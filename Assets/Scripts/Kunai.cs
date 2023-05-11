@@ -8,11 +8,13 @@ public class Kunai : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Material material;
     [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private PlayerWeaponsManager weaponManager;
 
-    public void Init(float launchSpeed)
+    public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
+        weaponManager = _weaponManager;
         meshRenderer.material = new Material(material);
-        rb.AddForce(transform.forward * launchSpeed, ForceMode.Impulse);
+        rb.AddForce(transform.forward * _launchSpeed, ForceMode.Impulse);
         rb.freezeRotation = true;
     }
 
@@ -26,6 +28,11 @@ public class Kunai : MonoBehaviour
 
         gameObject.tag = "CollectableKunai";
         gameObject.layer = 0;
+
+        if (gameObject.CompareTag("Enemy"))
+        {
+            weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.gameObject);
+        }
 
         //StartCoroutine(VanishingSequence(5));
     }

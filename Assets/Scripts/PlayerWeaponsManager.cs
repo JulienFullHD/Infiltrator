@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerWeaponsManager : MonoBehaviour
 {
     [Header("Sword Settings")]
-    [SerializeField] private Vector3 boxPosition;
-    [SerializeField] private Vector3 boxSize;
-    [SerializeField] private float swordAttackCooldown;
+    [SerializeField] private Vector3 swordBoxDisplacement;
+    [SerializeField] private Vector3 swordBoxSize;
+    [SerializeField] private float preAttackCountdownMS;
+    [SerializeField] private float swordAttackCooldownMS;
+    [SerializeField] private bool canAttackSword;
+    [SerializeField] private Collider[] swordHits;
 
     [Header("Kunai Settings")]
     [SerializeField] private GameObject kunaiPrefab;
@@ -18,22 +22,37 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private SphereCollider collectionTrigger;
 
     [Header("Dash Settings")]
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashDuration;
-    [SerializeField] private Vector2 hitboxHeightWidth;
+    [SerializeField] private float dashMaxDistance;
+    [SerializeField] private float dashInterpDurationMS; //For position interpolation
+    [SerializeField] private Vector3 dashMoveHitbox;
+    [SerializeField] private Vector3 dashAttackHitbox;
+    [SerializeField] private float preDashCountdownMS;
+    [SerializeField] private float dashAttackCooldownMS;
+    [SerializeField] private bool canDash;
+    [SerializeField] private float calculatedDistance;
+    [SerializeField] private float speedAfterDash;
+    [SerializeField] private Rigidbody rb;
+    private RaycastHit[] dashHits;
 
     [Header("Smokebomb Settings")]
     [SerializeField] private GameObject smokebombPrefab;
     [SerializeField] private Transform smokebombLaunchLocation;
     [SerializeField] private float smokebombLaunchSpeed;
+    [SerializeField] private bool canThrowSmokebomb;
 
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
+    private Matrix4x4 rotationMatrix;
+    private Vector3 dashStartPos;
+    private Vector3 dashEndPos;
 
     private void Awake()
     {
         kunaiAmount = 3;
+        canAttackSword = true;
+        canDash = true;
+        canThrowSmokebomb = true;
     }
 
     private void Update()
@@ -49,16 +68,89 @@ public class PlayerWeaponsManager : MonoBehaviour
             AddKunai();
             ThrowKunai();
         }
+
+        if (Input.GetKey(KeyCode.Mouse0) && canAttackSword)
+        {
+            canAttackSword = false;
+            StartCoroutine(PreAttackCountdown(preAttackCountdownMS));
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && canDash)
+        {
+            canDash = false;
+            StartCoroutine(PreDashCountdown(preDashCountdownMS));
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && canThrowSmokebomb)
+        {
+            canThrowSmokebomb = false;
+
+        }
     }
 
     private void AttackDash()
     {
+        StartCoroutine(DashCooldown(swordAttackCooldownMS));
 
+        //Check for physics collisions to not put player into walls
+        //Physics.BoxCast with LayerMask Environment to check how far the dash could go
+        if (Physics.BoxCast(transform.position, dashMoveHitbox / 2, transform.forward, out RaycastHit hitInfo, Quaternion.identity, dashMaxDistance, LayerMask.GetMask("World")))
+        {
+            calculatedDistance = hitInfo.distance;
+        }
+        else
+        {
+            calculatedDistance = dashMaxDistance;
+        }
+
+
+        //Physics.BoxCastAll start->end to check for all enemies hit within dash range
+        dashHits = Physics.BoxCastAll(transform.position, dashAttackHitbox / 2, transform.forward, Quaternion.identity, calculatedDistance, LayerMask.GetMask("Enemy"));
+
+        Debug.Log($"Dash hit {dashHits.Length} enemies");
+        if (dashHits.Length > 0)
+        {
+            for (int i = 0; i < dashHits.Length; i++)
+            {
+                Debug.Log($"Hit: {dashHits[i].collider.name}");
+
+                HitEnemy(hitType: HitType.Dash, enemyGameObject: dashHits[i].collider.gameObject);
+            }
+        }
+
+        //Move Player forward
+        rb.velocity = Vector3.zero;
+
+        transform.position += transform.forward * calculatedDistance;
+        
+        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - TO DO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        //UNCOMMENT WHEN IMPLEMENTED IN CHARACTE CONTROLLER:
+        //rb.velocity = transform.forward * speedAfterDash;
+
+        
+        
+        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - TO DO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        // POSITION INTERPOLATION INSTEAD OF TELEPORTATION
     }
 
     private void AttackSword()
     {
+        StartCoroutine(AttackCooldown(swordAttackCooldownMS));
 
+        swordHits = Physics.OverlapBox(transform.position + (transform.rotation * swordBoxDisplacement), swordBoxSize / 2,Quaternion.identity, LayerMask.GetMask("Enemy"));
+
+        //swordHits = Physics.OverlapBox(transform.position, swordBoxSize / 2,Quaternion.identity);
+
+        Debug.Log($"Sword hit {swordHits.Length} enemies");
+        if(swordHits.Length > 0)
+        {
+            for (int i = 0; i < swordHits.Length; i++)
+            {
+                Debug.Log($"Hit: {swordHits[i].name}");
+
+                HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);
+            }
+        }
     }
 
     private void ThrowSmoke()
@@ -74,10 +166,9 @@ public class PlayerWeaponsManager : MonoBehaviour
             kunaiAmount--;
 
             GameObject kunai = Instantiate(original: kunaiPrefab, position: kunaiLaunchLocation.position, rotation: kunaiLaunchLocation.rotation);
-            kunai.GetComponent<Kunai>().Init(launchSpeed: kunaiLaunchSpeed);
-        }
+            kunai.GetComponent<Kunai>().Init(_launchSpeed: kunaiLaunchSpeed, _weaponManager: this);
 
-        
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -94,7 +185,7 @@ public class PlayerWeaponsManager : MonoBehaviour
         kunaiAmount++;
     }
 
-    public void HitEnemy(HitType hitType)
+    public void HitEnemy(HitType hitType, GameObject enemyGameObject)
     {
 
     }
@@ -108,6 +199,54 @@ public class PlayerWeaponsManager : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawLine(transform.position, hitInfo.point);
         }
+
+        if(!canAttackSword)
+        {
+            Gizmos.matrix = transform.localToWorldMatrix;
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(swordBoxDisplacement, swordBoxSize);
+            Gizmos.matrix = Matrix4x4.identity;
+        }
+
+        if (!canDash)
+        {
+            
+        }
+    }
+
+    private IEnumerator PreAttackCountdown(float ms)
+    {
+        if(ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        AttackSword();
+    }
+    private IEnumerator AttackCooldown(float ms)
+    {
+        if (ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        canAttackSword = true;
+    }
+
+    private IEnumerator PreDashCountdown(float ms)
+    {
+        if (ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        AttackDash();
+    }
+
+    private IEnumerator DashCooldown(float ms)
+    {
+        if (ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        canDash = true;
     }
 }
 

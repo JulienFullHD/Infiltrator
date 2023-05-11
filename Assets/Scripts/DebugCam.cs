@@ -29,7 +29,7 @@ public class DebugCam : MonoBehaviour
 
     private void CameraMove()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.V))
         {
             sprintSpeed = sprintMultiplier;
         }
