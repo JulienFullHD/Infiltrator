@@ -39,6 +39,9 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private Transform smokebombLaunchLocation;
     [SerializeField] private float smokebombLaunchSpeed;
     [SerializeField] private bool canThrowSmokebomb;
+    [SerializeField] private float preSmokebombCountdownMS;
+    [SerializeField] private float smokebombAttackCooldownMS;
+
 
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
@@ -81,10 +84,10 @@ public class PlayerWeaponsManager : MonoBehaviour
             StartCoroutine(PreDashCountdown(preDashCountdownMS));
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && canThrowSmokebomb)
+        if (Input.GetKeyDown(KeyCode.F) && canThrowSmokebomb)
         {
             canThrowSmokebomb = false;
-
+            StartCoroutine(PreSmokebombCountdown(preSmokebombCountdownMS));
         }
     }
 
@@ -155,7 +158,10 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void ThrowSmoke()
     {
+        StartCoroutine(SmokebombCooldown(smokebombAttackCooldownMS));
 
+        GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
+        smokebomb.GetComponent<Smokebomb>().Init(_launchSpeed: smokebombLaunchSpeed, _weaponManager: this);
     }
 
     private void ThrowKunai()
@@ -187,7 +193,8 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     public void HitEnemy(HitType hitType, GameObject enemyGameObject)
     {
-
+        //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
+        //Tell score manager about the hit
     }
 
     private void OnDrawGizmos()
@@ -200,17 +207,12 @@ public class PlayerWeaponsManager : MonoBehaviour
             Gizmos.DrawLine(transform.position, hitInfo.point);
         }
 
-        if(!canAttackSword)
+        if(!canAttackSword && showGizmo)
         {
             Gizmos.matrix = transform.localToWorldMatrix;
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(swordBoxDisplacement, swordBoxSize);
             Gizmos.matrix = Matrix4x4.identity;
-        }
-
-        if (!canDash)
-        {
-            
         }
     }
 
@@ -248,6 +250,24 @@ public class PlayerWeaponsManager : MonoBehaviour
         }
         canDash = true;
     }
+
+    private IEnumerator PreSmokebombCountdown(float ms)
+    {
+        if (ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        ThrowSmoke();
+    }
+
+    private IEnumerator SmokebombCooldown(float ms)
+    {
+        if (ms > 0)
+        {
+            yield return new WaitForSeconds(ms / 1000);
+        }
+        canThrowSmokebomb = true;
+    }
 }
 
 public enum HitType
@@ -256,5 +276,6 @@ public enum HitType
     Sword,
     Kunai,
     Dash,
+    Smokebomb,
     Environment
 }
