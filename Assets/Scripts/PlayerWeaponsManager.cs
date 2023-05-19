@@ -9,10 +9,10 @@ public class PlayerWeaponsManager : MonoBehaviour
     [Header("Sword Settings")]
     [SerializeField] private Vector3 swordBoxDisplacement;
     [SerializeField] private Vector3 swordBoxSize;
-    [SerializeField] private float preAttackCountdownMS;
+    [SerializeField] private float swordAttackCountdownMS;
     [SerializeField] private float swordAttackCooldownMS;
-    [SerializeField] private bool canAttackSword;
-    [SerializeField] private Collider[] swordHits;
+    [ReadOnly, SerializeField] private bool canAttackSword;
+    [ReadOnly, SerializeField] private Collider[] swordHits;
 
     [Header("Kunai Settings")]
     [SerializeField] private GameObject kunaiPrefab;
@@ -21,40 +21,38 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private float kunaiAmount;
     [SerializeField] private SphereCollider collectionTrigger;
 
-    [Header("Dash Settings")]
-    [SerializeField] private float dashMaxDistance;
-    [SerializeField] private float dashInterpDurationMS; //For position interpolation
-    [SerializeField] private Vector3 dashMoveHitbox;
-    [SerializeField] private Vector3 dashAttackHitbox;
-    [SerializeField] private float preDashCountdownMS;
-    [SerializeField] private float dashAttackCooldownMS;
-    [SerializeField] private bool canDash;
-    [SerializeField] private float calculatedDistance;
-    [SerializeField] private float speedAfterDash;
-    [SerializeField] private Rigidbody rb;
-    private RaycastHit[] dashHits;
+    //[Header("Dash Settings")] //MOVE INTO MOVEMENT SCRIPT
+    //[SerializeField] private Dashing dashManager;
+    //[SerializeField] private float dashAttackCooldownMS;
+    //[ReadOnly, SerializeField] private bool canDash;
+    //[SerializeField] private float dashMaxDistance;
+    //[SerializeField] private float dashInterpDurationMS; //For position interpolation
+    //[SerializeField] private Vector3 dashMoveHitbox;
+    //[SerializeField] private Vector3 dashAttackHitbox;
+    //[SerializeField] private float calculatedDistance;
+    //[SerializeField] private float speedAfterDash;
+    //[SerializeField] private Rigidbody rb;
+    //[ReadOnly, SerializeField] private RaycastHit[] dashHits;
 
     [Header("Smokebomb Settings")]
     [SerializeField] private GameObject smokebombPrefab;
     [SerializeField] private Transform smokebombLaunchLocation;
     [SerializeField] private float smokebombLaunchSpeed;
-    [SerializeField] private bool canThrowSmokebomb;
-    [SerializeField] private float preSmokebombCountdownMS;
     [SerializeField] private float smokebombAttackCooldownMS;
+    [ReadOnly, SerializeField] private bool canThrowSmokebomb;
 
 
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
-    private Matrix4x4 rotationMatrix;
-    private Vector3 dashStartPos;
-    private Vector3 dashEndPos;
+    [ReadOnly, SerializeField] private Matrix4x4 rotationMatrix;
+    [ReadOnly, SerializeField] private Vector3 dashStartPos;
+    [ReadOnly, SerializeField] private Vector3 dashEndPos;
 
     private void Awake()
     {
         kunaiAmount = 3;
         canAttackSword = true;
-        canDash = true;
         canThrowSmokebomb = true;
     }
 
@@ -75,70 +73,57 @@ public class PlayerWeaponsManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Mouse0) && canAttackSword)
         {
             canAttackSword = false;
-            StartCoroutine(PreAttackCountdown(preAttackCountdownMS));
-        }
-
-        if(Input.GetKey(KeyCode.LeftShift) && canDash)
-        {
-            canDash = false;
-            StartCoroutine(PreDashCountdown(preDashCountdownMS));
+            Invoke(nameof(AttackSword), swordAttackCountdownMS);
         }
 
         if (Input.GetKeyDown(KeyCode.F) && canThrowSmokebomb)
         {
             canThrowSmokebomb = false;
-            StartCoroutine(PreSmokebombCountdown(preSmokebombCountdownMS));
+            ThrowSmoke();
         }
     }
 
-    private void AttackDash()
-    {
-        StartCoroutine(DashCooldown(swordAttackCooldownMS));
+    //private void AttackDash()
+    //{
+        //Invoke(nameof(AllowDash), dashAttackCooldownMS);
 
-        //Check for physics collisions to not put player into walls
-        //Physics.BoxCast with LayerMask Environment to check how far the dash could go
-        if (Physics.BoxCast(transform.position, dashMoveHitbox / 2, transform.forward, out RaycastHit hitInfo, Quaternion.identity, dashMaxDistance, LayerMask.GetMask("World")))
-        {
-            calculatedDistance = hitInfo.distance;
-        }
-        else
-        {
-            calculatedDistance = dashMaxDistance;
-        }
+        //dashManager.Dash();
+
+        ////Check for physics collisions to not put player into walls
+        ////Physics.BoxCast with LayerMask Environment to check how far the dash could go
+        //if (Physics.BoxCast(transform.position, dashMoveHitbox / 2, transform.forward, out RaycastHit hitInfo, Quaternion.identity, dashMaxDistance, LayerMask.GetMask("World")))
+        //{
+        //    calculatedDistance = hitInfo.distance;
+        //}
+        //else
+        //{
+        //    calculatedDistance = dashMaxDistance;
+        //}
 
 
-        //Physics.BoxCastAll start->end to check for all enemies hit within dash range
-        dashHits = Physics.BoxCastAll(transform.position, dashAttackHitbox / 2, transform.forward, Quaternion.identity, calculatedDistance, LayerMask.GetMask("Enemy"));
+        ////Physics.BoxCastAll start->end to check for all enemies hit within dash range
+        //dashHits = Physics.BoxCastAll(transform.position, dashAttackHitbox / 2, transform.forward, Quaternion.identity, calculatedDistance, LayerMask.GetMask("Enemy"));
 
-        Debug.Log($"Dash hit {dashHits.Length} enemies");
-        if (dashHits.Length > 0)
-        {
-            for (int i = 0; i < dashHits.Length; i++)
-            {
-                Debug.Log($"Hit: {dashHits[i].collider.name}");
+        //Debug.Log($"Dash hit {dashHits.Length} enemies");
+        //if (dashHits.Length > 0)
+        //{
+        //    for (int i = 0; i < dashHits.Length; i++)
+        //    {
+        //        Debug.Log($"Hit: {dashHits[i].collider.name}");
 
-                HitEnemy(hitType: HitType.Dash, enemyGameObject: dashHits[i].collider.gameObject);
-            }
-        }
+        //        HitEnemy(hitType: HitType.Dash, enemyGameObject: dashHits[i].collider.gameObject);
+        //    }
+        //}
 
-        //Move Player forward
-        rb.velocity = Vector3.zero;
+        ////Move Player forward
+        //rb.velocity = Vector3.zero;
 
-        transform.position += transform.forward * calculatedDistance;
-        
-        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - TO DO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        //UNCOMMENT WHEN IMPLEMENTED IN CHARACTE CONTROLLER:
-        //rb.velocity = transform.forward * speedAfterDash;
-
-        
-        
-        //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - TO DO - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-        // POSITION INTERPOLATION INSTEAD OF TELEPORTATION
-    }
+        //transform.position += transform.forward * calculatedDistance;
+    //}
 
     private void AttackSword()
     {
-        StartCoroutine(AttackCooldown(swordAttackCooldownMS));
+        Invoke(nameof(AllowMelee), swordAttackCooldownMS);
 
         swordHits = Physics.OverlapBox(transform.position + (transform.rotation * swordBoxDisplacement), swordBoxSize / 2,Quaternion.identity, LayerMask.GetMask("Enemy"));
 
@@ -158,7 +143,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void ThrowSmoke()
     {
-        StartCoroutine(SmokebombCooldown(smokebombAttackCooldownMS));
+        Invoke(nameof(AllowSmokeThrow), smokebombAttackCooldownMS);
 
         GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
         smokebomb.GetComponent<Smokebomb>().Init(_launchSpeed: smokebombLaunchSpeed, _weaponManager: this);
@@ -216,56 +201,14 @@ public class PlayerWeaponsManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PreAttackCountdown(float ms)
+
+    private void AllowMelee()
     {
-        if(ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
-        AttackSword();
-    }
-    private IEnumerator AttackCooldown(float ms)
-    {
-        if (ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
         canAttackSword = true;
     }
 
-    private IEnumerator PreDashCountdown(float ms)
+    private void AllowSmokeThrow()
     {
-        if (ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
-        AttackDash();
-    }
-
-    private IEnumerator DashCooldown(float ms)
-    {
-        if (ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
-        canDash = true;
-    }
-
-    private IEnumerator PreSmokebombCountdown(float ms)
-    {
-        if (ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
-        ThrowSmoke();
-    }
-
-    private IEnumerator SmokebombCooldown(float ms)
-    {
-        if (ms > 0)
-        {
-            yield return new WaitForSeconds(ms / 1000);
-        }
         canThrowSmokebomb = true;
     }
 }

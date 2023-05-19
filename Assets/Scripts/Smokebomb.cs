@@ -10,7 +10,7 @@ public class Smokebomb : MonoBehaviour
     [SerializeField] private PlayerWeaponsManager weaponManager;
     [SerializeField] private float durationMS;
     [SerializeField] private Vector3 stunHitbox;
-    [SerializeField] private Collider[] stunHits;
+    [ReadOnly, SerializeField] private Collider[] stunHits;
 
     public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
