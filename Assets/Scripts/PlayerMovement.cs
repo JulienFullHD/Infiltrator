@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float speedSprint;
     [SerializeField] private float speedDash;
+    [SerializeField] private float speedWallrunning;
     [ReadOnly, SerializeField] private float speedDesired;
     [ReadOnly, SerializeField] private float speedLastDesired;
     [ReadOnly, SerializeField] private float speedToApply;
@@ -40,6 +41,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpCooldown;
     [SerializeField] private float aerialSpeedMultiplier;
     [ReadOnly, SerializeField] private bool canJump;
+
+    [Header("Wallrun Settings")]
+    [ReadOnly, SerializeField] public bool isWallrunning;
 
 
     private void Start()
@@ -90,6 +94,10 @@ public class PlayerMovement : MonoBehaviour
         if (isDashing)
         {
             speedDesired = speedDash;
+        }
+        else if (isWallrunning)
+        {
+            speedDesired = speedWallrunning;
         }
         else
         {
