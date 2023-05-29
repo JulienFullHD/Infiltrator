@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float extraRaycastDistance;
-    [ReadOnly, SerializeField] private bool isGrounded;
+    [ReadOnly, SerializeField] public bool isGrounded;
 
     [Header("Dash Settings")]
     [SerializeField] private float speedChangeFactor;

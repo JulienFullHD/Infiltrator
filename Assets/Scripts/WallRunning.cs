@@ -16,14 +16,19 @@ public class WallRunning : MonoBehaviour
     [ReadOnly, SerializeField] private Vector3 forceToApply;
     [ReadOnly, SerializeField] private Vector3 wallSurfaceNormal;
     [ReadOnly, SerializeField] private Vector3 wallrunDirection;
+    [ReadOnly, SerializeField] private bool wallrunStartUseGravity;
 
     [Header("Exit Wallrun Settings")]
-    [SerializeField] private float exitWallTime;
+    [SerializeField] private bool exitWallRequiresGroundedToggle;
+    [ReadOnly, SerializeField] private bool exitWallRequiresGrounded;
+    [SerializeField] private float exitWallTimeOnJump;
+    [SerializeField] private float exitWallTimeOnFall;
     [ReadOnly, SerializeField] private bool exitingWall;
     [ReadOnly, SerializeField] private float exitWallTimer;
 
     [Header("Input")]
     [SerializeField] private KeyCode upwardsWallrunKey;
+    [SerializeField] private bool alwaysRise;
     private float horizontalInput;
     private float verticalInput;
 
@@ -42,6 +47,7 @@ public class WallRunning : MonoBehaviour
 
     private void Update()
     {
+        HandleInput();
         CheckForWall();
         HandleWallrunState();
     }
@@ -56,7 +62,6 @@ public class WallRunning : MonoBehaviour
 
     private void CheckForWall()
     {
-        //Check right and left of player for walls
         wallRightExists = Physics.Raycast(transform.position, orientation.right, out rightWallhit, wallCheckDistance, wallLayers);
         wallLeftExists = Physics.Raycast(transform.position, -orientation.right, out leftWallhit, wallCheckDistance, wallLayers);
     }
@@ -67,13 +72,15 @@ public class WallRunning : MonoBehaviour
         return !Physics.Raycast(transform.position, Vector3.down, minJumpHeight, groundLayers);
     }
 
-    private void HandleWallrunState()
+    private void HandleInput()
     {
         // Framerate indepentant input values for movement keys ASWD
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+    }
 
-        
+    private void HandleWallrunState()
+    {        
         // Needs to touch wall, press forward and be in air
         if((wallLeftExists || wallRightExists) && verticalInput > 0 && InAir() && rb.velocity.y > -30 && !exitingWall)
         {
@@ -82,6 +89,22 @@ public class WallRunning : MonoBehaviour
             {
                 StartWallRun();
             }
+
+            if(wallrunTimer > 0)
+            {
+                wallrunTimer -= Time.deltaTime;
+            }
+            else if(movementManager.isWallrunning)
+            {
+                exitingWall = true;
+                exitWallTimer = exitWallTimeOnFall;
+
+                if (exitWallRequiresGroundedToggle)
+                {
+                    exitWallRequiresGrounded = true;
+                }
+            }
+
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -99,9 +122,17 @@ public class WallRunning : MonoBehaviour
             {
                 exitWallTimer -= Time.deltaTime;
             }
-            else
+            else if(!(exitWallRequiresGrounded && !movementManager.isGrounded))
             {
+                //If doesnt require and not grounded
+                //If doesnt require and grounded
+                //NOT If require and not grounded
+                //If require and grounded
+                //If jumping
+
+
                 exitingWall = false;
+                exitWallRequiresGrounded = false;
             }
         }
         else
@@ -109,6 +140,13 @@ public class WallRunning : MonoBehaviour
             if (movementManager.isWallrunning)
             {
                 exitingWall = true;
+                exitWallTimer = exitWallTimeOnFall;
+
+                if (exitWallRequiresGroundedToggle)
+                {
+                    exitWallRequiresGrounded = true;
+                }
+
                 StopWallRun();
             }
         }
@@ -116,16 +154,27 @@ public class WallRunning : MonoBehaviour
 
     private void StartWallRun()
     {
+        wallrunStartUseGravity = true;
+
         movementManager.isWallrunning = true;
 
         //rb.useGravity = false;
-
+        wallrunTimer = maxWallrunTime;
     }
     
     private void WallRunningMovement()
     {
-        rb.useGravity = false;
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        // Use Gravity while initially going upwards
+        if (rb.velocity.y < 0)
+        {
+            wallrunStartUseGravity = false;
+            rb.useGravity = false;
+            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        }
+        else if (wallrunStartUseGravity)
+        {
+            rb.useGravity = true;
+        }
 
         wallSurfaceNormal = wallRightExists ? rightWallhit.normal : leftWallhit.normal;
 
@@ -141,8 +190,9 @@ public class WallRunning : MonoBehaviour
         rb.AddForce(wallrunDirection * wallrunForce, ForceMode.Force);
 
         // Upwards force
-        if (Input.GetKey(upwardsWallrunKey))
+        if (Input.GetKey(upwardsWallrunKey) || alwaysRise)
         {
+            wallrunStartUseGravity = false;
             rb.velocity = new Vector3(rb.velocity.x, wallrunUpwardsForce, rb.velocity.z);
         }
 
@@ -156,7 +206,7 @@ public class WallRunning : MonoBehaviour
     private void WallJump()
     {
         exitingWall = true;
-        exitWallTimer = exitWallTime;
+        exitWallTimer = exitWallTimeOnJump;
 
         forceToApply = transform.up * wallJumpUpForce + wallSurfaceNormal * wallJumpSideForce;
 

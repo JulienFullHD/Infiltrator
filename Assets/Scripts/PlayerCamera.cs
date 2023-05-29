@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
     [Header("Camera Settings")]
     [SerializeField] private float sensitivityX;
     [SerializeField] private float sensitivityY;
-    [SerializeField] private Transform orientation;
+    [SerializeField] private Transform flatOrientation;
     [SerializeField] private float xRotation;
     [SerializeField] private float yRotation;
     [SerializeField] private float mouseX;
@@ -30,7 +30,7 @@ public class PlayerCamera : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -89.99f, 89.99f);
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        flatOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
         
         if(mouseX < -12f || mouseX > 12f)

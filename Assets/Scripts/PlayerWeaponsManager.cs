@@ -58,7 +58,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             ThrowKunai();
         }
@@ -83,47 +83,9 @@ public class PlayerWeaponsManager : MonoBehaviour
         }
     }
 
-    //private void AttackDash()
-    //{
-        //Invoke(nameof(AllowDash), dashAttackCooldownMS);
-
-        //dashManager.Dash();
-
-        ////Check for physics collisions to not put player into walls
-        ////Physics.BoxCast with LayerMask Environment to check how far the dash could go
-        //if (Physics.BoxCast(transform.position, dashMoveHitbox / 2, transform.forward, out RaycastHit hitInfo, Quaternion.identity, dashMaxDistance, LayerMask.GetMask("World")))
-        //{
-        //    calculatedDistance = hitInfo.distance;
-        //}
-        //else
-        //{
-        //    calculatedDistance = dashMaxDistance;
-        //}
-
-
-        ////Physics.BoxCastAll start->end to check for all enemies hit within dash range
-        //dashHits = Physics.BoxCastAll(transform.position, dashAttackHitbox / 2, transform.forward, Quaternion.identity, calculatedDistance, LayerMask.GetMask("Enemy"));
-
-        //Debug.Log($"Dash hit {dashHits.Length} enemies");
-        //if (dashHits.Length > 0)
-        //{
-        //    for (int i = 0; i < dashHits.Length; i++)
-        //    {
-        //        Debug.Log($"Hit: {dashHits[i].collider.name}");
-
-        //        HitEnemy(hitType: HitType.Dash, enemyGameObject: dashHits[i].collider.gameObject);
-        //    }
-        //}
-
-        ////Move Player forward
-        //rb.velocity = Vector3.zero;
-
-        //transform.position += transform.forward * calculatedDistance;
-    //}
-
     private void AttackSword()
     {
-        Invoke(nameof(AllowMelee), swordAttackCooldownMS);
+        Invoke(nameof(AllowMelee), swordAttackCooldownMS/1000);
 
         swordHits = Physics.OverlapBox(transform.position + (transform.rotation * swordBoxDisplacement), swordBoxSize / 2,Quaternion.identity, LayerMask.GetMask("Enemy"));
 
@@ -143,7 +105,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void ThrowSmoke()
     {
-        Invoke(nameof(AllowSmokeThrow), smokebombAttackCooldownMS);
+        Invoke(nameof(AllowSmokeThrow), smokebombAttackCooldownMS/1000);
 
         GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
         smokebomb.GetComponent<Smokebomb>().Init(_launchSpeed: smokebombLaunchSpeed, _weaponManager: this);
@@ -180,6 +142,11 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
+    
+    
+    
+    
+    
     }
 
     private void OnDrawGizmos()
