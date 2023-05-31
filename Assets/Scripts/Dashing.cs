@@ -9,7 +9,12 @@ public class Dashing : MonoBehaviour
     [SerializeField] private Transform playerCamera;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private PlayerMovement movementManager;
+    [SerializeField] private PlayerWeaponsManager weaponManager;
     [SerializeField] public KeyCode keybindDash = KeyCode.E;
+
+    [Header("Phasing through enemies")]
+    [SerializeField] private float phaseTimer;
+    [SerializeField] private GameObject collisionObject;
 
     [Header("Dashing")]
     [SerializeField] private float dashForce;
@@ -22,6 +27,8 @@ public class Dashing : MonoBehaviour
     [SerializeField] private bool resetVelocity;
     [ReadOnly, SerializeField] private Transform forwardTransform;
 
+    [Header("Attack detection")]
+    [SerializeField] private CapsuleCollider attackCollider;
 
     [Header("Cooldown")]
     [SerializeField] private float dashCooldown;
@@ -42,8 +49,9 @@ public class Dashing : MonoBehaviour
 
     private void Dash()
     {
+        StartPhasing();
+
         canDash = false;
-        Invoke(nameof(AllowDash), dashCooldown);
 
         movementManager.isDashing = true;
 
@@ -56,6 +64,8 @@ public class Dashing : MonoBehaviour
 
         delayedForceToApply = forceToApply;
         Invoke(nameof(DelayedDashForce), 0.025f);
+
+        Invoke(nameof(AllowDash), dashCooldown);
 
         Invoke(nameof(ResetDash), dashDuration);
     }
@@ -83,5 +93,27 @@ public class Dashing : MonoBehaviour
     private void AllowDash()
     {
         canDash = true;
+    }
+
+    private void StartPhasing()
+    {
+        collisionObject.layer = LayerMask.NameToLayer(layerName: "PlayerDash");
+        attackCollider.enabled = true;
+
+        Invoke(nameof(StopPhasing), phaseTimer);
+    }
+
+    private void StopPhasing()
+    {
+        collisionObject.layer = LayerMask.NameToLayer(layerName: "Player");
+        attackCollider.enabled = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            weaponManager.HitEnemy(hitType: HitType.Dash, enemyGameObject: other.gameObject);
+        }
     }
 }

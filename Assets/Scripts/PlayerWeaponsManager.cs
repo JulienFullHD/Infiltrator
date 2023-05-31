@@ -18,7 +18,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private GameObject kunaiPrefab;
     [SerializeField] private Transform kunaiLaunchLocation;
     [SerializeField] private float kunaiLaunchSpeed; //Reminder to change rigidbody to Continuous
-    [SerializeField] private float kunaiAmount;
+    [SerializeField] private int kunaiAmount;
     [SerializeField] private SphereCollider collectionTrigger;
 
     //[Header("Dash Settings")] //MOVE INTO MOVEMENT SCRIPT
@@ -41,6 +41,8 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private float smokebombAttackCooldownMS;
     [ReadOnly, SerializeField] private bool canThrowSmokebomb;
 
+    [Header("Score Manager")]
+    [SerializeField] private ScoreManger scoreManager;
 
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
@@ -63,13 +65,6 @@ public class PlayerWeaponsManager : MonoBehaviour
             ThrowKunai();
         }
 
-        //FOR DEBUG ONLY; ENABLES FULL AUTO KUNAI SPRAY
-        if (Input.GetKey(KeyCode.B))
-        {
-            AddKunai();
-            ThrowKunai();
-        }
-
         if (Input.GetKey(KeyCode.Mouse0) && canAttackSword)
         {
             canAttackSword = false;
@@ -81,6 +76,24 @@ public class PlayerWeaponsManager : MonoBehaviour
             canThrowSmokebomb = false;
             ThrowSmoke();
         }
+
+        #region FOR_TESTING_ONLY
+        //FOR DEBUG ONLY; ENABLES FULL AUTO KUNAI SPRAY
+        if (Input.GetKey(KeyCode.B))
+        {
+            AddKunai();
+            ThrowKunai();
+        }
+
+        //Give to 3 Kunais
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            AddKunai();
+            AddKunai();
+            AddKunai();
+        }
+        #endregion
+
     }
 
     private void AttackSword()
@@ -120,7 +133,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
             GameObject kunai = Instantiate(original: kunaiPrefab, position: kunaiLaunchLocation.position, rotation: kunaiLaunchLocation.rotation);
             kunai.GetComponent<Kunai>().Init(_launchSpeed: kunaiLaunchSpeed, _weaponManager: this);
-
+            
         }        
     }
 
@@ -142,11 +155,12 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
-    
-    
-    
-    
-    
+
+
+        scoreManager.HitToScore(hitType: hitType);
+
+
+
     }
 
     private void OnDrawGizmos()

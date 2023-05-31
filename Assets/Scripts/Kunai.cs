@@ -26,10 +26,10 @@ public class Kunai : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         rb.constraints = RigidbodyConstraints.FreezeAll;
 
-        gameObject.tag = "CollectableKunai";
-        gameObject.layer = 0;
+        //gameObject.tag = "CollectableKunai";
+        //gameObject.layer = 0;
 
-        if (gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.gameObject);
         }
