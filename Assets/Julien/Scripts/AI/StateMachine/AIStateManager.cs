@@ -9,12 +9,16 @@ public class AIStateManager : MonoBehaviour
 {
     public AIBaseState CurrentState;
     public AIPatrollState PatrollState = new AIPatrollState();
-    public AISearchCoverState EngageState = new AISearchCoverState();
+    public AIEngageState EngageState = new AIEngageState();
     public List<Transform> PatrollPoints;
+    public DetectionSystem DetectionSystem;
+    public AI_Weapon Weapon;
+    public Transform Player;
+    public Transform Head;
+    public LayerMask IgnoreLayer;
     [HideInInspector]public AIDestinationSetter destinationSetter;
     [HideInInspector]public RichAI richAI;
-    public LayerMask layerMask;
-    //public CoverHandler coverHandler;
+   
     public Transform moveTarget;
     public TMP_Text text;
 

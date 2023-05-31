@@ -18,8 +18,7 @@ public class AIPatrollState : AIBaseState
             ai.text.SetText("Partoll to Waypoint " + currIndex);
         }
 
-        Debug.DrawRay(ai.transform.position, ai.transform.TransformDirection(Vector3.forward) * 100, Color.yellow);
-        if (Physics.Raycast(ai.transform.position, ai.transform.TransformDirection(Vector3.forward), 100, ai.layerMask))
+        if(ai.DetectionSystem.GetSusMeter() >= 100)
         {
             ai.SwitchState(ai.EngageState);
         }
