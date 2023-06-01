@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ScoreManger : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ScoreManger : MonoBehaviour
 
     [Header("Combo")]
     [SerializeField] private bool comboIsCounting;
+    [SerializeField] private Slider timerSlider;
     //[SerializeField] private float comboCurrentTotalTimer;
     [SerializeField] private float comboMaxInactivityDuration;
     [ReadOnly, SerializeField] private float comboCurrentInactivityDuration;
@@ -40,11 +42,11 @@ public class ScoreManger : MonoBehaviour
     private void ResetComboValues()
     {
         scoreTypeValues.Clear();
-        scoreTypeValues.Add(ScoreType.Kunai, 0);
-        scoreTypeValues.Add(ScoreType.Sword, 0);
-        scoreTypeValues.Add(ScoreType.Dash, 0);
-        scoreTypeValues.Add(ScoreType.Hattrick, 0);
-        scoreTypeValues.Add(ScoreType.Full_Arsenal, 0);
+        //scoreTypeValues.Add(ScoreType.Kunai, 0);
+        //scoreTypeValues.Add(ScoreType.Sword, 0);
+        //scoreTypeValues.Add(ScoreType.Dash, 0);
+        //scoreTypeValues.Add(ScoreType.Hattrick, 0);
+        //scoreTypeValues.Add(ScoreType.Full_Arsenal, 0);
     }
 
     private void StartCombo()
@@ -58,6 +60,8 @@ public class ScoreManger : MonoBehaviour
     private void StopCombo()
     {
         ResetComboValues();
+
+        ResetLastThreeHits();
 
         comboIsCounting = false;
     }
@@ -108,12 +112,16 @@ public class ScoreManger : MonoBehaviour
             comboCurrentInactivityDuration = comboMaxInactivityDuration;
         }
 
+        if (!scoreTypeValues.ContainsKey(scoreType))
+            scoreTypeValues.Add(scoreType, 0);
+
         scoreTypeValues[scoreType]++;
 
         scoringTextbox.text = "";
         foreach (KeyValuePair<ScoreType, int> item in scoreTypeValues)
         {
-            scoringTextbox.text += item.Key + ": " + item.Value + "\n";
+            if(item.Value > 0)
+            scoringTextbox.text += item.Key + ":  x" + item.Value + "\n";
         }
     }
 
