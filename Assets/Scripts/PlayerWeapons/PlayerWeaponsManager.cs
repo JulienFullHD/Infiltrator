@@ -19,7 +19,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private Transform kunaiLaunchLocation;
     [SerializeField] private float kunaiLaunchSpeed; //Reminder to change rigidbody to Continuous
     [SerializeField] private int kunaiAmount;
-    [SerializeField] private SphereCollider collectionTrigger;
+    //[SerializeField] private SphereCollider collectionTrigger;
 
     //[Header("Dash Settings")] //MOVE INTO MOVEMENT SCRIPT
     //[SerializeField] private Dashing dashManager;
