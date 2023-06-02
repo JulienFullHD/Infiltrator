@@ -1367,7 +1367,6 @@ MonoBehaviour:
   kunaiLaunchLocation: {fileID: 839098781}
   kunaiLaunchSpeed: 1000
   kunaiAmount: 0
-  collectionTrigger: {fileID: 576214781}
   smokebombPrefab: {fileID: 7718763528319435724, guid: ccfde9f3f7c9bfd4d8039e78a4b98095,
     type: 3}
   smokebombLaunchLocation: {fileID: 661088751}
@@ -5218,11 +5217,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1000305609726826092, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000305609726826092, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1458151353707714230, guid: 458a0c72d317f8e4ba75bab745ecf70c,
         type: 3}
       propertyPath: collectionTrigger
       value: 
       objectReference: {fileID: 576214781}
+    - target: {fileID: 1458151353822511052, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -8.179993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151353822511052, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -31.560005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151353822511052, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.089966
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151353822511052, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15.779999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151353822511053, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: m_Name
+      value: Text Combos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151354558184751, guid: 458a0c72d317f8e4ba75bab745ecf70c,
+        type: 3}
+      propertyPath: comboMaxInactivityDuration
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5496735524768176171, guid: 458a0c72d317f8e4ba75bab745ecf70c,
         type: 3}
       propertyPath: m_Name
