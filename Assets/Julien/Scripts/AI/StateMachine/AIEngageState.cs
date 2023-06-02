@@ -35,7 +35,6 @@ public class AIEngageState : AIBaseState
                 return true;
             }
         }
-        Debug.Log(hit.transform.name);
         return false;
     }
 }

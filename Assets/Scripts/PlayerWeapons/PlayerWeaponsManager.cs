@@ -53,7 +53,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void Awake()
     {
-        kunaiAmount = 3;
+        kunaiAmount = 300;
         canAttackSword = true;
         canThrowSmokebomb = true;
     }
@@ -110,7 +110,6 @@ public class PlayerWeaponsManager : MonoBehaviour
             for (int i = 0; i < swordHits.Length; i++)
             {
                 Debug.Log($"Hit: {swordHits[i].name}");
-
                 HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);
             }
         }
@@ -155,12 +154,14 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
-
-
-        scoreManager.HitToScore(hitType: hitType);
-
-
-
+        Debug.Log(hitType);
+        
+        if(hitType != HitType.Dash && hitType != HitType.Smokebomb)
+        {
+            enemyGameObject.transform.parent.GetComponent<AI_HPSystem>().TakeDamage(1);
+            scoreManager.HitToScore(hitType: hitType);
+        }
+        
     }
 
     private void OnDrawGizmos()

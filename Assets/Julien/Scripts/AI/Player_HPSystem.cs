@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class AI_HPSystem : MonoBehaviour
+public class Player_HPSystem : MonoBehaviour
 {
     public int HitPoints = 10;
   
@@ -12,7 +13,7 @@ public class AI_HPSystem : MonoBehaviour
         HitPoints -= _damage;
         if(HitPoints <= 0)
         {
-            GameObject.Destroy(this.gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }

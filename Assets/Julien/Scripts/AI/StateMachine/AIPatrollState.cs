@@ -7,16 +7,23 @@ public class AIPatrollState : AIBaseState
     public override void EnterState(AIStateManager ai)
     {
         ai.text.SetText("Partoll to Waypoint " + currIndex);
-        ai.destinationSetter.target = ai.PatrollPoints[currIndex];
+        if(ai.PatrollPoints.Count > 0)
+        {
+            ai.destinationSetter.target = ai.PatrollPoints[currIndex];
+        }
     }
 
     public override void UpdateState(AIStateManager ai)
     {
-        if(ai.richAI.reachedDestination)
+        if(ai.PatrollPoints.Count > 0)
         {
-            ai.destinationSetter.target = GetNextCheckpoint(ai);
-            ai.text.SetText("Partoll to Waypoint " + currIndex);
+            if(ai.richAI.reachedDestination)
+            {
+                ai.destinationSetter.target = GetNextCheckpoint(ai);
+                ai.text.SetText("Partoll to Waypoint " + currIndex);
+            }
         }
+        
 
         if(ai.DetectionSystem.GetSusMeter() >= 100)
         {

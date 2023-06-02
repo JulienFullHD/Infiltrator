@@ -357,7 +357,6 @@ MonoBehaviour:
   kunaiLaunchLocation: {fileID: 1458151354593193189}
   kunaiLaunchSpeed: 1000
   kunaiAmount: 0
-  collectionTrigger: {fileID: 0}
   smokebombPrefab: {fileID: 7718763528319435724, guid: ccfde9f3f7c9bfd4d8039e78a4b98095,
     type: 3}
   smokebombLaunchLocation: {fileID: 1458151354610854516}
@@ -421,7 +420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 221.695, y: -3.2849884}
+  m_AnchoredPosition: {x: 221.695, y: -3.2849731}
   m_SizeDelta: {x: -459.75, y: -6.570018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1458151353822511058
@@ -534,6 +533,7 @@ GameObject:
   - component: {fileID: 1458151353933140078}
   - component: {fileID: 1458151353933140077}
   - component: {fileID: 1458151353933140076}
+  - component: {fileID: 6187158003156349108}
   m_Layer: 15
   m_Name: Player
   m_TagString: Untagged
@@ -693,6 +693,19 @@ MonoBehaviour:
   orientation: {fileID: 1458151354834225997}
   movementManager: {fileID: 1458151353933140078}
   rb: {fileID: 1458151353933140072}
+--- !u!114 &6187158003156349108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458151353933140073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d47d39cd1fbef419a66a5fa83965b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitPoints: 10
 --- !u!1 &1458151354042227899
 GameObject:
   m_ObjectHideFlags: 0

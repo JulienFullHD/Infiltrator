@@ -31,7 +31,7 @@ public class VisionCollider : MonoBehaviour
             {
                 //Debug.Log(objHit.transform.name);
                 var selection = objHit.collider.transform.gameObject;
-                if(selection.tag.Equals("Player") || selection.layer.Equals(16))
+                if(selection.tag.Equals("Player"))
                 {   
                     inVision = true;
                     if(susTimer <= 0 && SusMeter < 1000)
@@ -86,14 +86,7 @@ public class VisionCollider : MonoBehaviour
         {
             inVisionCollider = true;
             target = other.gameObject.transform;
-            targetHead = other.gameObject.transform.Find("Head");
-        }
-        if(other.gameObject.layer.Equals(15))
-        {
-            other.gameObject.layer = 16;
-            inVisionCollider = true;
-            target = other.gameObject.transform;
-            targetHead = target;
+            targetHead = other.gameObject.transform.parent.Find("CameraPos");
         }
     }
 
@@ -102,11 +95,6 @@ public class VisionCollider : MonoBehaviour
         if(other.tag.Equals("Player"))
         {
             inVisionCollider = false;
-        }
-        if(other.gameObject.layer.Equals(16))
-        {
-            inVisionCollider = false;
-            other.gameObject.layer = 15;
         }
     }
 }

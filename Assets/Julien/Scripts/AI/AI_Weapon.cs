@@ -12,17 +12,17 @@ public class AI_Weapon : MonoBehaviour
     //WeaponStats
     //AR
     public GameObject bullet;
-    private AudioSource audioSource;
-    public GameObject MuzzleFlashEffect;
+    //private AudioSource audioSource;
+    //public GameObject MuzzleFlashEffect;
     [SerializeField]private Transform Gunpoint;
     private string enemyTag = "player";
     private float startShootTimerAR = 0.1f;
     private float shootTimerAR;
     private float muzzleVAR = 50;
-    private float magSizeAR = 20;
+    private float magSizeAR = 3;
     
     private float magSizeSniper = 20;
-    public AudioClip ARSound;
+    //public AudioClip ARSound;
 
     //Shotgun
     private float startShootTimerShotgun = 1f;
@@ -30,7 +30,7 @@ public class AI_Weapon : MonoBehaviour
     private float muzzleVShotgun = 50;
     private float magSizeShotgun = 3;
     private float bulletAmountShotgun = 10;
-    public AudioClip ShotgunSound;
+    //public AudioClip ShotgunSound;
     
     void Start()
     {
@@ -47,7 +47,7 @@ public class AI_Weapon : MonoBehaviour
             MagSize = magSizeShotgun;
         }
         StartMagSize = MagSize;
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     public void Shoot(Transform _target)
@@ -72,34 +72,39 @@ public class AI_Weapon : MonoBehaviour
     {
         if(shootTimerAR < 0)
         {   
-            audioSource.PlayOneShot(ARSound);
+            //audioSource.PlayOneShot(ARSound);
             var Bullet = Instantiate(bullet) as GameObject;
             Bullet.transform.SetParent(Gunpoint);
             Bullet.transform.localPosition = new Vector3(0,0,0);
             Bullet.transform.localRotation = Quaternion.identity;
             
-            var muzzleFlashEffectIstance = Instantiate(MuzzleFlashEffect) as GameObject;
-            muzzleFlashEffectIstance.transform.SetParent(Gunpoint);
-            muzzleFlashEffectIstance.transform.localPosition = new Vector3(0,0,0);
-            muzzleFlashEffectIstance.transform.localRotation = Quaternion.identity;
-            Destroy(muzzleFlashEffectIstance, 4);
+            //var muzzleFlashEffectIstance = Instantiate(MuzzleFlashEffect) as GameObject;
+            //muzzleFlashEffectIstance.transform.SetParent(Gunpoint);
+            //muzzleFlashEffectIstance.transform.localPosition = new Vector3(0,0,0);
+            //muzzleFlashEffectIstance.transform.localRotation = Quaternion.identity;
+            //Destroy(muzzleFlashEffectIstance, 4);
 
             Bullet.GetComponent<AI_Bullet>().RecieveBulletParameter(Vector3.zero,muzzleVAR,_target,1);
             shootTimerAR = startShootTimerAR;
             MagSize -= 1;
+        }
+        if(MagSize <= 0)
+        {
+            shootTimerAR = 3;
+            MagSize = StartMagSize;
         }
     }
     private void ShootShotgun(Transform _target)
     {
         if(shootTimerShotgun < 0)
         {
-            audioSource.PlayOneShot(ShotgunSound);
+            //audioSource.PlayOneShot(ShotgunSound);
 
-            var muzzleFlashEffectIstance = Instantiate(MuzzleFlashEffect) as GameObject;
-            muzzleFlashEffectIstance.transform.SetParent(Gunpoint);
-            muzzleFlashEffectIstance.transform.localPosition = new Vector3(0,0,0);
-            muzzleFlashEffectIstance.transform.localRotation = Quaternion.identity;
-            Destroy(muzzleFlashEffectIstance, 4);
+            //var muzzleFlashEffectIstance = Instantiate(MuzzleFlashEffect) as GameObject;
+            //muzzleFlashEffectIstance.transform.SetParent(Gunpoint);
+            //muzzleFlashEffectIstance.transform.localPosition = new Vector3(0,0,0);
+            //muzzleFlashEffectIstance.transform.localRotation = Quaternion.identity;
+            //Destroy(muzzleFlashEffectIstance, 4);
 
             for(int i = 0; i < bulletAmountShotgun; i++)
             {

@@ -39,7 +39,7 @@ public class PlayerCamera : MonoBehaviour
         }
         else
         {
-            Debug.Log($"{yRotation} || {Input.GetAxisRaw("Mouse X")} || {Time.deltaTime}");
+            //Debug.Log($"{yRotation} || {Input.GetAxisRaw("Mouse X")} || {Time.deltaTime}");
         }
     }
 }

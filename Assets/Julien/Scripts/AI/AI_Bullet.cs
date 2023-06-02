@@ -49,7 +49,7 @@ public class AI_Bullet : MonoBehaviour
         {
             if(_obj.transform.tag == "Player")
             {
-                //Obj.transform.GetComponent<Player_HPSystem>().TakeDamage(1);
+                _obj.transform.GetComponent<Player_HPSystem>().TakeDamage(1);
                 DestroyBullet();
             }
             if(_obj.transform.tag == "obstacle")
@@ -74,7 +74,7 @@ public class AI_Bullet : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            //other.GetComponent<Player_HPSystem>().TakeDamage(0);
+            other.transform.parent.GetComponent<Player_HPSystem>().TakeDamage(1);
             DestroyBullet();
         }
         if(other.tag == "obstacle")
