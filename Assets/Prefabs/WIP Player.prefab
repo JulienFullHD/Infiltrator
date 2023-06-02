@@ -502,25 +502,6 @@ MonoBehaviour:
   scoreManager: {fileID: 1458151354558184751}
   showGizmo: 1
   gizmoRadius: 0.2
-  rotationMatrix:
-    e00: 0
-    e01: 0
-    e02: 0
-    e03: 0
-    e10: 0
-    e11: 0
-    e12: 0
-    e13: 0
-    e20: 0
-    e21: 0
-    e22: 0
-    e23: 0
-    e30: 0
-    e31: 0
-    e32: 0
-    e33: 0
-  dashStartPos: {x: 0, y: 0, z: 0}
-  dashEndPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1458151353822511053
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,8 +537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 299.8, y: -221.1}
-  m_SizeDelta: {x: -621.6, y: 280.2}
+  m_AnchoredPosition: {x: 272.84, y: -221.1}
+  m_SizeDelta: {x: -558.68, y: 280.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1458151353822511058
 CanvasRenderer:
@@ -774,6 +755,7 @@ MonoBehaviour:
   keybindDash: 304
   phaseTimer: 1
   collisionObject: {fileID: 1458151354380073269}
+  attackCollider: {fileID: 1458151352786537218}
   dashForce: 80
   dashUpForce: 0
   dashDuration: 0.1
@@ -782,7 +764,6 @@ MonoBehaviour:
   disableGravity: 1
   resetVelocity: 1
   forwardTransform: {fileID: 0}
-  attackCollider: {fileID: 1458151352786537218}
   dashCooldown: 1
   canDash: 0
 --- !u!114 &1458151353933140076

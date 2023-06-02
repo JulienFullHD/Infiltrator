@@ -15,6 +15,8 @@ public class Dashing : MonoBehaviour
     [Header("Phasing through enemies")]
     [SerializeField] private float phaseTimer;
     [SerializeField] private GameObject collisionObject;
+    [SerializeField] private CapsuleCollider attackCollider;
+    [ReadOnly, SerializeField] private int enemiesHitPerDash;
 
     [Header("Dashing")]
     [SerializeField] private float dashForce;
@@ -26,9 +28,6 @@ public class Dashing : MonoBehaviour
     [SerializeField] private bool disableGravity;
     [SerializeField] private bool resetVelocity;
     [ReadOnly, SerializeField] private Transform forwardTransform;
-
-    [Header("Attack detection")]
-    [SerializeField] private CapsuleCollider attackCollider;
 
     [Header("Cooldown")]
     [SerializeField] private float dashCooldown;
@@ -107,6 +106,18 @@ public class Dashing : MonoBehaviour
     {
         collisionObject.layer = LayerMask.NameToLayer(layerName: "Player");
         attackCollider.enabled = false;
+
+        if(enemiesHitPerDash == 2)
+        {
+            // Double Dash
+            weaponManager.scoreManager.AddScoreType(scoreType: ScoreManger.ScoreType.DoubleDash);
+        }
+        else if(enemiesHitPerDash >= 3)
+        {
+            // Triple Dash
+            weaponManager.scoreManager.AddScoreType(scoreType: ScoreManger.ScoreType.TripleDash);
+        }
+        enemiesHitPerDash = 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -114,6 +125,7 @@ public class Dashing : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             weaponManager.HitEnemy(hitType: HitType.Dash, enemyGameObject: other.gameObject);
+            enemiesHitPerDash++;
         }
     }
 }

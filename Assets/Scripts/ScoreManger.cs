@@ -34,7 +34,6 @@ public class ScoreManger : MonoBehaviour
 
     [Header("Trick: Full Arsenal")]
     [ReadOnly, SerializeField] private List<ScoreType> lastThreeHits;
-    [SerializeField]private WinChecker winChecker;
 
     private void Start()
     {
@@ -55,6 +54,7 @@ public class ScoreManger : MonoBehaviour
     private void ResetComboValues()
     {
         scoreTypeValues.Clear();
+        textComboList.text = "";
         currentMultiplier = 1;
         currentComboScore = 0;
     }
@@ -113,6 +113,12 @@ public class ScoreManger : MonoBehaviour
         comboIsCounting = false;
     }
 
+    public void AddScoreType(ScoreType scoreType)
+    {
+        AddToLastThreeHits(scoreType: scoreType);
+        AddScoreToList(scoreType: scoreType);
+    }
+
     public void HitToScore(HitType hitType)
     {
         switch (hitType)
@@ -120,16 +126,13 @@ public class ScoreManger : MonoBehaviour
             case HitType.UNDEFINED:
                 break;
             case HitType.Sword:
-                AddScoreToList(scoreType: ScoreType.Sword);
-                AddToLastThreeHits(scoreType: ScoreType.Sword);
+                AddScoreType(scoreType: ScoreType.Sword);
                 break;
             case HitType.Kunai:
-                AddScoreToList(scoreType: ScoreType.Kunai);
-                AddToLastThreeHits(scoreType: ScoreType.Kunai);
+                AddScoreType(scoreType: ScoreType.Kunai);
                 break;
             case HitType.Dash:
-                AddScoreToList(scoreType: ScoreType.Dash);
-                AddToLastThreeHits(scoreType: ScoreType.Dash);                
+                AddScoreType(scoreType: ScoreType.Dash);
                 break;
             case HitType.Smokebomb:
                 break;
@@ -138,7 +141,6 @@ public class ScoreManger : MonoBehaviour
             default:
                 break;
         }
-        winChecker.EnemyKilled();
     }
 
     private void AddToLastThreeHits(ScoreType scoreType)
@@ -147,6 +149,8 @@ public class ScoreManger : MonoBehaviour
             lastThreeHits.RemoveAt(0);
 
         lastThreeHits.Add(item: scoreType);
+
+        TestForBonus();
     }
 
     private void AddScoreToList(ScoreType scoreType)
@@ -193,8 +197,14 @@ public class ScoreManger : MonoBehaviour
             case ScoreType.Hattrick:
                 scoreCalcDummy = 150;
                 break;
-            case ScoreType.Full_Arsenal:
-                scoreCalcDummy = 200;
+            case ScoreType.FullArsenal:
+                scoreCalcDummy = 100;
+                break;
+            case ScoreType.DoubleDash:
+                scoreCalcDummy = 120;
+                break;
+            case ScoreType.TripleDash:
+                scoreCalcDummy = 150;
                 break;
             default:
                 break;
@@ -222,7 +232,6 @@ public class ScoreManger : MonoBehaviour
             }
         }
 
-
         TestForBonus();
     }
 
@@ -246,7 +255,7 @@ public class ScoreManger : MonoBehaviour
             lastThreeHits[1] != lastThreeHits[2])
         {
             ResetLastThreeHits();
-            AddScoreToList(scoreType: ScoreType.Full_Arsenal);
+            AddScoreToList(scoreType: ScoreType.FullArsenal);
         }
     }
 
@@ -270,6 +279,8 @@ public class ScoreManger : MonoBehaviour
         Sword,
         Dash,
         Hattrick,
-        Full_Arsenal,
+        FullArsenal,
+        DoubleDash,
+        TripleDash,
     }
 }
