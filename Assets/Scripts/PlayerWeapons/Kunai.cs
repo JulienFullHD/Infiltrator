@@ -9,6 +9,7 @@ public class Kunai : MonoBehaviour
     [SerializeField] private Material material;
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private PlayerWeaponsManager weaponManager;
+    private Vector3 LastPos;
 
     public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
@@ -16,6 +17,25 @@ public class Kunai : MonoBehaviour
         meshRenderer.material = new Material(material);
         rb.AddForce(transform.forward * _launchSpeed, ForceMode.Impulse);
         rb.freezeRotation = true;
+    }
+
+    void FixedUpdate()
+    {
+        if (Physics.Linecast(transform.position, LastPos,out RaycastHit collision))
+        {
+            if (collision.transform.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log(collision.transform.gameObject.name);
+                weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.transform.gameObject);
+                Debug.Log($"KUNAI HIT: {collision.transform.gameObject.name}");
+
+                rb.velocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+            }
+        }
+        LastPos = transform.position;
+
     }
 
     private void OnCollisionEnter(Collision collision)

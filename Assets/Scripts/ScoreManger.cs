@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,6 +34,7 @@ public class ScoreManger : MonoBehaviour
 
     [Header("Trick: Full Arsenal")]
     [ReadOnly, SerializeField] private List<ScoreType> lastThreeHits;
+    [SerializeField]private WinChecker winChecker;
 
     private void Start()
     {
@@ -138,6 +138,7 @@ public class ScoreManger : MonoBehaviour
             default:
                 break;
         }
+        winChecker.EnemyKilled();
     }
 
     private void AddToLastThreeHits(ScoreType scoreType)
