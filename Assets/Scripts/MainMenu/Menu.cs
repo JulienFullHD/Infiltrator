@@ -14,7 +14,7 @@ public class Menu : MonoBehaviour
         turntable.ResetRotation();
         isOpen = true;
         gameObject.SetActive(true);
-        CameraMovePositions.Instance.MoveCam(cameraPos.position);
+        CameraMovePositions.Instance.MoveCam(cameraPos.position, cameraPos.eulerAngles);
     }
     public void Close()
     {
