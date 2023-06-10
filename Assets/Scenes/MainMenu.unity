@@ -823,7 +823,7 @@ GameObject:
   - component: {fileID: 89556822}
   - component: {fileID: 89556823}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: TurntableCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2387,6 +2387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuName: Level 2
   cameraPos: {fileID: 1984099080}
+  turntable: {fileID: 447964635}
   isOpen: 0
 --- !u!114 &218688022
 MonoBehaviour:
@@ -2801,6 +2802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuName: CreditsMenu
   cameraPos: {fileID: 850990526}
+  turntable: {fileID: 89556823}
   isOpen: 0
 --- !u!114 &287722834
 MonoBehaviour:
@@ -3573,7 +3575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364154160}
   m_LocalRotation: {x: -0.016572442, y: -0.9812238, z: 0.16490255, w: -0.09865239}
-  m_LocalPosition: {x: 0.14999962, y: 4.01, z: 6.39}
+  m_LocalPosition: {x: 1.3, y: 4.01, z: 6.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4134,7 +4136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384188561}
   m_LocalRotation: {x: -0.016572442, y: -0.9812238, z: 0.16490255, w: -0.09865239}
-  m_LocalPosition: {x: 0.14999962, y: 4.01, z: 6.39}
+  m_LocalPosition: {x: 1.3, y: 4.01, z: 6.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4681,7 +4683,7 @@ GameObject:
   - component: {fileID: 447964634}
   - component: {fileID: 447964635}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: TurntableLevel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6736,6 +6738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuName: Level 1
   cameraPos: {fileID: 1521841909}
+  turntable: {fileID: 1564168118}
   isOpen: 0
 --- !u!114 &693711914
 MonoBehaviour:
@@ -8714,7 +8717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850990525}
   m_LocalRotation: {x: -0.016572442, y: -0.9812238, z: 0.16490255, w: -0.09865239}
-  m_LocalPosition: {x: 0.14999962, y: 4.01, z: 6.39}
+  m_LocalPosition: {x: 1.3, y: 4.01, z: 6.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9514,7 +9517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971975208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: 0, z: 0}
+  m_LocalPosition: {x: -30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9841,6 +9844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuName: MainMenu
   cameraPos: {fileID: 384188562}
+  turntable: {fileID: 1825345088}
   isOpen: 0
 --- !u!1 &996190619
 GameObject:
@@ -9885,7 +9889,7 @@ GameObject:
   - component: {fileID: 1008257641}
   - component: {fileID: 1008257642}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: TurntableSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13469,7 +13473,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f177d72549cddd48aad42d447007b7a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -14465,7 +14469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521841908}
   m_LocalRotation: {x: -0.016572442, y: -0.9812238, z: 0.16490255, w: -0.09865239}
-  m_LocalPosition: {x: 0.14999962, y: 4.01, z: 6.39}
+  m_LocalPosition: {x: 1.3, y: 4.01, z: 6.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14519,7 +14523,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f177d72549cddd48aad42d447007b7a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -14985,7 +14989,7 @@ GameObject:
   - component: {fileID: 1564168117}
   - component: {fileID: 1564168118}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: TurntableLevel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15049,7 +15053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564630691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 0}
+  m_LocalPosition: {x: 30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15382,7 +15386,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f177d72549cddd48aad42d447007b7a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -16709,7 +16713,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f177d72549cddd48aad42d447007b7a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -16775,6 +16779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuName: SettingsMenu
   cameraPos: {fileID: 364154161}
+  turntable: {fileID: 1008257642}
   isOpen: 0
 --- !u!114 &1738509257
 MonoBehaviour:
@@ -18062,7 +18067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823817476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: 0}
+  m_LocalPosition: {x: 60, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18082,7 +18087,7 @@ GameObject:
   - component: {fileID: 1825345087}
   - component: {fileID: 1825345088}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: TurntableMainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18502,7 +18507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860339044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40, y: 0, z: 0}
+  m_LocalPosition: {x: -60, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19376,7 +19381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984099079}
   m_LocalRotation: {x: -0.016572442, y: -0.9812238, z: 0.16490255, w: -0.09865239}
-  m_LocalPosition: {x: 0.14999962, y: 4.01, z: 6.39}
+  m_LocalPosition: {x: 1.3, y: 4.01, z: 6.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21631,7 +21636,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cfeff1d67ecb92245941b957cebd290e, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f177d72549cddd48aad42d447007b7a, type: 2}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0

@@ -20,6 +20,12 @@ public class Turntable : MonoBehaviour
         }
     }
 
+    public void ResetRotation()
+    {
+        rotate.y = 0;
+        transform.localEulerAngles = rotate;
+    }
+
     private void Update()
     {
         if (rotationIsLocal)
