@@ -158,7 +158,8 @@ public class PlayerWeaponsManager : MonoBehaviour
         
         if(hitType != HitType.Dash && hitType != HitType.Smokebomb)
         {
-            enemyGameObject.transform.parent.GetComponent<AI_HPSystem>().TakeDamage(1);
+            if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))aI_HPSystem.TakeDamage(1);
+            
             scoreManager.HitToScore(hitType: hitType);
         }
         
