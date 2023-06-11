@@ -12,6 +12,7 @@ public class AI_HPSystem : MonoBehaviour
         HitPoints -= _damage;
         if(HitPoints <= 0)
         {
+            LevelManager.Instance.EnemyCount--;
             GameObject.Destroy(this.gameObject);
         }
     }
