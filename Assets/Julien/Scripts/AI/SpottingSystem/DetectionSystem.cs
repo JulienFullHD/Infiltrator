@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class DetectionSystem : MonoBehaviour
@@ -11,6 +12,8 @@ public class DetectionSystem : MonoBehaviour
     public bool PlayerInVision = false;
     private int sightCounter = 0;
     [SerializeField]private List<VisionCollider> VisionCollider = new List<VisionCollider>();
+    [SerializeField]private Slider spottingSlider;
+    [SerializeField]private Image fillImage;
 
     private void Update() 
     {
@@ -49,10 +52,12 @@ public class DetectionSystem : MonoBehaviour
             alpha = SusMeter;
         }else
         {
+            fillImage.color = Color.red;
             alpha = 100;
         }
         //SI_System.CreateIndicator(this.transform,alpha);
         SusMeter += _susRatio;
+        spottingSlider.value = SusMeter;
         
     }
 

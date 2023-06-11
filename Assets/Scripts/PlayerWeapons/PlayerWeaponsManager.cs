@@ -92,7 +92,7 @@ public class PlayerWeaponsManager : MonoBehaviour
         {
             for (int i = 0; i < swordHits.Length; i++)
             {
-                HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);
+                HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);   
             }
         }
     }
@@ -142,6 +142,7 @@ public class PlayerWeaponsManager : MonoBehaviour
            hitType == HitType.Sword ||
            hitType == HitType.Dash)
         {
+            Debug.Log(enemyGameObject.transform.parent.name);
             if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))aI_HPSystem.TakeDamage(1);
             
             scoreManager.HitToScore(hitType: hitType);

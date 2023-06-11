@@ -1,15 +1,25 @@
 //author Julien Kelch
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AIPatrollState : AIBaseState
 {
     private int currIndex = 0;
+    private float startWaitTime = 5;
+    private float waitTime = 0;
+    private bool wait;
     public override void EnterState(AIStateManager ai)
     {
-        ai.text.SetText("Partoll to Waypoint " + currIndex);
+        ai.Text.SetText("Partoll to Waypoint " + currIndex);
         if(ai.PatrollPoints.Count > 0)
         {
             ai.destinationSetter.target = ai.PatrollPoints[currIndex];
+            ai.Animator.SetFloat("Speed", 1);
+        }else
+        {
+            ai.destinationSetter.target = ai.transform;
+            ai.Animator.SetFloat("Speed", 0);
         }
     }
 
@@ -19,8 +29,23 @@ public class AIPatrollState : AIBaseState
         {
             if(ai.richAI.reachedDestination)
             {
-                ai.destinationSetter.target = GetNextCheckpoint(ai);
-                ai.text.SetText("Partoll to Waypoint " + currIndex);
+                if(!wait)
+                {
+                    waitTime = startWaitTime;
+                    wait = true;
+                    ai.Animator.SetFloat("Speed", 0);
+                    ai.Visual.localPosition = Vector3.zero;
+                }else
+                {
+                    waitTime -= Time.deltaTime;
+                    if(waitTime <= 0)
+                    {
+                        ai.destinationSetter.target = GetNextCheckpoint(ai);
+                        ai.Text.SetText("Partoll to Waypoint " + currIndex);
+                        ai.Animator.SetFloat("Speed", 1);
+                        wait = false;
+                    }
+                }
             }
         }
         
@@ -35,7 +60,6 @@ public class AIPatrollState : AIBaseState
     {
         
     }
-
     private Transform GetNextCheckpoint(AIStateManager ai)
     {
         currIndex++;

@@ -16,18 +16,20 @@ public class AIStateManager : MonoBehaviour
     public Transform Player;
     public Transform Head;
     public LayerMask IgnoreLayer;
-    [HideInInspector]public AIDestinationSetter destinationSetter;
-    [HideInInspector]public RichAI richAI;
+    public AIDestinationSetter destinationSetter;
+    public RichAI richAI;
    
-    public Transform moveTarget;
-    public TMP_Text text;
+    public Transform MoveTarget;
+    public TMP_Text Text;
+    public Animator Animator;
+    public Transform Visual;
 
     void Start()
     {
         CurrentState = PatrollState;
         CurrentState.EnterState(this);
-        destinationSetter = this.GetComponent<AIDestinationSetter>();
-        richAI = this.GetComponent<RichAI>();
+        //destinationSetter = this.GetComponent<AIDestinationSetter>();
+        //richAI = this.GetComponent<RichAI>();
     }
 
     // Update is called once per frame

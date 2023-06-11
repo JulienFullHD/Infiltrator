@@ -1,7 +1,7 @@
 //author Julien Kelch
 using UnityEngine;
 
-public class AIEngageState : AIBaseState
+public class AISleepState : AIBaseState
 {
     public override void EnterState(AIStateManager ai)
     {
