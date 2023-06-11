@@ -25,9 +25,7 @@ public class Kunai : MonoBehaviour
         {
             if (collision.transform.gameObject.CompareTag("Enemy"))
             {
-                Debug.Log(collision.transform.gameObject.name);
                 weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.transform.gameObject);
-                Debug.Log($"KUNAI HIT: {collision.transform.gameObject.name}");
 
                 rb.velocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;

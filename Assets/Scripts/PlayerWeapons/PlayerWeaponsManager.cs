@@ -19,20 +19,6 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private Transform kunaiLaunchLocation;
     [SerializeField] private float kunaiLaunchSpeed; //Reminder to change rigidbody to Continuous
     [SerializeField] private int kunaiAmount;
-    //[SerializeField] private SphereCollider collectionTrigger;
-
-    //[Header("Dash Settings")] //MOVE INTO MOVEMENT SCRIPT
-    //[SerializeField] private Dashing dashManager;
-    //[SerializeField] private float dashAttackCooldownMS;
-    //[ReadOnly, SerializeField] private bool canDash;
-    //[SerializeField] private float dashMaxDistance;
-    //[SerializeField] private float dashInterpDurationMS; //For position interpolation
-    //[SerializeField] private Vector3 dashMoveHitbox;
-    //[SerializeField] private Vector3 dashAttackHitbox;
-    //[SerializeField] private float calculatedDistance;
-    //[SerializeField] private float speedAfterDash;
-    //[SerializeField] private Rigidbody rb;
-    //[ReadOnly, SerializeField] private RaycastHit[] dashHits;
 
     [Header("Smokebomb Settings")]
     [SerializeField] private GameObject smokebombPrefab;
@@ -42,14 +28,11 @@ public class PlayerWeaponsManager : MonoBehaviour
     [ReadOnly, SerializeField] private bool canThrowSmokebomb;
 
     [Header("Score Manager")]
-    [SerializeField] private ScoreManger scoreManager;
+    [SerializeField] public ScoreManger scoreManager;
 
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
-    [ReadOnly, SerializeField] private Matrix4x4 rotationMatrix;
-    [ReadOnly, SerializeField] private Vector3 dashStartPos;
-    [ReadOnly, SerializeField] private Vector3 dashEndPos;
 
     private void Awake()
     {
@@ -109,8 +92,7 @@ public class PlayerWeaponsManager : MonoBehaviour
         {
             for (int i = 0; i < swordHits.Length; i++)
             {
-                Debug.Log($"Hit: {swordHits[i].name}");
-                HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);
+                HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);   
             }
         }
     }
@@ -154,11 +136,15 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
-        Debug.Log(hitType);
+        Debug.Log($"HitEnemy({hitType}, {enemyGameObject.name})");
         
-        if(hitType != HitType.Dash && hitType != HitType.Smokebomb)
+        if(hitType == HitType.Kunai ||
+           hitType == HitType.Sword ||
+           hitType == HitType.Dash)
         {
-            enemyGameObject.transform.parent.GetComponent<AI_HPSystem>().TakeDamage(1);
+            Debug.Log(enemyGameObject.transform.parent.name);
+            if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))aI_HPSystem.TakeDamage(1);
+            
             scoreManager.HitToScore(hitType: hitType);
         }
         
