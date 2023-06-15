@@ -58,7 +58,6 @@ public class DetectionSystem : MonoBehaviour
         //SI_System.CreateIndicator(this.transform,alpha);
         SusMeter += _susRatio;
         spottingSlider.value = SusMeter;
-        
     }
 
     public float GetSusMeter()
