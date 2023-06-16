@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -5,6 +6,27 @@ using UnityEngine;
 
 public class UserSettings : MonoBehaviour
 {
+    [ReadOnly,SerializeField] public static UserSettings Instance;
+    private void Awake()
+    {
+        if(Instance is not null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this);
+
+        if(sensitivityHorizontal == 0)
+        {
+            sensitivityHorizontal = 1;
+        }
+        if(sensitivityVertical == 0)
+        {
+            sensitivityVertical = 1;
+        }
+    }
+
     public void LoadAllPrefs()
     {
         LoadPrefsAudio();
@@ -91,9 +113,9 @@ public class UserSettings : MonoBehaviour
     #region Graphics
     public enum QualityLevels
     {
-        High = 3,
-        Medium = 2,
-        Low = 1
+        High = 0,
+        Medium = 1,
+        Low = 2
     }
     private QualityLevels graphicsQuality;
 
@@ -106,15 +128,15 @@ public class UserSettings : MonoBehaviour
         PlayerPrefs.SetInt("GraphicsQuality", (int)graphicsQuality);
     }
 
-    public QualityLevels GraphicsQuality
+    public int GraphicsQuality
     {
         get
         {
-            return graphicsQuality;
+            return (int)graphicsQuality;
         }
         set
         {
-            graphicsQuality = value;
+            graphicsQuality = (QualityLevels)value;
         }
     }
     #endregion
@@ -155,6 +177,17 @@ public class UserSettings : MonoBehaviour
             sensitivityVertical = value;
         }
     }
+    public string SensitivityVerticalString
+    {
+        get
+        {
+            return SensitivityVertical.ToString();
+        }
+        set
+        {
+            SensitivityVertical = Convert.ToInt32(value);
+        }
+    }
     public float SensitivityHorizontal
     {
         get
@@ -164,6 +197,17 @@ public class UserSettings : MonoBehaviour
         set
         {
             sensitivityHorizontal = value;
+        }
+    }
+    public string SensitivityHorizontalString
+    {
+        get
+        {
+            return SensitivityHorizontal.ToString();
+        }
+        set
+        {
+            SensitivityHorizontal = Convert.ToInt32(value);
         }
     }
     public KeyCode KeybindKunai

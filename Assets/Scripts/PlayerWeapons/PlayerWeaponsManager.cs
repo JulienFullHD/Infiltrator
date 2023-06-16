@@ -38,7 +38,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         kunaiAmount = 300;
         canAttackSword = true;
-        canThrowSmokebomb = true;
+        canThrowSmokebomb = true;        
     }
 
     private void Update()
