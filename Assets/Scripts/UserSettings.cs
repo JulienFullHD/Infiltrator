@@ -17,6 +17,7 @@ public class UserSettings : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this);
 
+        LoadAllPrefs();
         if(sensitivityHorizontal == 0)
         {
             sensitivityHorizontal = 1;
@@ -244,4 +245,9 @@ public class UserSettings : MonoBehaviour
         }
     }
     #endregion
+
+    private void OnApplicationQuit()
+    {
+        SaveAllPrefs();
+    }
 }
