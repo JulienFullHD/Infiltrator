@@ -46,7 +46,16 @@ public class PlayerMovement : MonoBehaviour
     [ReadOnly, SerializeField] public bool isWallrunning;
 
 
-    private void Start()
+    //Wwise
+    private bool FootstepIsPlaying = false;
+    private float lastFootstepTime = 0;
+    [Header("Wwise Events")]
+    public AK.Wwise.Event myFootstep;
+
+
+
+
+private void Start()
     {
         canJump = true;
     }
@@ -56,7 +65,17 @@ public class PlayerMovement : MonoBehaviour
         GroundCheck();
         Inputs();
         SpeedControl();
-        DragControl();        
+        DragControl();
+        if (rb.velocity.magnitude > 0.3 && isGrounded)
+        {
+            if (!FootstepIsPlaying && lastFootstepTime > 0.2)
+            {
+                myFootstep.Post(gameObject);
+                lastFootstepTime = 0;
+            }
+            lastFootstepTime += Time.deltaTime;
+            FootstepIsPlaying = false;
+        }
     }   
 
     private void GroundCheck()
@@ -130,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             rb.velocity = new Vector3(limitedVelocity.x, rb.velocity.y, limitedVelocity.z);
+
         }
 
         //Vertical
@@ -139,9 +159,11 @@ public class PlayerMovement : MonoBehaviour
 
             if (flatVelocity.magnitude > speedToApply)
             {
-                limitedVelocity = flatVelocity.normalized * speedToApply;
+                limitedVelocity = flatVelocity.normalized * speedToApply;              
 
                 rb.velocity = new Vector3(rb.velocity.x, limitedVelocity.y, rb.velocity.z); ;
+
+   
             }
         }
     }

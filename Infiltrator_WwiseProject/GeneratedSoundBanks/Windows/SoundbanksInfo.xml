@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{23EB3BB1-C83B-FF98-EE6A-6DB2B21530CC}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="13638431" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_Concrete3.wav</ShortName>
+					<CachePath>SFX/FS_Concrete3_B175DA7A.wem</CachePath>
+				</File>
+				<File Id="68473811" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>KatanaKill2.wav</ShortName>
+					<CachePath>SFX/KatanaKill2_EB6D0231.wem</CachePath>
+				</File>
+				<File Id="465842787" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience Pimped.wav</ShortName>
+					<CachePath>SFX/Ambience Pimped_9E3C39AB.wem</CachePath>
+				</File>
+				<File Id="889603467" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_Concrete1.wav</ShortName>
+					<CachePath>SFX/FS_Concrete1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="908125092" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_Concrete2.wav</ShortName>
+					<CachePath>SFX/FS_Concrete2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="930238905" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>DashPlaceholder.wav</ShortName>
+					<CachePath>SFX/DashPlaceholder_B90668D3.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1942692385" Name="Dash" DurationType="OneShot" DurationMin="0.54789585" DurationMax="0.54789585">
+					<MediaRefs>
+						<MediaRef Id="930238905"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1010055213" Name="Enemy_Hit" DurationType="OneShot" DurationMin="1.8932657" DurationMax="2.1263468">
+					<MediaRefs>
+						<MediaRef Id="68473811"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4079089048" Name="Play_AmbienceWind" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="465842787"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2265754055" Name="Play_Footsteps_Concrete" DurationType="OneShot" DurationMin="0.1621347" DurationMax="0.2598589">
+					<MediaRefs>
+						<MediaRef Id="13638431"/>
+						<MediaRef Id="889603467"/>
+						<MediaRef Id="908125092"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5C55FE41-D77D-9392-106A-ABBD7E536CAE}</FileHash>
+</SoundBanksInfo>

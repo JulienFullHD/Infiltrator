@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AF1F9481-A54E-451B-8519-0A7261121FF1}" SchemaVersion="110">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{AF1F9481-A54E-451B-8519-0A7261121FF1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{23084D42-69F8-47DF-8F86-B3EC1BFD68EE}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps_Concrete" ID="{85FB20D5-EEC5-476F-B0F9-57A01903A619}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dash" ID="{1129B7A0-5F3F-4D48-A2D9-F332F8187219}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

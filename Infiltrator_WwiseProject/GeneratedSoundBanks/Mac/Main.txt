@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1010055213	Enemy_Hit			\Default Work Unit\Enemy_Hit	
+	1942692385	Dash			\Default Work Unit\Movement\Dash	
+	2265754055	Play_Footsteps_Concrete			\Default Work Unit\Movement\Footsteps\Play_Footsteps_Concrete	
+	4079089048	Play_AmbienceWind			\Default Work Unit\Ambience\Play_AmbienceWind	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	13638431	FS_Concrete3	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Concrete3_B175DA7A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\FS_Concrete\FS_Concrete3		45848
+	68473811	KatanaKill1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\KatanaKill2_EB6D0231.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Kill\KatanaKill1		390820
+	465842787	AmbienceWind	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Ambience Pimped_9E3C39AB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbienceWind		10203552
+	889603467	FS_Concrete1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Concrete1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\FS_Concrete\FS_Concrete1		35348
+	908125092	FS_Concrete2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Concrete2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\FS_Concrete\FS_Concrete2		33096
+	930238905	Dash	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DashPlaceholder_B90668D3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Dash		105292
+

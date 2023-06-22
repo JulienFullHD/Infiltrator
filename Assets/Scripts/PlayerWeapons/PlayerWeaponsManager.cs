@@ -34,6 +34,10 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
 
+    [Header("Wwise Events")]
+    public AK.Wwise.Event EnemyKill;
+    
+
     private void Awake()
     {
         kunaiAmount = 300;
@@ -90,6 +94,7 @@ public class PlayerWeaponsManager : MonoBehaviour
         Debug.Log($"Sword hit {swordHits.Length} enemies");
         if(swordHits.Length > 0)
         {
+            EnemyKill.Post(gameObject);
             for (int i = 0; i < swordHits.Length; i++)
             {
                 HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);   
