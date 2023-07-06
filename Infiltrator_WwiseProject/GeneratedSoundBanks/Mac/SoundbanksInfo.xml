@@ -22,21 +22,57 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{23EB3BB1-C83B-FF98-EE6A-6DB2B21530CC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F677E5B6-3EF5-9ED2-8E6A-1BA522AA2221}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="9922241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metal1.wav</ShortName>
+					<CachePath>SFX/FS_player_metal1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="13638431" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Concrete3.wav</ShortName>
 					<CachePath>SFX/FS_Concrete3_B175DA7A.wem</CachePath>
+				</File>
+				<File Id="19314398" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Grunt_shot.wav</ShortName>
+					<CachePath>SFX/Grunt_shot_CE182C00.wem</CachePath>
+				</File>
+				<File Id="58810018" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump.wav</ShortName>
+					<CachePath>SFX/jump_10C4C929.wem</CachePath>
 				</File>
 				<File Id="68473811" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>KatanaKill2.wav</ShortName>
 					<CachePath>SFX/KatanaKill2_EB6D0231.wem</CachePath>
 				</File>
+				<File Id="86246821" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metal3.wav</ShortName>
+					<CachePath>SFX/FS_player_metal3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="174831135" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metal2.wav</ShortName>
+					<CachePath>SFX/FS_player_metal2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="465842787" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience Pimped.wav</ShortName>
-					<CachePath>SFX/Ambience Pimped_9E3C39AB.wem</CachePath>
+					<CachePath>SFX/Ambience Pimped_2E60FC68.wem</CachePath>
+				</File>
+				<File Id="599743113" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kunai.wav</ShortName>
+					<CachePath>SFX/kunai_10C4C929.wem</CachePath>
+				</File>
+				<File Id="635522304" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump2.wav</ShortName>
+					<CachePath>SFX/jump2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="808142375" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>kunai1.wav</ShortName>
+					<CachePath>SFX/kunai1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="885646893" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jump1.wav</ShortName>
+					<CachePath>SFX/jump1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="889603467" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Concrete1.wav</ShortName>
@@ -46,20 +82,30 @@
 					<ShortName>FS_Concrete2.wav</ShortName>
 					<CachePath>SFX/FS_Concrete2_10C4C929.wem</CachePath>
 				</File>
-				<File Id="930238905" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DashPlaceholder.wav</ShortName>
-					<CachePath>SFX/DashPlaceholder_B90668D3.wem</CachePath>
+				<File Id="955289616" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metal.wav</ShortName>
+					<CachePath>SFX/FS_player_metal_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1044589429" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>dash.wav</ShortName>
+					<CachePath>SFX/dash_EA35EB72.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1942692385" Name="Dash" DurationType="OneShot" DurationMin="0.54789585" DurationMax="0.54789585">
-					<MediaRefs>
-						<MediaRef Id="930238905"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="1010055213" Name="Enemy_Hit" DurationType="OneShot" DurationMin="1.8932657" DurationMax="2.1263468">
 					<MediaRefs>
 						<MediaRef Id="68473811"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="501485854" Name="Grunt_burst" DurationType="OneShot" DurationMin="0.4568095" DurationMax="0.4568095">
+					<MediaRefs>
+						<MediaRef Id="19314398"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1445849350" Name="Kunai_Throw" DurationType="OneShot" DurationMin="0.23270783" DurationMax="0.31152612">
+					<MediaRefs>
+						<MediaRef Id="599743113"/>
+						<MediaRef Id="808142375"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4079089048" Name="Play_AmbienceWind" DurationType="Infinite">
@@ -74,8 +120,28 @@
 						<MediaRef Id="908125092"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2273641359" Name="Play_Footsteps_Metal" DurationType="OneShot" DurationMin="0.16449301" DurationMax="0.19292316">
+					<MediaRefs>
+						<MediaRef Id="9922241"/>
+						<MediaRef Id="86246821"/>
+						<MediaRef Id="174831135"/>
+						<MediaRef Id="955289616"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2394582229" Name="Player_dash" DurationType="OneShot" DurationMin="0.7893697" DurationMax="0.8608138">
+					<MediaRefs>
+						<MediaRef Id="1044589429"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1305133589" Name="Player_jump" DurationType="OneShot" DurationMin="0.22676109" DurationMax="0.27294207">
+					<MediaRefs>
+						<MediaRef Id="58810018"/>
+						<MediaRef Id="635522304"/>
+						<MediaRef Id="885646893"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7AD60E5B-7523-EFF1-7659-FC217848255B}</FileHash>
+	<FileHash>{67DAA30D-C30A-507E-5AF9-004D5D058CA3}</FileHash>
 </SoundBanksInfo>

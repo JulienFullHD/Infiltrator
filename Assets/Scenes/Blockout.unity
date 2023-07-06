@@ -281,6 +281,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -10398,6 +10404,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -13777,6 +13789,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -17487,6 +17505,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -20562,6 +20586,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -21614,6 +21644,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -23722,6 +23758,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -26000,6 +26042,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1458151353707714230, guid: 5a510215b0823ce4f9102adff1633e16,
         type: 3}
+      propertyPath: myKunai.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2ee4c829a6a71ca4bbd4a1c0e17dfd64,
+        type: 2}
+    - target: {fileID: 1458151353707714230, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
       propertyPath: EnemyKill.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: e18c9c2479368d14cbe6df00f390f0c4,
@@ -26032,9 +26080,15 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1458151353933140078, guid: 5a510215b0823ce4f9102adff1633e16,
         type: 3}
+      propertyPath: myJump.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f677ad4a682a864386a28579ce8369d,
+        type: 2}
+    - target: {fileID: 1458151353933140078, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
       propertyPath: myFootstep.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: 7e3757e6820d4f749a1a6245f87766b0,
+      objectReference: {fileID: 11400000, guid: ad114d63046b29743a491029da764a5e,
         type: 2}
     - target: {fileID: 1458151353933140079, guid: 5a510215b0823ce4f9102adff1633e16,
         type: 3}
@@ -26304,6 +26358,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -34000,6 +34060,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -35133,6 +35199,12 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -48691,6 +48763,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -52694,6 +52772,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -52838,6 +52922,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -53801,6 +53891,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -54046,6 +54142,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head
@@ -57354,6 +57456,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517776, guid: 3b4d0525668b9c14380e61ad99bb9376,
+        type: 3}
+      propertyPath: Grunt_shoot.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+        type: 2}
     - target: {fileID: 6698196843874517779, guid: 3b4d0525668b9c14380e61ad99bb9376,
         type: 3}
       propertyPath: Head

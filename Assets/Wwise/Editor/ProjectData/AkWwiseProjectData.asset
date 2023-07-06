@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585141705497726776
+    m_lastTime: -8585129671242017576
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585141705497606672
+    m_lastTime: -8585129671242067615
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -113,9 +113,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Dash
-      guid: a0b729113f5f484da2d9f332f8187219
-      id: 1942692385
+    - name: Combat
+      guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      id: 2764240573
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -123,13 +123,27 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Movement
+      - ElementName: Combat
         ObjectType: 4
-        guid: c38713433a6ccc4ea146efbc335239d9
-      - ElementName: Dash
-        ObjectType: 3
-        guid: a0b729113f5f484da2d9f332f8187219
-      Path: Events\Default Work Unit\Movement\Dash
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      Path: Events\Default Work Unit\Combat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Enemies
+      guid: 89c1dce8a0af8849a0e64dea5079bd0e
+      id: 2242381963
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: 89c1dce8a0af8849a0e64dea5079bd0e
+      Path: Events\Default Work Unit\Enemies
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -143,10 +157,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
       - ElementName: Enemy_Hit
         ObjectType: 3
         guid: fc08b6898e629a47baf0d9b7827cdc0d
-      Path: Events\Default Work Unit\Enemy_Hit
+      Path: Events\Default Work Unit\Combat\Enemy_Hit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -167,6 +184,46 @@ MonoBehaviour:
         ObjectType: 4
         guid: e1a786779f6e2043844589eae31c8633
       Path: Events\Default Work Unit\Movement\Footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Grunt_burst
+      guid: dc0264f6fdf7cf4a85cce4988dce216e
+      id: 501485854
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: 89c1dce8a0af8849a0e64dea5079bd0e
+      - ElementName: Grunt_burst
+        ObjectType: 3
+        guid: dc0264f6fdf7cf4a85cce4988dce216e
+      Path: Events\Default Work Unit\Enemies\Grunt_burst
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Kunai_Throw
+      guid: 10d40d7e79a4954a9107d3a198b92c5f
+      id: 1445849350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Kunai_Throw
+        ObjectType: 3
+        guid: 10d40d7e79a4954a9107d3a198b92c5f
+      Path: Events\Default Work Unit\Combat\Kunai_Throw
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -230,6 +287,89 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Footsteps_Metal
+      guid: b4e76d0fbc670e4ebb3b0a2e6ad3f689
+      id: 2273641359
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Footsteps
+        ObjectType: 4
+        guid: e1a786779f6e2043844589eae31c8633
+      - ElementName: Play_Footsteps_Metal
+        ObjectType: 3
+        guid: b4e76d0fbc670e4ebb3b0a2e6ad3f689
+      Path: Events\Default Work Unit\Movement\Footsteps\Play_Footsteps_Metal
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_dash
+      guid: a0b729113f5f484da2d9f332f8187219
+      id: 2394582229
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Player_dash
+        ObjectType: 3
+        guid: a0b729113f5f484da2d9f332f8187219
+      Path: Events\Default Work Unit\Movement\Player_dash
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_jump
+      guid: 279fc2a2d213164e8989ccfb837864d6
+      id: 1305133589
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Player_jump
+        ObjectType: 3
+        guid: 279fc2a2d213164e8989ccfb837864d6
+      Path: Events\Default Work Unit\Movement\Player_jump
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Sniper_shot
+      guid: bbdf62b37beead49822d4d89d6231ccb
+      id: 2759914667
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Enemies
+        ObjectType: 4
+        guid: 89c1dce8a0af8849a0e64dea5079bd0e
+      - ElementName: Sniper_shot
+        ObjectType: 3
+        guid: bbdf62b37beead49822d4d89d6231ccb
+      Path: Events\Default Work Unit\Enemies\Sniper_shot
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -287,7 +427,7 @@ MonoBehaviour:
     m_lastTime: -8585147583629246102
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000090000000a0000000b0000000c0000006201000063010000
+  ExpandedWaapiItemIds: 050000000600000008000000090000000a0000000b0000000c0000001a000000200000006201000063010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

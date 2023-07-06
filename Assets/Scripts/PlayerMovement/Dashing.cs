@@ -33,6 +33,7 @@ public class Dashing : MonoBehaviour
     [SerializeField] private float dashCooldown;
     [ReadOnly, SerializeField] private bool canDash;
 
+    //Wwise
     [Header("Wwise Events")]
     public AK.Wwise.Event PlayerDash;
 

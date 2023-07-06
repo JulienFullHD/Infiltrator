@@ -4247,6 +4247,11 @@ MonoBehaviour:
   Weapon: 0
   MagSize: 0
   StartMagSize: 0
+  Grunt_shoot:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 17c972c24018d6847a6a2df06f7972f7,
+      type: 2}
   bullet: {fileID: 8424643758678577342, guid: 9569042b587984d4d9f5989258e14f1b, type: 3}
   Gunpoint: {fileID: 4982390461175117112}
 --- !u!114 &6698196843874517777

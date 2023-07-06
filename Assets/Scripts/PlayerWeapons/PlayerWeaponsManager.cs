@@ -36,6 +36,8 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     [Header("Wwise Events")]
     public AK.Wwise.Event EnemyKill;
+    public AK.Wwise.Event myKunai;
+    public AK.Wwise.Event mySmokebomb;
     
 
     private void Awake()
@@ -108,6 +110,9 @@ public class PlayerWeaponsManager : MonoBehaviour
 
         GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
         smokebomb.GetComponent<Smokebomb>().Init(_launchSpeed: smokebombLaunchSpeed, _weaponManager: this);
+
+        //Wwise
+        mySmokebomb.Post(gameObject);
     }
 
     private void ThrowKunai()
@@ -119,6 +124,9 @@ public class PlayerWeaponsManager : MonoBehaviour
 
             GameObject kunai = Instantiate(original: kunaiPrefab, position: kunaiLaunchLocation.position, rotation: kunaiLaunchLocation.rotation);
             kunai.GetComponent<Kunai>().Init(_launchSpeed: kunaiLaunchSpeed, _weaponManager: this);
+
+            //Wwise
+            myKunai.Post(gameObject);
             
         }        
     }

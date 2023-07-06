@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e972edc4650cd4184cb954987661ac, type: 3}
   m_Name: 1129B7A0-5F3F-4D48-A2D9-F332F8187219
   m_EditorClassIdentifier: 
-  objectName: Dash
-  id: 1942692385
+  objectName: Player_dash
+  id: 2394582229
   guid: 1129B7A0-5F3F-4D48-A2D9-F332F8187219

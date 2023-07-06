@@ -9,6 +9,9 @@ public class AI_Weapon : MonoBehaviour
     [HideInInspector]public float MagSize;
     [HideInInspector]public float StartMagSize;
 
+    //Wwise
+    public AK.Wwise.Event Grunt_shoot;
+
     //WeaponStats
     //AR
     public GameObject bullet;
@@ -77,7 +80,9 @@ public class AI_Weapon : MonoBehaviour
             Bullet.transform.SetParent(Gunpoint);
             Bullet.transform.localPosition = new Vector3(0,0,0);
             Bullet.transform.localRotation = Quaternion.identity;
-            
+
+            Grunt_shoot.Post(gameObject);
+
             //var muzzleFlashEffectIstance = Instantiate(MuzzleFlashEffect) as GameObject;
             //muzzleFlashEffectIstance.transform.SetParent(Gunpoint);
             //muzzleFlashEffectIstance.transform.localPosition = new Vector3(0,0,0);
@@ -87,6 +92,7 @@ public class AI_Weapon : MonoBehaviour
             Bullet.GetComponent<AI_Bullet>().RecieveBulletParameter(Vector3.zero,muzzleVAR,_target,1);
             shootTimerAR = startShootTimerAR;
             MagSize -= 1;
+
         }
         if(MagSize <= 0)
         {

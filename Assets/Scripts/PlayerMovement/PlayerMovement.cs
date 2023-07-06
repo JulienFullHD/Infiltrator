@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     private float lastFootstepTime = 0;
     [Header("Wwise Events")]
     public AK.Wwise.Event myFootstep;
+    public AK.Wwise.Event myJump;
+
 
 
 
@@ -66,9 +68,10 @@ private void Start()
         Inputs();
         SpeedControl();
         DragControl();
-        if (rb.velocity.magnitude > 0.3 && isGrounded)
+        //Wwise
+        if (rb.velocity.magnitude > 0.4 && isGrounded)
         {
-            if (!FootstepIsPlaying && lastFootstepTime > 0.2)
+            if (!FootstepIsPlaying && lastFootstepTime > 0.20)
             {
                 myFootstep.Post(gameObject);
                 lastFootstepTime = 0;
@@ -104,6 +107,7 @@ private void Start()
         {
             canJump = false;
             Jump();
+
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
@@ -192,6 +196,9 @@ private void Start()
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpStrength, ForceMode.Impulse);
+
+        //Wwise
+        myJump.Post(gameObject);
     }
 
     private void ResetJump()

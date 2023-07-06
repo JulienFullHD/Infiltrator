@@ -5,10 +5,14 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{23084D42-69F8-47DF-8F86-B3EC1BFD68EE}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Kunai_throw" ID="{AEBAA2BF-611F-40C1-AAC0-7D7BF152CF07}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps_Concrete" ID="{85FB20D5-EEC5-476F-B0F9-57A01903A619}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Dash" ID="{1129B7A0-5F3F-4D48-A2D9-F332F8187219}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Grunt_burst" ID="{F66402DC-F7FD-4ACF-85CC-E4988DCE216E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_dash" ID="{1129B7A0-5F3F-4D48-A2D9-F332F8187219}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps_Metal" ID="{0F6DE7B4-67BC-4E0E-BB3B-0A2E6AD3F689}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_jump" ID="{A2C29F27-13D2-4E16-8989-CCFB837864D6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

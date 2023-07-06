@@ -13,10 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID DASH = 1942692385U;
         static const AkUniqueID ENEMY_HIT = 1010055213U;
+        static const AkUniqueID GRUNT_BURST = 501485854U;
+        static const AkUniqueID KUNAI_THROW = 1445849350U;
         static const AkUniqueID PLAY_AMBIENCEWIND = 4079089048U;
         static const AkUniqueID PLAY_FOOTSTEPS_CONCRETE = 2265754055U;
+        static const AkUniqueID PLAY_FOOTSTEPS_METAL = 2273641359U;
+        static const AkUniqueID PLAYER_DASH = 2394582229U;
+        static const AkUniqueID PLAYER_JUMP = 1305133589U;
     } // namespace EVENTS
 
     namespace BANKS
