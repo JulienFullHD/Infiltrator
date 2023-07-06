@@ -20,7 +20,9 @@ public class PlayerCamera : MonoBehaviour
         Cursor.visible = false;
 
         if (UserSettings.Instance is null)
+        {
             Debug.LogError("No UserSettings Instance found");
+        }
     }
 
     void Update()
