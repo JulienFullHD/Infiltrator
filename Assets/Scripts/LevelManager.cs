@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CanvasGroup winCanvasGroup; // Fade  in on win
     [SerializeField] private float fadeMaxTime;
     [ReadOnly, SerializeField] private float fadeTimer;
-
+    [SerializeField]private ScoreManger scoreManager;
+    [SerializeField]private LeaderBoard leaderBoard;
+    [SerializeField]private GhostRunner ghostRunner;
+    [SerializeField]private string userName;
     private void Start()
     {
         if(Instance is not null)
@@ -59,6 +63,13 @@ public class LevelManager : MonoBehaviour
         isWon = true;
         winCanvasObject.SetActive(true);
         fadeTimer = 0;
+        ghostRunner.StopRun();
+        Debug.Log(scoreManager.GetScore());
+        //if(ghostRunner._system.GetRun(RecordingType.Last, out Recording run)) leaderBoard.SetLeaderBoardEntry(userName, scoreManager.GetScore(), "NULL");//run.Serialize()
+        //Debug.Log(run.Serialize().ToString().Length);
+        leaderBoard.SetLeaderBoardEntry(userName, scoreManager.GetScore(), "NULL");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
     private void Update()
