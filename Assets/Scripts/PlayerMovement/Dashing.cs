@@ -65,6 +65,7 @@ public class Dashing : MonoBehaviour
         Invoke(nameof(DelayedDashForce), 0.025f);
 
         Invoke(nameof(AllowDash), dashCooldown);
+        AbilityUI.Instance.StartDashCooldown(dashCooldown);
 
         Invoke(nameof(ResetDash), dashDuration);
     }

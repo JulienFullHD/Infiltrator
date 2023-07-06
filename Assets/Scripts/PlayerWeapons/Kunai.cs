@@ -52,6 +52,7 @@ public class Kunai : MonoBehaviour
             weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.gameObject);
         }
 
+        Destroy(gameObject);
         //StartCoroutine(VanishingSequence(5));
     }
 

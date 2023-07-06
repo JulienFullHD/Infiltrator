@@ -6,8 +6,8 @@ using UnityEngine;
 public class PlayerCamera : MonoBehaviour
 {
     [Header("Camera Settings")]
-    [SerializeField] private float sensitivityX;
-    [SerializeField] private float sensitivityY;
+    //[SerializeField] private float sensitivityX; //Replaced by UserSettings
+    //[SerializeField] private float sensitivityY;
     [SerializeField] private Transform flatOrientation;
     [SerializeField] private float xRotation;
     [SerializeField] private float yRotation;
@@ -18,12 +18,17 @@ public class PlayerCamera : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (UserSettings.Instance is null)
+        {
+            Debug.LogError("No UserSettings Instance found");
+        }
     }
 
     void Update()
     {
-        mouseX = Input.GetAxisRaw("Mouse X") * sensitivityX;
-        mouseY = Input.GetAxisRaw("Mouse Y") * sensitivityY;
+        mouseX = Input.GetAxisRaw("Mouse X") * UserSettings.Instance.SensitivityHorizontal;
+        mouseY = Input.GetAxisRaw("Mouse Y") * UserSettings.Instance.SensitivityVertical;
 
         yRotation += mouseX;
         xRotation -= mouseY;

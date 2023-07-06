@@ -19,6 +19,28 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private Transform kunaiLaunchLocation;
     [SerializeField] private float kunaiLaunchSpeed; //Reminder to change rigidbody to Continuous
     [SerializeField] private int kunaiAmount;
+    public int KunaiAmount
+    {
+        get
+        {
+            return kunaiAmount;
+        }
+        set
+        {
+            kunaiAmount = value;
+
+            if(kunaiAmount < 0)
+            {
+                kunaiAmount = 0;
+            }
+            else if (kunaiAmount > 3)
+            {
+                kunaiAmount = 3;
+            }
+
+            AbilityUI.Instance.ChangeKunaiAmmoUI(kunaiAmount);
+        }
+    }
 
     [Header("Smokebomb Settings")]
     [SerializeField] private GameObject smokebombPrefab;
@@ -30,15 +52,20 @@ public class PlayerWeaponsManager : MonoBehaviour
     [Header("Score Manager")]
     [SerializeField] public ScoreManger scoreManager;
 
+    [Header("Hitmarker Settings")]
+    [SerializeField] private GameObject hitmarkerObject;
+    [SerializeField] private float hitmarkerDisplayMS;
+
+
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
 
     private void Awake()
     {
-        kunaiAmount = 300;
+        KunaiAmount = 3;
         canAttackSword = true;
-        canThrowSmokebomb = true;
+        canThrowSmokebomb = true;        
     }
 
     private void Update()
@@ -99,6 +126,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void ThrowSmoke()
     {
+        AbilityUI.Instance.StartSmokeCooldown(smokebombAttackCooldownMS / 1000);
         Invoke(nameof(AllowSmokeThrow), smokebombAttackCooldownMS/1000);
 
         GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
@@ -108,9 +136,9 @@ public class PlayerWeaponsManager : MonoBehaviour
     private void ThrowKunai()
     {
         //Small amount of Kunais does not warrant use of pooling
-        if(kunaiAmount > 0)
+        if(KunaiAmount > 0)
         {
-            kunaiAmount--;
+            KunaiAmount--;
 
             GameObject kunai = Instantiate(original: kunaiPrefab, position: kunaiLaunchLocation.position, rotation: kunaiLaunchLocation.rotation);
             kunai.GetComponent<Kunai>().Init(_launchSpeed: kunaiLaunchSpeed, _weaponManager: this);
@@ -129,13 +157,14 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     public void AddKunai()
     {
-        kunaiAmount++;
+        KunaiAmount++;
     }
 
     public void HitEnemy(HitType hitType, GameObject enemyGameObject)
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
+
         Debug.Log($"HitEnemy({hitType}, {enemyGameObject.name})");
         
         if(hitType == HitType.Kunai ||
@@ -146,8 +175,17 @@ public class PlayerWeaponsManager : MonoBehaviour
             if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))aI_HPSystem.TakeDamage(1);
             
             scoreManager.HitToScore(hitType: hitType);
+
+            // Display Hitmarker for x ms
+            hitmarkerObject.SetActive(true);
+            Invoke(nameof(HideHitmarker), hitmarkerDisplayMS/1000);
         }
         
+    }
+
+    private void HideHitmarker()
+    {
+        hitmarkerObject.SetActive(false);
     }
 
     private void OnDrawGizmos()
@@ -179,6 +217,11 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         canThrowSmokebomb = true;
     }
+
+    #region UI
+    
+
+    #endregion
 }
 
 public enum HitType

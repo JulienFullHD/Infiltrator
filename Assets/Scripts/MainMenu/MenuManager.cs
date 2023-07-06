@@ -6,19 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [ReadOnly, SerializeField] public static MenuManager Instance;
-
-    [SerializeField] Menu[] menuArray;
+    [SerializeField] Menu[] menuArray; 
 
     private void Start()
     {
-        if (Instance is not null)
-        {
-            Destroy(gameObject);
-        }
-
-        Instance = this;
-
         OpenMenu(menuArray[0]);
     }
 
