@@ -620,6 +620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bot v2
       objectReference: {fileID: 0}
+    - target: {fileID: 6698196843874517784, guid: 6db15ecdf04aae74aa173534484aeadb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6698196843874517785, guid: 6db15ecdf04aae74aa173534484aeadb,
         type: 3}
       propertyPath: m_RootOrder
@@ -1443,10 +1448,8 @@ MonoBehaviour:
   smokebombAttackCooldownMS: 5000
   canThrowSmokebomb: 1
   scoreManager: {fileID: 0}
-  kunaiNoAmmo: {fileID: 0}
-  kunaiOneAmmo: {fileID: 0}
-  kunaiTwoAmmo: {fileID: 0}
-  kunaiThreeAmmo: {fileID: 0}
+  hitmarkerObject: {fileID: 0}
+  hitmarkerDisplayMS: 0
   showGizmo: 1
   gizmoRadius: 0.2
 --- !u!135 &576214781
@@ -4027,6 +4030,16 @@ PrefabInstance:
       propertyPath: kunaiThreeAmmo
       value: 
       objectReference: {fileID: 1841632673}
+    - target: {fileID: 1458151353933140077, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: dashCooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458151353933140078, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: maxCoyoteTime
+      value: 0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 4517641378074566555, guid: 5a510215b0823ce4f9102adff1633e16,
         type: 3}
       propertyPath: m_CullTransparentMesh

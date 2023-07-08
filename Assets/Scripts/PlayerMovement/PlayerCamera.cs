@@ -36,15 +36,5 @@ public class PlayerCamera : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         flatOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
-
-        
-        if(mouseX < -12f || mouseX > 12f)
-        {
-            Debug.LogWarning($"{yRotation} || {mouseX} || {Time.deltaTime}");
-        }
-        else
-        {
-            //Debug.Log($"{yRotation} || {Input.GetAxisRaw("Mouse X")} || {Time.deltaTime}");
-        }
     }
 }

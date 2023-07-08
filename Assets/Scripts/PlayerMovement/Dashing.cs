@@ -44,6 +44,11 @@ public class Dashing : MonoBehaviour
         {
             Dash();
         }
+
+        if(attackCollider.enabled == true)
+        {
+            Debug.Log("Phasing");
+        }
     }
 
     private void Dash()
