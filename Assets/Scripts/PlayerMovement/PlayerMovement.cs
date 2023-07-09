@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Wwise Events")]
     public AK.Wwise.Event myFootstep;
     public AK.Wwise.Event myJump;
+    public AK.Wwise.Event myLand;
 
 
 
@@ -197,8 +198,8 @@ private void Start()
 
         rb.AddForce(transform.up * jumpStrength, ForceMode.Impulse);
 
-        //Wwise
-        myJump.Post(gameObject);
+        
+        myJump.Post(gameObject); //Wwise
     }
 
     private void ResetJump()

@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	328487306	Player_stopwallrunning			\Default Work Unit\Movement\Player_stopwallrunning	
 	405241043	Play_FS_Metal			\Default Work Unit\Movement\Footsteps\Play_FS_Metal	
 	501485854	Grunt_burst			\Default Work Unit\Enemies\Grunt_burst	
 	857770058	Play_FS_Enemy			\Default Work Unit\Movement\Footsteps\Play_FS_Enemy	
@@ -7,9 +8,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1445849350	Kunai_Throw			\Default Work Unit\Combat\Kunai_Throw	
 	1928192825	Play_FS_MetalWet			\Default Work Unit\Movement\Footsteps\Play_FS_MetalWet	
 	2085220022	ThrowSmoke			\Default Work Unit\Combat\ThrowSmoke	
+	2134301282	Player_wallrunning			\Default Work Unit\Movement\Player_wallrunning	
 	2394582229	Player_dash			\Default Work Unit\Movement\Player_dash	
 	2725920228	Katana_Swing			\Default Work Unit\Combat\Katana_Swing	
 	3009755888	Play_MainTheme			\Default Work Unit\Music\Play_MainTheme	
+	3629196698	Player_land			\Default Work Unit\Movement\Player_land	
 	4079089048	Play_AmbienceWind			\Default Work Unit\Ambience\Play_AmbienceWind	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -17,28 +20,29 @@ State Group	ID	Name			Wwise Object Path	Notes
 
 State	ID	Name	State Group			Notes
 	748895195	None	PlayerAlive			
-	979470758	Yes	PlayerAlive			
-	1668749452	No	PlayerAlive			
+	2452206122	False	PlayerAlive			
+	3053630529	True	PlayerAlive			
 
 Custom State	ID	Name	State Group	Owner		Notes
-	488231813	No	PlayerAlive	\Actor-Mixer Hierarchy\Default Work Unit\Music\MainTheme		
+	488231813	False	PlayerAlive	\Actor-Mixer Hierarchy\Default Work Unit\Music\MainTheme		
 
 Effect plug-ins	ID	Name	Type				Notes
 	31841406	Time Stretch (Custom)	Wwise Time Stretch			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	9922241	FS_player_metal1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal1		16596
-	15224681	Bleed2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed2_444B4E5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed2		30088
 	19314398	Grunt_burst	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Grunt_shot_51B40A6A.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Grunt_burst		43950
 	50718732	Katana_Swing1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing1_F6A1D474.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing1		30732
 	58810018	jump	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\jump		24096
-	86246821	FS_player_metal3	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal3		16596
-	155857382	Bleed1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed1_FEF1235F.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed1		37064
+	79855120	Wallrun	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Wallrun_7E2C6AF9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Wallrun		208992
+	86246821	FS_player_metal	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal		16596
+	173493422	Bleed11	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed11_49260CEE.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed11		51388
 	174831135	FS_player_metal2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal2		16596
 	183922488	DeathEnemy4	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DeathEnemy4_B886DEB5.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Grunt_Pain\DeathEnemy4		96250
 	233280696	FS_player_metalWet	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metalWet_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_MetalWet\FS_player_metalWet		33846
 	248514043	FS_Enemy1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Enemy1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\FS_Enemy\FS_Enemy1		22596
-	432068875	Bleed	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed_056032EB.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed		48966
+	290099863	Bleed22	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed22_36E054E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed22		50960
+	397544805	JumpFallLand	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DropAfterJumpFall_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\JumpFallLand		34596
 	465842787	AmbienceWind	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Ambience Pimped_C18E9BBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbienceWind		10203552
 	491065857	FS_Enemy	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Enemy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\FS_Enemy\FS_Enemy		24096
 	497480755	DeathEnemy5	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DeathEnemy5_680ACE7A.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Grunt_Pain\DeathEnemy5		92238
@@ -49,14 +53,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	662879814	FS_Enemy2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Enemy2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\FS_Enemy\FS_Enemy2		19596
 	675877473	Katana_Swing no3	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing no3_3C6556A1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing no3		33620
 	743429803	FS_player_metalWet1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metalWet1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_MetalWet\FS_player_metalWet1		18846
+	782221668	Bleed33	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed33_C6BF1477.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed33		59462
 	808142375	kunai1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\kunai1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Kunai\Kunai_Throw\kunai1		27096
 	834220296	Katana_Swing no3 1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing no3 1_6543591D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing no3 1		33996
 	885646893	jump1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\jump1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\jump1		24096
 	952022165	Katana_Swing	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing_B9FC8756.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing		31006
-	955289616	FS_player_metal	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal		16596
 	961857935	DeathEnemy2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DeathEnemy2_33CD2048.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Grunt_Pain\DeathEnemy2		87290
 	988550002	FS_player_metalWet2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metalWet2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_MetalWet\FS_player_metalWet2		18096
-	1044589429	Dash	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\dash_71BD1D07.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Dash		78096
+	1044589429	Dash	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\dash_BE17CF0A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Dash		78096
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
 	642047943	MainTheme	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\CyberPsycho (Beat)_56D96038.wem	642047943.wem	\Actor-Mixer Hierarchy\Default Work Unit\Music\MainTheme	

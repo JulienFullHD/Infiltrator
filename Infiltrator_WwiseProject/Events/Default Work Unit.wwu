@@ -79,6 +79,42 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Player_land" ID="{80136CF6-A747-46FE-A3DF-175385D0799E}">
+							<ChildrenList>
+								<Action Name="" ID="{7A8425A1-DCF6-4CA5-A813-0C42A3B647E0}" ShortID="737114264">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="JumpFallLand" ID="{2E82DC29-6D99-47C2-AFF3-7901F3A38984}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_wallrunning" ID="{F7DB8EB2-F10F-4E14-89A7-AE6C604BF2A2}">
+							<ChildrenList>
+								<Action Name="" ID="{6F061CE9-796C-4501-90D3-1D3F97E7F64B}" ShortID="362540518">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wallrun" ID="{6F405727-7D89-42C6-9769-ED7DCBBBE747}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_stopwallrunning" ID="{1BCACDF0-07C4-44BB-B2C3-6B704924754B}">
+							<ChildrenList>
+								<Action Name="" ID="{B0E24105-CBEB-4793-9C5F-CED94B249C19}" ShortID="1024408788">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Wallrun" ID="{6F405727-7D89-42C6-9769-ED7DCBBBE747}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemies" ID="{E8DCC189-AFA0-4988-A0E6-4DEA5079BD0E}" ShortID="838549427">
@@ -103,7 +139,7 @@
 							<ChildrenList>
 								<Action Name="" ID="{43DCAF91-9CEA-4601-BF76-E3AE0ED2C5DB}" ShortID="134016738">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.1"/>
+										<Property Name="Delay" Type="Real64" Value="0.2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

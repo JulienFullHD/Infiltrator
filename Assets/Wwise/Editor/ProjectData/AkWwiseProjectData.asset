@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585126921131530857
+    m_lastTime: -8585126746441968707
     List:
+    - name: Ambience
+      guid: 6c4f897ba31d8b4093b29a0ae523264b
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17073382a501504daa8610032b3917e0
+      - ElementName: Master
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Ambience
+        ObjectType: 2
+        guid: 6c4f897ba31d8b4093b29a0ae523264b
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master\Ambience
     - name: Environment
       guid: 3d4b3d5ed4ab0d44a57db9b0bc888196
       id: 1229948536
@@ -157,7 +174,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585126921120681543
+    m_lastTime: -8585126807404323820
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -185,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585126921136284939
+    m_lastTime: -8585126747511221704
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -561,6 +578,66 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_land
+      guid: f66c138047a7fe46a3df175385d0799e
+      id: 3629196698
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Player_land
+        ObjectType: 3
+        guid: f66c138047a7fe46a3df175385d0799e
+      Path: Events\Default Work Unit\Movement\Player_land
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_stopwallrunning
+      guid: f0cdca1bc407bb44b2c36b704924754b
+      id: 328487306
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Player_stopwallrunning
+        ObjectType: 3
+        guid: f0cdca1bc407bb44b2c36b704924754b
+      Path: Events\Default Work Unit\Movement\Player_stopwallrunning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_wallrunning
+      guid: b28edbf70ff1144e89a7ae6c604bf2a2
+      id: 2134301282
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Movement
+        ObjectType: 4
+        guid: c38713433a6ccc4ea146efbc335239d9
+      - ElementName: Player_wallrunning
+        ObjectType: 3
+        guid: b28edbf70ff1144e89a7ae6c604bf2a2
+      Path: Events\Default Work Unit\Movement\Player_wallrunning
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Sniper_shot
       guid: bbdf62b37beead49822d4d89d6231ccb
       id: 2759914667
@@ -726,7 +803,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d92bbc41e8db4e46a1521be4e7a13ab7
     GuidInternal: 
-    m_lastTime: -8585126921120646506
+    m_lastTime: -8585126818515898566
     List:
     - name: PlayerAlive
       guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
@@ -743,9 +820,9 @@ MonoBehaviour:
         guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
       Path: States\Default Work Unit\PlayerAlive
       values:
-      - name: No
+      - name: False
         guid: 6a9de4463d39ba40bb626bac4c479ed4
-        id: 1668749452
+        id: 2452206122
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -756,7 +833,7 @@ MonoBehaviour:
         - ElementName: PlayerAlive
           ObjectType: 9
           guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-        - ElementName: No
+        - ElementName: False
           ObjectType: 8
           guid: 6a9de4463d39ba40bb626bac4c479ed4
       - name: None
@@ -775,9 +852,9 @@ MonoBehaviour:
         - ElementName: None
           ObjectType: 8
           guid: 3740faef2f5790478ccc587c0e6560ce
-      - name: Yes
+      - name: True
         guid: ed6074327afd114bbdeae8d94031453f
-        id: 979470758
+        id: 3053630529
         PathAndIcons:
         - ElementName: States
           ObjectType: 5
@@ -788,9 +865,75 @@ MonoBehaviour:
         - ElementName: PlayerAlive
           ObjectType: 9
           guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-        - ElementName: Yes
+        - ElementName: True
           ObjectType: 8
           guid: ed6074327afd114bbdeae8d94031453f
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: PlayerIsWallruning
+      guid: 7601b60c1eed3c45ad9a392f916852b9
+      id: 3701697919
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d92bbc41e8db4e46a1521be4e7a13ab7
+      - ElementName: PlayerIsWallruning
+        ObjectType: 9
+        guid: 7601b60c1eed3c45ad9a392f916852b9
+      Path: States\Default Work Unit\PlayerIsWallruning
+      values:
+      - name: False
+        guid: fe14d23117687e469b46fc92bd89fc77
+        id: 2452206122
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d92bbc41e8db4e46a1521be4e7a13ab7
+        - ElementName: PlayerIsWallruning
+          ObjectType: 9
+          guid: 7601b60c1eed3c45ad9a392f916852b9
+        - ElementName: False
+          ObjectType: 8
+          guid: fe14d23117687e469b46fc92bd89fc77
+      - name: None
+        guid: 48195aaaf0c54d448ba1d0b49ebd86ac
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d92bbc41e8db4e46a1521be4e7a13ab7
+        - ElementName: PlayerIsWallruning
+          ObjectType: 9
+          guid: 7601b60c1eed3c45ad9a392f916852b9
+        - ElementName: None
+          ObjectType: 8
+          guid: 48195aaaf0c54d448ba1d0b49ebd86ac
+      - name: True
+        guid: a1fa5e284486ef42b0143d367424e88e
+        id: 3053630529
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: d92bbc41e8db4e46a1521be4e7a13ab7
+        - ElementName: PlayerIsWallruning
+          ObjectType: 9
+          guid: 7601b60c1eed3c45ad9a392f916852b9
+        - ElementName: True
+          ObjectType: 8
+          guid: a1fa5e284486ef42b0143d367424e88e
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -823,7 +966,7 @@ MonoBehaviour:
     m_lastTime: -8585126921120586461
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 05000000060000000a0000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

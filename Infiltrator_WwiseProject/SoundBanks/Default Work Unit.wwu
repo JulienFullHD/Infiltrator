@@ -8,14 +8,17 @@
 						<ObjectRef Name="Kunai_Throw" ID="{AEBAA2BF-611F-40C1-AAC0-7D7BF152CF07}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_Enemy" ID="{162D86D2-8CDB-4259-9167-38C744BEAF3C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Katana_Swing" ID="{A62B4711-7D33-427D-AAF6-555D47022FE1}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_stopwallrunning" ID="{1BCACDF0-07C4-44BB-B2C3-6B704924754B}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_MetalWet" ID="{49112EAA-35A0-4543-8F8C-BDE0FE3F335C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_land" ID="{80136CF6-A747-46FE-A3DF-175385D0799E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Kunai_Throw" ID="{7E0DD410-A479-4A95-9107-D3A198B92C5F}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Grunt_burst" ID="{F66402DC-F7FD-4ACF-85CC-E4988DCE216E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ThrowSmoke" ID="{AC1021D9-2927-4C66-9DA8-FA5494AD34A4}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_dash" ID="{1129B7A0-5F3F-4D48-A2D9-F332F8187219}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_Metal" ID="{0F6DE7B4-67BC-4E0E-BB3B-0A2E6AD3F689}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_wallrunning" ID="{F7DB8EB2-F10F-4E14-89A7-AE6C604BF2A2}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_jump" ID="{A2C29F27-13D2-4E16-8989-CCFB837864D6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MainTheme" ID="{E3A11A17-4B42-4E1E-A574-DA2C446F8C60}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

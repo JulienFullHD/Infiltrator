@@ -5,14 +5,13 @@
 			<ChildrenList>
 				<Attenuation Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" ShortID="873303606">
 					<PropertyList>
-						<Property Name="ConeInnerAngle" Type="int32" Value="120"/>
-						<Property Name="ConeOuterAngle" Type="int32" Value="280"/>
+						<Property Name="ConeInnerAngle" Type="int32" Value="70"/>
+						<Property Name="ConeOuterAngle" Type="int32" Value="200"/>
 						<Property Name="ConeUse" Type="bool">
 							<ValueList>
 								<Value>True</Value>
 							</ValueList>
 						</Property>
-						<Property Name="RadiusMax" Type="Real64" Value="65"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -28,13 +27,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>29.213873</XPos>
-											<YPos>-3.94484</YPos>
-											<Flags>0</Flags>
-											<SegmentShape>Log2</SegmentShape>
-										</Point>
-										<Point>
-											<XPos>65</XPos>
+											<XPos>100</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
@@ -61,17 +54,7 @@
 											<Flags>5</Flags>
 										</Point>
 										<Point>
-											<XPos>45.448546</XPos>
-											<YPos>47</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>61.7414265</XPos>
-											<YPos>79</YPos>
-											<Flags>0</Flags>
-										</Point>
-										<Point>
-											<XPos>65</XPos>
+											<XPos>100</XPos>
 											<YPos>100</YPos>
 											<Flags>37</Flags>
 										</Point>

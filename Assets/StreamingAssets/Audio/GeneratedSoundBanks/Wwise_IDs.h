@@ -24,6 +24,9 @@ namespace AK
         static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
+        static const AkUniqueID PLAYER_LAND = 3629196698U;
+        static const AkUniqueID PLAYER_STOPWALLRUNNING = 328487306U;
+        static const AkUniqueID PLAYER_WALLRUNNING = 2134301282U;
         static const AkUniqueID THROWSMOKE = 2085220022U;
     } // namespace EVENTS
 
@@ -35,11 +38,23 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID FALSE = 2452206122U;
                 static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID YES = 979470758U;
+                static const AkUniqueID TRUE = 3053630529U;
             } // namespace STATE
         } // namespace PLAYERALIVE
+
+        namespace PLAYERISWALLRUNING
+        {
+            static const AkUniqueID GROUP = 3701697919U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FALSE = 2452206122U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID TRUE = 3053630529U;
+            } // namespace STATE
+        } // namespace PLAYERISWALLRUNING
 
     } // namespace STATES
 
@@ -59,6 +74,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID MUSIC = 3991942870U;

@@ -13,7 +13,12 @@
 						<Bus Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}">
 							<PropertyList>
 								<Property Name="MaxDuckVolume" Type="Real64" Value="-25"/>
-								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.75"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
@@ -58,9 +63,9 @@
 								<DuckItem>
 									<BusRef Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}"/>
 									<DuckingParam>
-										<Volume>-10</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>0.5</FadeOutTime>
+										<Volume>-3</Volume>
+										<FadeInTime>0.800000011920929</FadeInTime>
+										<FadeOutTime>0.200000002980232</FadeOutTime>
 										<FadeCurve>FadeLog2</FadeCurve>
 									</DuckingParam>
 								</DuckItem>
@@ -71,7 +76,7 @@
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -133,6 +138,7 @@
 								</AuxBus>
 							</ChildrenList>
 						</Bus>
+						<Bus Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}"/>
 					</ChildrenList>
 					<ObjectLists>
 						<ObjectList Name="RTPC">

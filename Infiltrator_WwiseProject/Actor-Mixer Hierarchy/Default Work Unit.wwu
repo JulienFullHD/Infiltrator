@@ -9,7 +9,7 @@
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-7</Value>
+								<Value>-6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -18,7 +18,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+							<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -64,6 +64,11 @@
 				<ActorMixer Name="Combat" ID="{A82FEDF0-F0BF-4C37-9E06-A9D4EB493901}" ShortID="745743272">
 					<PropertyList>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -167,12 +172,15 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Katana_Swing" ID="{B6299099-36FE-4DB1-ABDE-5DDE2F6B1D04}" ShortID="432197522">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
 												<Value>21</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -188,7 +196,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>6</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -310,6 +318,63 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{A193AE24-D606-463A-867D-C3D40C5DA648}">
+											<PropertyList>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="Swing" ID="{AD5E7E93-80DD-43BA-B435-6E2E9DAE46AE}">
+													<PointList>
+														<Point>
+															<XPos>-8.12185</XPos>
+															<YPos>25.70621</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>38.07106</XPos>
+															<YPos>54.80227</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Katana_Swing_Path" ID="{3B49A166-E10D-461A-AE82-DC39212E0685}">
+													<PointList>
+														<Point>
+															<XPos>-4.06091</XPos>
+															<YPos>11.58191</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>27.41117</XPos>
+															<YPos>30.50847</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Katana_Swing_Path_01" ID="{E0425D17-D379-463A-A4C2-E897E9D1D2A4}">
+													<PointList>
+														<Point>
+															<XPos>-6.59898</XPos>
+															<YPos>24.01129</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>6.09137</XPos>
+															<YPos>49.71751</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
@@ -402,12 +467,15 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="Kunai_Throw" ID="{AEBAA2BF-611F-40C1-AAC0-7D7BF152CF07}" ShortID="84632364">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
 												<Value>20</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -423,7 +491,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>11</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -481,6 +549,60 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{EEB61134-AE17-4A63-9FCD-E781CAAA46C8}">
+											<ChildrenList>
+												<Path2D Name="Kunai_Throw_Path" ID="{866BAC2E-9262-4DF7-8938-2B8AE8775C6E}">
+													<PointList>
+														<Point>
+															<XPos>2.03047</XPos>
+															<YPos>2.54238</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-89.84772</XPos>
+															<YPos>100</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Kunai_Throw_Path_02" ID="{2152DB9B-0634-490F-AB7C-505E38C6B1E5}">
+													<PointList>
+														<Point>
+															<XPos>2.53809</XPos>
+															<YPos>2.54238</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-67.00508</XPos>
+															<YPos>100</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="Kunai_Throw_Path_01" ID="{9FA46D49-A2F1-4189-89FE-3D28B4CC9064}">
+													<PointList>
+														<Point>
+															<XPos>1.52286</XPos>
+															<YPos>1.41244</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-84.26396</XPos>
+															<YPos>97.74011</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
@@ -495,7 +617,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+							<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -509,12 +631,7 @@
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>15</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -535,7 +652,7 @@
 								<Property Name="SpeakerPanning3DSpatializationMix" Type="int32" Value="54"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -561,7 +678,7 @@
 								</AudioFileSource>
 								<AudioFileSource Name="dash" ID="{8893D8CA-A8C5-40D4-A2C1-418014CEC2BD}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0895878820960699"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.222741802404553"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.489628820960699"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
@@ -602,7 +719,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -687,17 +804,20 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="FS_Metal" ID="{47AD9101-6F3A-47CB-A38C-E07EF88B43D2}" ShortID="400593294">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>5</Value>
+												<Value>21</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>25</Value>
+												<Value>20</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -713,7 +833,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-2</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -743,9 +863,37 @@
 														<MediaID ID="955289616"/>
 													</MediaIDList>
 												</AudioFileSource>
+												<AudioFileSource Name="FS_player_metal1" ID="{E447D250-4E79-4F6B-9BC7-333B65234F1B}">
+													<Language>SFX</Language>
+													<AudioFile>FS_player_metal1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="9922241"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="FS_player_metal-1" ID="{081FEEBF-A12A-4AF6-9140-87F20081A86B}">
+													<Language>SFX</Language>
+													<AudioFile>FS_player_metal-1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="156816055"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="FS_player_metal2" ID="{CD167987-0B26-41A2-A5AF-0C281876158B}">
+													<Language>SFX</Language>
+													<AudioFile>FS_player_metal2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="174831135"/>
+													</MediaIDList>
+												</AudioFileSource>
+												<AudioFileSource Name="FS_player_metal3" ID="{5916AD60-75E5-4708-A419-53857AFF3B65}">
+													<Language>SFX</Language>
+													<AudioFile>FS_player_metal3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="86246821"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metal" ID="{B690FC72-0B51-495F-B56E-7772BB2171BD}" Platform="Linked"/>
+												<ActiveSource Name="FS_player_metal3" ID="{5916AD60-75E5-4708-A419-53857AFF3B65}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="FS_player_metal1" ID="{ACA42983-FFE2-4FFE-9122-D6458138385F}" ShortID="826242035">
@@ -815,6 +963,22 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{68CD8231-7BAB-48DE-BC49-8665AA221BD2}">
+											<ChildrenList>
+												<Path2D Name="FS_Metal_Path" ID="{433AF0BC-171A-44E5-8E4F-0025CD2A8766}">
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>50</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="FS_MetalWet" ID="{CFC3078C-4CBD-464E-893C-41316DBC2EAB}" ShortID="290618737">
 									<PropertyList>
@@ -840,6 +1004,11 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -943,6 +1112,93 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
+						<Sound Name="JumpFallLand" ID="{2E82DC29-6D99-47C2-AFF3-7901F3A38984}" ShortID="333348052">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-130</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2ED6F8DF-A7BB-4892-A577-13A530A58616}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="126"/>
+													<Property Name="Min" Type="Real64" Value="-101"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="DropAfterJumpFall" ID="{49B8556F-13A8-4191-A0B4-16A6E1C3D81A}">
+									<Language>SFX</Language>
+									<AudioFile>DropAfterJumpFall.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="397544805"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="DropAfterJumpFall" ID="{49B8556F-13A8-4191-A0B4-16A6E1C3D81A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Wallrun" ID="{6F405727-7D89-42C6-9769-ED7DCBBBE747}" ShortID="637928191">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Wallrun" ID="{7FB8E4B9-4504-4605-87F5-E3F91D61307B}">
+									<PropertyList>
+										<Property Name="CrossfadeShape" Type="int16" Value="0"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0302923670793163"/>
+										<Property Name="FadeInShape" Type="int16" Value="0"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0640204865556977"/>
+										<Property Name="FadeOutShape" Type="int16" Value="9"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.17600939241431"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Wallrun.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="79855120"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Wallrun" ID="{7FB8E4B9-4504-4605-87F5-E3F91D61307B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Music" ID="{AAA7F8EB-D845-4704-956E-CD163447CBE7}" ShortID="793922622">
@@ -972,6 +1228,11 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1004,7 +1265,7 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
-										<StateRef Name="No" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
+										<StateRef Name="False" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
 										<CustomState Name="" ID="{26CB7176-448C-4101-BEA0-DAA82CEEEABC}" ShortID="488231813">
 											<PropertyList>
 												<Property Name="Volume" Type="Real64" Value="-108"/>
@@ -1012,7 +1273,7 @@
 										</CustomState>
 									</CustomState>
 									<CustomState>
-										<StateRef Name="Yes" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
+										<StateRef Name="True" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
 										<CustomState Name="" ID="{FA100A20-6AAA-4875-9092-9639CF2BA836}" ShortID="152958258"/>
 									</CustomState>
 								</CustomStateList>
@@ -1046,6 +1307,9 @@
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="EnemySounds" ID="{44B2F107-6A7E-4AE8-BB1A-C2D1A9F9EAB3}" ShortID="824544720">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
 							<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
@@ -1102,7 +1366,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1137,6 +1401,11 @@
 						</Sound>
 						<RandomSequenceContainer Name="Bleed" ID="{64A8D468-9AAE-4ED2-9E5D-267804FA6930}" ShortID="676441126">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>18</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1144,8 +1413,7 @@
 											<Modifier Name="" ID="{FC42F80A-B5EB-44BE-9347-B07F2952DE03}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="76"/>
-													<Property Name="Min" Type="Real64" Value="-102"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -1154,7 +1422,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>4</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -1187,7 +1455,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Bleed" ID="{2E8F6A8C-221D-45E5-B67E-EAC35B50BFDF}" ShortID="193186631">
+								<Sound Name="Bleed11" ID="{6783D34C-DCF6-433A-9A6F-CABC5CA39032}" ShortID="360609784">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1197,26 +1465,24 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed" ID="{2D24653E-49FB-42B3-97B7-8F7328D46CC6}">
+										<AudioFileSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.108016378574477"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0422306626895236"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.203607005141388"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.13928427763551"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.648346719347789"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.534282615681234"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Bleed.wav</AudioFile>
+											<AudioFile>Bleed11.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="432068875"/>
+												<MediaID ID="173493422"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed" ID="{2D24653E-49FB-42B3-97B7-8F7328D46CC6}" Platform="Linked"/>
+										<ActiveSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed1" ID="{2784DF45-2D83-40DE-BD23-AAFD66946F52}" ShortID="257894984">
+								<Sound Name="Bleed22" ID="{C6125E4C-CCA6-4517-BA98-AECFB83A38CD}" ShortID="434089335">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1226,26 +1492,24 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed1" ID="{FB51A982-084D-414C-9387-EB3E2D08DEF6}">
+										<AudioFileSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0284253627827571"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.076768574564255"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.114436053984576"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.186186126227059"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.571269411730176"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.529824068123393"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Bleed1.wav</AudioFile>
+											<AudioFile>Bleed22.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="155857382"/>
+												<MediaID ID="290099863"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed1" ID="{FB51A982-084D-414C-9387-EB3E2D08DEF6}" Platform="Linked"/>
+										<ActiveSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed2" ID="{BBA98949-8F7F-442A-AFD5-17BB7DC86D26}" ShortID="148202601">
+								<Sound Name="Bleed33" ID="{E373DD61-466F-4006-8C4A-329F9E257B8F}" ShortID="770516473">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1255,22 +1519,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed2" ID="{C0DB5E1C-1644-44E1-8CF8-E6DDDB241FC2}">
+										<AudioFileSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}">
 											<PropertyList>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.0134443021766965"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.171057090454035"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.489622830976864"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.31241477992752"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.618400546272493"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Bleed2.wav</AudioFile>
+											<AudioFile>Bleed33.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="15224681"/>
+												<MediaID ID="782221668"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed2" ID="{C0DB5E1C-1644-44E1-8CF8-E6DDDB241FC2}" Platform="Linked"/>
+										<ActiveSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1278,10 +1541,25 @@
 						<RandomSequenceContainer Name="Grunt_Pain" ID="{D73D8FDE-1037-4B65-9F8D-72F861E6C735}" ShortID="843781091">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-170</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AB4829A9-9B2D-4BA9-B88F-3731B8010615}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1307,6 +1585,11 @@
 													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -1350,6 +1633,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1392,6 +1680,11 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1427,6 +1720,11 @@
 												<Value>-150</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1459,11 +1757,6 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="FS_Enemy" ID="{378A9B02-BF75-4BCB-8260-EC79BF194405}" ShortID="35631811">
 							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>26</Value>
-									</ValueList>
-								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>

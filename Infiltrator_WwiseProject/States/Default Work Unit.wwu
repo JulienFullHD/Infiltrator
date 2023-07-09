@@ -9,8 +9,18 @@
 					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{EFFA4037-572F-4790-8CCC-587C0E6560CE}"/>
-						<State Name="Yes" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
-						<State Name="No" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
+						<State Name="True" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
+						<State Name="False" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerIsWallruning" ID="{0CB60176-ED1E-453C-AD9A-392F916852B9}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{AA5A1948-C5F0-444D-8BA1-D0B49EBD86AC}"/>
+						<State Name="True" ID="{285EFAA1-8644-42EF-B014-3D367424E88E}"/>
+						<State Name="False" ID="{31D214FE-6817-467E-9B46-FC92BD89FC77}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

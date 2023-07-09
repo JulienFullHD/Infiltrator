@@ -45,6 +45,11 @@ public class WallRunning : MonoBehaviour
     [SerializeField] private PlayerMovement movementManager;
     [SerializeField] private Rigidbody rb;
 
+    [Header("Wwise Events")]
+    public AK.Wwise.Event myWallrun;
+    public AK.Wwise.Event myWallrunStop;
+    public AK.Wwise.Event myWalljump;
+
     private void Update()
     {
         HandleInput();
@@ -158,6 +163,8 @@ public class WallRunning : MonoBehaviour
 
         movementManager.isWallrunning = true;
 
+        myWallrun.Post(gameObject); //Wwise
+
         //rb.useGravity = false;
         wallrunTimer = maxWallrunTime;
     }
@@ -210,6 +217,8 @@ public class WallRunning : MonoBehaviour
 
         forceToApply = transform.up * wallJumpUpForce + wallSurfaceNormal * wallJumpSideForce;
 
+        myWalljump.Post(gameObject);  // Wwise
+
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);
     }
@@ -219,5 +228,6 @@ public class WallRunning : MonoBehaviour
         rb.useGravity = true;
 
         movementManager.isWallrunning = false;
+        myWallrunStop.Post(gameObject);
     }
 }
