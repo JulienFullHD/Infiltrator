@@ -9,13 +9,13 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7C4D2B12-DBC7-D796-D883-B2D51BC4D964}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D4C85C40-55CF-FB61-C366-BA81B7EE1060}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="3900114836" Name="Metal_Hangar" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -36,10 +36,10 @@
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
-				<AuxBus Id="2254890591" Name="Platform_between_walls">
+				<AuxBus Id="2249836984" Name="Room_Medium_HighAbsorbtion">
 					<PluginRefs>
 						<ShareSets>
-							<PluginRef Id="3900114836"/>
+							<PluginRef Id="2891462749"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -280,5 +280,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{48AFE558-108D-D151-E2B2-E6DE91F07C42}</FileHash>
+	<FileHash>{09398800-B2A5-4BA2-2677-D1E2DD2F8BDC}</FileHash>
 </SoundBanksInfo>

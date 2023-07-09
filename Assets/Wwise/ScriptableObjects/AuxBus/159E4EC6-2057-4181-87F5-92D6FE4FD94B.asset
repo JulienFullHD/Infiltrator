@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e400116d7234419ea609cfee77dff, type: 3}
   m_Name: 159E4EC6-2057-4181-87F5-92D6FE4FD94B
   m_EditorClassIdentifier: 
-  objectName: Platform_between_walls
-  id: 2254890591
+  objectName: Room_Medium_HighAbsorbtion
+  id: 2249836984
   guid: 159E4EC6-2057-4181-87F5-92D6FE4FD94B

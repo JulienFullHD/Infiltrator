@@ -124,8 +124,12 @@
 										</Reference>
 									</ReferenceList>
 								</AuxBus>
-								<AuxBus Name="Platform_between_walls" ID="{159E4EC6-2057-4181-87F5-92D6FE4FD94B}">
-									<ReferenceList/>
+								<AuxBus Name="Room_Medium_HighAbsorbtion" ID="{159E4EC6-2057-4181-87F5-92D6FE4FD94B}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
 								</AuxBus>
 							</ChildrenList>
 						</Bus>

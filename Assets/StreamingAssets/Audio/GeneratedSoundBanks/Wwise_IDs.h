@@ -68,7 +68,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID OPEN_FIELD = 1933665656U;
-        static const AkUniqueID PLATFORM_BETWEEN_WALLS = 2254890591U;
+        static const AkUniqueID ROOM_MEDIUM_HIGHABSORBTION = 2249836984U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

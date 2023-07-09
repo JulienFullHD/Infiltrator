@@ -19,11 +19,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1933665656	Open_field			\Default Work Unit\Master\Reverbs\Open_field	
-	2254890591	Platform_between_walls			\Default Work Unit\Master\Reverbs\Platform_between_walls	
+	2249836984	Room_Medium_HighAbsorbtion			\Default Work Unit\Master\Reverbs\Room_Medium_HighAbsorbtion	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
-	3900114836	Metal_Hangar	Wwise RoomVerb			
+	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
