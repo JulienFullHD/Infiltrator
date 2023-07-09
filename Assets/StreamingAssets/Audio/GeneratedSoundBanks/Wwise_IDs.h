@@ -15,13 +15,41 @@ namespace AK
     {
         static const AkUniqueID ENEMY_HIT = 1010055213U;
         static const AkUniqueID GRUNT_BURST = 501485854U;
+        static const AkUniqueID KATANA_SWING = 2725920228U;
         static const AkUniqueID KUNAI_THROW = 1445849350U;
         static const AkUniqueID PLAY_AMBIENCEWIND = 4079089048U;
-        static const AkUniqueID PLAY_FOOTSTEPS_CONCRETE = 2265754055U;
-        static const AkUniqueID PLAY_FOOTSTEPS_METAL = 2273641359U;
+        static const AkUniqueID PLAY_FS_ENEMY = 857770058U;
+        static const AkUniqueID PLAY_FS_METAL = 405241043U;
+        static const AkUniqueID PLAY_FS_METALWET = 1928192825U;
+        static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
+        static const AkUniqueID THROWSMOKE = 2085220022U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace PLAYERALIVE
+        {
+            static const AkUniqueID GROUP = 2557321869U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NO = 1668749452U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID YES = 979470758U;
+            } // namespace STATE
+        } // namespace PLAYERALIVE
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MUSICVOLUME = 2346531308U;
+        static const AkUniqueID PLAYERHEALTH = 151362964U;
+        static const AkUniqueID SFXVOLUME = 988953028U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {
@@ -31,8 +59,17 @@ namespace AK
 
     namespace BUSSES
     {
-        static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID ENVIRONMENT = 1229948536U;
+        static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID REVERBS = 3545700988U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID OPEN_FIELD = 1933665656U;
+        static const AkUniqueID PLATFORM_BETWEEN_WALLS = 2254890591U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

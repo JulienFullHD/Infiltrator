@@ -2,18 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class AI_HPSystem : MonoBehaviour
 {
+    [Header ("Wwise Event")]
+    public AK.Wwise.Event EnemyDeath;
     public int HitPoints = 10;
-  
-    
-    public void TakeDamage(int _damage)
-    {
-        HitPoints -= _damage;
-        if(HitPoints <= 0)
+
+
+
+        public void TakeDamage(int _damage)
         {
-            LevelManager.Instance.EnemyCount--;
-            GameObject.Destroy(this.gameObject);
+            HitPoints -= _damage;
+            if (HitPoints <= 0)
+            {
+                EnemyDeath.Post(gameObject);
+                LevelManager.Instance.EnemyCount--;
+                GameObject.Destroy(this.gameObject);
+            }
+
         }
-    }
 }

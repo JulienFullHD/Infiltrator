@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Mac" BasePlatform="Mac">
 	<PluginLibs>
+		<PluginLib LibName="Wwise RoomVerb" LibId="7733251" Type="Effect" DLL="AkRoomVerb" StaticLib="AkRoomVerbFX"/>
+		<PluginLib LibName="Wwise Time Stretch" LibId="8519683" Type="Effect" DLL="AkTimeStretch" StaticLib="AkTimeStretchFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{2DF3E370-A572-513D-8013-5B6E63623995}</FileHash>
+	<FileHash>{4EA1026E-67E1-0F34-63B2-120D1764E14B}</FileHash>
 </PluginInfo>

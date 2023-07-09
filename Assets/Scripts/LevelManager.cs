@@ -24,6 +24,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float fadeMaxTime;
     [ReadOnly, SerializeField] private float fadeTimer;
 
+    //Wwise shit
+    [Header("Wwise Event")]
+    public AK.Wwise.Event PlayMainTheme;
+    public AK.Wwise.Event StopMainTheme;
+
     private void Start()
     {
         if(Instance is not null)
@@ -35,6 +40,7 @@ public class LevelManager : MonoBehaviour
 
 
         isWon = false;
+        PlayMainTheme.Post(gameObject); //Wwise MainTheme
         EnemyCount = FindObjectsOfType(typeof(AI_HPSystem)).Count();
     }
 
@@ -58,6 +64,7 @@ public class LevelManager : MonoBehaviour
     {
         isWon = true;
         winCanvasObject.SetActive(true);
+        StopMainTheme.Post(gameObject);
         fadeTimer = 0;
     }
 

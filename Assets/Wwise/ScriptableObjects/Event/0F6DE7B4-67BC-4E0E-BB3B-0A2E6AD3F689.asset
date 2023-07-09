@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e972edc4650cd4184cb954987661ac, type: 3}
   m_Name: 0F6DE7B4-67BC-4E0E-BB3B-0A2E6AD3F689
   m_EditorClassIdentifier: 
-  objectName: Play_Footsteps_Metal
-  id: 2273641359
+  objectName: Play_FS_Metal
+  id: 405241043
   guid: 0F6DE7B4-67BC-4E0E-BB3B-0A2E6AD3F689

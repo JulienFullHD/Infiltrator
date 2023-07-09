@@ -1,5 +1,29 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2557321869	PlayerAlive			\Default Work Unit\PlayerAlive	
+
+State	ID	Name	State Group			Notes
+	748895195	None	PlayerAlive			
+	979470758	Yes	PlayerAlive			
+	1668749452	No	PlayerAlive			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXVolume			\Default Work Unit\Volume\SFXVolume	
+	2346531308	MusicVolume			\Default Work Unit\Volume\MusicVolume	
+	2918011349	MasterVolume			\Default Work Unit\Volume\MasterVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	1229948536	Environment			\Default Work Unit\Master\Environment	
+	3545700988	Reverbs			\Default Work Unit\Master\Reverbs	
+	3991942870	Music			\Default Work Unit\Master\Music	
+	4056684167	Master			\Default Work Unit\Master	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1933665656	Open_field			\Default Work Unit\Master\Reverbs\Open_field	
+	2254890591	Platform_between_walls			\Default Work Unit\Master\Reverbs\Platform_between_walls	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

@@ -35,9 +35,9 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private float gizmoRadius;
 
     [Header("Wwise Events")]
-    public AK.Wwise.Event EnemyKill;
     public AK.Wwise.Event myKunai;
     public AK.Wwise.Event mySmokebomb;
+    public AK.Wwise.Event myKatanaSwing;
     
 
     private void Awake()
@@ -56,6 +56,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Mouse0) && canAttackSword)
         {
+            myKatanaSwing.Post(gameObject);
             canAttackSword = false;
             Invoke(nameof(AttackSword), swordAttackCountdownMS);
         }
@@ -96,7 +97,6 @@ public class PlayerWeaponsManager : MonoBehaviour
         Debug.Log($"Sword hit {swordHits.Length} enemies");
         if(swordHits.Length > 0)
         {
-            EnemyKill.Post(gameObject);
             for (int i = 0; i < swordHits.Length; i++)
             {
                 HitEnemy(hitType: HitType.Sword, enemyGameObject: swordHits[i].gameObject);   
