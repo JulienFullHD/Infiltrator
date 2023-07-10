@@ -792,6 +792,211 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Folder Name="Combo" ID="{013FEA75-820E-49B7-8DD9-74DF360C6409}" ShortID="356869973">
+							<ChildrenList>
+								<ActorMixer Name="ComboSounds" ID="{5FFF82E5-F1EC-46E6-9DE0-335F9E348DFC}" ShortID="1062945605">
+									<PropertyList>
+										<Property Name="CenterPercentage" Type="int32">
+											<ValueList>
+												<Value>100</Value>
+											</ValueList>
+										</Property>
+										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+										<Property Name="OverrideOutput" Type="bool" Value="True"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ComboOne" ID="{A092FA11-CF3B-4709-9CD7-0E9314846C78}" ShortID="215480138">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ComboOne" ID="{6D30FA40-7576-443A-8100-0A42B0D62F83}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.276788908526135"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.261448800342759"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ComboOne.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="864099427"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ComboOne" ID="{6D30FA40-7576-443A-8100-0A42B0D62F83}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ComboOver" ID="{80016C2A-0A55-4C18-8D43-38F5F492B094}" ShortID="965503925">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ComboOver" ID="{33ECCF2C-3D50-4A2B-866A-E9976263761C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0144601542416451"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ComboOver.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="90319105"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ComboOver" ID="{33ECCF2C-3D50-4A2B-866A-E9976263761C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ComboThree" ID="{C7B41213-283C-4FAE-BDFF-3404DD660A34}" ShortID="999085175">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ComboThree" ID="{56F6B74B-AF02-43E7-833B-6C7593DEF562}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.168741190017138"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.112716447086547"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ComboThree.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="411126953"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ComboThree" ID="{56F6B74B-AF02-43E7-833B-6C7593DEF562}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ComboTwo" ID="{CA9B065C-53E1-4C2F-A687-DB5FABD80E78}" ShortID="667994759">
+											<PropertyList>
+												<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ComboTwo" ID="{7F4536F7-4C7F-419F-9DF9-12734D444E35}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.298945640531277"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.0817743680377035"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ComboTwo.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="401856473"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ComboTwo" ID="{7F4536F7-4C7F-419F-9DF9-12734D444E35}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{2AA66E5D-D2E9-44DC-A9E2-D0AA6FBC3395}">
+											<PropertyList>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="ComboSounds_Path" ID="{28898488-F684-440C-9B18-5819DD47654B}">
+													<PropertyList>
+														<Property Name="RandomZ" Type="Real64" Value="100"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>43.65483</XPos>
+															<YPos>100</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>56.85279</XPos>
+															<YPos>100</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="ComboSounds_Path_01" ID="{F0A5F59B-881C-4C25-B418-2FB6A4F7EAF8}">
+													<PointList>
+														<Point>
+															<XPos>30.45685</XPos>
+															<YPos>100</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>47.2081218274112</XPos>
+															<YPos>100</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="ComboSounds_Path_02" ID="{BEBB23F5-9197-4952-9932-7F6A57D67A6B}">
+													<PointList>
+														<Point>
+															<XPos>35.02538</XPos>
+															<YPos>99.15254</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>51.26904</XPos>
+															<YPos>100</YPos>
+															<Flags>0</Flags>
+															<Time>5000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
+								</ActorMixer>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Movement" ID="{24FDAF2F-B863-4DBC-BB4B-4EC2C862E5FA}" ShortID="285689025">

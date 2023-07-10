@@ -211,6 +211,50 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ComboOver" ID="{15AAE204-2A87-422E-BA9D-2FD8D2EAF942}">
+							<ChildrenList>
+								<Action Name="" ID="{9920B350-82B8-48ED-8597-BBECB2D4A7B7}" ShortID="601521438">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ComboOver" ID="{80016C2A-0A55-4C18-8D43-38F5F492B094}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ComboOne" ID="{0B15A148-259B-4A8A-87D2-09EAC5DB5775}">
+							<ChildrenList>
+								<Action Name="" ID="{B6CACDA0-C6A5-4440-8BDF-F0975860E59F}" ShortID="12894015">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ComboOne" ID="{A092FA11-CF3B-4709-9CD7-0E9314846C78}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ComboTwo" ID="{C389974C-CD49-4811-81B9-52F0F22ECAD3}">
+							<ChildrenList>
+								<Action Name="" ID="{D3B8EDE6-C73B-44D5-85F6-61F9392E99CA}" ShortID="435092815">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ComboTwo" ID="{CA9B065C-53E1-4C2F-A687-DB5FABD80E78}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ComboThree" ID="{04DB17B6-49F2-4D67-A603-DD3F02D7E934}">
+							<ChildrenList>
+								<Action Name="" ID="{71E1CB3D-69AD-40A1-9843-C5F4CBDE37E3}" ShortID="473800362">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ComboThree" ID="{C7B41213-283C-4FAE-BDFF-3404DD660A34}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{413DB58E-941B-430A-B098-FDF3C4694721}" ShortID="661071205">

@@ -13,6 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID COMBOONE = 991466503U;
+        static const AkUniqueID COMBOOVER = 513644559U;
+        static const AkUniqueID COMBOTHREE = 1373464935U;
+        static const AkUniqueID COMBOTWO = 875847605U;
         static const AkUniqueID ENEMY_HIT = 1010055213U;
         static const AkUniqueID GRUNT_BURST = 501485854U;
         static const AkUniqueID KATANA_SWING = 2725920228U;

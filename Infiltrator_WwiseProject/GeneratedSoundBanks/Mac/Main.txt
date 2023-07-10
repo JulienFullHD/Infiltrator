@@ -2,9 +2,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	328487306	Player_stopwallrunning			\Default Work Unit\Movement\Player_stopwallrunning	
 	405241043	Play_FS_Metal			\Default Work Unit\Movement\Footsteps\Play_FS_Metal	
 	501485854	Grunt_burst			\Default Work Unit\Enemies\Grunt_burst	
+	513644559	ComboOver			\Default Work Unit\Combat\ComboOver	
 	857770058	Play_FS_Enemy			\Default Work Unit\Movement\Footsteps\Play_FS_Enemy	
+	875847605	ComboTwo			\Default Work Unit\Combat\ComboTwo	
+	991466503	ComboOne			\Default Work Unit\Combat\ComboOne	
 	1010055213	Enemy_Hit			\Default Work Unit\Combat\Enemy_Hit	
 	1305133589	Player_jump			\Default Work Unit\Movement\Player_jump	
+	1373464935	ComboThree			\Default Work Unit\Combat\ComboThree	
 	1445849350	Kunai_Throw			\Default Work Unit\Combat\Kunai_Throw	
 	1928192825	Play_FS_MetalWet			\Default Work Unit\Movement\Footsteps\Play_FS_MetalWet	
 	2134301282	Player_wallrunning			\Default Work Unit\Movement\Player_wallrunning	
@@ -40,6 +44,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	58810018	jump	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\jump_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\jump		24096
 	79855120	Wallrun	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Wallrun_7E2C6AF9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Wallrun		208992
 	86246821	FS_player_metal	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal		16596
+	90319105	ComboOver	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\ComboOver_74D9761B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Combo\ComboSounds\ComboOver		120096
 	120826194	WinTheme	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\NERDS RULE EVERYTHING AROUND ME_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\WinTheme		45964896
 	173493422	Bleed11	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed11_49260CEE.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed11		51388
 	174831135	FS_player_metal2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_player_metal2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Footsteps\FS_Metal\FS_player_metal2		16596
@@ -49,6 +54,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	290099863	Bleed22	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed22_36E054E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed22		50960
 	326487538	DropAfterJumpFall2	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DropAfterJumpFall2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\JumpFall_Land\DropAfterJumpFall2		19622
 	397544805	DropAfterJumpFall	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DropAfterJumpFall_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\JumpFall_Land\DropAfterJumpFall		24096
+	401856473	ComboTwo	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\ComboTwo_11517FEB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Combo\ComboSounds\ComboTwo		92370
+	411126953	ComboThree	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\ComboThree_E7ECFC40.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Combo\ComboSounds\ComboThree		88904
 	465842787	AmbienceWind	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Ambience Pimped_C18E9BBE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\AmbienceWind		10203552
 	482327575	DropAfterJumpFall1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\DropAfterJumpFall1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\JumpFall_Land\DropAfterJumpFall1		24096
 	491065857	FS_Enemy	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\FS_Enemy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\FS_Enemy\FS_Enemy		24096
@@ -65,6 +72,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	782221668	Bleed33	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Bleed33_C6BF1477.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemySounds\Bleed\Bleed33		59462
 	808142375	kunai1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\kunai1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Kunai\Kunai_Throw\kunai1		27096
 	834220296	Katana_Swing no3 1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing no3 1_6543591D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing no3 1		33996
+	864099427	ComboOne	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\ComboOne_9420BBA0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Combo\ComboSounds\ComboOne		74624
 	885646893	jump1	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\jump1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Movement\Jump\jump1		24096
 	914882142	Smokebomb	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Smokebomb_2410DA82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Smokebomb\Smokebomb		1290322
 	952022165	Katana_Swing	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Katana_Swing_B9FC8756.wem		\Actor-Mixer Hierarchy\Default Work Unit\Combat\Katana\Katana_Swing\Katana_Swing		31006

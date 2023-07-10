@@ -68,7 +68,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F88F1B00-1F83-3C3F-C828-2026931EBE57}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8A5E1082-F346-8FE2-3E2E-4B3004F07418}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -99,6 +99,10 @@
 				<File Id="86246821" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metal3.wav</ShortName>
 					<CachePath>SFX/FS_player_metal3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="90319105" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ComboOver.wav</ShortName>
+					<CachePath>SFX/ComboOver_74D9761B.wem</CachePath>
 				</File>
 				<File Id="120826194" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NERDS RULE EVERYTHING AROUND ME.wav</ShortName>
@@ -135,6 +139,14 @@
 				<File Id="397544805" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall.wav</ShortName>
 					<CachePath>SFX/DropAfterJumpFall_10C4C929.wem</CachePath>
+				</File>
+				<File Id="401856473" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ComboTwo.wav</ShortName>
+					<CachePath>SFX/ComboTwo_11517FEB.wem</CachePath>
+				</File>
+				<File Id="411126953" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ComboThree.wav</ShortName>
+					<CachePath>SFX/ComboThree_E7ECFC40.wem</CachePath>
 				</File>
 				<File Id="465842787" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience Pimped.wav</ShortName>
@@ -205,6 +217,10 @@
 					<ShortName>Katana_Swing no3 1.wav</ShortName>
 					<CachePath>SFX/Katana_Swing no3 1_6543591D.wem</CachePath>
 				</File>
+				<File Id="864099427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ComboOne.wav</ShortName>
+					<CachePath>SFX/ComboOne_9420BBA0.wem</CachePath>
+				</File>
 				<File Id="885646893" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump1.wav</ShortName>
 					<CachePath>SFX/jump1_10C4C929.wem</CachePath>
@@ -240,6 +256,26 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="991466503" Name="ComboOne" DurationType="OneShot" DurationMin="0.77634287" DurationMax="0.77634287">
+					<MediaRefs>
+						<MediaRef Id="864099427"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="513644559" Name="ComboOver" DurationType="OneShot" DurationMin="1.25" DurationMax="1.25">
+					<MediaRefs>
+						<MediaRef Id="90319105"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1373464935" Name="ComboThree" DurationType="OneShot" DurationMin="0.92507523" DurationMax="0.92507523">
+					<MediaRefs>
+						<MediaRef Id="411126953"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="875847605" Name="ComboTwo" DurationType="OneShot" DurationMin="0.96118397" DurationMax="0.96118397">
+					<MediaRefs>
+						<MediaRef Id="401856473"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2437695" DurationMax="1.7687076">
 					<MediaRefs>
 						<MediaRef Id="173493422"/>
@@ -357,5 +393,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4C5D2ED8-A6BD-6B71-6E04-E378C6F38A16}</FileHash>
+	<FileHash>{8AC6AC12-75F0-5F03-641E-6EAB191B3F53}</FileHash>
 </SoundBanksInfo>

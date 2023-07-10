@@ -35,6 +35,12 @@ public class ScoreManger : MonoBehaviour
     [Header("Trick: Full Arsenal")]
     [ReadOnly, SerializeField] private List<ScoreType> lastThreeHits;
 
+    [Header("Wwise Events")]        //Wwise
+    public AK.Wwise.Event ComboOne;
+    public AK.Wwise.Event ComboTwo;
+    public AK.Wwise.Event ComboThree;
+    public AK.Wwise.Event ComboOver;
+
     private void Start()
     {
         comboTimerSlider.value = 0;
@@ -62,6 +68,8 @@ public class ScoreManger : MonoBehaviour
     private void StartCombo()
     {
         currentMultiplier = 1;
+
+        ComboOne.Post(gameObject);  //Wwise
 
         textComboScorePlus.text = "+";
 
@@ -107,6 +115,8 @@ public class ScoreManger : MonoBehaviour
         StartCoroutine(ComboFade(comboAddFadeTimer, currentComboScore));
 
         ResetComboValues();
+
+        ComboOver.Post(gameObject); //Wwise
 
         ResetLastThreeHits();
 
@@ -244,6 +254,7 @@ public class ScoreManger : MonoBehaviour
         {
             ResetLastThreeHits();
             AddScoreToList(scoreType: ScoreType.Hattrick);
+            ComboTwo.Post(gameObject);  //Wwise
         }
 
         // Full_Arsenal
@@ -256,6 +267,7 @@ public class ScoreManger : MonoBehaviour
         {
             ResetLastThreeHits();
             AddScoreToList(scoreType: ScoreType.FullArsenal);
+            ComboThree.Post(gameObject);    //Wwise
         }
     }
 

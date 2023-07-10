@@ -174,7 +174,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585126142204349639
+    m_lastTime: -8585126104901588658
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585126124185214457
+    m_lastTime: -8585126097839490550
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -235,6 +235,86 @@ MonoBehaviour:
         ObjectType: 4
         guid: e3f6ed781da2a44ea8ecdd28771d5f8f
       Path: Events\Default Work Unit\Combat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ComboOne
+      guid: 48a1150b9b258a4a87d209eac5db5775
+      id: 991466503
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: ComboOne
+        ObjectType: 3
+        guid: 48a1150b9b258a4a87d209eac5db5775
+      Path: Events\Default Work Unit\Combat\ComboOne
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ComboOver
+      guid: 04e2aa15872a2e42ba9d2fd8d2eaf942
+      id: 513644559
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: ComboOver
+        ObjectType: 3
+        guid: 04e2aa15872a2e42ba9d2fd8d2eaf942
+      Path: Events\Default Work Unit\Combat\ComboOver
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ComboThree
+      guid: b617db04f249674da603dd3f02d7e934
+      id: 1373464935
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: ComboThree
+        ObjectType: 3
+        guid: b617db04f249674da603dd3f02d7e934
+      Path: Events\Default Work Unit\Combat\ComboThree
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ComboTwo
+      guid: 4c9789c349cd114881b952f0f22ecad3
+      id: 875847605
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: ComboTwo
+        ObjectType: 3
+        guid: 4c9789c349cd114881b952f0f22ecad3
+      Path: Events\Default Work Unit\Combat\ComboTwo
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1006,7 +1086,7 @@ MonoBehaviour:
     m_lastTime: -8585126921120586461
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000090000000f000000
+  ExpandedWaapiItemIds: 0500000006000000080000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

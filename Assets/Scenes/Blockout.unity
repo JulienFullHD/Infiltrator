@@ -26381,6 +26381,30 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1458151354558184751, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: ComboOne.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: bca72614ba376b145820cc10dec73b76,
+        type: 2}
+    - target: {fileID: 1458151354558184751, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: ComboTwo.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 6dca86aed1bee744ea46e753dde856ab,
+        type: 2}
+    - target: {fileID: 1458151354558184751, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: ComboOver.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: aaa81d6bd7ce89940a83c8c69549ed3b,
+        type: 2}
+    - target: {fileID: 1458151354558184751, guid: 5a510215b0823ce4f9102adff1633e16,
+        type: 3}
+      propertyPath: ComboThree.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f66692035d406c43955889b65cf883c,
+        type: 2}
     - target: {fileID: 5496735524768176171, guid: 5a510215b0823ce4f9102adff1633e16,
         type: 3}
       propertyPath: m_Name

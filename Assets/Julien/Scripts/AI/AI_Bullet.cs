@@ -16,7 +16,12 @@ public class AI_Bullet : MonoBehaviour
     [SerializeField]
     private LayerMask ignoreLayer;
 
-    
+    //Wwise 
+    [Header("Wwise Events")]
+    public AK.Wwise.Event ProjectileFlight;
+    public AK.Wwise.Event ProjectileHitObstacle;
+
+
     void Start()
     {
         LastPos = transform.position;
@@ -80,6 +85,7 @@ public class AI_Bullet : MonoBehaviour
         if(other.tag == "obstacle")
         {
             DestroyBullet();
+            ProjectileHitObstacle.Post(gameObject);
         }
         
     }
