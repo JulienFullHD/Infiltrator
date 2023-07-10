@@ -50,6 +50,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Wallrun Settings")]
     [ReadOnly, SerializeField] public bool isWallrunning;
 
+    [Header("Sound Settings")]
+    [SerializeField] private float landingSoundCooldownDuration;
+    [ReadOnly, SerializeField] private float landingSoundCooldownTimer;
+
 
     private void Start()
     {
@@ -76,6 +80,23 @@ public class PlayerMovement : MonoBehaviour
         isGroundedLastFrame = isGrounded;
 
         isGrounded = isGroundedTrigger;
+
+        if (!isGroundedLastFrame && isGrounded && landingSoundCooldownTimer <= 0)
+        {
+            //SPIELER IST JETZT GELANDED
+            
+            //SOUND
+
+
+
+
+            landingSoundCooldownTimer = landingSoundCooldownDuration;
+        }
+
+        if(landingSoundCooldownTimer > 0)
+        {
+            landingSoundCooldownTimer -= Time.deltaTime;
+        }
 
         //isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + extraRaycastDistance, groundLayers);
     }
