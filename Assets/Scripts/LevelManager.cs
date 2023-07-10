@@ -30,11 +30,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField]private string userName;
     private void Start()
     {
-        if(Instance is not null)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // if(Instance is not null)
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
         Instance = this;
 
 
