@@ -5,21 +5,6 @@ using UnityEngine;
 
 public class AbilityUI : MonoBehaviour
 {
-    #region Instance
-    public static AbilityUI Instance;
-    private void Awake()
-    {
-        if (Instance is not null)
-        {
-            Destroy(this);
-            return;
-        }
-
-        Instance = this;
-    }
-    #endregion
-
-
     #region Kunai
     [Header("Kunai Settings")]
     [SerializeField] private GameObject kunaiNoAmmo;

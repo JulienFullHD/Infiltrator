@@ -32,6 +32,7 @@ public class Dashing : MonoBehaviour
     [Header("Cooldown")]
     [SerializeField] private float dashCooldown;
     [ReadOnly, SerializeField] private bool canDash;
+    [SerializeField]private AbilityUI abilityUI;
 
     private void Start()
     {
@@ -70,7 +71,7 @@ public class Dashing : MonoBehaviour
         Invoke(nameof(DelayedDashForce), 0.025f);
 
         Invoke(nameof(AllowDash), dashCooldown);
-        AbilityUI.Instance.StartDashCooldown(dashCooldown);
+        abilityUI.StartDashCooldown(dashCooldown);
 
         Invoke(nameof(ResetDash), dashDuration);
     }

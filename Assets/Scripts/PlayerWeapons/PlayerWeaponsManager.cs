@@ -38,7 +38,7 @@ public class PlayerWeaponsManager : MonoBehaviour
                 kunaiAmount = 3;
             }
 
-            AbilityUI.Instance.ChangeKunaiAmmoUI(kunaiAmount);
+            abilityUI.ChangeKunaiAmmoUI(kunaiAmount);
         }
     }
 
@@ -60,6 +60,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     [Header("Debug Settings")]
     [SerializeField] private bool showGizmo;
     [SerializeField] private float gizmoRadius;
+    [SerializeField] private AbilityUI abilityUI;
 
     private void Awake()
     {
@@ -126,7 +127,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void ThrowSmoke()
     {
-        AbilityUI.Instance.StartSmokeCooldown(smokebombAttackCooldownMS / 1000);
+        abilityUI.StartSmokeCooldown(smokebombAttackCooldownMS / 1000);
         Invoke(nameof(AllowSmokeThrow), smokebombAttackCooldownMS/1000);
 
         GameObject smokebomb = Instantiate(original: smokebombPrefab, position: smokebombLaunchLocation.position, rotation: smokebombLaunchLocation.rotation);
@@ -172,7 +173,11 @@ public class PlayerWeaponsManager : MonoBehaviour
            hitType == HitType.Dash)
         {
             Debug.Log(enemyGameObject.transform.parent.name);
-            if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))aI_HPSystem.TakeDamage(1);
+            if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))
+            {
+                aI_HPSystem.TakeDamage(1);
+                AddKunai();
+            }
             
             scoreManager.HitToScore(hitType: hitType);
 
