@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e972edc4650cd4184cb954987661ac, type: 3}
   m_Name: AC1021D9-2927-4C66-9DA8-FA5494AD34A4
   m_EditorClassIdentifier: 
-  objectName: ThrowSmoke
-  id: 2085220022
+  objectName: Smoke_Throw
+  id: 2664284733
   guid: AC1021D9-2927-4C66-9DA8-FA5494AD34A4

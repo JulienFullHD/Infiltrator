@@ -11,6 +11,8 @@ public class Smokebomb : MonoBehaviour
     [SerializeField] private float durationMS;
     [SerializeField] private Vector3 stunHitbox;
     [ReadOnly, SerializeField] private Collider[] stunHits;
+    [Header("Wwise Event")]     //Wwise
+    public AK.Wwise.Event mySmokebombPop;     //Wwise
 
     public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
@@ -25,6 +27,7 @@ public class Smokebomb : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         rb.constraints = RigidbodyConstraints.FreezeAll;
         rb.detectCollisions = false;
+        mySmokebombPop.Post(gameObject); //Wwise
 
         stunHits = Physics.OverlapBox(transform.position, stunHitbox / 2, Quaternion.identity, LayerMask.GetMask("Enemy"));
 

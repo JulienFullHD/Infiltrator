@@ -31124,6 +31124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HitPoints: 1
+  myDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a394d7b43da214d4c974458673389851,
+      type: 2}
 --- !u!1001 &1271028988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54128,6 +54133,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1946ad7500e191a4f97eba5e3459113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myKillzoneDeath:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a394d7b43da214d4c974458673389851,
+      type: 2}
 --- !u!65 &2010123206
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -55,6 +55,11 @@ MonoBehaviour:
   durationMS: 5000
   stunHitbox: {x: 10, y: 10, z: 10}
   stunHits: []
+  mySmokebombPop:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5340ea850ebbaba4981301962bb7556f,
+      type: 2}
 --- !u!54 &7718763528319435726
 Rigidbody:
   m_ObjectHideFlags: 0

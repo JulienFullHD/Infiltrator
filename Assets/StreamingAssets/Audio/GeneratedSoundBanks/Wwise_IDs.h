@@ -22,12 +22,15 @@ namespace AK
         static const AkUniqueID PLAY_FS_METAL = 405241043U;
         static const AkUniqueID PLAY_FS_METALWET = 1928192825U;
         static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
+        static const AkUniqueID PLAY_WINNINGSCREEN = 3205957598U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
+        static const AkUniqueID PLAYER_DEATH = 3083087645U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_STOPWALLRUNNING = 328487306U;
         static const AkUniqueID PLAYER_WALLRUNNING = 2134301282U;
-        static const AkUniqueID THROWSMOKE = 2085220022U;
+        static const AkUniqueID SMOKE_POP = 2528951528U;
+        static const AkUniqueID SMOKE_THROW = 2664284733U;
     } // namespace EVENTS
 
     namespace STATES

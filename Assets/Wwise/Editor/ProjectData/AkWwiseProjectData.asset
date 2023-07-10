@@ -174,7 +174,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585126807404323820
+    m_lastTime: -8585126142204349639
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -202,7 +202,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585126747511221704
+    m_lastTime: -8585126124185214457
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -558,6 +558,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Player_Death
+      guid: 75920e0fb637f649a8e165a7e2964653
+      id: 3083087645
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Player_Death
+        ObjectType: 3
+        guid: 75920e0fb637f649a8e165a7e2964653
+      Path: Events\Default Work Unit\Combat\Player_Death
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Player_jump
       guid: 279fc2a2d213164e8989ccfb837864d6
       id: 1305133589
@@ -638,6 +658,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Smoke_Pop
+      guid: 372963ec0be97a47801733c33acb24e6
+      id: 2528951528
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Smoke_Pop
+        ObjectType: 3
+        guid: 372963ec0be97a47801733c33acb24e6
+      Path: Events\Default Work Unit\Combat\Smoke_Pop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Smoke_Throw
+      guid: d92110ac2729664c9da8fa5494ad34a4
+      id: 2664284733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Smoke_Throw
+        ObjectType: 3
+        guid: d92110ac2729664c9da8fa5494ad34a4
+      Path: Events\Default Work Unit\Combat\Smoke_Throw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Sniper_shot
       guid: bbdf62b37beead49822d4d89d6231ccb
       id: 2759914667
@@ -675,26 +735,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: c0f1f8c78fb4b44e98f5ed4bd4468850
       Path: Events\Default Work Unit\Music\Stop_MainTheme
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: ThrowSmoke
-      guid: d92110ac2729664c9da8fa5494ad34a4
-      id: 2085220022
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Combat
-        ObjectType: 4
-        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
-      - ElementName: ThrowSmoke
-        ObjectType: 3
-        guid: d92110ac2729664c9da8fa5494ad34a4
-      Path: Events\Default Work Unit\Combat\ThrowSmoke
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -966,7 +1006,7 @@ MonoBehaviour:
     m_lastTime: -8585126921120586461
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a0000000f00000010000000
+  ExpandedWaapiItemIds: 0600000007000000090000000f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -84,7 +84,7 @@
 								<Action Name="" ID="{7A8425A1-DCF6-4CA5-A813-0C42A3B647E0}" ShortID="737114264">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="JumpFallLand" ID="{2E82DC29-6D99-47C2-AFF3-7901F3A38984}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="JumpFall_Land" ID="{34532EA1-67AE-4F5E-9B80-DA569F992A76}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -178,7 +178,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="ThrowSmoke" ID="{AC1021D9-2927-4C66-9DA8-FA5494AD34A4}"/>
+						<Event Name="Smoke_Throw" ID="{AC1021D9-2927-4C66-9DA8-FA5494AD34A4}">
+							<ChildrenList>
+								<Action Name="" ID="{4C36226E-0EEA-4C55-BD53-F94697FF0E84}" ShortID="532086150">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Smoke_Throw" ID="{739AEB13-56AA-4782-8AA2-643D63818CC2}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Death" ID="{0F0E9275-37B6-49F6-A8E1-65A7E2964653}">
+							<ChildrenList>
+								<Action Name="" ID="{506A92C4-229E-4DC6-AC8F-71C96C99F6F7}" ShortID="139752817">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_death" ID="{929A74B2-02EB-47B7-952E-1254B59A6141}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Smoke_Pop" ID="{EC632937-E90B-477A-8017-33C33ACB24E6}">
+							<ChildrenList>
+								<Action Name="" ID="{AED07268-8A21-4B61-B56B-071B922D682E}" ShortID="442539162">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Smokebomb" ID="{8A896FD8-CE32-4C9D-A3B7-21DAB1569AB8}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{413DB58E-941B-430A-B098-FDF3C4694721}" ShortID="661071205">
@@ -253,7 +285,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="WIN" ID="{C6413E42-1D12-46A2-9D50-8133D7AB4987}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="WinTheme" ID="{7EFEF2D8-507D-402D-88D3-E35357C8A500}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
