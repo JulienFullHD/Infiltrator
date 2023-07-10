@@ -114,7 +114,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
         //swordHits = Physics.OverlapBox(transform.position, swordBoxSize / 2,Quaternion.identity);
 
-        Debug.Log($"Sword hit {swordHits.Length} enemies");
+        //Debug.Log($"Sword hit {swordHits.Length} enemies");
         if(swordHits.Length > 0)
         {
             for (int i = 0; i < swordHits.Length; i++)

@@ -47,9 +47,12 @@ public class WallRunning : MonoBehaviour
 
     private void Update()
     {
+        if (movementManager.isWallrunning)
+            Debug.Log("Wallrunning");
+
         HandleInput();
         CheckForWall();
-        HandleWallrunState();
+        HandleWallrunState();        
     }
 
     private void FixedUpdate()
@@ -68,6 +71,9 @@ public class WallRunning : MonoBehaviour
 
     private bool InAir()
     {
+        //Better solution lol
+        //return !movementManager.isGrounded;
+
         //Check if player is in air above ground by at least minJumpHeight
         return !Physics.Raycast(transform.position, Vector3.down, minJumpHeight, groundLayers);
     }
@@ -154,6 +160,8 @@ public class WallRunning : MonoBehaviour
 
     private void StartWallRun()
     {
+        movementManager.ResetJump();
+
         wallrunStartUseGravity = true;
 
         movementManager.isWallrunning = true;
