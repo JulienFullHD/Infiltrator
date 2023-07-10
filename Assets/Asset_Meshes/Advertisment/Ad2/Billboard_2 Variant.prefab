@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 241406780662607096, guid: f16266b37d046614cb77f56c93ed1d9f,
         type: 3}
       propertyPath: m_Name
-      value: Billboard_2
+      value: Billboard_2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2872910744872495339, guid: f16266b37d046614cb77f56c93ed1d9f,
         type: 3}
@@ -86,6 +86,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90.258
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353935077496464492, guid: f16266b37d046614cb77f56c93ed1d9f,
+        type: 3}
+      propertyPath: m_Range
+      value: 12.750508
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353935077496464492, guid: f16266b37d046614cb77f56c93ed1d9f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.39999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353935077496464492, guid: f16266b37d046614cb77f56c93ed1d9f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353935077496464492, guid: f16266b37d046614cb77f56c93ed1d9f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9036932
+      objectReference: {fileID: 0}
+    - target: {fileID: 7353935077496464492, guid: f16266b37d046614cb77f56c93ed1d9f,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9008033268145906599, guid: f16266b37d046614cb77f56c93ed1d9f,
         type: 3}
