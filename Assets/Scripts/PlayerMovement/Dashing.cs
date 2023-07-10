@@ -32,7 +32,7 @@ public class Dashing : MonoBehaviour
     [Header("Cooldown")]
     [SerializeField] private float dashCooldown;
     [ReadOnly, SerializeField] private bool canDash;
-    [SerializeField]private AbilityUI abilityUI;
+    [SerializeField] private AbilityUI abilityUI;
 
     private void Start()
     {

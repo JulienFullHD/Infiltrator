@@ -27,9 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(20f)]
     [Header("Ground Check Settings")]
-    [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask groundLayers;
-    [SerializeField] private float extraRaycastDistance;
     [ReadOnly, SerializeField] public bool isGrounded;
     [ReadOnly, SerializeField] public bool isGroundedLastFrame;
     [ReadOnly, SerializeField] public bool isGroundedTrigger;
@@ -221,18 +219,15 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        isGroundedTrigger = true;
-    }
-
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    isGroundedTrigger = true;
+    //}
 
 
     // - - - - - - - - - - - - - - - Fixed Update stuff - - - - - - - - - - - - - - 
     private void FixedUpdate()
     {
-        isGroundedTrigger = false;
-
         Move();
     }
 

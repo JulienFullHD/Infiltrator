@@ -658,6 +658,7 @@ MonoBehaviour:
   hitmarkerDisplayMS: 100
   showGizmo: 1
   gizmoRadius: 0.2
+  abilityUI: {fileID: 0}
 --- !u!1 &1458151353822511053
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,11 +880,9 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0, z: -0}
   flatVelocity: {x: 0, y: 0, z: 0}
   limitedVelocity: {x: 9.897743, y: 0, z: 1.4264249}
-  playerHeight: 2
   groundLayers:
     serializedVersion: 2
     m_Bits: 4194432
-  extraRaycastDistance: 0.2
   isGrounded: 1
   isGroundedLastFrame: 0
   isGroundedTrigger: 0
@@ -928,6 +927,7 @@ MonoBehaviour:
   forwardTransform: {fileID: 0}
   dashCooldown: 4
   canDash: 0
+  abilityUI: {fileID: 0}
 --- !u!114 &1458151353933140076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3338,6 +3338,7 @@ GameObject:
   - component: {fileID: 4049501729472109622}
   - component: {fileID: 3615920908127242571}
   - component: {fileID: 6703818358704487100}
+  - component: {fileID: 2644349046557487201}
   m_Layer: 10
   m_Name: GroundCheckTrigger
   m_TagString: Untagged
@@ -3424,6 +3425,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2644349046557487201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7515255004443102258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f732e0fb24dfab74b83fb03a1cc27cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementManager: {fileID: 1458151353933140078}
 --- !u!1 &7785915594387474775
 GameObject:
   m_ObjectHideFlags: 0
