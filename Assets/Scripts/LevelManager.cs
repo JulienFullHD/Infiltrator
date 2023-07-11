@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Dan.Main;
 
 public class LevelManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]private LeaderBoard leaderBoard;
     [SerializeField]private GhostRunner ghostRunner;
     [SerializeField]private string userName;
+    private string publicKey = "e9856340c08efde8a7d87ae37c65bf62b267bd68b4526abeae5c98859244f1c5";
     private void Start()
     {
         // if(Instance is not null)
@@ -36,8 +38,6 @@ public class LevelManager : MonoBehaviour
         //     return;
         // }
         Instance = this;
-
-
         isWon = false;
         EnemyCount = FindObjectsOfType(typeof(AI_HPSystem)).Count();
     }
@@ -67,7 +67,8 @@ public class LevelManager : MonoBehaviour
         Debug.Log(scoreManager.GetScore());
         //if(ghostRunner._system.GetRun(RecordingType.Last, out Recording run)) leaderBoard.SetLeaderBoardEntry(userName, scoreManager.GetScore(), "NULL");//run.Serialize()
         //Debug.Log(run.Serialize().ToString().Length);
-        leaderBoard.SetLeaderBoardEntry(userName, scoreManager.GetScore(), "NULL");
+        userName = PlayerPrefs.GetString("PlayerName");
+        SetLeaderBoardEntry(userName, scoreManager.GetScore());
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
@@ -83,5 +84,11 @@ public class LevelManager : MonoBehaviour
 
 
         }
+    }
+
+    public void SetLeaderBoardEntry(string username, int score)
+    {
+        LeaderboardCreator.UploadNewEntry(publicKey, username, score, ((msg) => {
+        }));
     }
 }
