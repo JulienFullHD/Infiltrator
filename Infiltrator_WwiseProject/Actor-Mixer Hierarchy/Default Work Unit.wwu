@@ -692,7 +692,7 @@
 								</Property>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>30</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
@@ -1199,7 +1199,7 @@
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>21</Value>
+												<Value>20</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Lowpass" Type="int16">
@@ -1214,7 +1214,6 @@
 												<ModifierInfo>
 													<Modifier Name="" ID="{6870D0DC-835D-40C1-B15C-05B4468DA1F8}">
 														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="76"/>
 															<Property Name="Min" Type="Real64" Value="-200"/>
 														</PropertyList>
@@ -1224,7 +1223,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1232,12 +1231,15 @@
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Single_Band_1Khz_Wide" ID="{9B6A1D1B-F90F-4EAC-B796-2943413957FE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="FS_player_metal" ID="{1179EC90-BCD9-4C98-88AE-5D02510BAB82}" ShortID="278504549">
+										<Sound Name="FS_player_metal" ID="{B8AE64B0-0D4A-4149-A735-9204355A2A8A}" ShortID="454539594">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1247,47 +1249,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metal" ID="{B690FC72-0B51-495F-B56E-7772BB2171BD}">
+												<AudioFileSource Name="FS_player_metal" ID="{C2293786-6E9E-4DD7-8EF7-A983492BE04E}">
 													<Language>SFX</Language>
 													<AudioFile>FS_player_metal.wav</AudioFile>
 													<MediaIDList>
 														<MediaID ID="955289616"/>
 													</MediaIDList>
 												</AudioFileSource>
-												<AudioFileSource Name="FS_player_metal1" ID="{E447D250-4E79-4F6B-9BC7-333B65234F1B}">
-													<Language>SFX</Language>
-													<AudioFile>FS_player_metal1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="9922241"/>
-													</MediaIDList>
-												</AudioFileSource>
-												<AudioFileSource Name="FS_player_metal-1" ID="{081FEEBF-A12A-4AF6-9140-87F20081A86B}">
-													<Language>SFX</Language>
-													<AudioFile>FS_player_metal-1.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="156816055"/>
-													</MediaIDList>
-												</AudioFileSource>
-												<AudioFileSource Name="FS_player_metal2" ID="{CD167987-0B26-41A2-A5AF-0C281876158B}">
-													<Language>SFX</Language>
-													<AudioFile>FS_player_metal2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="174831135"/>
-													</MediaIDList>
-												</AudioFileSource>
-												<AudioFileSource Name="FS_player_metal3" ID="{5916AD60-75E5-4708-A419-53857AFF3B65}">
-													<Language>SFX</Language>
-													<AudioFile>FS_player_metal3.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="86246821"/>
-													</MediaIDList>
-												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metal3" ID="{5916AD60-75E5-4708-A419-53857AFF3B65}" Platform="Linked"/>
+												<ActiveSource Name="FS_player_metal" ID="{C2293786-6E9E-4DD7-8EF7-A983492BE04E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metal1" ID="{ACA42983-FFE2-4FFE-9122-D6458138385F}" ShortID="826242035">
+										<Sound Name="FS_player_metal1" ID="{4E2AC98D-798B-412D-AE8C-8561B17FADE7}" ShortID="392923104">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1297,7 +1271,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metal1" ID="{F6279818-9AC6-44EE-BA82-04DFC6FFE7E5}">
+												<AudioFileSource Name="FS_player_metal1" ID="{68311FDD-32E8-44E3-BA78-22FC8D7CE3D9}">
 													<Language>SFX</Language>
 													<AudioFile>FS_player_metal1.wav</AudioFile>
 													<MediaIDList>
@@ -1306,10 +1280,10 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metal1" ID="{F6279818-9AC6-44EE-BA82-04DFC6FFE7E5}" Platform="Linked"/>
+												<ActiveSource Name="FS_player_metal1" ID="{68311FDD-32E8-44E3-BA78-22FC8D7CE3D9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metal2" ID="{03A6EF9C-6DDB-4764-9E3D-B7F131CD51F6}" ShortID="10728932">
+										<Sound Name="FS_player_metal2" ID="{9510D943-A27D-42B6-8AE5-9824461D8E14}" ShortID="560649143">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1319,7 +1293,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metal2" ID="{58DA995B-A9DD-4FD7-BC71-BCCD62C5976A}">
+												<AudioFileSource Name="FS_player_metal2" ID="{1424E45C-B178-45F0-A475-58352057B40C}">
 													<Language>SFX</Language>
 													<AudioFile>FS_player_metal2.wav</AudioFile>
 													<MediaIDList>
@@ -1328,10 +1302,10 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metal2" ID="{58DA995B-A9DD-4FD7-BC71-BCCD62C5976A}" Platform="Linked"/>
+												<ActiveSource Name="FS_player_metal2" ID="{1424E45C-B178-45F0-A475-58352057B40C}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metal3" ID="{90F9CBAD-5944-49AA-AA60-8B74F6CA685C}" ShortID="738267178">
+										<Sound Name="FS_player_metal3" ID="{A53FA01F-14D6-44F6-A54F-668D2B0107B5}" ShortID="540240940">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1341,7 +1315,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metal3" ID="{DED7AE36-3750-4522-B5DC-36EB8FF6F466}">
+												<AudioFileSource Name="FS_player_metal3" ID="{BDBB1DA8-39F0-4CD9-AD62-3D622E8B8A32}">
 													<Language>SFX</Language>
 													<AudioFile>FS_player_metal3.wav</AudioFile>
 													<MediaIDList>
@@ -1350,7 +1324,7 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metal3" ID="{DED7AE36-3750-4522-B5DC-36EB8FF6F466}" Platform="Linked"/>
+												<ActiveSource Name="FS_player_metal3" ID="{BDBB1DA8-39F0-4CD9-AD62-3D622E8B8A32}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1508,10 +1482,20 @@
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>110</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>11</Value>
+										<Value>8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1547,12 +1531,19 @@
 						</Sound>
 						<RandomSequenceContainer Name="JumpFall_Land" ID="{34532EA1-67AE-4F5E-9B80-DA569F992A76}" ShortID="96088747">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-570</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{DC949339-D87B-4E28-993D-5DE96F0A7B57}">
 												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="126"/>
 													<Property Name="Min" Type="Real64" Value="-354"/>
 												</PropertyList>
@@ -1645,6 +1636,11 @@
 						<Property Name="CenterPercentage" Type="int32">
 							<ValueList>
 								<Value>75</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>

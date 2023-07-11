@@ -633,12 +633,14 @@
 								<Effect Name="Single_Band_1Khz_Wide" ID="{9B6A1D1B-F90F-4EAC-B796-2943413957FE}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
-										<Property Name="FilterTypeBand2" Type="int32" Value="2"/>
+										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="5162"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="10000"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-3.5"/>
 										<Property Name="QFactorBand2" Type="Real32" Value="0.5"/>
 									</PropertyList>
 								</Effect>

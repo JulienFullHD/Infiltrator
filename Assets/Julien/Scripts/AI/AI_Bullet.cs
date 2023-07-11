@@ -26,6 +26,7 @@ public class AI_Bullet : MonoBehaviour
     {
         LastPos = transform.position;
         rb = this.GetComponent<Rigidbody>();
+        ProjectileFlight.Post(gameObject);
     }
     void Update()
     {

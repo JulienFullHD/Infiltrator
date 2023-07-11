@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
     //Wwise shit
     [Header("Wwise Event")]
     public AK.Wwise.Event PlayMainTheme;
-    public AK.Wwise.Event StopMainTheme;
+    public AK.Wwise.Event PlayWinTheme;
 
     private void Start()
     {
@@ -69,7 +69,7 @@ public class LevelManager : MonoBehaviour
     {
         isWon = true;
         winCanvasObject.SetActive(true);
-        StopMainTheme.Post(gameObject);
+        PlayWinTheme.Post(gameObject);
         fadeTimer = 0;
         ghostRunner.StopRun();
         Debug.Log(scoreManager.GetScore());

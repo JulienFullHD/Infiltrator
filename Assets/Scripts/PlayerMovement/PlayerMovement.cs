@@ -106,9 +106,7 @@ private void Start()
 
         if (!isGroundedLastFrame && isGrounded && landingSoundCooldownTimer <= 0)
         {
-            //SPIELER IST JETZT GELANDED
-            
-            //SOUND
+            myLand.Post(gameObject); //Wwise
 
 
 
