@@ -32,6 +32,7 @@ public class Dashing : MonoBehaviour
     [Header("Cooldown")]
     [SerializeField] private float dashCooldown;
     [ReadOnly, SerializeField] private bool canDash;
+    [SerializeField] private AbilityUI abilityUI;
 
     //Wwise
     [Header("Wwise Events")]
@@ -49,6 +50,11 @@ public class Dashing : MonoBehaviour
         {
             Dash();
             PlayerDash.Post(gameObject);
+        }
+
+        if(attackCollider.enabled == true)
+        {
+            Debug.Log("Phasing");
         }
     }
 
@@ -71,6 +77,7 @@ public class Dashing : MonoBehaviour
         Invoke(nameof(DelayedDashForce), 0.025f);
 
         Invoke(nameof(AllowDash), dashCooldown);
+        abilityUI.StartDashCooldown(dashCooldown);
 
         Invoke(nameof(ResetDash), dashDuration);
     }

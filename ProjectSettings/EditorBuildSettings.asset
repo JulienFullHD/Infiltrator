@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5c95617c9b8f55f4e874e59025ac66e7
   - enabled: 1
+    path: Assets/Scenes/Blockout_backup.unity
+    guid: 39c598a12ca1a044e8159dabe2ee8b2d
+  - enabled: 0
     path: Assets/Scenes/Blockout.unity
     guid: 497b2cd9f53fd3844b978454d9accf39
   m_configObjects: {}

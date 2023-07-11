@@ -27,10 +27,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Space(20f)]
     [Header("Ground Check Settings")]
-    [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask groundLayers;
-    [SerializeField] private float extraRaycastDistance;
     [ReadOnly, SerializeField] public bool isGrounded;
+    [ReadOnly, SerializeField] public bool isGroundedLastFrame;
+    [ReadOnly, SerializeField] public bool isGroundedTrigger;
 
     [Header("Dash Settings")]
     [SerializeField] private float speedChangeFactor;
@@ -38,12 +38,21 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping Settings")]
     [SerializeField] private float jumpStrength;
-    [SerializeField] private float jumpCooldown;
+    //[SerializeField] private float jumpCooldown; //Remnant from before CoyoteTime
     [SerializeField] private float aerialSpeedMultiplier;
     [ReadOnly, SerializeField] private bool canJump;
 
+    [Header("Coyote Time")]
+    [SerializeField] private float maxCoyoteTime;
+    [ReadOnly, SerializeField] private bool coyoteAllowJump;
+    [ReadOnly, SerializeField] private float timeInAir;
+
     [Header("Wallrun Settings")]
     [ReadOnly, SerializeField] public bool isWallrunning;
+
+    [Header("Sound Settings")]
+    [SerializeField] private float landingSoundCooldownDuration;
+    [ReadOnly, SerializeField] private float landingSoundCooldownTimer;
 
 
     //Wwise
@@ -65,7 +74,14 @@ private void Start()
 
     private void Update()
     {
+        if (isGrounded)
+            Debug.Log("Grounded");
+        else
+            Debug.Log("In Air");
+
+
         GroundCheck();
+        CoyoteTime();
         Inputs();
         SpeedControl();
         DragControl();
@@ -84,7 +100,56 @@ private void Start()
 
     private void GroundCheck()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + extraRaycastDistance, groundLayers);
+        isGroundedLastFrame = isGrounded;
+
+        isGrounded = isGroundedTrigger;
+
+        if (!isGroundedLastFrame && isGrounded && landingSoundCooldownTimer <= 0)
+        {
+            //SPIELER IST JETZT GELANDED
+            
+            //SOUND
+
+
+
+
+            landingSoundCooldownTimer = landingSoundCooldownDuration;
+        }
+
+        if(landingSoundCooldownTimer > 0)
+        {
+            landingSoundCooldownTimer -= Time.deltaTime;
+        }
+
+        //isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + extraRaycastDistance, groundLayers);
+    }
+
+    private void CoyoteTime()
+    {
+        if (isGrounded)
+        {
+            timeInAir = 0;
+            coyoteAllowJump = true;
+
+            //Execute if player landed this frame
+            if (!isGroundedLastFrame)
+            {
+                canJump = true;
+            }
+        }
+        else
+        {
+            timeInAir += Time.deltaTime;
+
+            if(timeInAir < maxCoyoteTime)
+            {
+                coyoteAllowJump = true;
+            }
+            else
+            {
+                coyoteAllowJump = false;
+            }
+        }
     }
     
     private void DragControl()
@@ -104,13 +169,10 @@ private void Start()
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(KeyCode.Space) && canJump && isGrounded)
+        if(Input.GetKey(KeyCode.Space) && canJump && coyoteAllowJump)
         {
             canJump = false;
             Jump();
-
-
-            Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
     private void SpeedControl()
@@ -202,10 +264,15 @@ private void Start()
         myJump.Post(gameObject); //Wwise
     }
 
-    private void ResetJump()
+    public void ResetJump()
     {
         canJump = true;
     }
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    isGroundedTrigger = true;
+    //}
 
 
     // - - - - - - - - - - - - - - - Fixed Update stuff - - - - - - - - - - - - - - 
@@ -227,6 +294,4 @@ private void Start()
             rb.AddForce(moveDirection.normalized * speedToApply * speedForceMultiplier * aerialSpeedMultiplier, ForceMode.Force);
         }
     }
-
-    
 }

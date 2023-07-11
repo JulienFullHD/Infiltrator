@@ -284,6 +284,11 @@ public class ScoreManger : MonoBehaviour
         return scoreType == ScoreType.Kunai || scoreType == ScoreType.Sword || scoreType == ScoreType.Dash;
     }
 
+    public int GetScore()
+    {
+        return currentMainScore;
+    }
+
     public enum ScoreType
     {
         UNDEFINED,

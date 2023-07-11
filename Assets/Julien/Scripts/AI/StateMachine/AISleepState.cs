@@ -8,42 +8,25 @@ public class AISleepState : AIBaseState
         ai.Text.SetText("Engage Player");
         
         ai.destinationSetter.target = ai.Player;
-        ai.Animator.SetFloat("Speed", 1);
-        ai.Animator.SetBool("Aiming", true);
+        ai.Animator.SetFloat("Speed", 0);
+        ai.Animator.SetBool("Aiming", false);
+
+        ai.destinationSetter.target = ai.transform;
     }
 
     public override void UpdateState(AIStateManager ai)
     {
-        if(ai.richAI.reachedEndOfPath)
+        foreach (var mate in ai.ConnectedMates)
         {
-            ai.Animator.SetFloat("Speed", 0);
-        }else
-        {
-            ai.Animator.SetFloat("Speed", 1);
-        }
-        if(sightOnPlayer(ai.Player, ai))
-        {
-            ai.Weapon.Shoot(ai.Player);
+            if(mate.DetectionSystem.GetSusMeter() >= 100)
+            {
+                ai.SwitchState(ai.SnipeState);
+            }
         }
     }
 
     public override void OnCollisionEnter(AIStateManager ai)
     {
 
-    }
-
-    public bool sightOnPlayer(Transform _target, AIStateManager ai)
-    {
-        RaycastHit hit;
-        Vector3 dir = (_target.position - ai.Head.position).normalized;
-        Debug.DrawRay(ai.Head.position, dir*100 , Color.red);
-        if(Physics.Raycast(ai.Head.position, dir, out hit, 100,~ai.IgnoreLayer))
-        {
-            if(hit.transform.tag == "Player")
-            {
-                return true;
-            }
-        }
-        return false;
     }
 }
