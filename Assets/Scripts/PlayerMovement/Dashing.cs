@@ -10,7 +10,6 @@ public class Dashing : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private PlayerMovement movementManager;
     [SerializeField] private PlayerWeaponsManager weaponManager;
-    [SerializeField] public KeyCode keybindDash = KeyCode.E;
 
     [Header("Phasing through enemies")]
     [SerializeField] private float phaseTimer;
@@ -46,7 +45,7 @@ public class Dashing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(keybindDash) && canDash)
+        if (Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
         {
             Dash();
             PlayerDash.Post(gameObject);

@@ -77,7 +77,7 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(UserSettings.Instance.KeybindKunai))
         {
             ThrowKunai();
         }
@@ -89,7 +89,7 @@ public class PlayerWeaponsManager : MonoBehaviour
             Invoke(nameof(AttackSword), swordAttackCountdownMS);
         }
 
-        if (Input.GetKeyDown(KeyCode.F) && canThrowSmokebomb)
+        if (Input.GetKeyDown(UserSettings.Instance.KeybindSmokebomb) && canThrowSmokebomb)
         {
             canThrowSmokebomb = false;
             ThrowSmoke();

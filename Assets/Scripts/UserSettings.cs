@@ -18,14 +18,6 @@ public class UserSettings : MonoBehaviour
         DontDestroyOnLoad(this);
 
         LoadAllPrefs();
-        if(sensitivityHorizontal == 0)
-        {
-            sensitivityHorizontal = 1;
-        }
-        if(sensitivityVertical == 0)
-        {
-            sensitivityVertical = 1;
-        }
     }
 
     public void LoadAllPrefs()
@@ -33,6 +25,7 @@ public class UserSettings : MonoBehaviour
         LoadPrefsAudio();
         LoadPrefsGraphics();
         LoadPrefsControls();
+        ResetBrokenValues();
     }
 
     public void SaveAllPrefs()
@@ -43,20 +36,37 @@ public class UserSettings : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    private void ResetBrokenValues()
+    {
+        if (keybindKunai == KeyCode.None)
+            keybindKunai = KeyCode.Mouse1;
+        if (keybindSmokebomb == KeyCode.None)
+            keybindSmokebomb = KeyCode.F;
+        if (keybindDash == KeyCode.None)
+            keybindDash = KeyCode.LeftShift;
+        if(sensitivityHorizontal == 0)
+            sensitivityHorizontal = 1;
+        if(sensitivityVertical == 0)
+            sensitivityVertical = 1;
+        if ((int)graphicsQuality > 3 || (int)graphicsQuality < 0)
+            graphicsQuality = 0;
+    }
+
     #region Audio
-    private float volumeMaster;
-    private float volumeMenu;
-    private float volumeMusic;
-    private float volumeEffects;
-    private float volumeAmbience;
+    [Header("Audio")]
+    [ReadOnly, SerializeField] private float volumeMaster;
+    [ReadOnly, SerializeField] private float volumeMenu;
+    [ReadOnly, SerializeField] private float volumeMusic;
+    [ReadOnly, SerializeField] private float volumeEffects;
+    [ReadOnly, SerializeField] private float volumeAmbience;
 
     public void LoadPrefsAudio()
     {
-        volumeMaster = PlayerPrefs.GetFloat("VolumeMaster");
-        volumeMenu = PlayerPrefs.GetFloat("VolumeMenu");
-        volumeMusic = PlayerPrefs.GetFloat("VolumeMusic");
-        volumeEffects = PlayerPrefs.GetFloat("VolumeEffects");
-        volumeAmbience = PlayerPrefs.GetFloat("VolumeAmbience");
+        volumeMaster = PlayerPrefs.GetFloat("VolumeMaster", 0.6f);
+        volumeMenu = PlayerPrefs.GetFloat("VolumeMenu", 1f);
+        volumeMusic = PlayerPrefs.GetFloat("VolumeMusic", 1f);
+        volumeEffects = PlayerPrefs.GetFloat("VolumeEffects", 1f);
+        volumeAmbience = PlayerPrefs.GetFloat("VolumeAmbience", 1f);
     }
     public void SetPrefsAudio()
     {
@@ -130,17 +140,18 @@ public class UserSettings : MonoBehaviour
 
 
     #region Graphics
+    [Header("Graphics")]
+    [SerializeField] private QualityLevels graphicsQuality;
     public enum QualityLevels
     {
         High = 0,
         Medium = 1,
         Low = 2
     }
-    private QualityLevels graphicsQuality;
 
     public void LoadPrefsGraphics()
     {
-        graphicsQuality = (QualityLevels)PlayerPrefs.GetInt("GraphicsQuality");
+        graphicsQuality = (QualityLevels)PlayerPrefs.GetInt("GraphicsQuality", 0);
     }
     public void SetPrefsGraphics()
     {
@@ -162,19 +173,20 @@ public class UserSettings : MonoBehaviour
 
 
     #region Controls
-    private float sensitivityVertical;
-    private float sensitivityHorizontal;
-    private KeyCode keybindKunai;
-    private KeyCode keybindSmokebomb;
-    private KeyCode keybindDash;
+    [Header("Controls")]
+    [SerializeField] private float sensitivityVertical;
+    [SerializeField] private float sensitivityHorizontal;
+    [SerializeField] private KeyCode keybindKunai;
+    [SerializeField] private KeyCode keybindSmokebomb;
+    [SerializeField] private KeyCode keybindDash;
 
     public void LoadPrefsControls()
     {
-        sensitivityVertical = PlayerPrefs.GetFloat("ControlsSensitivityVertical");
-        sensitivityHorizontal = PlayerPrefs.GetFloat("ControlsSensitivityHorizontal");
-        keybindKunai = (KeyCode)PlayerPrefs.GetInt("KeybindKunai");
-        keybindSmokebomb = (KeyCode)PlayerPrefs.GetInt("KeybindSmokebomb");
-        keybindDash = (KeyCode)PlayerPrefs.GetInt("KeybindDash");
+        sensitivityVertical = PlayerPrefs.GetFloat("ControlsSensitivityVertical", 1);
+        sensitivityHorizontal = PlayerPrefs.GetFloat("ControlsSensitivityHorizontal", 1);
+        keybindKunai = (KeyCode)PlayerPrefs.GetInt("KeybindKunai", (int)KeyCode.Mouse1);
+        keybindSmokebomb = (KeyCode)PlayerPrefs.GetInt("KeybindSmokebomb", (int)KeyCode.F);
+        keybindDash = (KeyCode)PlayerPrefs.GetInt("KeybindDash", (int)KeyCode.LeftShift);
     }
     public void SetPrefsControls()
     {
