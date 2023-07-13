@@ -48,6 +48,7 @@ public class UserSettings : MonoBehaviour
     private float volumeMenu;
     private float volumeMusic;
     private float volumeEffects;
+    private float volumeAmbience;
 
     public void LoadPrefsAudio()
     {
@@ -55,13 +56,14 @@ public class UserSettings : MonoBehaviour
         volumeMenu = PlayerPrefs.GetFloat("VolumeMenu");
         volumeMusic = PlayerPrefs.GetFloat("VolumeMusic");
         volumeEffects = PlayerPrefs.GetFloat("VolumeEffects");
+        volumeAmbience = PlayerPrefs.GetFloat("VolumeAmbience");
     }
     public void SetPrefsAudio()
     {
         PlayerPrefs.SetFloat("VolumeMaster", volumeMaster);
         PlayerPrefs.SetFloat("VolumeMenu", volumeMenu);
         PlayerPrefs.SetFloat("VolumeMusic", volumeMusic);
-        PlayerPrefs.SetFloat("VolumeEffects", volumeEffects);
+        PlayerPrefs.SetFloat("VolumeAmbience", volumeAmbience);
     }
 
     public float VolumeMaster
@@ -73,6 +75,7 @@ public class UserSettings : MonoBehaviour
         set
         {
             volumeMaster = value;
+            AkSoundEngine.SetRTPCValue("MasterVolume", volumeMaster);
         }
     }
     public float VolumeMenu
@@ -84,6 +87,7 @@ public class UserSettings : MonoBehaviour
         set
         {
             volumeMenu = value;
+            AkSoundEngine.SetRTPCValue("MenuVolume", volumeMenu);
         }
     }
     public float VolumeMusic
@@ -95,6 +99,7 @@ public class UserSettings : MonoBehaviour
         set
         {
             volumeMusic = value;
+            AkSoundEngine.SetRTPCValue("MusicVolume", volumeMusic);
         }
     }
     public float VolumeEffects
@@ -106,6 +111,19 @@ public class UserSettings : MonoBehaviour
         set
         {
             volumeEffects = value;
+            AkSoundEngine.SetRTPCValue("SFXVolume", volumeEffects);
+        }
+    }
+    public float VolumeAmbience
+    {
+        get
+        {
+            return volumeAmbience;
+        }
+        set
+        {
+            volumeAmbience = value;
+            AkSoundEngine.SetRTPCValue("AmbienceVolume", volumeAmbience);
         }
     }
     #endregion
