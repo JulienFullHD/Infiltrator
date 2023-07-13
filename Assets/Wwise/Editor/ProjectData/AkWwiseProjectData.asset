@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585126746441968707
+    m_lastTime: -8585123540931397348
     List:
     - name: Ambience
       guid: 6c4f897ba31d8b4093b29a0ae523264b
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585124306530397871
+    m_lastTime: -8585123547803957730
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -984,10 +984,27 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: b5bce439aa4f3b448d2f31d46913a3e9
     GuidInternal: 
-    m_lastTime: -8585126921136274935
+    m_lastTime: -8585123536879098279
     List:
+    - name: AmbienceVolume
+      guid: e1ea6fe5de57b040aa6daa85cbf848ef
+      id: 1204480359
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b5bce439aa4f3b448d2f31d46913a3e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 95aa09ecf32d90488d6cf343237de9ac
+      - ElementName: AmbienceVolume
+        ObjectType: 13
+        guid: e1ea6fe5de57b040aa6daa85cbf848ef
+      Path: Game Parameters\Default Work Unit\Volume\AmbienceVolume
     - name: MasterVolume
-      guid: afbad465b97cbb46b910ba6e6312d871
+      guid: b14c4d5ad0114a448bc7281b055e5526
       id: 2918011349
       PathAndIcons:
       - ElementName: Game Parameters
@@ -1001,10 +1018,27 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: MasterVolume
         ObjectType: 13
-        guid: afbad465b97cbb46b910ba6e6312d871
+        guid: b14c4d5ad0114a448bc7281b055e5526
       Path: Game Parameters\Default Work Unit\Volume\MasterVolume
+    - name: MenuVolume
+      guid: bf88cd521407864e997f1c15753894d1
+      id: 1786260118
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b5bce439aa4f3b448d2f31d46913a3e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 95aa09ecf32d90488d6cf343237de9ac
+      - ElementName: MenuVolume
+        ObjectType: 13
+        guid: bf88cd521407864e997f1c15753894d1
+      Path: Game Parameters\Default Work Unit\Volume\MenuVolume
     - name: MusicVolume
-      guid: 6bf1113ec6d85a458a0438ea966bfb0f
+      guid: 14f716d1d252c94fa779536f04c72207
       id: 2346531308
       PathAndIcons:
       - ElementName: Game Parameters
@@ -1018,24 +1052,10 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: MusicVolume
         ObjectType: 13
-        guid: 6bf1113ec6d85a458a0438ea966bfb0f
+        guid: 14f716d1d252c94fa779536f04c72207
       Path: Game Parameters\Default Work Unit\Volume\MusicVolume
-    - name: PlayerHealth
-      guid: 8cb870d28c75e746a3e76bcd40ba5dad
-      id: 151362964
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b5bce439aa4f3b448d2f31d46913a3e9
-      - ElementName: PlayerHealth
-        ObjectType: 13
-        guid: 8cb870d28c75e746a3e76bcd40ba5dad
-      Path: Game Parameters\Default Work Unit\PlayerHealth
     - name: SFXVolume
-      guid: 4f09cd29f682df40947cd2b7a870a657
+      guid: 79479900e3bad1439ee16d4b2dbb50b3
       id: 988953028
       PathAndIcons:
       - ElementName: Game Parameters
@@ -1049,7 +1069,7 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: SFXVolume
         ObjectType: 13
-        guid: 4f09cd29f682df40947cd2b7a870a657
+        guid: 79479900e3bad1439ee16d4b2dbb50b3
       Path: Game Parameters\Default Work Unit\Volume\SFXVolume
     - name: Volume
       guid: 95aa09ecf32d90488d6cf343237de9ac

@@ -402,8 +402,28 @@
 				</Folder>
 				<Folder Name="Menu" ID="{D50BDA80-0B48-4EE4-9626-407D1A399A8A}" ShortID="294813160">
 					<ChildrenList>
-						<Event Name="Play_MenuPick" ID="{2A4847CB-1D66-42DC-B0CA-CC4DE6B2E9B2}"/>
-						<Event Name="Play_MenuBack" ID="{62BCD0FA-E58C-4B7F-AB15-83AA9CDFC721}"/>
+						<Event Name="Play_MenuPick" ID="{2A4847CB-1D66-42DC-B0CA-CC4DE6B2E9B2}">
+							<ChildrenList>
+								<Action Name="" ID="{42BBCF83-B9E0-4135-9E85-D66003315BC0}" ShortID="715481207">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu Pick" ID="{3F3913F4-11D9-4ACE-BBEC-D94255F8107A}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MenuBack" ID="{62BCD0FA-E58C-4B7F-AB15-83AA9CDFC721}">
+							<ChildrenList>
+								<Action Name="" ID="{067E397A-7367-4789-BEBA-2223E899D662}" ShortID="558172178">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu Back" ID="{E8DD8573-E6A2-44E7-9BB6-A1B63F213DE1}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

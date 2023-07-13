@@ -5,29 +5,38 @@
 			<ChildrenList>
 				<Folder Name="Volume" ID="{EC09AA95-2DF3-4890-8D6C-F343237DE9AC}" ShortID="129422794">
 					<ChildrenList>
-						<GameParameter Name="MasterVolume" ID="{65D4BAAF-7CB9-46BB-B910-BA6E6312D871}">
+						<GameParameter Name="MenuVolume" ID="{52CD88BF-0714-4E86-997F-1C15753894D1}">
 							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="75"/>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1.2"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="MusicVolume" ID="{3E11F16B-D8C6-455A-8A04-38EA966BFB0F}">
+						<GameParameter Name="SFXVolume" ID="{00994779-BAE3-43D1-9EE1-6D4B2DBB50B3}">
 							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="75"/>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1.2"/>
 							</PropertyList>
 						</GameParameter>
-						<GameParameter Name="SFXVolume" ID="{29CD094F-82F6-40DF-947C-D2B7A870A657}">
+						<GameParameter Name="MasterVolume" ID="{5A4D4CB1-11D0-444A-8BC7-281B055E5526}">
 							<PropertyList>
-								<Property Name="InitialValue" Type="Real64" Value="75"/>
+								<Property Name="InitialValue" Type="Real64" Value="0.6"/>
+								<Property Name="Max" Type="Real64" Value="1.2"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="MusicVolume" ID="{D116F714-52D2-4FC9-A779-536F04C72207}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1.2"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="AmbienceVolume" ID="{E56FEAE1-57DE-40B0-AA6D-AA85CBF848EF}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="1.2"/>
 							</PropertyList>
 						</GameParameter>
 					</ChildrenList>
 				</Folder>
-				<GameParameter Name="PlayerHealth" ID="{D270B88C-758C-46E7-A3E7-6BCD40BA5DAD}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="1"/>
-						<Property Name="Max" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

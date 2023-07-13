@@ -72,9 +72,10 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID AMBIENCEVOLUME = 1204480359U;
         static const AkUniqueID MASTERVOLUME = 2918011349U;
+        static const AkUniqueID MENUVOLUME = 1786260118U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;
-        static const AkUniqueID PLAYERHEALTH = 151362964U;
         static const AkUniqueID SFXVOLUME = 988953028U;
     } // namespace GAME_PARAMETERS
 

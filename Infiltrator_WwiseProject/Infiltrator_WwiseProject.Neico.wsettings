@@ -63,7 +63,7 @@
 				<Property Name="General\SourceControlPluginID" Type="string" Value="{C403A906-0C19-4ED5-808E-748707065301}"/>
 				<Property Name="GenerateSoundBanks\ShowHierarchy" Type="bool" Value="False"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
-				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="KhkgvVyuSUeRHbc7gwjtdA=="/>
+				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="Bs2XG2LG40mzf8yeryCUNyoZIL1crklHkR23O4MI7XQ="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="Qk0II/hp30ePhrPsG/1o7p9EDXST2EhDvkJwLVMkPwA="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
 				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups_v2" Type="string" Value="cmsRdIfBiEKG2+ieN2UubQEAXlLTAAAAwJTnJvp/AABolbGQ9AEAAAAAAAD0AQAAwJTnJvp/AAA0lPUS+n8AACCgVbD0AQAAAAAAAPQBAAAIAAAAAAAAAIjhXlLTAAAAUAUKE/p/AABvBgoT+n8AAFAFChP6fwAAwJTnJvp/AADAlOcm+n8AAGiVsZD0AQAAAQAAAKM5ZsZp8Z5NuesLzgNXWVMBAF5S0wAAAMCU5yb6fwAAaJWxkPQBAAAAAAAA9AEAAMCU5yb6fwAANJT1Evp/AAAgoFWw9AEAAAAAAAD0AQAACAAAAAAAAACI4V5S0wAAAFAFChP6fwAAbwYKE/p/AABQBQoT+n8AAMCU5yb6fwAAwJTnJvp/AABolbGQ9AEAAAEAAAA="/>

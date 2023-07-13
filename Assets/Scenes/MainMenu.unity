@@ -2883,6 +2883,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &182184561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5959,6 +5971,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &359406737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8477,6 +8501,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &518725762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10689,6 +10725,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &687617688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11348,6 +11396,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 287722833}
           m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13673,6 +13733,7 @@ GameObject:
   - component: {fileID: 896266462}
   - component: {fileID: 896266461}
   - component: {fileID: 896266465}
+  - component: {fileID: 896266466}
   m_Layer: 5
   m_Name: Canvas Menus
   m_TagString: Untagged
@@ -13797,6 +13858,28 @@ MonoBehaviour:
   - {fileID: 693711913}
   - {fileID: 218688021}
   - {fileID: 773361609}
+--- !u!114 &896266466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896266460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1ff309aaf23d04eb9bf5c7b6afd52c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ButtonForward:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8e3d218c40798c34eb108909f6b3a2e8,
+      type: 2}
+  ButtonBack:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 91701900a40cd5a4fbe0488a017a35a7,
+      type: 2}
 --- !u!1 &898401239
 GameObject:
   m_ObjectHideFlags: 0
@@ -14623,6 +14706,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 693711913}
           m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -18172,6 +18267,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228943322}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1228957077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228957078}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228957078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228957077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 728.4755, y: 351.7791, z: 175.43466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230907715
 GameObject:
   m_ObjectHideFlags: 0
@@ -21095,6 +21221,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1439287081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22502,6 +22640,18 @@ MonoBehaviour:
           m_StringArgument: Blockout
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1529723145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23207,7 +23357,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 527902843}
   m_HandleRect: {fileID: 527902842}
   m_Direction: 2
-  m_Value: 1.0000008
+  m_Value: 1
   m_Size: 0.75540936
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -23629,6 +23779,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 773361609}
           m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -27257,6 +27431,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1787812365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28513,6 +28699,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 982320979}
           m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -30005,6 +30203,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 615070918}
           m_ObjectArgumentAssemblyTypeName: Menu, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 896266466}
+        m_TargetAssemblyTypeName: MenuSounds, Assembly-CSharp
+        m_MethodName: PlayForwardSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
