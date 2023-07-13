@@ -10,6 +10,7 @@
 						<ObjectRef Name="Play_FS_Enemy" ID="{162D86D2-8CDB-4259-9167-38C744BEAF3C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Katana_Swing" ID="{A62B4711-7D33-427D-AAF6-555D47022FE1}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_stopwallrunning" ID="{1BCACDF0-07C4-44BB-B2C3-6B704924754B}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Rain" ID="{16974727-D882-44BB-85EC-2B4D4323181C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_MetalWet" ID="{49112EAA-35A0-4543-8F8C-BDE0FE3F335C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_land" ID="{80136CF6-A747-46FE-A3DF-175385D0799E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
@@ -28,6 +29,16 @@
 						<ObjectRef Name="Player_wallrunning" ID="{F7DB8EB2-F10F-4E14-89A7-AE6C604BF2A2}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_jump" ID="{A2C29F27-13D2-4E16-8989-CCFB837864D6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MainTheme" ID="{E3A11A17-4B42-4E1E-A574-DA2C446F8C60}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Menu" ID="{740D449F-D893-4348-BE42-702D53243F00}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_MenuPick" ID="{2A4847CB-1D66-42DC-B0CA-CC4DE6B2E9B2}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_MenuTheme" ID="{C08B5A7B-311B-4811-BB94-F0D3BB29FFEB}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MenuBack" ID="{62BCD0FA-E58C-4B7F-AB15-83AA9CDFC721}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MenuTheme" ID="{BE0A1678-32FE-4EFE-B433-D3EAC8C9DF38}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

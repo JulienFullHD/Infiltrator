@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585126746441968707
+    m_lastTime: -8585123540931397348
     List:
     - name: Ambience
       guid: 6c4f897ba31d8b4093b29a0ae523264b
@@ -174,7 +174,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585126104901588658
+    m_lastTime: -8585124306530457921
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -190,6 +190,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 424d0823f869df478f86b3ec1bfd68ee
       Path: SoundBanks\Default Work Unit\Main
+    - name: Menu
+      guid: 9f440d7493d84843be42702d53243f00
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 81941faf4ea51b4585190a7261121ff1
+      - ElementName: Menu
+        ObjectType: 7
+        guid: 9f440d7493d84843be42702d53243f00
+      Path: SoundBanks\Default Work Unit\Menu
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -202,7 +216,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585126097839490550
+    m_lastTime: -8585123547803957730
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -318,23 +332,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Enemies
-      guid: 89c1dce8a0af8849a0e64dea5079bd0e
-      id: 2242381963
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Enemies
-        ObjectType: 4
-        guid: 89c1dce8a0af8849a0e64dea5079bd0e
-      Path: Events\Default Work Unit\Enemies
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
     - name: Enemy_Hit
       guid: fc08b6898e629a47baf0d9b7827cdc0d
       id: 1010055213
@@ -385,13 +382,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Enemies
+      - ElementName: Combat
         ObjectType: 4
-        guid: 89c1dce8a0af8849a0e64dea5079bd0e
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
       - ElementName: Grunt_burst
         ObjectType: 3
         guid: dc0264f6fdf7cf4a85cce4988dce216e
-      Path: Events\Default Work Unit\Enemies\Grunt_burst
+      Path: Events\Default Work Unit\Combat\Grunt_burst
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -432,6 +429,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 10d40d7e79a4954a9107d3a198b92c5f
       Path: Events\Default Work Unit\Combat\Kunai_Throw
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Menu
+      guid: 80da0bd5480be44e9626407d1a399a8a
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 80da0bd5480be44e9626407d1a399a8a
+      Path: Events\Default Work Unit\Menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -578,6 +592,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_MenuBack
+      guid: fad0bc628ce57f4bab1583aa9cdfc721
+      id: 1113566242
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 80da0bd5480be44e9626407d1a399a8a
+      - ElementName: Play_MenuBack
+        ObjectType: 3
+        guid: fad0bc628ce57f4bab1583aa9cdfc721
+      Path: Events\Default Work Unit\Menu\Play_MenuBack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_MenuPick
+      guid: cb47482a661ddc42b0cacc4de6b2e9b2
+      id: 1055472740
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Menu
+        ObjectType: 4
+        guid: 80da0bd5480be44e9626407d1a399a8a
+      - ElementName: Play_MenuPick
+        ObjectType: 3
+        guid: cb47482a661ddc42b0cacc4de6b2e9b2
+      Path: Events\Default Work Unit\Menu\Play_MenuPick
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_MenuTheme
       guid: 78160abefe32fe4eb433d3eac8c9df38
       id: 3757523130
@@ -595,6 +649,66 @@ MonoBehaviour:
         ObjectType: 3
         guid: 78160abefe32fe4eb433d3eac8c9df38
       Path: Events\Default Work Unit\Music\Play_MenuTheme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ProjectileFlight
+      guid: 626de8e7e4b7214490000410c6a8f0aa
+      id: 874464097
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Play_ProjectileFlight
+        ObjectType: 3
+        guid: 626de8e7e4b7214490000410c6a8f0aa
+      Path: Events\Default Work Unit\Combat\Play_ProjectileFlight
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ProjectileHitOther
+      guid: 9607d383f285354ab145d1d36b7c3ed6
+      id: 1766533624
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Play_ProjectileHitOther
+        ObjectType: 3
+        guid: 9607d383f285354ab145d1d36b7c3ed6
+      Path: Events\Default Work Unit\Combat\Play_ProjectileHitOther
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Rain
+      guid: 2747971682d8bb4485ec2b4d4323181c
+      id: 2838936948
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
+      - ElementName: Play_Rain
+        ObjectType: 3
+        guid: 2747971682d8bb4485ec2b4d4323181c
+      Path: Events\Default Work Unit\Ambience\Play_Rain
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -788,13 +902,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Enemies
+      - ElementName: Combat
         ObjectType: 4
-        guid: 89c1dce8a0af8849a0e64dea5079bd0e
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
       - ElementName: Sniper_shot
         ObjectType: 3
         guid: bbdf62b37beead49822d4d89d6231ccb
-      Path: Events\Default Work Unit\Enemies\Sniper_shot
+      Path: Events\Default Work Unit\Combat\Sniper_shot
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -818,6 +932,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_MenuTheme
+      guid: 7b5a8bc01b311148bb94f0d3bb29ffeb
+      id: 2271744
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Music
+        ObjectType: 4
+        guid: 8eb53d411b940a43b098fdf3c4694721
+      - ElementName: Stop_MenuTheme
+        ObjectType: 3
+        guid: 7b5a8bc01b311148bb94f0d3bb29ffeb
+      Path: Events\Default Work Unit\Music\Stop_MenuTheme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_ProjectileFlight
+      guid: 2687c8c415f46a4c8aa4ad8f732b21ac
+      id: 2872239319
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Stop_ProjectileFlight
+        ObjectType: 3
+        guid: 2687c8c415f46a4c8aa4ad8f732b21ac
+      Path: Events\Default Work Unit\Combat\Stop_ProjectileFlight
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -830,10 +984,27 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: b5bce439aa4f3b448d2f31d46913a3e9
     GuidInternal: 
-    m_lastTime: -8585126921136274935
+    m_lastTime: -8585123536879098279
     List:
+    - name: AmbienceVolume
+      guid: e1ea6fe5de57b040aa6daa85cbf848ef
+      id: 1204480359
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b5bce439aa4f3b448d2f31d46913a3e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 95aa09ecf32d90488d6cf343237de9ac
+      - ElementName: AmbienceVolume
+        ObjectType: 13
+        guid: e1ea6fe5de57b040aa6daa85cbf848ef
+      Path: Game Parameters\Default Work Unit\Volume\AmbienceVolume
     - name: MasterVolume
-      guid: afbad465b97cbb46b910ba6e6312d871
+      guid: b14c4d5ad0114a448bc7281b055e5526
       id: 2918011349
       PathAndIcons:
       - ElementName: Game Parameters
@@ -847,10 +1018,27 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: MasterVolume
         ObjectType: 13
-        guid: afbad465b97cbb46b910ba6e6312d871
+        guid: b14c4d5ad0114a448bc7281b055e5526
       Path: Game Parameters\Default Work Unit\Volume\MasterVolume
+    - name: MenuVolume
+      guid: bf88cd521407864e997f1c15753894d1
+      id: 1786260118
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b5bce439aa4f3b448d2f31d46913a3e9
+      - ElementName: Volume
+        ObjectType: 4
+        guid: 95aa09ecf32d90488d6cf343237de9ac
+      - ElementName: MenuVolume
+        ObjectType: 13
+        guid: bf88cd521407864e997f1c15753894d1
+      Path: Game Parameters\Default Work Unit\Volume\MenuVolume
     - name: MusicVolume
-      guid: 6bf1113ec6d85a458a0438ea966bfb0f
+      guid: 14f716d1d252c94fa779536f04c72207
       id: 2346531308
       PathAndIcons:
       - ElementName: Game Parameters
@@ -864,24 +1052,10 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: MusicVolume
         ObjectType: 13
-        guid: 6bf1113ec6d85a458a0438ea966bfb0f
+        guid: 14f716d1d252c94fa779536f04c72207
       Path: Game Parameters\Default Work Unit\Volume\MusicVolume
-    - name: PlayerHealth
-      guid: 8cb870d28c75e746a3e76bcd40ba5dad
-      id: 151362964
-      PathAndIcons:
-      - ElementName: Game Parameters
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: b5bce439aa4f3b448d2f31d46913a3e9
-      - ElementName: PlayerHealth
-        ObjectType: 13
-        guid: 8cb870d28c75e746a3e76bcd40ba5dad
-      Path: Game Parameters\Default Work Unit\PlayerHealth
     - name: SFXVolume
-      guid: 4f09cd29f682df40947cd2b7a870a657
+      guid: 79479900e3bad1439ee16d4b2dbb50b3
       id: 988953028
       PathAndIcons:
       - ElementName: Game Parameters
@@ -895,7 +1069,7 @@ MonoBehaviour:
         guid: 95aa09ecf32d90488d6cf343237de9ac
       - ElementName: SFXVolume
         ObjectType: 13
-        guid: 4f09cd29f682df40947cd2b7a870a657
+        guid: 79479900e3bad1439ee16d4b2dbb50b3
       Path: Game Parameters\Default Work Unit\Volume\SFXVolume
     - name: Volume
       guid: 95aa09ecf32d90488d6cf343237de9ac
@@ -1086,7 +1260,7 @@ MonoBehaviour:
     m_lastTime: -8585126921120586461
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c00000010000000130000002c000000
+  ExpandedWaapiItemIds: 05000000060000000700000008000000090000000a0000000b0000000c00000010000000130000002c0000001501000016010000190100001b0100002002000023020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

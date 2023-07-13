@@ -16,17 +16,14 @@ public class AI_Bullet : MonoBehaviour
     [SerializeField]
     private LayerMask ignoreLayer;
 
-    //Wwise 
-    [Header("Wwise Events")]
-    public AK.Wwise.Event ProjectileFlight;
-    public AK.Wwise.Event ProjectileHitObstacle;
+
+
 
 
     void Start()
     {
         LastPos = transform.position;
         rb = this.GetComponent<Rigidbody>();
-        ProjectileFlight.Post(gameObject);
     }
     void Update()
     {
@@ -41,7 +38,7 @@ public class AI_Bullet : MonoBehaviour
         if(ticker > timer)
         {
             DestroyBullet();
-            ticker=0;        
+            ticker=0;
         }
         
     }
@@ -73,7 +70,6 @@ public class AI_Bullet : MonoBehaviour
     void DestroyBullet(){
 
         Destroy(gameObject);
-
     }
 
     void OnTriggerEnter(Collider other) 
@@ -86,7 +82,6 @@ public class AI_Bullet : MonoBehaviour
         if(other.tag == "obstacle")
         {
             DestroyBullet();
-            ProjectileHitObstacle.Post(gameObject);
         }
         
     }

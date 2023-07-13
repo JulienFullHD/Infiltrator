@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{5B3A3BEC-EC56-907B-5329-047AD94E2136}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{63CF9712-6DD3-2DA4-8D60-04032A4DED1B}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -46,8 +46,9 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
-				<GameParameter Id="151362964" Name="PlayerHealth"/>
 				<GameParameter Id="988953028" Name="SFXVolume"/>
+				<GameParameter Id="1204480359" Name="AmbienceVolume"/>
+				<GameParameter Id="1786260118" Name="MenuVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume"/>
 				<GameParameter Id="2918011349" Name="MasterVolume"/>
 			</GameParameters>
@@ -68,7 +69,43 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BB988A14-153D-908C-C028-F8E8267098DB}">
+		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{0E9709CF-D7AE-A048-BCB8-109806A56064}">
+			<ShortName>Menu</ShortName>
+			<Path>Menu.bnk</Path>
+			<Media>
+				<File Id="209281007" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>InfiltratorBEAT.wav</ShortName>
+					<CachePath>SFX/InfiltratorBEAT_10C4C929.wem</CachePath>
+				</File>
+				<File Id="283995949" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu Back v2.wav</ShortName>
+					<CachePath>SFX/Menu Back v2_10C4C929.wem</CachePath>
+				</File>
+				<File Id="594860196" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu Pick v2.wav</ShortName>
+					<CachePath>SFX/Menu Pick v2_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1113566242" Name="Play_MenuBack" DurationType="OneShot" DurationMin="1.390625" DurationMax="1.4108521">
+					<MediaRefs>
+						<MediaRef Id="283995949"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1055472740" Name="Play_MenuPick" DurationType="OneShot" DurationMin="1.3016042" DurationMax="1.3212996">
+					<MediaRefs>
+						<MediaRef Id="594860196"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3757523130" Name="Play_MenuTheme" DurationType="OneShot" DurationMin="317.7549" DurationMax="317.7549">
+					<MediaRefs>
+						<MediaRef Id="209281007"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{194B5D4F-2448-58C9-5BF3-48D094B30DE4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -82,7 +119,7 @@
 				</File>
 				<File Id="19314398" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Grunt_shot.wav</ShortName>
-					<CachePath>SFX/Grunt_shot_51B40A6A.wem</CachePath>
+					<CachePath>SFX/Grunt_shot_A868838E.wem</CachePath>
 				</File>
 				<File Id="50718732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing1.wav</ShortName>
@@ -127,6 +164,10 @@
 				<File Id="248514043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy1.wav</ShortName>
 					<CachePath>SFX/FS_Enemy1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="250371715" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rain (secret onion).wav</ShortName>
+					<CachePath>SFX/Rain (secret onion)_10C4C929.wem</CachePath>
 				</File>
 				<File Id="290099863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed22.wav</ShortName>
@@ -299,7 +340,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.4247437" DurationMax="0.4704667">
+				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42886746" DurationMax="0.47503436">
 					<MediaRefs>
 						<MediaRef Id="19314398"/>
 					</MediaRefs>
@@ -356,6 +397,11 @@
 						<MediaRef Id="642047943"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2838936948" Name="Play_Rain" DurationType="OneShot" DurationMin="84" DurationMax="84">
+					<MediaRefs>
+						<MediaRef Id="250371715"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3205957598" Name="Play_WinningScreen" DurationType="OneShot" DurationMin="310.3734" DurationMax="310.3734">
 					<MediaRefs>
 						<MediaRef Id="120826194"/>
@@ -406,5 +452,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{551E61CB-5A72-AB73-AAEF-3EB97EC0BFDB}</FileHash>
+	<FileHash>{9439D541-840D-F3B3-7F08-50B030EC54BD}</FileHash>
 </SoundBanksInfo>
