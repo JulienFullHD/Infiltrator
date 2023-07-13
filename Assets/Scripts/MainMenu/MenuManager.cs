@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    //Wwise
+    [Header("Wwise Events")]
+    public AK.Wwise.Event PlayMenuSoundtrack;
+    public AK.Wwise.Event StopMenuSoundtrack;
     [SerializeField] Menu[] menuArray; 
 
     private void Start()
     {
+        PlayMenuSoundtrack.Post(gameObject);        //Wwise
         OpenMenu(menuArray[0]);
     }
 

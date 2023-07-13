@@ -59,6 +59,28 @@
 								<ActiveSource Name="Ambience Pimped" ID="{A1E51410-C9C5-446A-8F40-6FCC72620518}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Rain (secret onion)" ID="{DE40762F-8E0F-47BA-B012-BA58AE15C2D1}" ShortID="1051897046">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Rain (secret onion)" ID="{FE0F5E81-80DB-45B5-8806-1912CC3147D9}">
+									<Language>SFX</Language>
+									<AudioFile>Rain (secret onion).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="250371715"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Rain (secret onion)" ID="{FE0F5E81-80DB-45B5-8806-1912CC3147D9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Combat" ID="{A82FEDF0-F0BF-4C37-9E06-A9D4EB493901}" ShortID="745743272">
@@ -700,7 +722,6 @@
 										<Value>10</Value>
 									</ValueList>
 								</Property>
-								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -995,6 +1016,131 @@
 										</Position>
 									</PositioningInfo>
 								</ActorMixer>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Projectile" ID="{681D56EF-169D-4AF7-B9C7-E45D3E2A50C5}" ShortID="763208903">
+							<ChildrenList>
+								<Sound Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" ShortID="359940990">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>7</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ProjectileFlight" ID="{D3204D5A-7459-4495-B8DE-7D377B7150A3}">
+											<Language>SFX</Language>
+											<AudioFile>ProjectileFlight.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="560034719"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ProjectileFlight" ID="{D3204D5A-7459-4495-B8DE-7D377B7150A3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="ProjectileHitOther" ID="{6A68FDEB-FD57-48D1-BC7A-6070961F2068}" ShortID="428106940">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{42129ADC-9F50-4F69-82BB-6BDA849C1B0A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="303"/>
+															<Property Name="Min" Type="Real64" Value="-202"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ProjectileHitOther" ID="{034319FD-E841-4362-B62A-637DEF626D8E}" ShortID="846206557">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ProjectileHitOther" ID="{1DD80951-43DE-4EA9-978B-75DBCB78838E}">
+													<Language>SFX</Language>
+													<AudioFile>ProjectileHitOther.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1054928639"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ProjectileHitOther" ID="{1DD80951-43DE-4EA9-978B-75DBCB78838E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ProjectileHitOther1" ID="{FA70BE24-2D3F-495E-ADD5-3AC0A6CD08BA}" ShortID="651581054">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ProjectileHitOther1" ID="{6D8BE857-1054-4B96-89B0-BB2B2441466B}">
+													<Language>SFX</Language>
+													<AudioFile>ProjectileHitOther1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="576626224"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ProjectileHitOther1" ID="{6D8BE857-1054-4B96-89B0-BB2B2441466B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
@@ -1793,7 +1939,7 @@
 						<Panner Name="" ID="{99486F31-4798-4B98-BBA7-535866603679}"/>
 					</PositioningInfo>
 				</ActorMixer>
-				<ActorMixer Name="EnemySounds" ID="{44B2F107-6A7E-4AE8-BB1A-C2D1A9F9EAB3}" ShortID="824544720">
+				<ActorMixer Name="Enemy Sounds" ID="{44B2F107-6A7E-4AE8-BB1A-C2D1A9F9EAB3}" ShortID="824544720">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 					</PropertyList>
@@ -1805,7 +1951,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+							<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -1837,6 +1983,16 @@
 						<Sound Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" ShortID="391010135">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>13</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -1853,7 +2009,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1872,8 +2028,9 @@
 								<AudioFileSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0212882096069869"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0603165938864628"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.355690502183406"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.351255458515284"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Grunt_shot.wav</AudioFile>
@@ -2028,6 +2185,7 @@
 						<RandomSequenceContainer Name="Grunt_Pain" ID="{D73D8FDE-1037-4B65-9F8D-72F861E6C735}" ShortID="843781091">
 							<PropertyList>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-170</Value>
@@ -2055,7 +2213,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+									<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2368,6 +2526,97 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Menu" ID="{C7EC1EF0-B235-42C1-BE67-9816856990F9}" ShortID="385292414">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Menu Pick" ID="{3F3913F4-11D9-4ACE-BBEC-D94255F8107A}" ShortID="319497313">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DE7ECF4C-4C00-48CB-8201-ADA469C2A4CD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-26"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Menu Back v2" ID="{7516ED15-8BBF-4022-97F3-D83505AB3FD9}">
+									<Language>SFX</Language>
+									<AudioFile>Menu Back v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="283995949"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Menu Pick v2" ID="{53866F03-B5D4-462B-8757-5AFF2CB807C5}">
+									<Language>SFX</Language>
+									<AudioFile>Menu Pick v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="594860196"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Menu Pick v2" ID="{53866F03-B5D4-462B-8757-5AFF2CB807C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Menu Back" ID="{E8DD8573-E6A2-44E7-9BB6-A1B63F213DE1}" ShortID="809846485">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9BBFD2A1-9F79-42A0-A3E0-A2A2FBD7528A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Menu Back v2" ID="{342FCB33-8D3A-4F51-A2B9-CCD8BB70A5F2}">
+									<Language>SFX</Language>
+									<AudioFile>Menu Back v2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="283995949"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Menu Back v2" ID="{342FCB33-8D3A-4F51-A2B9-CCD8BB70A5F2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

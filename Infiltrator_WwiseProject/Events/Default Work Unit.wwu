@@ -16,6 +16,23 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Rain" ID="{16974727-D882-44BB-85EC-2B4D4323181C}">
+							<ChildrenList>
+								<Action Name="" ID="{CE286F8A-C8A2-4000-BABD-4AA6CD8B2D20}" ShortID="290419772">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+								<Action Name="" ID="{88ABB32E-F5FD-45C3-A0B8-9DD479DDE675}" ShortID="734503359">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rain (secret onion)" ID="{DE40762F-8E0F-47BA-B012-BA58AE15C2D1}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Movement" ID="{431387C3-6C3A-4ECC-A146-EFBC335239D9}" ShortID="394829484">
@@ -115,22 +132,6 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Enemies" ID="{E8DCC189-AFA0-4988-A0E6-4DEA5079BD0E}" ShortID="838549427">
-					<ChildrenList>
-						<Event Name="Grunt_burst" ID="{F66402DC-F7FD-4ACF-85CC-E4988DCE216E}">
-							<ChildrenList>
-								<Action Name="" ID="{D0735EF6-7EFB-4A18-8D98-CCB533469C69}" ShortID="969047388">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Sniper_shot" ID="{B362DFBB-EE7B-49AD-822D-4D89D6231CCB}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Combat" ID="{78EDF6E3-A21D-4EA4-A8EC-DD28771D5F8F}" ShortID="84657631">
@@ -255,6 +256,54 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Grunt_burst" ID="{F66402DC-F7FD-4ACF-85CC-E4988DCE216E}">
+							<ChildrenList>
+								<Action Name="" ID="{D0735EF6-7EFB-4A18-8D98-CCB533469C69}" ShortID="969047388">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Sniper_shot" ID="{B362DFBB-EE7B-49AD-822D-4D89D6231CCB}"/>
+						<Event Name="Play_ProjectileFlight" ID="{E7E86D62-B7E4-4421-9000-0410C6A8F0AA}">
+							<ChildrenList>
+								<Action Name="" ID="{4B064ED0-6C55-4B09-A47D-335615319120}" ShortID="940798673">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_ProjectileFlight" ID="{C4C88726-F415-4C6A-8AA4-AD8F732B21AC}">
+							<ChildrenList>
+								<Action Name="" ID="{E1562912-DAE1-4A97-83AC-7B9598A25259}" ShortID="467896642">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ProjectileHitOther" ID="{83D30796-85F2-4A35-B145-D1D36B7C3ED6}">
+							<ChildrenList>
+								<Action Name="" ID="{1FDA2678-CA3E-43C1-922A-0D70C2853D79}" ShortID="1044903027">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ProjectileHitOther" ID="{6A68FDEB-FD57-48D1-BC7A-6070961F2068}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{413DB58E-941B-430A-B098-FDF3C4694721}" ShortID="661071205">
@@ -335,6 +384,26 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_MenuTheme" ID="{C08B5A7B-311B-4811-BB94-F0D3BB29FFEB}">
+							<ChildrenList>
+								<Action Name="" ID="{885B45C4-874D-48C7-B241-C77A31D7DB0A}" ShortID="731544159">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MenuTheme" ID="{54ABB455-EC5D-4DEE-99F1-FDC7386ABDAE}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Menu" ID="{D50BDA80-0B48-4EE4-9626-407D1A399A8A}" ShortID="294813160">
+					<ChildrenList>
+						<Event Name="Play_MenuPick" ID="{2A4847CB-1D66-42DC-B0CA-CC4DE6B2E9B2}"/>
+						<Event Name="Play_MenuBack" ID="{62BCD0FA-E58C-4B7F-AB15-83AA9CDFC721}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

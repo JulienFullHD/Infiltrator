@@ -26,6 +26,10 @@ namespace AK
         static const AkUniqueID PLAY_FS_METAL = 405241043U;
         static const AkUniqueID PLAY_FS_METALWET = 1928192825U;
         static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
+        static const AkUniqueID PLAY_MENUBACK = 1113566242U;
+        static const AkUniqueID PLAY_MENUPICK = 1055472740U;
+        static const AkUniqueID PLAY_MENUTHEME = 3757523130U;
+        static const AkUniqueID PLAY_RAIN = 2838936948U;
         static const AkUniqueID PLAY_WINNINGSCREEN = 3205957598U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
@@ -35,6 +39,7 @@ namespace AK
         static const AkUniqueID PLAYER_WALLRUNNING = 2134301282U;
         static const AkUniqueID SMOKE_POP = 2528951528U;
         static const AkUniqueID SMOKE_THROW = 2664284733U;
+        static const AkUniqueID STOP_MENUTHEME = 2271744U;
     } // namespace EVENTS
 
     namespace STATES
@@ -77,6 +82,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID MENU = 2607556080U;
     } // namespace BANKS
 
     namespace BUSSES
