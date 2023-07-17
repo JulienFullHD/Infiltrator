@@ -19,16 +19,15 @@ public class LevelManager : MonoBehaviour
 
     [Header("Win Event")]
     [SerializeField] private bool isWon;
-    [SerializeField] private GameObject playerCanvasObject;     // Fade out on win
     [SerializeField] private CanvasGroup playerCanvasGroup;     // Fade out on win
     [SerializeField] private GameObject winCanvasObject; // Fade  in on win
     [SerializeField] private CanvasGroup winCanvasGroup; // Fade  in on win
     [SerializeField] private float fadeMaxTime;
     [ReadOnly, SerializeField] private float fadeTimer;
     [SerializeField]private ScoreManger scoreManager;
-    [SerializeField]private LeaderBoard leaderBoard;
     [SerializeField]private GhostRunner ghostRunner;
     [SerializeField]private string userName;
+    [SerializeField]private SetupConfig setupConfig;
     private string publicKey = "e9856340c08efde8a7d87ae37c65bf62b267bd68b4526abeae5c98859244f1c5";
 
     //Wwise shit
@@ -72,11 +71,19 @@ public class LevelManager : MonoBehaviour
         PlayWinTheme.Post(gameObject);
         fadeTimer = 0;
         ghostRunner.StopRun();
+
         Debug.Log(scoreManager.GetScore());
+        if(ghostRunner._system.GetRun(RecordingType.Last, out Recording run))
+        {
+            //ghostRunner._system.SetSavedRun(run);
+            //ghostRunner._system.SetSavedRun(run);
+            setupConfig.SaveRun(run.Serialize());
+            Debug.Log(run.Serialize());
+        }
         //if(ghostRunner._system.GetRun(RecordingType.Last, out Recording run)) leaderBoard.SetLeaderBoardEntry(userName, scoreManager.GetScore(), "NULL");//run.Serialize()
         //Debug.Log(run.Serialize().ToString().Length);
         userName = PlayerPrefs.GetString("PlayerName");
-        SetLeaderBoardEntry(userName, scoreManager.GetScore());
+        //SetLeaderBoardEntry(userName, scoreManager.GetScore());
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }

@@ -67,7 +67,7 @@ public class Recording
     }
 
     private const char DATA_DELIMITER = '|';
-    private const char CURVE_DELIMITER = '\n';
+    private const char CURVE_DELIMITER = 'a';
 
     public string Serialize() {
         var builder = new StringBuilder();
@@ -75,14 +75,14 @@ public class Recording
         StringifyPoints(_posXCurve);
         StringifyPoints(_posYCurve);
         StringifyPoints(_posZCurve);
-        StringifyPoints(_rotXCurve, false);
-        StringifyPoints(_rotYCurve, false);
+        StringifyPoints(_rotXCurve);
+        StringifyPoints(_rotYCurve);
         StringifyPoints(_rotZCurve, false);
 
         void StringifyPoints(AnimationCurve curve, bool addDelimiter = true) {
             for (var i = 0; i < curve.length; i++) {
                 var point = curve[i];
-                builder.Append($"{point.time:F3},{point.value:F2}");
+                builder.Append($"{point.time:F3}:{point.value:F2}");
                 if (i != curve.length - 1) builder.Append(DATA_DELIMITER);
             }
 
@@ -105,7 +105,7 @@ public class Recording
     void DeserializePoint(AnimationCurve curve, string d) {
         var splitValues = d.Split(DATA_DELIMITER);
         foreach (var timeValPair in splitValues) {
-                var s = timeValPair.Split(',');
+                var s = timeValPair.Split(':');
                 var kf = new Keyframe(float.Parse(s[0]), float.Parse(s[1]));
                 curve.AddKey(kf);
             }

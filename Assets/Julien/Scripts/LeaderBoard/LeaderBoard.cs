@@ -8,7 +8,7 @@ public class LeaderBoard : MonoBehaviour
 {
     [SerializeField]private Transform uiParent;
     [SerializeField]private GameObject uiPrefab;
-    private string publicKey = "e9856340c08efde8a7d87ae37c65bf62b267bd68b4526abeae5c98859244f1c5";
+    private string publicKey = "78b6f0a9a7c55666facf7c7e1cbdf881ab7a165a5ee6cbcf06261a5b9b0ec908";
 
     private void Start() 
     {

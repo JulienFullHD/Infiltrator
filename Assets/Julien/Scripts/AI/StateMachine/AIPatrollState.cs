@@ -36,7 +36,7 @@ public class AIPatrollState : AIBaseState
                     wait = true;
                     //ai.Animator.SetFloat("Speed", 0);
                     ai.Animator.SetBool("Attack", false);
-                    ai.Visual.localPosition = Vector3.zero;
+                    //ai.Visual.localPosition = Vector3.zero;
                 }else
                 {
                     waitTime -= Time.deltaTime;
