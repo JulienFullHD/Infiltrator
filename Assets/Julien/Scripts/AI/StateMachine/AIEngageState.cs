@@ -8,18 +8,17 @@ public class AIEngageState : AIBaseState
         ai.Text.SetText("Engage Player");
         
         ai.destinationSetter.target = ai.Player;
-        ai.Animator.SetFloat("Speed", 1);
-        ai.Animator.SetBool("Aiming", true);
+        ai.Animator.SetBool("Attack", true);
     }
 
     public override void UpdateState(AIStateManager ai)
     {
         if(ai.richAI.reachedEndOfPath)
         {
-            ai.Animator.SetFloat("Speed", 0);
+            //ai.Animator.SetFloat("Speed", 0);
         }else
         {
-            ai.Animator.SetFloat("Speed", 1);
+            //ai.Animator.SetFloat("Speed", 1);
         }
         if(sightOnPlayer(ai.Player, ai))
         {

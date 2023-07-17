@@ -15,11 +15,12 @@ public class AIPatrollState : AIBaseState
         if(ai.PatrollPoints.Count > 0)
         {
             ai.destinationSetter.target = ai.PatrollPoints[currIndex];
-            ai.Animator.SetFloat("Speed", 1);
+            ai.Animator.SetBool("Attack", true);
+            //ai.Animator.SetFloat("Speed", 1);
         }else
         {
             ai.destinationSetter.target = ai.transform;
-            ai.Animator.SetFloat("Speed", 0);
+            //ai.Animator.SetFloat("Speed", 0);
         }
     }
 
@@ -33,7 +34,8 @@ public class AIPatrollState : AIBaseState
                 {
                     waitTime = startWaitTime;
                     wait = true;
-                    ai.Animator.SetFloat("Speed", 0);
+                    //ai.Animator.SetFloat("Speed", 0);
+                    ai.Animator.SetBool("Attack", false);
                     ai.Visual.localPosition = Vector3.zero;
                 }else
                 {
@@ -42,7 +44,8 @@ public class AIPatrollState : AIBaseState
                     {
                         ai.destinationSetter.target = GetNextCheckpoint(ai);
                         ai.Text.SetText("Partoll to Waypoint " + currIndex);
-                        ai.Animator.SetFloat("Speed", 1);
+                        //ai.Animator.SetFloat("Speed", 1);
+                        ai.Animator.SetBool("Attack", true);
                         wait = false;
                     }
                 }
