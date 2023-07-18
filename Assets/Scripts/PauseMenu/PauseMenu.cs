@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour
     {
         UnPauseGame();
 
-        //ghostRunner.StopRun();
+        ghostRunner.StopRun();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -69,7 +69,7 @@ public class PauseMenu : MonoBehaviour
     {
         UnPauseGame();
 
-        //ghostRunner.StopRun();
+        ghostRunner.StopRun();
         SceneManager.LoadScene(mainMenuIndex);
     }
 }
