@@ -10,9 +10,17 @@ State	ID	Name	State Group			Notes
 	2452206122	False	PlayerIsWallruning			
 	3053630529	True	PlayerIsWallruning			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	988953028	SFXVolume			\Default Work Unit\Volume\SFXVolume	
+	1204480359	AmbienceVolume			\Default Work Unit\Volume\AmbienceVolume	
+	1786260118	MenuVolume			\Default Work Unit\Volume\MenuVolume	
+	2346531308	MusicVolume			\Default Work Unit\Volume\MusicVolume	
+	2918011349	MasterVolume			\Default Work Unit\Volume\MasterVolume	
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master\Ambience	
 	1229948536	Environment			\Default Work Unit\Master\Environment	
+	2607556080	Menu			\Default Work Unit\Master\Menu	
 	3545700988	Reverbs			\Default Work Unit\Master\Reverbs	
 	3991942870	Music			\Default Work Unit\Master\Music	
 	4056684167	Master			\Default Work Unit\Master	

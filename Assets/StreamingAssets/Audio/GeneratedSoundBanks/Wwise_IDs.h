@@ -91,6 +91,7 @@ namespace AK
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID ENVIRONMENT = 1229948536U;
         static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MENU = 2607556080U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID REVERBS = 3545700988U;
     } // namespace BUSSES

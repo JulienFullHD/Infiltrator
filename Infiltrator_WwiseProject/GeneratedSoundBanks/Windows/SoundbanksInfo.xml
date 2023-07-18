@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{94C22B87-D913-80A9-C1E6-A514177C2FBC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D08DA0CD-45E4-635E-B940-E04DCD3FC7F5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -25,6 +25,7 @@
 			<Busses>
 				<Bus Id="85412153" Name="Ambience"/>
 				<Bus Id="1229948536" Name="Environment"/>
+				<Bus Id="2607556080" Name="Menu"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3991942870" Name="Music"/>
 				<Bus Id="4056684167" Name="Master"/>
@@ -69,7 +70,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{0E9709CF-D7AE-A048-BCB8-109806A56064}">
+		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{F090AE71-D5D4-18CA-3E37-328050097E2D}">
 			<ShortName>Menu</ShortName>
 			<Path>Menu.bnk</Path>
 			<Media>
@@ -77,24 +78,24 @@
 					<ShortName>InfiltratorBEAT.wav</ShortName>
 					<CachePath>SFX/InfiltratorBEAT_10C4C929.wem</CachePath>
 				</File>
-				<File Id="283995949" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Menu Back v2.wav</ShortName>
-					<CachePath>SFX/Menu Back v2_10C4C929.wem</CachePath>
+				<File Id="334689524" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu Sound.wav</ShortName>
+					<CachePath>SFX/Menu Sound_10C4C929.wem</CachePath>
 				</File>
-				<File Id="594860196" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Menu Pick v2.wav</ShortName>
-					<CachePath>SFX/Menu Pick v2_10C4C929.wem</CachePath>
+				<File Id="816732395" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Menu Back v3.wav</ShortName>
+					<CachePath>SFX/Menu Back v3_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="1113566242" Name="Play_MenuBack" DurationType="OneShot" DurationMin="1.390625" DurationMax="1.4108521">
+				<Event Id="1113566242" Name="Play_MenuBack" DurationType="OneShot" DurationMin="0.1675625" DurationMax="0.1675625">
 					<MediaRefs>
-						<MediaRef Id="283995949"/>
+						<MediaRef Id="816732395"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1055472740" Name="Play_MenuPick" DurationType="OneShot" DurationMin="1.3016042" DurationMax="1.3212996">
+				<Event Id="1055472740" Name="Play_MenuPick" DurationType="OneShot" DurationMin="0.1675625" DurationMax="0.1675625">
 					<MediaRefs>
-						<MediaRef Id="594860196"/>
+						<MediaRef Id="334689524"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3757523130" Name="Play_MenuTheme" DurationType="OneShot" DurationMin="317.7549" DurationMax="317.7549">
@@ -105,7 +106,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{194B5D4F-2448-58C9-5BF3-48D094B30DE4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{69637792-FC17-D57D-C2BC-F097BB5D61B5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -452,5 +453,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BB09EC98-19CD-A91E-B4D5-C1A809500C0F}</FileHash>
+	<FileHash>{733E9CED-D000-B597-F521-0F55F4FCC2C5}</FileHash>
 </SoundBanksInfo>

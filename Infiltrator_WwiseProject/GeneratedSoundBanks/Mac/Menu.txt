@@ -6,6 +6,6 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	209281007	MenuTheme	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\InfiltratorBEAT_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MenuTheme		56052128
-	283995949	Menu Back	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Menu Back v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu Back		133596
-	594860196	Menu Pick	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Menu Pick v2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu Pick		125050
+	334689524	Menu Sound	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Menu Sound_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu Sound		16182
+	816732395	Menu Back v3	C:\Users\Neico\Documents\GitHub\Infiltrator\Infiltrator_WwiseProject\.cache\Mac\SFX\Menu Back v3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Menu\Menu Back v3		16182
 

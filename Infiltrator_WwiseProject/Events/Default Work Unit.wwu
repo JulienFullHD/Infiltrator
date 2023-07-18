@@ -407,7 +407,7 @@
 								<Action Name="" ID="{42BBCF83-B9E0-4135-9E85-D66003315BC0}" ShortID="715481207">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Menu Pick" ID="{3F3913F4-11D9-4ACE-BBEC-D94255F8107A}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="Menu Sound" ID="{5D1ABB90-B21C-4999-92B9-719AEBAF067E}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -418,7 +418,7 @@
 								<Action Name="" ID="{067E397A-7367-4789-BEBA-2223E899D662}" ShortID="558172178">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Menu Back" ID="{E8DD8573-E6A2-44E7-9BB6-A1B63F213DE1}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="Menu Back v3" ID="{1DDD6953-43CD-4F66-95A0-159BDCA314EE}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
