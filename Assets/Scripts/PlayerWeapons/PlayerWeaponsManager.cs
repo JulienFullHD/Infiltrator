@@ -77,19 +77,19 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(UserSettings.Instance.KeybindKunai))
+        if (!PauseMenu.isPaused && Input.GetKeyDown(UserSettings.Instance.KeybindKunai))
         {
             ThrowKunai();
         }
 
-        if (Input.GetKey(KeyCode.Mouse0) && canAttackSword)
+        if (!PauseMenu.isPaused && Input.GetKey(KeyCode.Mouse0) && canAttackSword)
         {
             myKatanaSwing.Post(gameObject);
             canAttackSword = false;
             Invoke(nameof(AttackSword), swordAttackCountdownMS);
         }
 
-        if (Input.GetKeyDown(UserSettings.Instance.KeybindSmokebomb) && canThrowSmokebomb)
+        if (!PauseMenu.isPaused && Input.GetKeyDown(UserSettings.Instance.KeybindSmokebomb) && canThrowSmokebomb)
         {
             canThrowSmokebomb = false;
             ThrowSmoke();

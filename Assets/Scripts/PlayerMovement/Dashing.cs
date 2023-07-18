@@ -45,7 +45,7 @@ public class Dashing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
+        if (!PauseMenu.isPaused && Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
         {
             Dash();
             PlayerDash.Post(gameObject);
