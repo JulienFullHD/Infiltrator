@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1822553173903213905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform_Wide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: l_Pillar (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d419c76b3ebf733478864506b4ca6073,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d419c76b3ebf733478864506b4ca6073, type: 3}
@@ -236,6 +241,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: l_Pillar (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d419c76b3ebf733478864506b4ca6073,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d419c76b3ebf733478864506b4ca6073, type: 3}
@@ -470,6 +480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: l_Pillar (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d419c76b3ebf733478864506b4ca6073,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d419c76b3ebf733478864506b4ca6073, type: 3}
 --- !u!4 &8388899122442639671 stripped
@@ -583,6 +598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: l_Pillar (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d419c76b3ebf733478864506b4ca6073,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d419c76b3ebf733478864506b4ca6073, type: 3}
