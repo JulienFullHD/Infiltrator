@@ -9,13 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D08DA0CD-45E4-635E-B940-E04DCD3FC7F5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{39E54DCE-E0C4-E730-5082-F681D175CC46}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
 					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3604890626" Name="High_Pass_60Hz" LibName="Wwise Parametric EQ" LibId="6881283"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -35,6 +36,7 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="48620415"/>
+							<PluginRef Id="3604890626"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -42,6 +44,7 @@
 					<PluginRefs>
 						<ShareSets>
 							<PluginRef Id="2891462749"/>
+							<PluginRef Id="3604890626"/>
 						</ShareSets>
 					</PluginRefs>
 				</AuxBus>
@@ -106,7 +109,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{69637792-FC17-D57D-C2BC-F097BB5D61B5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{6391C2F9-7B76-91FE-8314-834CACAEB8F2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -453,5 +456,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{733E9CED-D000-B597-F521-0F55F4FCC2C5}</FileHash>
+	<FileHash>{1965D9A9-C031-1483-8935-C29AC4C5F2E5}</FileHash>
 </SoundBanksInfo>
