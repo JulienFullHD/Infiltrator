@@ -128,9 +128,9 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
   showCirrusCloudsControls: 0
   show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: -0.41684425, y: 0.8350174}
-  cloudFlatDetailAnim: {x: -0.13183402, y: 0.2025323}
-  cirrusAnim: {x: 0.79122484, y: -0.58269393}
+  cloudFlatBaseAnim: {x: -0.5498641, y: 0.9684472}
+  cloudFlatDetailAnim: {x: -0.79776937, y: 0.8692093}
+  cirrusAnim: {x: 0.72470534, y: -0.5161351}
 --- !u!114 &-1033463005042072443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18a0693e95fd064e9d0a3b96e538236, type: 3}
   m_Name: Lighting Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
       key0: {r: 0, g: 0, b: 0, a: 1}
       key1: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 1}
       key2: {r: 0.46471164, g: 0.5037812, b: 0.5566038, a: 0}
-      key3: {r: 0.8502581, g: 0.87486047, b: 0.9339623, a: 0}
+      key3: {r: 0.990566, g: 0.7242346, b: 0.9575155, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0586c1500fad0074693dd4176a399883, type: 3}
   m_Name: Environment Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
@@ -1618,11 +1618,11 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    temperature: 5.357969e-30
+    temperature: 2e-44
     temperatureWeatherMod: 0
     temperatureCustomMod: 0
     temperatureChangingSpeed: 0.1
-    wetness: 0.99999994
+    wetness: 1
     wetnessTarget: 1
     snow: 0
     snowTarget: 0
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: c2a8d80258fd83a409a05aa912abca80, type: 2}
   showSeasonControls: 0
   showTemperatureControls: 0
-  showWeatherStateControls: 0
+  showWeatherStateControls: 1
   showWindControls: 0
 --- !u!114 &3171557369469055653
 MonoBehaviour:
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cae96c4b3ef46947a21c9615a74e6e4, type: 3}
   m_Name: Volumetric Cloud Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   settingsLayer1:
@@ -1661,14 +1661,14 @@ MonoBehaviour:
     windSpeedModifier: 0.005
     windUpwards: 0.02
     coverage: 0.21
-    worleyFreq2: 1
-    worleyFreq1: 4
+    worleyFreq2: 3.7
+    worleyFreq1: 827
     dilateCoverage: 0.17
     dilateType: 0.457
     cloudsTypeModifier: 0.633
     locationOffset: {x: 0, y: 0}
-    bottomCloudsHeight: -1431
-    topCloudsHeight: 1330.81
+    bottomCloudsHeight: -2247
+    topCloudsHeight: 2306
     density: 0.2
     densitySmoothness: 1.72
     scatteringIntensity: 0.05
@@ -1836,10 +1836,10 @@ MonoBehaviour:
   showDensityControls: 1
   showTextureControls: 0
   showWindControls: 1
-  cloudAnimLayer1: {x: 0.7752782, y: -0.5658413, z: 0.5971028}
+  cloudAnimLayer1: {x: 0.6950869, y: -0.4857867, z: -0.10736508}
   cloudAnimLayer2: {x: 0, y: 0, z: 0}
-  cloudAnimNonScaledLayer1: {x: 2.1973202, y: -2.1646848, z: -73.58614}
-  cloudAnimNonScaledLayer2: {x: -1.915369, y: 1.8827344, z: -73.94438}
+  cloudAnimNonScaledLayer1: {x: 3.1604486, y: -3.127813, z: -121.73813}
+  cloudAnimNonScaledLayer2: {x: -2.8785048, y: 2.8458667, z: -122.09637}
   weatherMap: {fileID: 0}
 --- !u!114 &3607125083166130530
 MonoBehaviour:
@@ -2079,9 +2079,41 @@ MonoBehaviour:
       m_NumColorKeys: 4
       m_NumAlphaKeys: 2
   preset: {fileID: 11400000, guid: 6625884995235d049bd7f2f1de182577, type: 2}
-  showFogControls: 0
+  showFogControls: 1
   showVolumetricsControls: 0
   fogLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
