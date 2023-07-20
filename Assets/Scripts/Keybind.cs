@@ -74,7 +74,9 @@ public class Keybind : MonoBehaviour
 
     public void StopRebindRoutine()
     {
-        StopCoroutine(rebindRoutine);
+        if(rebindRoutine is not null)
+            StopCoroutine(rebindRoutine);
+
         rebindRoutine = null;
     }
 
