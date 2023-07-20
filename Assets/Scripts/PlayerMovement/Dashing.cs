@@ -132,12 +132,13 @@ public class Dashing : MonoBehaviour
         enemiesHitPerDash = 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnDashTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             weaponManager.HitEnemy(hitType: HitType.Dash, enemyGameObject: other.gameObject);
             enemiesHitPerDash++;
+            Debug.Log("Dash hit");
         }
     }
 }
