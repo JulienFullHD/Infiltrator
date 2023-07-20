@@ -100,8 +100,11 @@
 					<ChildrenList>
 						<Effect Name="Light_Expander" ID="{C7E71A3B-745F-47B0-8F31-276DD413F83C}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="1.5"/>
-								<Property Name="Threshold" Type="Real32" Value="0"/>
+								<Property Name="AttackTime" Type="Real32" Value="1"/>
+								<Property Name="OutputGain" Type="Real32" Value="9.7"/>
+								<Property Name="Ratio" Type="Real32" Value="1"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="1.8"/>
+								<Property Name="Threshold" Type="Real32" Value="-42.1"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Noise_Gate_Fast_Attack" ID="{747A6B61-E953-474C-8227-672C884DA616}" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
@@ -165,7 +168,7 @@
 								<Property Name="LookAhead" Type="Real32" Value="0.001"/>
 								<Property Name="OutputGain" Type="Real32" Value="6"/>
 								<Property Name="Ratio" Type="Real32" Value="50"/>
-								<Property Name="ReleaseTime" Type="Real32" Value="0.02"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="0.2"/>
 								<Property Name="Threshold" Type="Real32" Value="-40"/>
 							</PropertyList>
 						</Effect>
@@ -1313,7 +1316,7 @@
 								</Effect>
 								<Effect Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="1.7"/>
+										<Property Name="DecayTime" Type="Real32" Value="0.6"/>
 										<Property Name="Density" Type="Real32" Value="70"/>
 										<Property Name="DryLevel" Type="Real32" Value="-17.3"/>
 										<Property Name="ERFrontBackDelay" Type="Real32" Value="21"/>
@@ -1513,7 +1516,7 @@
 							<ChildrenList>
 								<Effect Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="1.1"/>
+										<Property Name="DecayTime" Type="Real32" Value="0.8"/>
 										<Property Name="Density" Type="Real32" Value="73"/>
 										<Property Name="DryLevel" Type="Real32" Value="-7.3"/>
 										<Property Name="ERFrontBackDelay" Type="Real32" Value="35"/>

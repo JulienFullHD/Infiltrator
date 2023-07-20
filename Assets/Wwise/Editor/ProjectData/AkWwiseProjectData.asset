@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585118187988686548
+    m_lastTime: -8585117435619684255
     List:
     - name: Ambience
       guid: 6c4f897ba31d8b4093b29a0ae523264b
@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585119295073019729
+    m_lastTime: -8585117517935133754
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -233,7 +233,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585119288381441539
+    m_lastTime: -8585117518430970798
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -726,6 +726,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2747971682d8bb4485ec2b4d4323181c
       Path: Events\Default Work Unit\Ambience\Play_Rain
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_StaticNoise
+      guid: d9732675f950b246b70298b3bcd147c6
+      id: 1913495746
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
+      - ElementName: Play_StaticNoise
+        ObjectType: 3
+        guid: d9732675f950b246b70298b3bcd147c6
+      Path: Events\Default Work Unit\Ambience\Play_StaticNoise
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

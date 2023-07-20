@@ -31,8 +31,8 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	1252796875	Light_Expander	Wwise Expander			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
-	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			
