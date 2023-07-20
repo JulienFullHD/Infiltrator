@@ -18,6 +18,8 @@ public class ScoreManger : MonoBehaviour
     [SerializeField] private float comboMaxInactivityDuration;
     [ReadOnly, SerializeField] private bool comboIsCounting;
     [ReadOnly, SerializeField] private float comboCurrentInactivityDuration;
+    private Coroutine fadeAnimationRoutine;
+    private float animationRoutineTimer;
 
     [Header("Latest Scores")]
     private Dictionary<ScoreType, int> scoreTypeValues;
@@ -67,6 +69,11 @@ public class ScoreManger : MonoBehaviour
 
     private void StartCombo()
     {
+        if (fadeAnimationRoutine is not null)
+        {
+            animationRoutineTimer = 0;            
+        }
+
         currentMultiplier = 1;
 
         ComboOne.Post(gameObject);  //Wwise
@@ -83,26 +90,32 @@ public class ScoreManger : MonoBehaviour
     {
         Color textColorOriginal = textComboScore.color;
         Color textColor = textComboScore.color;
-        float timer = duration;
+        animationRoutineTimer = duration;
         Vector3 mainScorePos = textMainScore.rectTransform.position;
         Vector3 comboScorePos = textComboScore.rectTransform.position;
         Vector3 lerpPos = textComboScore.rectTransform.position;
 
-        while (timer > 0)
+        while (animationRoutineTimer > 0)
         {
-            textColor.a = timer / duration;
+            textColor.a = animationRoutineTimer / duration;
             textComboScore.color = textColor;
             textComboScorePlus.color = textColor;
 
-            lerpPos.y = Mathf.Lerp(mainScorePos.y, comboScorePos.y,  timer / duration);
+            lerpPos.y = Mathf.Lerp(mainScorePos.y, comboScorePos.y, animationRoutineTimer / duration);
             textComboScore.rectTransform.position = lerpPos;
 
-            timer -= Time.deltaTime;
+            animationRoutineTimer -= Time.deltaTime;
             yield return null;
         }
 
-        textComboScore.text = "";
-        textComboScorePlus.text = "";
+        
+
+        if(comboCurrentInactivityDuration < 0)
+        {
+            textComboScore.text = "";
+            textComboScorePlus.text = "";
+        }
+        
         textComboScore.color = textColorOriginal;
         textComboScorePlus.color = textColorOriginal;
         textComboScore.rectTransform.position = comboScorePos;
@@ -112,7 +125,7 @@ public class ScoreManger : MonoBehaviour
 
     private void StopCombo()
     {
-        StartCoroutine(ComboFade(comboAddFadeTimer, currentComboScore));
+        fadeAnimationRoutine = StartCoroutine(ComboFade(comboAddFadeTimer, currentComboScore));
 
         ResetComboValues();
 
