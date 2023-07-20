@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerWeaponsManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private float swordAttackCooldownMS;
     [ReadOnly, SerializeField] private bool canAttackSword;
     [ReadOnly, SerializeField] private Collider[] swordHits;
+    [SerializeField] private VisualEffect slashEffect;
 
     [Header("Kunai Settings")]
     [SerializeField] private GameObject kunaiPrefab;
@@ -116,6 +118,8 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     private void AttackSword()
     {
+        slashEffect.Play();
+
         Invoke(nameof(AllowMelee), swordAttackCooldownMS/1000);
 
         swordHits = Physics.OverlapBox(transform.position + (transform.rotation * swordBoxDisplacement), swordBoxSize / 2,Quaternion.identity, LayerMask.GetMask("Enemy"));
