@@ -33,6 +33,27 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_StaticNoise" ID="{752673D9-50F9-46B2-B702-98B3BCD147C6}">
+							<ChildrenList>
+								<Action Name="" ID="{AB205483-B0A3-4ED0-89FA-3828E5C95AAE}" ShortID="9401196">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StaticNoise" ID="{A5263AA3-F0FF-4B8B-B144-A26CFBAA9EF3}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{E2ECF407-1F81-4DC0-B304-EE30811C7FFC}" ShortID="961135454">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StaticNoise" ID="{A5263AA3-F0FF-4B8B-B144-A26CFBAA9EF3}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Movement" ID="{431387C3-6C3A-4ECC-A146-EFBC335239D9}" ShortID="394829484">

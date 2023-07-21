@@ -8,6 +8,9 @@
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{EC276527-1397-45EB-9CC7-994817510560}" WorkUnitID="{C4A04063-AD39-4BEA-805A-3D29B63F33DF}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Expander" CompanyID="0" PluginID="109" PluginType="3">
+							<ObjectRef Name="Light_Expander" ID="{C7E71A3B-745F-47B0-8F31-276DD413F83C}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}">
@@ -16,7 +19,7 @@
 								<Property Name="RecoveryTime" Type="Real64" Value="0.75"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -59,26 +62,10 @@
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}"/>
-									<DuckingParam>
-										<Volume>-3</Volume>
-										<FadeInTime>0.800000011920929</FadeInTime>
-										<FadeOutTime>0.200000002980232</FadeOutTime>
-										<FadeCurve>FadeLog2</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
 						</Bus>
 						<Bus Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}">
 							<PropertyList>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">

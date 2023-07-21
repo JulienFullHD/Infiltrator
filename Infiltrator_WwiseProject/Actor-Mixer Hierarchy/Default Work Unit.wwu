@@ -6,6 +6,12 @@
 				<ActorMixer Name="Ambience" ID="{08246CD6-8A24-414A-814D-9007F5D61292}" ShortID="287174772">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -24,7 +30,23 @@
 					<ChildrenList>
 						<Sound Name="AmbienceWind" ID="{0269C097-3A21-4A87-85E5-AC8366E16817}" ShortID="993225427">
 							<PropertyList>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -60,6 +82,34 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Rain (secret onion)" ID="{DE40762F-8E0F-47BA-B012-BA58AE15C2D1}" ShortID="1051897046">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>51</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-200</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -79,6 +129,85 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Rain (secret onion)" ID="{FE0F5E81-80DB-45B5-8806-1912CC3147D9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="StaticNoise" ID="{A5263AA3-F0FF-4B8B-B144-A26CFBAA9EF3}" ShortID="548807079">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="CenterPercentage" Type="int32">
+									<ValueList>
+										<Value>60</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>45</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{607EFB2E-6481-4A61-9E04-50A5B666923F}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Commercials" ID="{1F00F3DF-969A-4C77-8DBF-89D3A5E64CA5}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="StaticNoise (werbetafel)" ID="{A3E2B55C-CBDE-453E-8DBD-2461520EF9CB}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0340909090909091"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0227272727272725"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>StaticNoise (werbetafel).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="59469052"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="StaticNoise" ID="{4E763810-E68F-41FF-8AD1-B13D8304AD71}">
+									<Language>SFX</Language>
+									<AudioFile>StaticNoise.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="359748634"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="StaticNoise" ID="{4E763810-E68F-41FF-8AD1-B13D8304AD71}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
@@ -496,6 +625,11 @@
 												<Value>20</Value>
 											</ValueList>
 										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
@@ -513,7 +647,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>11</Value>
+												<Value>12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -825,6 +959,11 @@
 										<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1168,7 +1307,12 @@
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>22</Value>
+										<Value>8</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -1240,6 +1384,11 @@
 						</Sound>
 						<RandomSequenceContainer Name="Jump" ID="{8527B4DF-E277-4E33-82AA-E631A3DCCB09}" ShortID="562504858">
 							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1256,7 +1405,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1351,6 +1500,11 @@
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>14</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -1518,7 +1672,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1531,7 +1685,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="FS_player_metalWet" ID="{60BD35AE-E997-4E8A-88C9-3C4D8B707FEF}" ShortID="550784199">
+										<Sound Name="Footsteps MetalWet1" ID="{5871FF51-691E-425B-A05F-FE73D5D834D5}" ShortID="721700788">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1541,19 +1695,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metalWet" ID="{EE0DD47B-F8E7-4D0D-B455-5E43AF3D8281}">
+												<AudioFileSource Name="Footsteps MetalWet1" ID="{B664ADEA-D664-4127-91D8-C22C831FA17D}">
 													<Language>SFX</Language>
-													<AudioFile>FS_player_metalWet.wav</AudioFile>
+													<AudioFile>Footsteps MetalWet1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="233280696"/>
+														<MediaID ID="325601555"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metalWet" ID="{EE0DD47B-F8E7-4D0D-B455-5E43AF3D8281}" Platform="Linked"/>
+												<ActiveSource Name="Footsteps MetalWet1" ID="{B664ADEA-D664-4127-91D8-C22C831FA17D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metalWet1" ID="{E6166A70-AB30-4FAD-BD1F-6FB914CDA84F}" ShortID="742040324">
+										<Sound Name="Footsteps MetalWet2" ID="{5C5DBCDA-8F4B-4DF7-A8C6-01DFE052EAB4}" ShortID="1067827066">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1563,19 +1717,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metalWet1" ID="{3F8F8379-DFE4-47DA-AB60-EE0877D0E2F9}">
+												<AudioFileSource Name="Footsteps MetalWet2" ID="{94F42A5E-91DC-4F9A-81C5-EBCD990A15B0}">
 													<Language>SFX</Language>
-													<AudioFile>FS_player_metalWet1.wav</AudioFile>
+													<AudioFile>Footsteps MetalWet2.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="743429803"/>
+														<MediaID ID="1045138895"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metalWet1" ID="{3F8F8379-DFE4-47DA-AB60-EE0877D0E2F9}" Platform="Linked"/>
+												<ActiveSource Name="Footsteps MetalWet2" ID="{94F42A5E-91DC-4F9A-81C5-EBCD990A15B0}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metalWet2" ID="{8FE80114-36F5-4D5B-B8EF-9285F28D9E5B}" ShortID="67615152">
+										<Sound Name="Footsteps MetalWet3" ID="{5BF01C02-58D3-419B-83B9-2060C06B7D48}" ShortID="709953819">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1585,19 +1739,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metalWet2" ID="{F62EE4EE-DAD5-4E85-AEDC-63DE35D1C59D}">
+												<AudioFileSource Name="Footsteps MetalWet3" ID="{C99CE41F-2B69-46B3-918C-795B1927C55B}">
 													<Language>SFX</Language>
-													<AudioFile>FS_player_metalWet2.wav</AudioFile>
+													<AudioFile>Footsteps MetalWet3.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="988550002"/>
+														<MediaID ID="934240164"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metalWet2" ID="{F62EE4EE-DAD5-4E85-AEDC-63DE35D1C59D}" Platform="Linked"/>
+												<ActiveSource Name="Footsteps MetalWet3" ID="{C99CE41F-2B69-46B3-918C-795B1927C55B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="FS_player_metalWet3" ID="{0CABA61E-08CB-43E2-BDE1-E72D211750F1}" ShortID="924045531">
+										<Sound Name="Footsteps MetalWet4" ID="{4F7C4FCE-194A-495D-80A7-53D8D448FC70}" ShortID="366365092">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1607,16 +1761,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="FS_player_metalWet3" ID="{0DE5EEE1-07A8-4DA9-B895-D226B7C0794B}">
+												<AudioFileSource Name="Footsteps MetalWet4" ID="{B12E83A1-3167-4FCA-A27F-7F0A358B4317}">
 													<Language>SFX</Language>
-													<AudioFile>FS_player_metalWet3.wav</AudioFile>
+													<AudioFile>Footsteps MetalWet4.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="658006621"/>
+														<MediaID ID="521892516"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="FS_player_metalWet3" ID="{0DE5EEE1-07A8-4DA9-B895-D226B7C0794B}" Platform="Linked"/>
+												<ActiveSource Name="Footsteps MetalWet4" ID="{B12E83A1-3167-4FCA-A27F-7F0A358B4317}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1633,6 +1787,11 @@
 										<Value>30</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
@@ -1641,7 +1800,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1682,6 +1841,11 @@
 										<Value>30</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-570</Value>
@@ -1696,6 +1860,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1882,6 +2051,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="MenuTheme" ID="{54ABB455-EC5D-4DEE-99F1-FDC7386ABDAE}" ShortID="560480691">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1996,7 +2172,7 @@
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>13</Value>
+										<Value>15</Value>
 									</ValueList>
 								</Property>
 								<Property Name="MakeUpGain" Type="Real64">
@@ -2020,7 +2196,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>9</Value>
+										<Value>10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2215,7 +2391,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
