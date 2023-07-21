@@ -19,8 +19,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 311
     y: -190
-    width: 1055
-    height: 1376
+    width: 1054
+    height: 1637
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614614}
-  m_UIPosition: {x: 942, y: 528}
+  m_UIPosition: {x: 941, y: 694}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -715,7 +715,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614612}
-  m_UIPosition: {x: 941, y: 814}
+  m_UIPosition: {x: 941, y: 1075}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -740,7 +740,7 @@ MonoBehaviour:
   excludeFromTAA: 0
   sortingPriority: 0
   m_SubOutputs: []
-  cullMode: 0
+  cullMode: 3
   zWriteMode: 0
   zTestMode: 0
   colorMapping: 0
@@ -786,7 +786,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":124007798685723775,"guid":"adb298f240899a24d8f7939042720aad","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":124007798685723775,"guid":"ffe9583c41d9a5742b9dedf4f668239d","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mesh
