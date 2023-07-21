@@ -128,9 +128,9 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
   showCirrusCloudsControls: 0
   show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: 0.7685385, y: -0.34993035}
-  cloudFlatDetailAnim: {x: -0.20614949, y: 0.27859402}
-  cirrusAnim: {x: 0.38388988, y: -0.17532948}
+  cloudFlatBaseAnim: {x: -0.7497189, y: -0.83184433}
+  cloudFlatDetailAnim: {x: 0.20305045, y: -0.13036774}
+  cirrusAnim: {x: 0.62484616, y: -0.41629905}
 --- !u!114 &-1033463005042072443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375eef0084d44344ebf50cbba7c1eadb, type: 3}
   m_Name: Sky Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
@@ -527,8 +527,8 @@ MonoBehaviour:
       m_NumAlphaKeys: 2
     moonColorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 9.082411, g: 9.082411, b: 9.082411, a: 1}
+      key0: {r: 1, g: 0.69682956, b: 0, a: 1}
+      key1: {r: 2.3816388, g: 0, b: 1.1621248, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -768,8 +768,8 @@ MonoBehaviour:
       m_RotationOrder: 4
     intensity: 0.5
     sunScale: 7
-    moonScale: 7
-    moonPhase: -1.632224
+    moonScale: 15.92
+    moonPhase: 0.32
     skyExposureHDRP:
       serializedVersion: 2
       m_Curve:
@@ -813,7 +813,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   preset: {fileID: 11400000, guid: 44f43418b8d8b8142863e38d1e49e174, type: 2}
-  showSkyControls: 1
+  showSkyControls: 0
   showSkySunControls: 1
   showSkyMoonControls: 1
   showSkyStarsControls: 0
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b18a0693e95fd064e9d0a3b96e538236, type: 3}
   m_Name: Lighting Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0586c1500fad0074693dd4176a399883, type: 3}
   m_Name: Environment Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
@@ -1618,7 +1618,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    temperature: 2e-44
+    temperature: 0.0000103370585
     temperatureWeatherMod: 0
     temperatureCustomMod: 0
     temperatureChangingSpeed: 0.1
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cae96c4b3ef46947a21c9615a74e6e4, type: 3}
   m_Name: Volumetric Cloud Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   settingsLayer1:
@@ -1836,10 +1836,10 @@ MonoBehaviour:
   showDensityControls: 1
   showTextureControls: 0
   showWindControls: 1
-  cloudAnimLayer1: {x: 0.34017414, y: -0.13087223, z: -0.42526767}
+  cloudAnimLayer1: {x: 0.58113354, y: -0.3718386, z: -0.27888143}
   cloudAnimLayer2: {x: 0, y: 0, z: 0}
-  cloudAnimNonScaledLayer1: {x: 3.9856591, y: -3.9530237, z: -163.00047}
-  cloudAnimNonScaledLayer2: {x: -3.7037153, y: 3.6710773, z: -163.35869}
+  cloudAnimNonScaledLayer1: {x: 5.109078, y: -5.0764146, z: -219.17807}
+  cloudAnimNonScaledLayer2: {x: -4.827904, y: 4.7952294, z: -219.53629}
   weatherMap: {fileID: 0}
 --- !u!114 &3607125083166130530
 MonoBehaviour:
@@ -1874,7 +1874,7 @@ MonoBehaviour:
     defaultSkyReflectionTex: {fileID: 0}
   preset: {fileID: 11400000, guid: da668770e38694d49af97ecfd05fd7eb, type: 2}
   showReflectionControls: 1
-  lastReflectionUpdate: 2.358334
+  lastReflectionUpdate: 3.025
   lastReflectionUpdatePos: {x: -58.87, y: 19.315, z: -62.7}
 --- !u!114 &3618876123998454902
 MonoBehaviour:
@@ -1888,18 +1888,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0081d4f9e5d6e0a4d9fe8e7a8d7256b6, type: 3}
   m_Name: Time Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
     simulate: 0
     secSerial: 0
-    minSerial: 20
-    hourSerial: 2
-    daySerial: 1
+    minSerial: 0
+    hourSerial: 3
+    daySerial: 21
     monthSerial: 1
     yearSerial: 2023
-    timeOfDay: 2.333334
+    timeOfDay: 3
     latitude: 24
     longitude: 67
     utcOffset: 5
@@ -1907,7 +1907,7 @@ MonoBehaviour:
     dayLengthModifier: 1
     nightLengthModifier: 1
   preset: {fileID: 11400000, guid: 82acdd278499d74498ad37dd931734d1, type: 2}
-  showTimeControls: 0
+  showTimeControls: 1
   showLocationControls: 0
 --- !u!114 &4011421771873438716
 MonoBehaviour:
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ccdfb360c52f049bf71126aa74826f, type: 3}
   m_Name: Weather Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
@@ -2243,6 +2243,55 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   fogMat: {fileID: 0}
   volumetricsMat: {fileID: 0}
   blurMat: {fileID: 0}
@@ -2259,7 +2308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e0fff1aca044c40b9f5dc9d0bfaaa3, type: 3}
   m_Name: Audio Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
