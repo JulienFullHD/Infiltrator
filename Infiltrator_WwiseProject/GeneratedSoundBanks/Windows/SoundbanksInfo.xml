@@ -9,13 +9,12 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{733B702F-6E13-2D38-B881-E53AEBFDE672}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D08DA0CD-45E4-635E-B940-E04DCD3FC7F5}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="48620415" Name="Have_U_Ever_Been_Outside" LibName="Wwise RoomVerb" LibId="7733251"/>
-					<Plugin Id="1252796875" Name="Light_Expander" LibName="Wwise Expander" LibId="7143427"/>
 					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
@@ -29,13 +28,7 @@
 				<Bus Id="2607556080" Name="Menu"/>
 				<Bus Id="3545700988" Name="Reverbs"/>
 				<Bus Id="3991942870" Name="Music"/>
-				<Bus Id="4056684167" Name="Master">
-					<PluginRefs>
-						<ShareSets>
-							<PluginRef Id="1252796875"/>
-						</ShareSets>
-					</PluginRefs>
-				</Bus>
+				<Bus Id="4056684167" Name="Master"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="1933665656" Name="Open_field">
@@ -77,7 +70,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{AD437385-F162-80A7-7C6E-9E4473F4F141}">
+		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{F090AE71-D5D4-18CA-3E37-328050097E2D}">
 			<ShortName>Menu</ShortName>
 			<Path>Menu.bnk</Path>
 			<Media>
@@ -113,7 +106,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{606F3B4C-C631-A0A6-03EF-FC73E5B29531}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{69637792-FC17-D57D-C2BC-F097BB5D61B5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -165,6 +158,10 @@
 					<ShortName>DeathEnemy4.wav</ShortName>
 					<CachePath>SFX/DeathEnemy4_B886DEB5.wem</CachePath>
 				</File>
+				<File Id="233280696" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metalWet.wav</ShortName>
+					<CachePath>SFX/FS_player_metalWet_10C4C929.wem</CachePath>
+				</File>
 				<File Id="248514043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy1.wav</ShortName>
 					<CachePath>SFX/FS_Enemy1_10C4C929.wem</CachePath>
@@ -177,17 +174,9 @@
 					<ShortName>Bleed22.wav</ShortName>
 					<CachePath>SFX/Bleed22_36E054E0.wem</CachePath>
 				</File>
-				<File Id="325601555" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps MetalWet1.wav</ShortName>
-					<CachePath>SFX/Footsteps MetalWet1_10C4C929.wem</CachePath>
-				</File>
 				<File Id="326487538" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall2.wav</ShortName>
 					<CachePath>SFX/DropAfterJumpFall2_10C4C929.wem</CachePath>
-				</File>
-				<File Id="359748634" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>StaticNoise.wav</ShortName>
-					<CachePath>SFX/StaticNoise_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="397544805" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall.wav</ShortName>
@@ -221,10 +210,6 @@
 					<ShortName>DeathEnemy5.wav</ShortName>
 					<CachePath>SFX/DeathEnemy5_680ACE7A.wem</CachePath>
 				</File>
-				<File Id="521892516" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps MetalWet4.wav</ShortName>
-					<CachePath>SFX/Footsteps MetalWet4_10C4C929.wem</CachePath>
-				</File>
 				<File Id="599743113" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kunai.wav</ShortName>
 					<CachePath>SFX/kunai_10C4C929.wem</CachePath>
@@ -246,6 +231,10 @@
 					<ShortName>DeathEnemy6.wav</ShortName>
 					<CachePath>SFX/DeathEnemy6_CA454A26.wem</CachePath>
 				</File>
+				<File Id="658006621" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metalWet3.wav</ShortName>
+					<CachePath>SFX/FS_player_metalWet3_10C4C929.wem</CachePath>
+				</File>
 				<File Id="662879814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy2.wav</ShortName>
 					<CachePath>SFX/FS_Enemy2_10C4C929.wem</CachePath>
@@ -253,6 +242,10 @@
 				<File Id="675877473" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing no3.wav</ShortName>
 					<CachePath>SFX/Katana_Swing no3_3C6556A1.wem</CachePath>
+				</File>
+				<File Id="743429803" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metalWet1.wav</ShortName>
+					<CachePath>SFX/FS_player_metalWet1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="782221668" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed33.wav</ShortName>
@@ -278,10 +271,6 @@
 					<ShortName>Smokebomb.wav</ShortName>
 					<CachePath>SFX/Smokebomb_BC02CF42.wem</CachePath>
 				</File>
-				<File Id="934240164" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps MetalWet3.wav</ShortName>
-					<CachePath>SFX/Footsteps MetalWet3_10C4C929.wem</CachePath>
-				</File>
 				<File Id="952022165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing.wav</ShortName>
 					<CachePath>SFX/Katana_Swing_B9FC8756.wem</CachePath>
@@ -294,6 +283,10 @@
 					<ShortName>DeathEnemy2.wav</ShortName>
 					<CachePath>SFX/DeathEnemy2_33CD2048.wem</CachePath>
 				</File>
+				<File Id="988550002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FS_player_metalWet2.wav</ShortName>
+					<CachePath>SFX/FS_player_metalWet2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="996908741" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_death.wav</ShortName>
 					<CachePath>SFX/Player_death_10C4C929.wem</CachePath>
@@ -301,10 +294,6 @@
 				<File Id="1044589429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dash.wav</ShortName>
 					<CachePath>SFX/dash_BE17CF0A.wem</CachePath>
-				</File>
-				<File Id="1045138895" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Footsteps MetalWet2.wav</ShortName>
-					<CachePath>SFX/Footsteps MetalWet2_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -396,12 +385,12 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="1928192825" Name="Play_FS_MetalWet" DurationType="OneShot" DurationMin="0.22898632" DurationMax="0.43375808">
+				<Event Id="1928192825" Name="Play_FS_MetalWet" DurationType="OneShot" DurationMin="0.17173974" DurationMax="0.4066482">
 					<MediaRefs>
-						<MediaRef Id="325601555"/>
-						<MediaRef Id="521892516"/>
-						<MediaRef Id="934240164"/>
-						<MediaRef Id="1045138895"/>
+						<MediaRef Id="233280696"/>
+						<MediaRef Id="658006621"/>
+						<MediaRef Id="743429803"/>
+						<MediaRef Id="988550002"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3009755888" Name="Play_MainTheme" DurationType="Infinite">
@@ -409,14 +398,9 @@
 						<MediaRef Id="642047943"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2838936948" Name="Play_Rain" DurationType="OneShot" DurationMin="94.28681" DurationMax="94.28681">
+				<Event Id="2838936948" Name="Play_Rain" DurationType="OneShot" DurationMin="84" DurationMax="84">
 					<MediaRefs>
 						<MediaRef Id="250371715"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1913495746" Name="Play_StaticNoise" MaxAttenuation="100" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="359748634"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3205957598" Name="Play_WinningScreen" DurationType="OneShot" DurationMin="310.3734" DurationMax="310.3734">
@@ -469,5 +453,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EBC2E551-FE5B-D3CA-3F15-A7176745E877}</FileHash>
+	<FileHash>{733E9CED-D000-B597-F521-0F55F4FCC2C5}</FileHash>
 </SoundBanksInfo>

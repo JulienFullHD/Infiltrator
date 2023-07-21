@@ -30,7 +30,6 @@ namespace AK
         static const AkUniqueID PLAY_MENUPICK = 1055472740U;
         static const AkUniqueID PLAY_MENUTHEME = 3757523130U;
         static const AkUniqueID PLAY_RAIN = 2838936948U;
-        static const AkUniqueID PLAY_STATICNOISE = 1913495746U;
         static const AkUniqueID PLAY_WINNINGSCREEN = 3205957598U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
