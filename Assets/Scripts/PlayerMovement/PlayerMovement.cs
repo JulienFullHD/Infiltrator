@@ -167,7 +167,7 @@ private void Start()
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetKey(KeyCode.Space) && canJump && coyoteAllowJump)
+        if(!PauseMenu.isPaused && Input.GetKey(KeyCode.Space) && canJump && coyoteAllowJump)
         {
             canJump = false;
             Jump();

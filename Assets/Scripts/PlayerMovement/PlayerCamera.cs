@@ -27,6 +27,9 @@ public class PlayerCamera : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.isPaused)
+            return;
+
         mouseX = Input.GetAxisRaw("Mouse X") * UserSettings.Instance.SensitivityHorizontal;
         mouseY = Input.GetAxisRaw("Mouse Y") * UserSettings.Instance.SensitivityVertical;
 

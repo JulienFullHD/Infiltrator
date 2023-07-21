@@ -45,7 +45,7 @@ public class Dashing : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
+        if (!PauseMenu.isPaused && Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
         {
             Dash();
             PlayerDash.Post(gameObject);
@@ -132,12 +132,13 @@ public class Dashing : MonoBehaviour
         enemiesHitPerDash = 0;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnDashTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             weaponManager.HitEnemy(hitType: HitType.Dash, enemyGameObject: other.gameObject);
             enemiesHitPerDash++;
+            Debug.Log("Dash hit");
         }
     }
 }

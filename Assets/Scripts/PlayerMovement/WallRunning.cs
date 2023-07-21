@@ -117,7 +117,7 @@ public class WallRunning : MonoBehaviour
             }
 
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (!PauseMenu.isPaused && Input.GetKeyDown(KeyCode.Space))
             {
                 WallJump();
             }
@@ -205,7 +205,7 @@ public class WallRunning : MonoBehaviour
         rb.AddForce(wallrunDirection * wallrunForce, ForceMode.Force);
 
         // Upwards force
-        if (Input.GetKey(upwardsWallrunKey) || alwaysRise)
+        if (!PauseMenu.isPaused && Input.GetKey(upwardsWallrunKey) || alwaysRise)
         {
             wallrunStartUseGravity = false;
             rb.velocity = new Vector3(rb.velocity.x, wallrunUpwardsForce, rb.velocity.z);
