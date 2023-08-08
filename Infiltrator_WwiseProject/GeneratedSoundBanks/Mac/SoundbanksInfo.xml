@@ -106,7 +106,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{69637792-FC17-D57D-C2BC-F097BB5D61B5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8DF70D9A-1E1E-44D9-9E17-45481E3C105B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -365,7 +365,7 @@
 						<MediaRef Id="465842787"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.203125" DurationMax="0.2612193">
+				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.21875" DurationMax="0.25317174">
 					<MediaRefs>
 						<MediaRef Id="248514043"/>
 						<MediaRef Id="491065857"/>
@@ -453,5 +453,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D59038C7-5705-2364-2E1B-57475043FB33}</FileHash>
+	<FileHash>{A496D522-FB7A-D7C7-2D4E-A7B5980C82F6}</FileHash>
 </SoundBanksInfo>

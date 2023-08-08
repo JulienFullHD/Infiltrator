@@ -5748,6 +5748,7 @@ GameObject:
   - component: {fileID: 6698196843874517778}
   - component: {fileID: 6698196843874517776}
   - component: {fileID: 6698196843874517777}
+  - component: {fileID: 1916430235830841507}
   m_Layer: 2
   m_Name: Bot
   m_TagString: Enemy
@@ -5967,6 +5968,24 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   HitPoints: 1
+--- !u!114 &1916430235830841507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698196843874517784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56fed6d9435bb334ebbebadc775bfd4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3206247806006374561}
+  EnemyFootsteps:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7dc4c84c236b43841aca39675fc6a37b,
+      type: 2}
 --- !u!1 &6725976939849643918
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,7 +24,19 @@
 					<ChildrenList>
 						<Sound Name="AmbienceWind" ID="{0269C097-3A21-4A87-85E5-AC8366E16817}" ShortID="993225427">
 							<PropertyList>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -60,6 +72,20 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Rain (secret onion)" ID="{DE40762F-8E0F-47BA-B012-BA58AE15C2D1}" ShortID="1051897046">
+							<PropertyList>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2413,6 +2439,11 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="FS_Enemy" ID="{378A9B02-BF75-4BCB-8260-EC79BF194405}" ShortID="35631811">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>29</Value>
+									</ValueList>
+								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2420,7 +2451,7 @@
 											<Modifier Name="" ID="{4BB5C66C-C3D6-488B-B27A-8C2654CE400F}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-76"/>
+													<Property Name="Min" Type="Real64" Value="-253"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -2429,7 +2460,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2442,16 +2473,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="FS_Enemy" ID="{D7FA1128-F702-4F83-A61D-B444FF649866}" ShortID="49406652">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{81B743A0-453B-471D-AC10-A7A118EEE421}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<Sound Name="FS_Enemy" ID="{AA38138E-3B04-4C16-8083-AAC083FE7945}" ShortID="352293562">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2461,7 +2483,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="FS_Enemy" ID="{CE1DDAD6-BB7F-4E4B-95EB-691224DD5DFF}">
+										<AudioFileSource Name="FS_Enemy" ID="{294C3EF6-E070-4DCB-B849-B581DE9A5ABC}">
 											<Language>SFX</Language>
 											<AudioFile>FS_Enemy.wav</AudioFile>
 											<MediaIDList>
@@ -2470,19 +2492,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="FS_Enemy" ID="{CE1DDAD6-BB7F-4E4B-95EB-691224DD5DFF}" Platform="Linked"/>
+										<ActiveSource Name="FS_Enemy" ID="{294C3EF6-E070-4DCB-B849-B581DE9A5ABC}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="FS_Enemy1" ID="{DB992D43-7F2F-4B61-AD0B-AA9F3CEA79CD}" ShortID="720445141">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{B1FDB6B9-0A4D-4666-9655-346726FF418D}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<Sound Name="FS_Enemy1" ID="{E6D2A85D-517E-4067-AEA5-6883B4582774}" ShortID="780467466">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2492,7 +2505,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="FS_Enemy1" ID="{6895BBFF-BCCA-4F79-86CC-CBFFEFEDC3F5}">
+										<AudioFileSource Name="FS_Enemy1" ID="{4D223A87-F2E9-4DA6-9D5A-0CB187ECB0C7}">
 											<Language>SFX</Language>
 											<AudioFile>FS_Enemy1.wav</AudioFile>
 											<MediaIDList>
@@ -2501,19 +2514,10 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="FS_Enemy1" ID="{6895BBFF-BCCA-4F79-86CC-CBFFEFEDC3F5}" Platform="Linked"/>
+										<ActiveSource Name="FS_Enemy1" ID="{4D223A87-F2E9-4DA6-9D5A-0CB187ECB0C7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="FS_Enemy2" ID="{E36B3ABB-7514-4F98-92CE-35399A45B06C}" ShortID="60196696">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{D0C7D186-6FA7-465E-A99C-333E147B7043}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
+								<Sound Name="FS_Enemy2" ID="{6D38ED9A-BE76-4283-A786-BEC57E06D4FB}" ShortID="824648218">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2523,7 +2527,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="FS_Enemy2" ID="{2FE0043D-2C16-4B42-A908-C6CDAB6B823D}">
+										<AudioFileSource Name="FS_Enemy2" ID="{9C78220B-EACD-4B15-8733-F4B6C03F9E02}">
 											<Language>SFX</Language>
 											<AudioFile>FS_Enemy2.wav</AudioFile>
 											<MediaIDList>
@@ -2532,7 +2536,7 @@
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="FS_Enemy2" ID="{2FE0043D-2C16-4B42-A908-C6CDAB6B823D}" Platform="Linked"/>
+										<ActiveSource Name="FS_Enemy2" ID="{9C78220B-EACD-4B15-8733-F4B6C03F9E02}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
