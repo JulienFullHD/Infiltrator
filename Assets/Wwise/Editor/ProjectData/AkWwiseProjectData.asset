@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585101118233622070
+    m_lastTime: -8585100204946835911
     List:
     - name: Ambience
       guid: 6c4f897ba31d8b4093b29a0ae523264b
@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585101118233577025
+    m_lastTime: -8585099887744521138
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -233,7 +233,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585101081758650225
+    m_lastTime: -8585099364899386831
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -249,6 +249,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
       Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Bullet_Flight
+      guid: 88d685e1d017fa40901c7e3e58e3356e
+      id: 332624362
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: Bullet_Flight
+        ObjectType: 3
+        guid: 88d685e1d017fa40901c7e3e58e3356e
+      Path: Events\Default Work Unit\Combat\Bullet_Flight
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -520,6 +540,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_BillboardNoise
+      guid: e3fccbc03b20f349a36375cb830b0e99
+      id: 909711491
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
+      - ElementName: Play_BillboardNoise
+        ObjectType: 3
+        guid: e3fccbc03b20f349a36375cb830b0e99
+      Path: Events\Default Work Unit\Ambience\Play_BillboardNoise
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_FS_Enemy
       guid: d2862d16db8c5942916738c744beaf3c
       id: 857770058
@@ -586,6 +626,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: aa2e1149a03543458f8cbde0fe3f335c
       Path: Events\Default Work Unit\Movement\Footsteps\Play_FS_MetalWet
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_LightHum
+      guid: f984354af5e94947ac2bec429ef2e353
+      id: 444602164
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
+      - ElementName: Play_LightHum
+        ObjectType: 3
+        guid: f984354af5e94947ac2bec429ef2e353
+      Path: Events\Default Work Unit\Ambience\Play_LightHum
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -666,26 +726,6 @@ MonoBehaviour:
         ObjectType: 3
         guid: 78160abefe32fe4eb433d3eac8c9df38
       Path: Events\Default Work Unit\Music\Play_MenuTheme
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Play_ProjectileFlight
-      guid: 626de8e7e4b7214490000410c6a8f0aa
-      id: 874464097
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Combat
-        ObjectType: 4
-        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
-      - ElementName: Play_ProjectileFlight
-        ObjectType: 3
-        guid: 626de8e7e4b7214490000410c6a8f0aa
-      Path: Events\Default Work Unit\Combat\Play_ProjectileFlight
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -969,26 +1009,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stop_ProjectileFlight
-      guid: 2687c8c415f46a4c8aa4ad8f732b21ac
-      id: 2872239319
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 422f606ff5de564d8d2d7d49b6a29f86
-      - ElementName: Combat
-        ObjectType: 4
-        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
-      - ElementName: Stop_ProjectileFlight
-        ObjectType: 3
-        guid: 2687c8c415f46a4c8aa4ad8f732b21ac
-      Path: Events\Default Work Unit\Combat\Stop_ProjectileFlight
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -1001,7 +1021,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: b5bce439aa4f3b448d2f31d46913a3e9
     GuidInternal: 
-    m_lastTime: -8585123508747777860
+    m_lastTime: -8585099364337604264
     List:
     - name: AmbienceVolume
       guid: e1ea6fe5de57b040aa6daa85cbf848ef
@@ -1020,6 +1040,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: e1ea6fe5de57b040aa6daa85cbf848ef
       Path: Game Parameters\Default Work Unit\Volume\AmbienceVolume
+    - name: DopplerParam
+      guid: e1d8fd945984df4da71efef15a028a5e
+      id: 2828409398
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: b5bce439aa4f3b448d2f31d46913a3e9
+      - ElementName: DopplerParam
+        ObjectType: 13
+        guid: e1d8fd945984df4da71efef15a028a5e
+      Path: Game Parameters\Default Work Unit\DopplerParam
     - name: MasterVolume
       guid: b14c4d5ad0114a448bc7281b055e5526
       id: 2918011349
@@ -1114,140 +1148,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: d92bbc41e8db4e46a1521be4e7a13ab7
     GuidInternal: 
-    m_lastTime: -8585126818515898566
-    List:
-    - name: PlayerAlive
-      guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-      id: 2557321869
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: d92bbc41e8db4e46a1521be4e7a13ab7
-      - ElementName: PlayerAlive
-        ObjectType: 9
-        guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-      Path: States\Default Work Unit\PlayerAlive
-      values:
-      - name: False
-        guid: 6a9de4463d39ba40bb626bac4c479ed4
-        id: 2452206122
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerAlive
-          ObjectType: 9
-          guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-        - ElementName: False
-          ObjectType: 8
-          guid: 6a9de4463d39ba40bb626bac4c479ed4
-      - name: None
-        guid: 3740faef2f5790478ccc587c0e6560ce
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerAlive
-          ObjectType: 9
-          guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-        - ElementName: None
-          ObjectType: 8
-          guid: 3740faef2f5790478ccc587c0e6560ce
-      - name: True
-        guid: ed6074327afd114bbdeae8d94031453f
-        id: 3053630529
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerAlive
-          ObjectType: 9
-          guid: fe90bb1a1d6aeb469f11a10c4ba5ff44
-        - ElementName: True
-          ObjectType: 8
-          guid: ed6074327afd114bbdeae8d94031453f
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
-    - name: PlayerIsWallruning
-      guid: 7601b60c1eed3c45ad9a392f916852b9
-      id: 3701697919
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: d92bbc41e8db4e46a1521be4e7a13ab7
-      - ElementName: PlayerIsWallruning
-        ObjectType: 9
-        guid: 7601b60c1eed3c45ad9a392f916852b9
-      Path: States\Default Work Unit\PlayerIsWallruning
-      values:
-      - name: False
-        guid: fe14d23117687e469b46fc92bd89fc77
-        id: 2452206122
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerIsWallruning
-          ObjectType: 9
-          guid: 7601b60c1eed3c45ad9a392f916852b9
-        - ElementName: False
-          ObjectType: 8
-          guid: fe14d23117687e469b46fc92bd89fc77
-      - name: None
-        guid: 48195aaaf0c54d448ba1d0b49ebd86ac
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerIsWallruning
-          ObjectType: 9
-          guid: 7601b60c1eed3c45ad9a392f916852b9
-        - ElementName: None
-          ObjectType: 8
-          guid: 48195aaaf0c54d448ba1d0b49ebd86ac
-      - name: True
-        guid: a1fa5e284486ef42b0143d367424e88e
-        id: 3053630529
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: d92bbc41e8db4e46a1521be4e7a13ab7
-        - ElementName: PlayerIsWallruning
-          ObjectType: 9
-          guid: 7601b60c1eed3c45ad9a392f916852b9
-        - ElementName: True
-          ObjectType: 8
-          guid: a1fa5e284486ef42b0143d367424e88e
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8585099364899561991
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -1277,7 +1179,7 @@ MonoBehaviour:
     m_lastTime: -8585126921120586461
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000a00000032000000
+  ExpandedWaapiItemIds: 050000000600000007000000080000002b0000002c0000002d00000032000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

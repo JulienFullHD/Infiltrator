@@ -6,6 +6,7 @@
 				<SoundBank Name="Main" ID="{23084D42-69F8-47DF-8F86-B3EC1BFD68EE}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Kunai_Throw" ID="{AEBAA2BF-611F-40C1-AAC0-7D7BF152CF07}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Bullet_Flight" ID="{E185D688-17D0-40FA-901C-7E3E58E3356E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ComboOver" ID="{15AAE204-2A87-422E-BA9D-2FD8D2EAF942}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_Enemy" ID="{162D86D2-8CDB-4259-9167-38C744BEAF3C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Katana_Swing" ID="{A62B4711-7D33-427D-AAF6-555D47022FE1}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
@@ -14,11 +15,14 @@
 						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_MetalWet" ID="{49112EAA-35A0-4543-8F8C-BDE0FE3F335C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_land" ID="{80136CF6-A747-46FE-A3DF-175385D0799E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LightHum" ID="{4A3584F9-E9F5-4749-AC2B-EC429EF2E353}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Smoke_Pop" ID="{EC632937-E90B-477A-8017-33C33ACB24E6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ComboTwo" ID="{C389974C-CD49-4811-81B9-52F0F22ECAD3}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WinningScreen" ID="{326DEBF3-42F3-4925-A338-B325C9D0D190}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BillboardNoise" ID="{C0CBFCE3-203B-49F3-A363-75CB830B0E99}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Death" ID="{0F0E9275-37B6-49F6-A8E1-65A7E2964653}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ProjectileHitOther" ID="{83D30796-85F2-4A35-B145-D1D36B7C3ED6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ComboOne" ID="{0B15A148-259B-4A8A-87D2-09EAC5DB5775}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Kunai_Throw" ID="{7E0DD410-A479-4A95-9107-D3A198B92C5F}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Grunt_burst" ID="{F66402DC-F7FD-4ACF-85CC-E4988DCE216E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>

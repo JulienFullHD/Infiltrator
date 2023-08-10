@@ -23,6 +23,7 @@ public class AI_Weapon : MonoBehaviour
     private float shootTimerAR;
     private float muzzleVAR = 50;
     private float magSizeAR = 3;
+
     
     private float magSizeSniper = 20;
     //public AudioClip ARSound;
@@ -58,6 +59,7 @@ public class AI_Weapon : MonoBehaviour
         if(Weapons.AR == Weapon)
         {
             ShootAR(_target);
+
         }
         if(Weapons.Sniper == Weapon)
         {

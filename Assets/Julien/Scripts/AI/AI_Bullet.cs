@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AI_Bullet : MonoBehaviour
@@ -15,6 +16,10 @@ public class AI_Bullet : MonoBehaviour
     private bool onlyOnce = true;
     [SerializeField]
     private LayerMask ignoreLayer;
+    //Wwise
+    [SerializeField]private AK.Wwise.Event BulletFlight;
+    [SerializeField]private AK.Wwise.Event BulletHitOther;
+
 
 
 
@@ -22,8 +27,10 @@ public class AI_Bullet : MonoBehaviour
 
     void Start()
     {
+
         LastPos = transform.position;
         rb = this.GetComponent<Rigidbody>();
+        BulletFlight.Post(gameObject);
     }
     void Update()
     {
@@ -57,6 +64,8 @@ public class AI_Bullet : MonoBehaviour
             }
             if(_obj.transform.tag == "obstacle")
             {
+                //Wwise 
+                BulletHitOther.Post(gameObject);
                 DestroyBullet();
             }
         }

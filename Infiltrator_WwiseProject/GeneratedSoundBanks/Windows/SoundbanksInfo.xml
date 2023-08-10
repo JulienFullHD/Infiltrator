@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D08DA0CD-45E4-635E-B940-E04DCD3FC7F5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{28262491-9AE2-1069-8CC8-A4212196572F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -51,24 +51,9 @@
 				<GameParameter Id="1204480359" Name="AmbienceVolume"/>
 				<GameParameter Id="1786260118" Name="MenuVolume"/>
 				<GameParameter Id="2346531308" Name="MusicVolume"/>
+				<GameParameter Id="2828409398" Name="DopplerParam"/>
 				<GameParameter Id="2918011349" Name="MasterVolume"/>
 			</GameParameters>
-			<StateGroups>
-				<StateGroup Id="2557321869" Name="PlayerAlive">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="2452206122" Name="False"/>
-						<State Id="3053630529" Name="True"/>
-					</States>
-				</StateGroup>
-				<StateGroup Id="3701697919" Name="PlayerIsWallruning">
-					<States>
-						<State Id="748895195" Name="None"/>
-						<State Id="2452206122" Name="False"/>
-						<State Id="3053630529" Name="True"/>
-					</States>
-				</StateGroup>
-			</StateGroups>
 		</SoundBank>
 		<SoundBank Id="2607556080" Type="User" Language="SFX" Hash="{F090AE71-D5D4-18CA-3E37-328050097E2D}">
 			<ShortName>Menu</ShortName>
@@ -106,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8DF70D9A-1E1E-44D9-9E17-45481E3C105B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EA38282A-F80C-8831-4409-2CC420352696}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -141,6 +126,10 @@
 				<File Id="90319105" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ComboOver.wav</ShortName>
 					<CachePath>SFX/ComboOver_C8373B16.wem</CachePath>
+				</File>
+				<File Id="93378581" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>FluorescentLightFlicker_ZA0.wav</ShortName>
+					<CachePath>SFX/FluorescentLightFlicker_ZA0_E6634B1A.wem</CachePath>
 				</File>
 				<File Id="120826194" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NERDS RULE EVERYTHING AROUND ME.wav</ShortName>
@@ -198,6 +187,10 @@
 					<ShortName>DropAfterJumpFall1.wav</ShortName>
 					<CachePath>SFX/DropAfterJumpFall1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="489933768" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BRS_Hum_Light_60_Watt_Thin_2.wav</ShortName>
+					<CachePath>SFX/BRS_Hum_Light_60_Watt_Thin_2_98172790.wem</CachePath>
+				</File>
 				<File Id="491065857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy.wav</ShortName>
 					<CachePath>SFX/FS_Enemy_10C4C929.wem</CachePath>
@@ -209,6 +202,10 @@
 				<File Id="497480755" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DeathEnemy5.wav</ShortName>
 					<CachePath>SFX/DeathEnemy5_680ACE7A.wem</CachePath>
+				</File>
+				<File Id="576626224" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ProjectileHitOther1.wav</ShortName>
+					<CachePath>SFX/ProjectileHitOther1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="599743113" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kunai.wav</ShortName>
@@ -291,9 +288,17 @@
 					<ShortName>Player_death.wav</ShortName>
 					<CachePath>SFX/Player_death_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1037991385" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullet_Flight.wav</ShortName>
+					<CachePath>SFX/Bullet_Flight_10C4C929.wem</CachePath>
+				</File>
 				<File Id="1044589429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dash.wav</ShortName>
 					<CachePath>SFX/dash_BE17CF0A.wem</CachePath>
+				</File>
+				<File Id="1054928639" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ProjectileHitOther.wav</ShortName>
+					<CachePath>SFX/ProjectileHitOther_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -305,6 +310,11 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
+				<Event Id="332624362" Name="Bullet_Flight" MaxAttenuation="25" DurationType="OneShot" DurationMin="13.469544" DurationMax="13.469544">
+					<MediaRefs>
+						<MediaRef Id="1037991385"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="991466503" Name="ComboOne" DurationType="OneShot" DurationMin="0.77634287" DurationMax="0.77634287">
 					<MediaRefs>
 						<MediaRef Id="864099427"/>
@@ -341,7 +351,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.42886746" DurationMax="0.47503436">
+				<Event Id="501485854" Name="Grunt_burst" DurationType="OneShot" DurationMin="0.42886746" DurationMax="0.47503436">
 					<MediaRefs>
 						<MediaRef Id="19314398"/>
 					</MediaRefs>
@@ -363,6 +373,11 @@
 				<Event Id="4079089048" Name="Play_AmbienceWind" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="465842787"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="909711491" Name="Play_BillboardNoise" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="93378581"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.21875" DurationMax="0.25317174">
@@ -393,9 +408,20 @@
 						<MediaRef Id="988550002"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="444602164" Name="Play_LightHum" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="489933768"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3009755888" Name="Play_MainTheme" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="642047943"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1766533624" Name="Play_ProjectileHitOther" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.41972026" DurationMax="0.56187975">
+					<MediaRefs>
+						<MediaRef Id="576626224"/>
+						<MediaRef Id="1054928639"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2838936948" Name="Play_Rain" DurationType="OneShot" DurationMin="84" DurationMax="84">
@@ -451,7 +477,10 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="2828409398" Name="DopplerParam"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BD5C2E0D-9D67-40A4-7F29-1F0F192D51B8}</FileHash>
+	<FileHash>{5B75EFEF-15AA-D279-1BBD-A15C477550FC}</FileHash>
 </SoundBanksInfo>

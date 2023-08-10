@@ -33,6 +33,48 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_LightHum" ID="{4A3584F9-E9F5-4749-AC2B-EC429EF2E353}">
+							<ChildrenList>
+								<Action Name="" ID="{E4627368-294A-4863-8410-839A72825262}" ShortID="432908860">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightHum" ID="{64B52385-D2F7-4242-B662-EB78FDC5D615}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{B091D6AE-B3FA-416F-B5D5-3995EC33D1B2}" ShortID="806860489">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LightHum" ID="{64B52385-D2F7-4242-B662-EB78FDC5D615}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BillboardNoise" ID="{C0CBFCE3-203B-49F3-A363-75CB830B0E99}">
+							<ChildrenList>
+								<Action Name="" ID="{CB4C816D-E03C-4F69-9AAC-6E679467D716}" ShortID="527079071">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BillboardHum" ID="{6981DA05-15E0-48C9-9328-D5622EA36785}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D28B26AE-20F4-416A-B4A1-9384504FDB0E}" ShortID="26692603">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BillboardHum" ID="{6981DA05-15E0-48C9-9328-D5622EA36785}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Movement" ID="{431387C3-6C3A-4ECC-A146-EFBC335239D9}" ShortID="394829484">
@@ -268,37 +310,23 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Sniper_shot" ID="{B362DFBB-EE7B-49AD-822D-4D89D6231CCB}"/>
-						<Event Name="Play_ProjectileFlight" ID="{E7E86D62-B7E4-4421-9000-0410C6A8F0AA}">
-							<ChildrenList>
-								<Action Name="" ID="{4B064ED0-6C55-4B09-A47D-335615319120}" ShortID="940798673">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_ProjectileFlight" ID="{C4C88726-F415-4C6A-8AA4-AD8F732B21AC}">
-							<ChildrenList>
-								<Action Name="" ID="{E1562912-DAE1-4A97-83AC-7B9598A25259}" ShortID="467896642">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
 						<Event Name="Play_ProjectileHitOther" ID="{83D30796-85F2-4A35-B145-D1D36B7C3ED6}">
 							<ChildrenList>
 								<Action Name="" ID="{1FDA2678-CA3E-43C1-922A-0D70C2853D79}" ShortID="1044903027">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ProjectileHitOther" ID="{6A68FDEB-FD57-48D1-BC7A-6070961F2068}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Bullet_Flight" ID="{E185D688-17D0-40FA-901C-7E3E58E3356E}">
+							<ChildrenList>
+								<Action Name="" ID="{A1524183-CB76-4B00-AE19-1901719F56CD}" ShortID="1017951837">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

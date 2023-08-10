@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{41BC2BD9-DBE8-464E-A152-1BE4E7A13AB7}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{41BC2BD9-DBE8-464E-A152-1BE4E7A13AB7}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="PlayerAlive" ID="{1ABB90FE-6A1D-46EB-9F11-A10C4BA5FF44}">
-					<PropertyList>
-						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
-					</PropertyList>
-					<ChildrenList>
-						<State Name="None" ID="{EFFA4037-572F-4790-8CCC-587C0E6560CE}"/>
-						<State Name="True" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
-						<State Name="False" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
-					</ChildrenList>
-				</StateGroup>
-				<StateGroup Name="PlayerIsWallruning" ID="{0CB60176-ED1E-453C-AD9A-392F916852B9}">
-					<PropertyList>
-						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
-					</PropertyList>
-					<ChildrenList>
-						<State Name="None" ID="{AA5A1948-C5F0-444D-8BA1-D0B49EBD86AC}"/>
-						<State Name="True" ID="{285EFAA1-8644-42EF-B014-3D367424E88E}"/>
-						<State Name="False" ID="{31D214FE-6817-467E-9B46-FC92BD89FC77}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{41BC2BD9-DBE8-464E-A152-1BE4E7A13AB7}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

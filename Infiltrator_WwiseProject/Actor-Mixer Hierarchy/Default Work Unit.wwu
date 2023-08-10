@@ -107,10 +107,120 @@
 								<ActiveSource Name="Rain (secret onion)" ID="{FE0F5E81-80DB-45B5-8806-1912CC3147D9}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<ActorMixer Name="Lights&amp;Billboards" ID="{8D2AA11D-4F40-44C4-8DF9-F01EB5EA3956}" ShortID="451414488">
+							<PropertyList>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="BillboardHum" ID="{6981DA05-15E0-48C9-9328-D5622EA36785}" ShortID="246118834">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FluorescentLightFlicker_ZA0" ID="{F810B3D5-E21B-4C38-9D15-A5ABB749D3A1}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0548304631572538"/>
+												<Property Name="FadeInShape" Type="int16" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.109660926314518"/>
+												<Property Name="FadeOutShape" Type="int16" Value="9"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.767626484201556"/>
+												<Property Name="TrimEnd" Type="Real64" Value="121.595787214062"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>FluorescentLightFlicker_ZA0.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="93378581"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FluorescentLightFlicker_ZA0" ID="{F810B3D5-E21B-4C38-9D15-A5ABB749D3A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="LightHum" ID="{64B52385-D2F7-4242-B662-EB78FDC5D615}" ShortID="634977712">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BRS_Hum_Light_60_Watt_Thin_2" ID="{D3E31D0E-5B32-46F7-B3EB-A738FD5D7013}">
+											<PropertyList>
+												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.17782263450836"/>
+												<Property Name="FadeInShape" Type="int16" Value="0"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.189981447124303"/>
+												<Property Name="FadeOutShape" Type="int16" Value="9"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="39.9825658657753"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>BRS_Hum_Light_60_Watt_Thin_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="489933768"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BRS_Hum_Light_60_Watt_Thin_2" ID="{D3E31D0E-5B32-46F7-B3EB-A738FD5D7013}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Combat" ID="{A82FEDF0-F0BF-4C37-9E06-A9D4EB493901}" ShortID="745743272">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -1046,46 +1156,6 @@
 						</Folder>
 						<Folder Name="Projectile" ID="{681D56EF-169D-4AF7-B9C7-E45D3E2A50C5}" ShortID="763208903">
 							<ChildrenList>
-								<Sound Name="ProjectileFlight" ID="{5390142A-393D-4A9B-98D0-28110F95A591}" ShortID="359940990">
-									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>7</Value>
-											</ValueList>
-										</Property>
-										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>12</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
-										</Reference>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="ProjectileFlight" ID="{D3204D5A-7459-4495-B8DE-7D377B7150A3}">
-											<Language>SFX</Language>
-											<AudioFile>ProjectileFlight.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="560034719"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="ProjectileFlight" ID="{D3204D5A-7459-4495-B8DE-7D377B7150A3}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<RandomSequenceContainer Name="ProjectileHitOther" ID="{6A68FDEB-FD57-48D1-BC7A-6070961F2068}" ShortID="428106940">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
@@ -1167,12 +1237,201 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<Sound Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" ShortID="747094048">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>1</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Bullet_Attenuation" ID="{58F83F4B-9D14-4995-A929-9E9177563D3B}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bullet_Flight" ID="{97C3AD2F-ACEC-4552-9D4B-A26919AC861A}">
+											<Language>SFX</Language>
+											<AudioFile>Bullet_Flight.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1037991385"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{BD28E993-8A05-489D-B5FE-DB45D349711A}" ShortID="623938886">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Pitch"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="DopplerParam" ID="{94FDD8E1-8459-4DDF-A71E-FEF15A028A5E}" WorkUnitID="{39E4BCB5-4FAA-443B-8D2F-31D46913A3E9}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{9A0F801A-8358-43FB-A272-01A80F4E1E54}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="65537"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-914</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>2</XPos>
+																				<YPos>1009</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+									<ActiveSourceList>
+										<ActiveSource Name="Bullet_Flight" ID="{97C3AD2F-ACEC-4552-9D4B-A26919AC861A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sniper_shot" ID="{4EE46B38-D5B1-4614-9C08-310F91116E5D}" ShortID="293322694">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}">
+											<Language>SFX</Language>
+											<AudioFile>Sniper_shot.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="411237613"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" ShortID="391010135">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>13</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{33AE7407-ADA0-4D55-92B1-AEF50A0B3863}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="126"/>
+															<Property Name="Min" Type="Real64" Value="-51"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0212882096069869"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0603165938864628"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.351255458515284"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Grunt_shot.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="19314398"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Movement" ID="{24FDAF2F-B863-4DBC-BB4B-4EC2C862E5FA}" ShortID="285689025">
 					<PropertyList>
+						<Property Name="Color" Type="int16" Value="19"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
@@ -1882,27 +2141,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="PlayerAlive" ID="{1ABB90FE-6A1D-46EB-9F11-A10C4BA5FF44}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="False" ID="{46E49D6A-393D-40BA-BB62-6BAC4C479ED4}"/>
-										<CustomState Name="" ID="{26CB7176-448C-4101-BEA0-DAA82CEEEABC}" ShortID="488231813">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64" Value="-108"/>
-											</PropertyList>
-										</CustomState>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="True" ID="{327460ED-FD7A-4B11-BDEA-E8D94031453F}"/>
-										<CustomState Name="" ID="{FA100A20-6AAA-4875-9092-9639CF2BA836}" ShortID="152958258"/>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
 							<ActiveSourceList>
 								<ActiveSource Name="CyberPsycho (Beat)" ID="{29C938FF-1A3E-4D18-8BBE-C27690A53ABE}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -1979,6 +2217,8 @@
 				<ActorMixer Name="Enemy Sounds" ID="{44B2F107-6A7E-4AE8-BB1A-C2D1A9F9EAB3}" ShortID="824544720">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -1992,94 +2232,6 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Sniper_shot" ID="{4EE46B38-D5B1-4614-9C08-310F91116E5D}" ShortID="293322694">
-							<PropertyList>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}">
-									<Language>SFX</Language>
-									<AudioFile>Sniper_shot.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="411237613"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" ShortID="391010135">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="1"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>13</Value>
-									</ValueList>
-								</Property>
-								<Property Name="MakeUpGain" Type="Real64">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{33AE7407-ADA0-4D55-92B1-AEF50A0B3863}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="126"/>
-													<Property Name="Min" Type="Real64" Value="-51"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>9</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0212882096069869"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0603165938864628"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.351255458515284"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Grunt_shot.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="19314398"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<RandomSequenceContainer Name="Bleed" ID="{64A8D468-9AAE-4ED2-9E5D-267804FA6930}" ShortID="676441126">
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">

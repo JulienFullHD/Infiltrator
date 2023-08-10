@@ -73,6 +73,8 @@
 						</Bus>
 						<Bus Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}">
 							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>

@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BULLET_FLIGHT = 332624362U;
         static const AkUniqueID COMBOONE = 991466503U;
         static const AkUniqueID COMBOOVER = 513644559U;
         static const AkUniqueID COMBOTHREE = 1373464935U;
@@ -22,13 +23,16 @@ namespace AK
         static const AkUniqueID KATANA_SWING = 2725920228U;
         static const AkUniqueID KUNAI_THROW = 1445849350U;
         static const AkUniqueID PLAY_AMBIENCEWIND = 4079089048U;
+        static const AkUniqueID PLAY_BILLBOARDNOISE = 909711491U;
         static const AkUniqueID PLAY_FS_ENEMY = 857770058U;
         static const AkUniqueID PLAY_FS_METAL = 405241043U;
         static const AkUniqueID PLAY_FS_METALWET = 1928192825U;
+        static const AkUniqueID PLAY_LIGHTHUM = 444602164U;
         static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
         static const AkUniqueID PLAY_MENUBACK = 1113566242U;
         static const AkUniqueID PLAY_MENUPICK = 1055472740U;
         static const AkUniqueID PLAY_MENUTHEME = 3757523130U;
+        static const AkUniqueID PLAY_PROJECTILEHITOTHER = 1766533624U;
         static const AkUniqueID PLAY_RAIN = 2838936948U;
         static const AkUniqueID PLAY_WINNINGSCREEN = 3205957598U;
         static const AkUniqueID PLAYER_DASH = 2394582229U;
@@ -42,37 +46,10 @@ namespace AK
         static const AkUniqueID STOP_MENUTHEME = 2271744U;
     } // namespace EVENTS
 
-    namespace STATES
-    {
-        namespace PLAYERALIVE
-        {
-            static const AkUniqueID GROUP = 2557321869U;
-
-            namespace STATE
-            {
-                static const AkUniqueID FALSE = 2452206122U;
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID TRUE = 3053630529U;
-            } // namespace STATE
-        } // namespace PLAYERALIVE
-
-        namespace PLAYERISWALLRUNING
-        {
-            static const AkUniqueID GROUP = 3701697919U;
-
-            namespace STATE
-            {
-                static const AkUniqueID FALSE = 2452206122U;
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID TRUE = 3053630529U;
-            } // namespace STATE
-        } // namespace PLAYERISWALLRUNING
-
-    } // namespace STATES
-
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID AMBIENCEVOLUME = 1204480359U;
+        static const AkUniqueID DOPPLERPARAM = 2828409398U;
         static const AkUniqueID MASTERVOLUME = 2918011349U;
         static const AkUniqueID MENUVOLUME = 1786260118U;
         static const AkUniqueID MUSICVOLUME = 2346531308U;

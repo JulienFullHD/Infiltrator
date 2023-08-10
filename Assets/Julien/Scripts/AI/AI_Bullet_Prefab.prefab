@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8424643758678577341}
   - component: {fileID: 8424643758678577340}
   - component: {fileID: 8424643758678577343}
+  - component: {fileID: -9094151734861179437}
   m_Layer: 2
   m_Name: AI_Bullet_Prefab
   m_TagString: Untagged
@@ -132,6 +133,16 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 4
+  BulletFlight:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: cfcb926b7b872754199ac4d4f648c349,
+      type: 2}
+  BulletHitOther:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f6b542792c589394aa2d6ed3dd4df908,
+      type: 2}
 --- !u!96 &8424643758678577343
 TrailRenderer:
   serializedVersion: 2
@@ -231,3 +242,15 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &-9094151734861179437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8424643758678577342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ccb826989683949b6d5e354d585d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
