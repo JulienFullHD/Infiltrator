@@ -1436,6 +1436,7 @@ MonoBehaviour:
   swordAttackCooldownMS: 2000
   canAttackSword: 1
   swordHits: []
+  slashEffect: {fileID: 0}
   kunaiPrefab: {fileID: 2546917410958814964, guid: 2e6b53f34eb554b4293aa3524a812531,
     type: 3}
   kunaiLaunchLocation: {fileID: 839098781}

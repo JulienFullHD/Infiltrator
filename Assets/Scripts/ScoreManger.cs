@@ -67,7 +67,7 @@ public class ScoreManger : MonoBehaviour
         currentComboScore = 0;
     }
 
-    private void StartCombo()
+    private void StartCombo(bool playSound = true)
     {
         if (fadeAnimationRoutine is not null)
         {
@@ -76,7 +76,8 @@ public class ScoreManger : MonoBehaviour
 
         currentMultiplier = 1;
 
-        ComboOne.Post(gameObject);  //Wwise
+        if(playSound)
+            ComboOne.Post(gameObject);  //Wwise
 
         textComboScorePlus.text = "+";
 
@@ -123,17 +124,28 @@ public class ScoreManger : MonoBehaviour
         textMainScore.text = currentMainScore.ToString();
     }
 
-    private void StopCombo()
+    private void StopCombo(bool playSound = true)
     {
         fadeAnimationRoutine = StartCoroutine(ComboFade(comboAddFadeTimer, currentComboScore));
 
         ResetComboValues();
 
-        ComboOver.Post(gameObject); //Wwise
+        if(playSound)
+            ComboOver.Post(gameObject); //Wwise
 
         ResetLastThreeHits();
 
         comboIsCounting = false;
+    }
+
+    public void ForceStopCombo()
+    {
+        if (fadeAnimationRoutine is not null)
+        {
+            StopCoroutine(fadeAnimationRoutine);
+        }
+
+        currentMainScore += currentComboScore;
     }
 
     public void AddScoreType(ScoreType scoreType)
@@ -243,7 +255,7 @@ public class ScoreManger : MonoBehaviour
 
     private void Update()
     {
-        if (comboIsCounting)
+        if (comboIsCounting && !LevelManager.Instance.isWon)
         {
             comboCurrentInactivityDuration -= Time.deltaTime;
 
@@ -258,7 +270,7 @@ public class ScoreManger : MonoBehaviour
         TestForBonus();
     }
 
-    private void TestForBonus()
+    private void TestForBonus(bool playSound = true)
     {
         // Hattrick
         if (lastThreeHits[0] == ScoreType.Kunai && 

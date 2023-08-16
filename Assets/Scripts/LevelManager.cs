@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Dan.Main;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,20 +12,20 @@ public class LevelManager : MonoBehaviour
     [SerializeField] public static LevelManager Instance;
 
     [Header("Level Details")]
-    [SerializeField] private int levelIdx;
-    [SerializeField] private string levelName;
+    [SerializeField] private int levelIdx; //Unused
+    [SerializeField] private string levelName; //Unused
 
     [Header("Enemy Details")]
     [ReadOnly, SerializeField] private int enemyCount; // Takes count on level Start()
 
     [Header("Win Event")]
-    [SerializeField] private bool isWon;
-    [SerializeField] private CanvasGroup playerCanvasGroup;     // Fade out on win
-    [SerializeField] private GameObject winCanvasObject; // Fade  in on win
-    [SerializeField] private CanvasGroup winCanvasGroup; // Fade  in on win
+    [SerializeField] public bool isWon;
+    [SerializeField] private CanvasGroup playerCanvasGroup;
+    [SerializeField] private GameObject winCanvasObject;
     [SerializeField] private float fadeMaxTime;
     [ReadOnly, SerializeField] private float fadeTimer;
     [SerializeField]private ScoreManger scoreManager;
+    [SerializeField] private TextMeshProUGUI winScreenScoreText;
     [SerializeField]private GhostRunner ghostRunner;
     [SerializeField]private string userName;
     [SerializeField]private SetupConfig setupConfig;
@@ -37,11 +38,6 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        // if(Instance is not null)
-        // {
-        //     Destroy(gameObject);
-        //     return;
-        // }
         Instance = this;
         isWon = false;
         PlayMainTheme.Post(gameObject); //Wwise MainTheme
@@ -59,21 +55,36 @@ public class LevelManager : MonoBehaviour
             enemyCount = value;
             if(enemyCount == 0)
             {
-                Win();
+                StartCoroutine(WinInSeconds(0.2f));
             }
         }
     }
 
+    private IEnumerator WinInSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        Win();
+    }
+
     public void Win()
     {
+        Time.timeScale = 0;
+
         isWon = true;
+        PauseMenu.isPaused = true;
         winCanvasObject.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         PlayWinTheme.Post(gameObject);
-        fadeTimer = 0;
         ghostRunner.StopRun();
 
-        Debug.Log(scoreManager.GetScore());
-        if(ghostRunner._system.GetRun(RecordingType.Last, out Recording run))
+        playerCanvasGroup.alpha = 0.5f;
+        scoreManager.ForceStopCombo();
+        winScreenScoreText.text = scoreManager.GetScore().ToString();
+
+        if (ghostRunner._system.GetRun(RecordingType.Last, out Recording run))
         {
             //ghostRunner._system.SetSavedRun(run);
             //ghostRunner._system.SetSavedRun(run);
@@ -84,21 +95,6 @@ public class LevelManager : MonoBehaviour
         //Debug.Log(run.Serialize().ToString().Length);
         userName = PlayerPrefs.GetString("PlayerName");
         //SetLeaderBoardEntry(userName, scoreManager.GetScore());
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
-    }
-
-    private void Update()
-    {
-        if (isWon)
-        {
-            fadeTimer += Time.deltaTime;
-
-            playerCanvasGroup.alpha = 1 - (fadeTimer / fadeMaxTime);
-            winCanvasGroup.alpha = fadeTimer / fadeMaxTime;
-
-
-        }
     }
 
     public void SetLeaderBoardEntry(string username, int score)
