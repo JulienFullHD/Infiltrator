@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{28262491-9AE2-1069-8CC8-A4212196572F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C4911AB3-20EA-B4C2-FB12-7A649169ECE3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -91,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EA38282A-F80C-8831-4409-2CC420352696}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{47F7114F-9967-8728-E0C0-ECCECD2D3D84}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -105,7 +105,7 @@
 				</File>
 				<File Id="19314398" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Grunt_shot.wav</ShortName>
-					<CachePath>SFX/Grunt_shot_A868838E.wem</CachePath>
+					<CachePath>SFX/Grunt_shot_5AAF5AE2.wem</CachePath>
 				</File>
 				<File Id="50718732" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing1.wav</ShortName>
@@ -127,10 +127,6 @@
 					<ShortName>ComboOver.wav</ShortName>
 					<CachePath>SFX/ComboOver_C8373B16.wem</CachePath>
 				</File>
-				<File Id="93378581" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>FluorescentLightFlicker_ZA0.wav</ShortName>
-					<CachePath>SFX/FluorescentLightFlicker_ZA0_E6634B1A.wem</CachePath>
-				</File>
 				<File Id="120826194" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NERDS RULE EVERYTHING AROUND ME.wav</ShortName>
 					<CachePath>SFX/NERDS RULE EVERYTHING AROUND ME_10C4C929.wem</CachePath>
@@ -143,6 +139,10 @@
 					<ShortName>FS_player_metal2.wav</ShortName>
 					<CachePath>SFX/FS_player_metal2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="177461868" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>StaticNoise (werbetafel).wav</ShortName>
+					<CachePath>SFX/StaticNoise (werbetafel)_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="183922488" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DeathEnemy4.wav</ShortName>
 					<CachePath>SFX/DeathEnemy4_B886DEB5.wem</CachePath>
@@ -154,10 +154,6 @@
 				<File Id="248514043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy1.wav</ShortName>
 					<CachePath>SFX/FS_Enemy1_10C4C929.wem</CachePath>
-				</File>
-				<File Id="250371715" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Rain (secret onion).wav</ShortName>
-					<CachePath>SFX/Rain (secret onion)_10C4C929.wem</CachePath>
 				</File>
 				<File Id="290099863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed22.wav</ShortName>
@@ -236,6 +232,10 @@
 					<ShortName>FS_Enemy2.wav</ShortName>
 					<CachePath>SFX/FS_Enemy2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="663770453" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bullet_Flight2.wav</ShortName>
+					<CachePath>SFX/Bullet_Flight2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="675877473" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing no3.wav</ShortName>
 					<CachePath>SFX/Katana_Swing no3_3C6556A1.wem</CachePath>
@@ -288,9 +288,9 @@
 					<ShortName>Player_death.wav</ShortName>
 					<CachePath>SFX/Player_death_10C4C929.wem</CachePath>
 				</File>
-				<File Id="1037991385" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Bullet_Flight.wav</ShortName>
-					<CachePath>SFX/Bullet_Flight_10C4C929.wem</CachePath>
+				<File Id="1034309048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Rain3.wav</ShortName>
+					<CachePath>SFX/Rain3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1044589429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dash.wav</ShortName>
@@ -310,9 +310,9 @@
 				</ShareSets>
 			</Plugins>
 			<Events>
-				<Event Id="332624362" Name="Bullet_Flight" MaxAttenuation="25" DurationType="OneShot" DurationMin="13.469544" DurationMax="13.469544">
+				<Event Id="332624362" Name="Bullet_Flight" MaxAttenuation="30" DurationType="OneShot" DurationMin="12.829353" DurationMax="12.829353">
 					<MediaRefs>
-						<MediaRef Id="1037991385"/>
+						<MediaRef Id="663770453"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="991466503" Name="ComboOne" DurationType="OneShot" DurationMin="0.77634287" DurationMax="0.77634287">
@@ -335,7 +335,7 @@
 						<MediaRef Id="401856473"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.2437695" DurationMax="1.7687076">
+				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="70" DurationType="OneShot" DurationMin="1.2437695" DurationMax="1.7687076">
 					<MediaRefs>
 						<MediaRef Id="173493422"/>
 						<MediaRef Id="183922488"/>
@@ -351,7 +351,7 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="501485854" Name="Grunt_burst" DurationType="OneShot" DurationMin="0.42886746" DurationMax="0.47503436">
+				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="70" DurationType="OneShot" DurationMin="0.298205" DurationMax="0.3303063">
 					<MediaRefs>
 						<MediaRef Id="19314398"/>
 					</MediaRefs>
@@ -375,12 +375,12 @@
 						<MediaRef Id="465842787"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="909711491" Name="Play_BillboardNoise" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="909711491" Name="Play_BillboardNoise" MaxAttenuation="45" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="93378581"/>
+						<MediaRef Id="177461868"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.21875" DurationMax="0.25317174">
+				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="70" DurationType="OneShot" DurationMin="0.21875" DurationMax="0.25317174">
 					<MediaRefs>
 						<MediaRef Id="248514043"/>
 						<MediaRef Id="491065857"/>
@@ -408,7 +408,7 @@
 						<MediaRef Id="988550002"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="444602164" Name="Play_LightHum" MaxAttenuation="100" DurationType="Infinite">
+				<Event Id="444602164" Name="Play_LightHum" MaxAttenuation="70" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="489933768"/>
 					</MediaRefs>
@@ -418,7 +418,7 @@
 						<MediaRef Id="642047943"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1766533624" Name="Play_ProjectileHitOther" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.41972026" DurationMax="0.56187975">
+				<Event Id="1766533624" Name="Play_ProjectileHitOther" MaxAttenuation="70" DurationType="OneShot" DurationMin="0.41972026" DurationMax="0.56187975">
 					<MediaRefs>
 						<MediaRef Id="576626224"/>
 						<MediaRef Id="1054928639"/>
@@ -426,7 +426,7 @@
 				</Event>
 				<Event Id="2838936948" Name="Play_Rain" DurationType="OneShot" DurationMin="84" DurationMax="84">
 					<MediaRefs>
-						<MediaRef Id="250371715"/>
+						<MediaRef Id="1034309048"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3205957598" Name="Play_WinningScreen" DurationType="OneShot" DurationMin="310.3734" DurationMax="310.3734">
@@ -466,7 +466,7 @@
 						<MediaRef Id="79855120"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2528951528" Name="Smoke_Pop" MaxAttenuation="100" DurationType="OneShot" DurationMin="13.439858" DurationMax="13.439858">
+				<Event Id="2528951528" Name="Smoke_Pop" MaxAttenuation="70" DurationType="OneShot" DurationMin="13.439858" DurationMax="13.439858">
 					<MediaRefs>
 						<MediaRef Id="914882142"/>
 					</MediaRefs>
@@ -482,5 +482,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5B75EFEF-15AA-D279-1BBD-A15C477550FC}</FileHash>
+	<FileHash>{BEDC1107-15E1-2F42-29B1-41608D70A0FF}</FileHash>
 </SoundBanksInfo>

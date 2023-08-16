@@ -37,6 +37,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -73,8 +78,18 @@
 						</Sound>
 						<Sound Name="Rain (secret onion)" ID="{DE40762F-8E0F-47BA-B012-BA58AE15C2D1}" ShortID="1051897046">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
 										<Value>1</Value>
@@ -83,6 +98,11 @@
 								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
 										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -102,9 +122,23 @@
 										<MediaID ID="250371715"/>
 									</MediaIDList>
 								</AudioFileSource>
+								<AudioFileSource Name="Rain (secret onion)2" ID="{CCEA43A5-7CFF-46BE-B2DC-CAEA817353CD}">
+									<Language>SFX</Language>
+									<AudioFile>Rain (secret onion)2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="973702690"/>
+									</MediaIDList>
+								</AudioFileSource>
+								<AudioFileSource Name="Rain3" ID="{51942363-701C-4632-AFDA-67D6599E0FF4}">
+									<Language>SFX</Language>
+									<AudioFile>Rain3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1034309048"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="Rain (secret onion)" ID="{FE0F5E81-80DB-45B5-8806-1912CC3147D9}" Platform="Linked"/>
+								<ActiveSource Name="Rain3" ID="{51942363-701C-4632-AFDA-67D6599E0FF4}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<ActorMixer Name="Lights&amp;Billboards" ID="{8D2AA11D-4F40-44C4-8DF9-F01EB5EA3956}" ShortID="451414488">
@@ -125,6 +159,7 @@
 							<ChildrenList>
 								<Sound Name="BillboardHum" ID="{6981DA05-15E0-48C9-9328-D5622EA36785}" ShortID="246118834">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -132,13 +167,22 @@
 												<Value>1</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
 											<ValueList>
 												<Value>True</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Ambient_Attenuation" ID="{C4DBCB8C-F7DA-452D-9C3B-95E8789018B2}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
 										</Reference>
@@ -163,9 +207,16 @@
 												<MediaID ID="93378581"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="StaticNoise (werbetafel)" ID="{9C563EE6-06CD-4F24-8B40-E29B72362008}">
+											<Language>SFX</Language>
+											<AudioFile>StaticNoise (werbetafel).wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="177461868"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="FluorescentLightFlicker_ZA0" ID="{F810B3D5-E21B-4C38-9D15-A5ABB749D3A1}" Platform="Linked"/>
+										<ActiveSource Name="StaticNoise (werbetafel)" ID="{9C563EE6-06CD-4F24-8B40-E29B72362008}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="LightHum" ID="{64B52385-D2F7-4242-B662-EB78FDC5D615}" ShortID="634977712">
@@ -1175,7 +1226,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1241,12 +1292,12 @@
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
-										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-										<Property Name="MakeUpGain" Type="Real64">
+										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>10</Value>
+												<Value>50</Value>
 											</ValueList>
 										</Property>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1256,7 +1307,7 @@
 										<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ValueList>
-												<Value>-200</Value>
+												<Value>-80</Value>
 											</ValueList>
 										</Property>
 										<Property Name="UseMaxSoundPerInstance" Type="bool">
@@ -1266,7 +1317,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>12</Value>
+												<Value>8</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1287,6 +1338,13 @@
 											<AudioFile>Bullet_Flight.wav</AudioFile>
 											<MediaIDList>
 												<MediaID ID="1037991385"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Bullet_Flight2" ID="{AC156863-37B5-41FD-A353-341BFB282C2C}">
+											<Language>SFX</Language>
+											<AudioFile>Bullet_Flight2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="663770453"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
@@ -1311,12 +1369,42 @@
 																		<PointList>
 																			<Point>
 																				<XPos>0</XPos>
-																				<YPos>-914</YPos>
+																				<YPos>-2006</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
+																				<XPos>0.09942</XPos>
+																				<YPos>-994</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.20094</XPos>
+																				<YPos>-488</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.50026</XPos>
+																				<YPos>16</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1.50079</XPos>
+																				<YPos>6</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1.8001</XPos>
+																				<YPos>503</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>1.89953</XPos>
+																				<YPos>1005</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
 																				<XPos>2</XPos>
-																				<YPos>1009</YPos>
+																				<YPos>2000</YPos>
 																				<Flags>37</Flags>
 																			</Point>
 																		</PointList>
@@ -1330,7 +1418,7 @@
 										</ObjectList>
 									</ObjectLists>
 									<ActiveSourceList>
-										<ActiveSource Name="Bullet_Flight" ID="{97C3AD2F-ACEC-4552-9D4B-A26919AC861A}" Platform="Linked"/>
+										<ActiveSource Name="Bullet_Flight2" ID="{AC156863-37B5-41FD-A353-341BFB282C2C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="Sniper_shot" ID="{4EE46B38-D5B1-4614-9C08-310F91116E5D}" ShortID="293322694">
@@ -1390,7 +1478,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>9</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1412,6 +1500,7 @@
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.0603165938864628"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.351255458515284"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.671973270440252"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Grunt_shot.wav</AudioFile>
@@ -2255,7 +2344,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>5</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2393,7 +2482,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
