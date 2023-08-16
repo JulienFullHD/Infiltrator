@@ -17,8 +17,8 @@ public class AI_Bullet : MonoBehaviour
     [SerializeField]
     private LayerMask ignoreLayer;
     //Wwise
-    [SerializeField]private AK.Wwise.Event BulletFlight;
-    [SerializeField]private AK.Wwise.Event BulletHitOther;
+    [SerializeField] private AK.Wwise.Event BulletFlight;
+    [SerializeField] private AK.Wwise.Event BulletHitOther;
 
 
 

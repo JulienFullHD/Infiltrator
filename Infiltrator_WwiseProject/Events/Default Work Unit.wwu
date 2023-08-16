@@ -303,7 +303,7 @@
 								<Action Name="" ID="{D0735EF6-7EFB-4A18-8D98-CCB533469C69}" ShortID="969047388">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="Grunt_Shot" ID="{5B4A6DCF-55BA-4152-B547-4B4D311062A7}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

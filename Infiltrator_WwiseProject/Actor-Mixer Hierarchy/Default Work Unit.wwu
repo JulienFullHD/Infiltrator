@@ -24,6 +24,11 @@
 					<ChildrenList>
 						<Sound Name="AmbienceWind" ID="{0269C097-3A21-4A87-85E5-AC8366E16817}" ShortID="993225427">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -80,11 +85,12 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>25</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>5</Value>
@@ -102,7 +108,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -130,6 +136,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 								<AudioFileSource Name="Rain3" ID="{51942363-701C-4632-AFDA-67D6599E0FF4}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.285714285714285"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.214661371686162"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Rain3.wav</AudioFile>
 									<MediaIDList>
@@ -159,7 +170,7 @@
 							<ChildrenList>
 								<Sound Name="BillboardHum" ID="{6981DA05-15E0-48C9-9328-D5622EA36785}" ShortID="246118834">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">
@@ -175,7 +186,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -217,51 +228,6 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="StaticNoise (werbetafel)" ID="{9C563EE6-06CD-4F24-8B40-E29B72362008}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="LightHum" ID="{64B52385-D2F7-4242-B662-EB78FDC5D615}" ShortID="634977712">
-									<PropertyList>
-										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>1</Value>
-											</ValueList>
-										</Property>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Ambience" ID="{7B894F6C-1DA3-408B-93B2-9A0AE523264B}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BRS_Hum_Light_60_Watt_Thin_2" ID="{D3E31D0E-5B32-46F7-B3EB-A738FD5D7013}">
-											<PropertyList>
-												<Property Name="CrossfadeShape" Type="int16" Value="2"/>
-												<Property Name="FadeInDuration" Type="Real64" Value="0.17782263450836"/>
-												<Property Name="FadeInShape" Type="int16" Value="0"/>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.189981447124303"/>
-												<Property Name="FadeOutShape" Type="int16" Value="9"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="39.9825658657753"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>BRS_Hum_Light_60_Watt_Thin_2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="489933768"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BRS_Hum_Light_60_Watt_Thin_2" ID="{D3E31D0E-5B32-46F7-B3EB-A738FD5D7013}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -389,6 +355,7 @@
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
@@ -909,6 +876,7 @@
 										<Value>10</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -926,6 +894,9 @@
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
+									<ObjectRef Name="Echoes_Linear" ID="{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
@@ -1290,14 +1261,19 @@
 								</RandomSequenceContainer>
 								<Sound Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" ShortID="747094048">
 									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="1"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
 										<Property Name="Highpass" Type="int16">
 											<ValueList>
-												<Value>50</Value>
+												<Value>40</Value>
 											</ValueList>
 										</Property>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>21</Value>
+											</ValueList>
+										</Property>
 										<Property Name="MaxSoundPerInstance" Type="int16">
 											<ValueList>
 												<Value>1</Value>
@@ -1317,7 +1293,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1341,6 +1317,12 @@
 											</MediaIDList>
 										</AudioFileSource>
 										<AudioFileSource Name="Bullet_Flight2" ID="{AC156863-37B5-41FD-A353-341BFB282C2C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.192610062893082"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.04009433962264"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.0187106918239"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Bullet_Flight2.wav</AudioFile>
 											<MediaIDList>
@@ -1348,6 +1330,9 @@
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{80E970B4-20BB-4076-AA71-CFD719F2E7B5}"/>
+									</PositioningInfo>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
 											<Reference>
@@ -1421,40 +1406,12 @@
 										<ActiveSource Name="Bullet_Flight2" ID="{AC156863-37B5-41FD-A353-341BFB282C2C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Sniper_shot" ID="{4EE46B38-D5B1-4614-9C08-310F91116E5D}" ShortID="293322694">
-									<PropertyList>
-										<Property Name="3DSpatialization" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Attenuation">
-											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
-										</Reference>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}">
-											<Language>SFX</Language>
-											<AudioFile>Sniper_shot.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="411237613"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Sniper_shot" ID="{D27F0D2A-3304-4880-A3D9-23B1E1D2202C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" ShortID="391010135">
 									<PropertyList>
 										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
-												<Value>13</Value>
+												<Value>20</Value>
 											</ValueList>
 										</Property>
 										<Property Name="MakeUpGain" Type="Real64">
@@ -1469,8 +1426,8 @@
 													<Modifier Name="" ID="{33AE7407-ADA0-4D55-92B1-AEF50A0B3863}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="126"/>
-															<Property Name="Min" Type="Real64" Value="-51"/>
+															<Property Name="Max" Type="Real64" Value="101"/>
+															<Property Name="Min" Type="Real64" Value="-76"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -1478,7 +1435,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>5</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1508,17 +1465,150 @@
 												<MediaID ID="19314398"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="Grunt_shot 2" ID="{C2ACD561-7365-4F47-9BD4-D97BBBFB0B41}">
+											<Language>SFX</Language>
+											<AudioFile>Grunt_shot 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="940036930"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Grunt_shot 2 new" ID="{F5F9238C-6035-439E-80CB-C0620B1319AB}">
+											<Language>SFX</Language>
+											<AudioFile>Grunt_shot 2 new.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="407701186"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="Grunt_shot 3 new" ID="{E2855467-C2D2-4A98-B8FE-9E2A15127035}">
+											<Language>SFX</Language>
+											<AudioFile>Grunt_shot 3 new.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="445833679"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Grunt_shot" ID="{2C1EFDF9-E9E8-4AF1-94EC-4BF2D9C0238E}" Platform="Linked"/>
+										<ActiveSource Name="Grunt_shot 3 new" ID="{E2855467-C2D2-4A98-B8FE-9E2A15127035}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<RandomSequenceContainer Name="Grunt_Shot" ID="{5B4A6DCF-55BA-4152-B547-4B4D311062A7}" ShortID="310864845">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0839666C-D91F-4DC6-95CC-626C9C607C94}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="126"/>
+															<Property Name="Min" Type="Real64" Value="-25"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A7858F80-FDF1-4712-B375-9D1EA2FE8A68}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Grunt_shot 2 new" ID="{4D0EA507-E76D-4EAE-870F-B77CEF4D3048}" ShortID="213335432">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}">
+													<Language>SFX</Language>
+													<AudioFile>Grunt_shot 2 new.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="407701186"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grunt_shot 2" ID="{805A4357-76FB-4F56-B59B-88EE122D6A15}" ShortID="1055975644">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}">
+													<Language>SFX</Language>
+													<AudioFile>Grunt_shot 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="940036930"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Grunt_shot 3 new" ID="{334FA087-869C-49B1-9D92-AC1B790019BA}" ShortID="1023099960">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}">
+													<Language>SFX</Language>
+													<AudioFile>Grunt_shot 3 new.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="445833679"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Movement" ID="{24FDAF2F-B863-4DBC-BB4B-4EC2C862E5FA}" ShortID="285689025">
 					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="Color" Type="int16" Value="19"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -1576,17 +1666,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="DashPlaceholder" ID="{FFF2B4C2-0FB2-47C6-B601-CC7818846191}">
-									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.284621212121212"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>DashPlaceholder.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="930238905"/>
-									</MediaIDList>
-								</AudioFileSource>
 								<AudioFileSource Name="dash" ID="{8893D8CA-A8C5-40D4-A2C1-418014CEC2BD}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.222741802404553"/>
@@ -1630,7 +1709,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>10</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1725,6 +1804,11 @@
 										<Property Name="Lowpass" Type="int16">
 											<ValueList>
 												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
 											</ValueList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -1892,7 +1976,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2001,6 +2085,11 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>19</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -2015,7 +2104,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2098,9 +2187,30 @@
 												<MediaID ID="397544805"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="DropAfterJumpFall1new" ID="{CB6F5BAD-58AC-49C7-8CAA-EDE874A16D65}">
+											<Language>SFX</Language>
+											<AudioFile>DropAfterJumpFall1new.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="893860165"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="DropAfterJumpFall2new" ID="{9FE5AF6B-BB95-4D5D-9878-7736E7AE5D38}">
+											<Language>SFX</Language>
+											<AudioFile>DropAfterJumpFall2new.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="626347568"/>
+											</MediaIDList>
+										</AudioFileSource>
+										<AudioFileSource Name="DropAfterJumpFall3new" ID="{95429E6D-D5A1-42D1-A3B7-4CA8D0702DDE}">
+											<Language>SFX</Language>
+											<AudioFile>DropAfterJumpFall3new.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="49437999"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DropAfterJumpFall" ID="{9611A6DC-E459-4A4E-93A4-8C80DCDF4428}" Platform="Linked"/>
+										<ActiveSource Name="DropAfterJumpFall3new" ID="{95429E6D-D5A1-42D1-A3B7-4CA8D0702DDE}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="DropAfterJumpFall1" ID="{8F758950-A1CD-47CA-94B3-D043EA1B500F}" ShortID="578633033">
@@ -2344,7 +2454,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>8</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2418,6 +2528,7 @@
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.114436053984576"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0327240566037736"/>
 												<Property Name="TrimEnd" Type="Real64" Value="0.529824068123393"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2462,11 +2573,16 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Grunt_Pain" ID="{D73D8FDE-1037-4B65-9F8D-72F861E6C735}" ShortID="843781091">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>24</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideOutput" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-170</Value>
+										<Value>-250</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2482,7 +2598,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2528,7 +2644,7 @@
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.959993612468461"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.301875785738965"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.317336245813981"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.29048321676088"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2575,7 +2691,7 @@
 											<PropertyList>
 												<Property Name="FadeOutDuration" Type="Real64" Value="0.894181829795512"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.394870696037698"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.462334521819583"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.48505718292439"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2620,9 +2736,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="DeathEnemy5" ID="{4B19C0D3-7BE3-4481-8E70-058783C16FCF}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.00085360648741"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.992261672442381"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.270707070707071"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.323145924655359"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.31540759709774"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2660,9 +2776,9 @@
 									<ChildrenList>
 										<AudioFileSource Name="DeathEnemy6" ID="{EF528AEA-8705-4669-BFFF-E2A62F0BF9ED}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.30396927016645"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.2290566216689"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.48803528240148"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.540474136349768"/>
 												<Property Name="TrimEnd" Type="Real64" Value="1.79200455256793"/>
 											</PropertyList>
 											<Language>SFX</Language>
@@ -2682,10 +2798,11 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>29</Value>
+										<Value>20</Value>
 									</ValueList>
 								</Property>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -2701,13 +2818,16 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-1</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
