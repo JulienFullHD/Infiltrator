@@ -15,7 +15,6 @@
 						<ObjectRef Name="Play_AmbienceWind" ID="{37502171-39B8-4504-B55E-57F7A70EE9B6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FS_MetalWet" ID="{49112EAA-35A0-4543-8F8C-BDE0FE3F335C}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_land" ID="{80136CF6-A747-46FE-A3DF-175385D0799E}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_LightHum" ID="{4A3584F9-E9F5-4749-AC2B-EC429EF2E353}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Smoke_Pop" ID="{EC632937-E90B-477A-8017-33C33ACB24E6}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ComboTwo" ID="{C389974C-CD49-4811-81B9-52F0F22ECAD3}" WorkUnitID="{6F602F42-DEF5-4D56-8D2D-7D49B6A29F86}" Origin="Manual" Filter="7"/>

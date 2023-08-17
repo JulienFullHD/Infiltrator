@@ -303,7 +303,7 @@
 								<Action Name="" ID="{D0735EF6-7EFB-4A18-8D98-CCB533469C69}" ShortID="969047388">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Grunt_burst" ID="{D74DF235-720F-4873-B1DE-D8A14A450F9C}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+											<ObjectRef Name="Grunt_Shot" ID="{5B4A6DCF-55BA-4152-B547-4B4D311062A7}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -323,6 +323,16 @@
 						</Event>
 						<Event Name="Bullet_Flight" ID="{E185D688-17D0-40FA-901C-7E3E58E3356E}">
 							<ChildrenList>
+								<Action Name="" ID="{094E1B09-75EE-482C-B332-09F4DF3891CB}" ShortID="120721075">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{A1524183-CB76-4B00-AE19-1901719F56CD}" ShortID="1017951837">
 									<ReferenceList>
 										<Reference Name="Target">

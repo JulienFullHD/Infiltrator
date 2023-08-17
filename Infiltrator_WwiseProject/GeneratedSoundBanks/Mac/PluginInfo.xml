@@ -2,10 +2,11 @@
 <PluginInfo Platform="Mac" BasePlatform="Mac">
 	<PluginLibs>
 		<PluginLib LibName="Wwise Parametric EQ" LibId="6881283" Type="Effect" DLL="AkParametricEQ" StaticLib="AkParametricEQFX"/>
+		<PluginLib LibName="Wwise Delay" LibId="6946819" Type="Effect" DLL="AkDelay" StaticLib="AkDelayFX"/>
 		<PluginLib LibName="Wwise RoomVerb" LibId="7733251" Type="Effect" DLL="AkRoomVerb" StaticLib="AkRoomVerbFX"/>
 		<PluginLib LibName="Wwise Time Stretch" LibId="8519683" Type="Effect" DLL="AkTimeStretch" StaticLib="AkTimeStretchFX"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{9E334238-21A0-98DE-5895-77B44E8F6B61}</FileHash>
+	<FileHash>{D6A72418-0748-2F85-C1B4-314D9A0A81D3}</FileHash>
 </PluginInfo>

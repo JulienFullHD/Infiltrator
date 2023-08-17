@@ -143,6 +143,10 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f6b542792c589394aa2d6ed3dd4df908,
       type: 2}
+  StopBulletFlight:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!96 &8424643758678577343
 TrailRenderer:
   serializedVersion: 2
@@ -254,3 +258,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ccb826989683949b6d5e354d585d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpeedOfSound: 343.3
+  DopplerFactor: 1

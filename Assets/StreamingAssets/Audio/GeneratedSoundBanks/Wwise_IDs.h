@@ -27,7 +27,6 @@ namespace AK
         static const AkUniqueID PLAY_FS_ENEMY = 857770058U;
         static const AkUniqueID PLAY_FS_METAL = 405241043U;
         static const AkUniqueID PLAY_FS_METALWET = 1928192825U;
-        static const AkUniqueID PLAY_LIGHTHUM = 444602164U;
         static const AkUniqueID PLAY_MAINTHEME = 3009755888U;
         static const AkUniqueID PLAY_MENUBACK = 1113566242U;
         static const AkUniqueID PLAY_MENUPICK = 1055472740U;
