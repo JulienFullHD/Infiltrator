@@ -7,9 +7,12 @@ public class Turntable : MonoBehaviour
     [SerializeField] private float spinSpeed;
     [SerializeField] private bool rotationIsLocal;
     [ReadOnly, SerializeField] private Vector3 rotate;
+    private Vector3 defaultRotation;
 
     private void Start()
     {
+        defaultRotation = transform.eulerAngles;
+
         if (rotationIsLocal)
         {
             rotate = transform.localEulerAngles;
@@ -22,7 +25,7 @@ public class Turntable : MonoBehaviour
 
     public void ResetRotation()
     {
-        rotate.y = 0;
+        rotate.y = defaultRotation.y;
         transform.localEulerAngles = rotate;
     }
 
