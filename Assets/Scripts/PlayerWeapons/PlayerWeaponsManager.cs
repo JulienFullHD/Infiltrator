@@ -175,7 +175,8 @@ public class PlayerWeaponsManager : MonoBehaviour
 
     public void AddKunai()
     {
-        KunaiAmount++;
+        if(kunaiAmount < 3)
+            KunaiAmount++;
     }
 
     public void HitEnemy(HitType hitType, GameObject enemyGameObject)

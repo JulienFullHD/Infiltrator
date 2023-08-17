@@ -14,8 +14,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GhostRunner ghostRunner;
 
 
-
-
     private void Start()
     {
         isPaused = false;
@@ -23,7 +21,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !LevelManager.Instance.isWon)
         {
             ChangePauseStatus(!isPaused);
         }
@@ -50,11 +48,15 @@ public class PauseMenu : MonoBehaviour
 
     private void UnPauseGame()
     {
-        pauseMenuOverlay.SetActive(false);
         Time.timeScale = 1.0f;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        if (LevelManager.Instance.isWon)
+            return;
+
+        pauseMenuOverlay.SetActive(false);
     }
 
     public void ResetLevel()
