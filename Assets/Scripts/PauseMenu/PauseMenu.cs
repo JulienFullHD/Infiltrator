@@ -70,7 +70,8 @@ public class PauseMenu : MonoBehaviour
     public void ExitLevel()
     {
         UnPauseGame();
-
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         ghostRunner.StopRun();
         SceneManager.LoadScene(mainMenuIndex);
     }
