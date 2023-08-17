@@ -19,7 +19,7 @@ public class TextHeartbeat : MonoBehaviour
     [ReadOnly, SerializeField] private float sizeMultiplier;
     private float defaultSize;
 
-    private void OnEnable()
+    private void Awake()
     {
         timer = 0;
         clr = textField.color;
