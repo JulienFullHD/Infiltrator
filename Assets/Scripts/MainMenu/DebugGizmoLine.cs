@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class DebugGizmoLine : MonoBehaviour
 {
-    public Transform pos1;
-    public Transform pos2;
+    public Transform drawLineTo;
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(pos1.position, pos2.position);
+        if (drawLineTo != null) 
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawLine(transform.position, drawLineTo.position);
+        }
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(transform.position, transform.forward * 4);
     }
 }
