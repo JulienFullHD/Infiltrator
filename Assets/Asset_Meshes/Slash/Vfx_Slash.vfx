@@ -786,7 +786,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Mesh, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":124007798685723775,"guid":"ffe9583c41d9a5742b9dedf4f668239d","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":124007798685723775,"guid":"e6d92038d94830940885d79888a1dbca","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mesh
@@ -948,7 +948,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 0.3
+      m_SerializableObject: 0.4
     m_Space: 2147483647
   m_Property:
     name: Lifetime
