@@ -254,6 +254,11 @@
 										<Value>True</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -424,7 +429,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -599,14 +604,14 @@
 												<Path2D Name="Swing" ID="{AD5E7E93-80DD-43BA-B435-6E2E9DAE46AE}">
 													<PointList>
 														<Point>
-															<XPos>-8.12185</XPos>
-															<YPos>25.70621</YPos>
+															<XPos>-2.03048</XPos>
+															<YPos>18.92655</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>38.07106</XPos>
-															<YPos>54.80227</YPos>
+															<XPos>15.73603</XPos>
+															<YPos>25.98871</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -615,14 +620,14 @@
 												<Path2D Name="Katana_Swing_Path" ID="{3B49A166-E10D-461A-AE82-DC39212E0685}">
 													<PointList>
 														<Point>
-															<XPos>-4.06091</XPos>
-															<YPos>11.58191</YPos>
+															<XPos>-0.50761</XPos>
+															<YPos>8.75705</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>27.41117</XPos>
-															<YPos>30.50847</YPos>
+															<XPos>12.18274</XPos>
+															<YPos>23.16384</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -631,8 +636,8 @@
 												<Path2D Name="Katana_Swing_Path_01" ID="{E0425D17-D379-463A-A4C2-E897E9D1D2A4}">
 													<PointList>
 														<Point>
-															<XPos>-6.59898</XPos>
-															<YPos>24.01129</YPos>
+															<XPos>-1.01522</XPos>
+															<YPos>19.49152</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
@@ -827,13 +832,13 @@
 												<Path2D Name="Kunai_Throw_Path" ID="{866BAC2E-9262-4DF7-8938-2B8AE8775C6E}">
 													<PointList>
 														<Point>
-															<XPos>2.03047</XPos>
-															<YPos>2.54238</YPos>
+															<XPos>0</XPos>
+															<YPos>0.84746</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-89.84772</XPos>
+															<XPos>-12.69036</XPos>
 															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
@@ -843,13 +848,13 @@
 												<Path2D Name="Kunai_Throw_Path_02" ID="{2152DB9B-0634-490F-AB7C-505E38C6B1E5}">
 													<PointList>
 														<Point>
-															<XPos>2.53809</XPos>
-															<YPos>2.54238</YPos>
+															<XPos>0</XPos>
+															<YPos>1.97741</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-67.00508</XPos>
+															<XPos>-8.12183</XPos>
 															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
@@ -859,14 +864,14 @@
 												<Path2D Name="Kunai_Throw_Path_01" ID="{9FA46D49-A2F1-4189-89FE-3D28B4CC9064}">
 													<PointList>
 														<Point>
-															<XPos>1.52286</XPos>
+															<XPos>0</XPos>
 															<YPos>1.41244</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-84.26396</XPos>
-															<YPos>97.74011</YPos>
+															<XPos>-10.15228</XPos>
+															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -2490,6 +2495,7 @@
 										<Value>18</Value>
 									</ValueList>
 								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2506,7 +2512,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>7</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2633,7 +2639,7 @@
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>24</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -2653,10 +2659,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2669,20 +2676,8 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="DeathEnemy2" ID="{8178F47E-C766-4C49-99AF-97B5DE2AA3D8}" ShortID="79089761">
+								<Sound Name="EnemyPain" ID="{4479D2F4-4EF2-4D8C-9188-6C7F37608D64}" ShortID="158802916">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{5E1330EF-2AE5-4A14-8DCE-122641D432F4}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-126"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-2</Value>
@@ -2698,38 +2693,100 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy2" ID="{101CAA10-009E-4D29-A152-CA8B9EE98C5C}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.959993612468461"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.317336245813981"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.29048321676088"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain" ID="{83BA33FF-C16E-4FFB-A206-C3180B637CF4}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy2.wav</AudioFile>
+											<AudioFile>EnemyPain.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="961857935"/>
+												<MediaID ID="149103611"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy2" ID="{101CAA10-009E-4D29-A152-CA8B9EE98C5C}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain" ID="{83BA33FF-C16E-4FFB-A206-C3180B637CF4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="DeathEnemy4" ID="{00896622-05AF-47C2-8058-00D87AA2D0FA}" ShortID="66127128">
+								<Sound Name="EnemyPain1" ID="{CE3DE2E8-2633-429A-99B5-DA9C4F2403BF}" ShortID="82499215">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain1" ID="{4A8590A3-8539-43C3-A719-7260032847CE}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="164023042"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain1" ID="{4A8590A3-8539-43C3-A719-7260032847CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain2" ID="{235B2C07-6509-470A-9BE2-D86B916737D4}" ShortID="216530094">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{AB2AE365-3EF2-45EA-A2DD-8B79D20574AE}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-278"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
 										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain2" ID="{56CBF4D9-E84E-4F34-8971-CE6FB40330E3}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="492423826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain2" ID="{56CBF4D9-E84E-4F34-8971-CE6FB40330E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain3" ID="{713A1344-6EB9-4A1B-BC9A-8EBEA768DEAC}" ShortID="1045215761">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain3" ID="{1C858241-8570-4326-A59E-CB73D000F511}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="240970278"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain3" ID="{1C858241-8570-4326-A59E-CB73D000F511}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain4" ID="{B1E67250-7327-45F6-B9CC-6481FABF10D9}" ShortID="516984336">
+									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
@@ -2745,41 +2802,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy4" ID="{80C4E9CD-F3A6-423F-8672-39FC9ED824ED}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.894181829795512"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.462334521819583"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.48505718292439"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain4" ID="{0F3722EA-7744-44D5-80E0-C540FB6D7BA9}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy4.wav</AudioFile>
+											<AudioFile>EnemyPain4.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="183922488"/>
+												<MediaID ID="17528126"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy4" ID="{80C4E9CD-F3A6-423F-8672-39FC9ED824ED}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain4" ID="{0F3722EA-7744-44D5-80E0-C540FB6D7BA9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="DeathEnemy5" ID="{6621B7A3-DD23-44B7-91AB-BD9AACAC1462}" ShortID="1072372698">
+								<Sound Name="EnemyPain5" ID="{5B6BBEAC-AC91-44FA-9394-2090528AA83E}" ShortID="362022058">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{0C372101-D82D-4B2D-B6A7-B5262868E3A4}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-101"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2792,62 +2831,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy5" ID="{4B19C0D3-7BE3-4481-8E70-058783C16FCF}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.992261672442381"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.323145924655359"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.31540759709774"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain5" ID="{2C90AA01-8E48-4159-ABCB-6BFED9DD6359}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy5.wav</AudioFile>
+											<AudioFile>EnemyPain5.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="497480755"/>
+												<MediaID ID="30904411"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy5" ID="{4B19C0D3-7BE3-4481-8E70-058783C16FCF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="DeathEnemy6" ID="{75BBF08F-9C06-427F-8F6C-C8956721471C}" ShortID="29403091">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-150</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy6" ID="{EF528AEA-8705-4669-BFFF-E2A62F0BF9ED}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.2290566216689"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.540474136349768"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.79200455256793"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>DeathEnemy6.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="650916587"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy6" ID="{EF528AEA-8705-4669-BFFF-E2A62F0BF9ED}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain5" ID="{2C90AA01-8E48-4159-ABCB-6BFED9DD6359}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

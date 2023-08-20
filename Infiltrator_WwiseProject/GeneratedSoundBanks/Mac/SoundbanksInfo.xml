@@ -91,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5956BB31-45B4-4B3F-C38B-E545EE22BB62}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{966E323A-262F-6CE6-2679-AA26C62725F1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -102,6 +102,14 @@
 				<File Id="9922241" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metal1.wav</ShortName>
 					<CachePath>SFX/FS_player_metal1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="17528126" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain4.wav</ShortName>
+					<CachePath>SFX/EnemyPain4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="30904411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain5.wav</ShortName>
+					<CachePath>SFX/EnemyPain5_10C4C929.wem</CachePath>
 				</File>
 				<File Id="49437999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall3new.wav</ShortName>
@@ -131,6 +139,14 @@
 					<ShortName>NERDS RULE EVERYTHING AROUND ME.wav</ShortName>
 					<CachePath>SFX/NERDS RULE EVERYTHING AROUND ME_10C4C929.wem</CachePath>
 				</File>
+				<File Id="149103611" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain.wav</ShortName>
+					<CachePath>SFX/EnemyPain_10C4C929.wem</CachePath>
+				</File>
+				<File Id="164023042" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain1.wav</ShortName>
+					<CachePath>SFX/EnemyPain1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="174831135" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metal2.wav</ShortName>
 					<CachePath>SFX/FS_player_metal2_10C4C929.wem</CachePath>
@@ -139,13 +155,13 @@
 					<ShortName>StaticNoise (werbetafel).wav</ShortName>
 					<CachePath>SFX/StaticNoise (werbetafel)_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="183922488" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DeathEnemy4.wav</ShortName>
-					<CachePath>SFX/DeathEnemy4_E316E76A.wem</CachePath>
-				</File>
 				<File Id="233280696" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metalWet.wav</ShortName>
 					<CachePath>SFX/FS_player_metalWet_10C4C929.wem</CachePath>
+				</File>
+				<File Id="240970278" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain3.wav</ShortName>
+					<CachePath>SFX/EnemyPain3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="248514043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy1.wav</ShortName>
@@ -187,9 +203,9 @@
 					<ShortName>Smoke_Throw.wav</ShortName>
 					<CachePath>SFX/Smoke_Throw_473F68FB.wem</CachePath>
 				</File>
-				<File Id="497480755" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DeathEnemy5.wav</ShortName>
-					<CachePath>SFX/DeathEnemy5_4A606725.wem</CachePath>
+				<File Id="492423826" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EnemyPain2.wav</ShortName>
+					<CachePath>SFX/EnemyPain2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="576626224" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ProjectileHitOther1.wav</ShortName>
@@ -215,10 +231,6 @@
 					<ShortName>CyberPsycho (Beat).wav</ShortName>
 					<Path>Media/642047943.wem</Path>
 					<CachePath>SFX/CyberPsycho (Beat)_56D96038.wem</CachePath>
-				</File>
-				<File Id="650916587" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DeathEnemy6.wav</ShortName>
-					<CachePath>SFX/DeathEnemy6_1E715DF1.wem</CachePath>
 				</File>
 				<File Id="658006621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metalWet3.wav</ShortName>
@@ -280,10 +292,6 @@
 					<ShortName>FS_player_metal.wav</ShortName>
 					<CachePath>SFX/FS_player_metal_10C4C929.wem</CachePath>
 				</File>
-				<File Id="961857935" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>DeathEnemy2.wav</ShortName>
-					<CachePath>SFX/DeathEnemy2_24267E71.wem</CachePath>
-				</File>
 				<File Id="968899651" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed 1st tweak.wav</ShortName>
 					<CachePath>SFX/Bleed 1st tweak_10C4C929.wem</CachePath>
@@ -307,6 +315,10 @@
 				<File Id="1054928639" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ProjectileHitOther.wav</ShortName>
 					<CachePath>SFX/ProjectileHitOther_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1069867659" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AC.wav</ShortName>
+					<CachePath>SFX/AC_E6094D64.wem</CachePath>
 				</File>
 			</Media>
 			<Plugins>
@@ -345,15 +357,17 @@
 						<MediaRef Id="401856473"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="60" DurationType="OneShot" DurationMin="1.2760385" DurationMax="1.7768296">
+				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.8731356" DurationMax="1.2094889">
 					<MediaRefs>
-						<MediaRef Id="183922488"/>
+						<MediaRef Id="17528126"/>
+						<MediaRef Id="30904411"/>
+						<MediaRef Id="149103611"/>
+						<MediaRef Id="164023042"/>
+						<MediaRef Id="240970278"/>
 						<MediaRef Id="320974741"/>
-						<MediaRef Id="497480755"/>
+						<MediaRef Id="492423826"/>
 						<MediaRef Id="618296949"/>
-						<MediaRef Id="650916587"/>
 						<MediaRef Id="727363635"/>
-						<MediaRef Id="961857935"/>
 						<MediaRef Id="968899651"/>
 					</MediaRefs>
 					<PluginRefs>
@@ -381,6 +395,11 @@
 					<MediaRefs>
 						<MediaRef Id="599743113"/>
 						<MediaRef Id="808142375"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2380299862" Name="Play_AC" MaxAttenuation="45" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1069867659"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4079089048" Name="Play_AmbienceWind" DurationType="Infinite">
@@ -500,5 +519,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8B9BED0A-9470-83C0-F651-1639F2DAA233}</FileHash>
+	<FileHash>{815082AA-A5B4-01E5-2B90-002AFF0E22B9}</FileHash>
 </SoundBanksInfo>
