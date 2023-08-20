@@ -232,6 +232,58 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="AC" ID="{E1974B26-9B5D-4592-A51D-D4B64F8AF24C}" ShortID="527189920">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Ambient_Attenuation" ID="{C4DBCB8C-F7DA-452D-9C3B-95E8789018B2}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AC" ID="{E3958227-5749-4621-BA29-11815A6F6647}">
+									<PropertyList>
+										<Property Name="FadeInShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.70762333825996"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>AC.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1069867659"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AC" ID="{E3958227-5749-4621-BA29-11815A6F6647}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Combat" ID="{A82FEDF0-F0BF-4C37-9E06-A9D4EB493901}" ShortID="745743272">
@@ -491,6 +543,50 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Katana_Swing1" ID="{B62B3046-76C8-4F5F-8D18-73242778F729}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Katana_HitElse no3 2" ID="{BAE84911-00D2-44BE-860D-5F701693EA47}" ShortID="791961479">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Katana_HitElse no3 2" ID="{E0F2C5F1-E1BB-4E44-BCF5-493A6BE9007B}">
+													<Language>SFX</Language>
+													<AudioFile>Katana_HitElse no3 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="671753095"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Katana_HitElse no3 2" ID="{E0F2C5F1-E1BB-4E44-BCF5-493A6BE9007B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Katana_HitElse no3 3" ID="{D5E1135E-AD1C-462F-B181-0EB252426352}" ShortID="542777752">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Katana_HitElse no3 3" ID="{67BC6AC0-434D-4BB4-BFB0-CD6CD3AB1B57}">
+													<Language>SFX</Language>
+													<AudioFile>Katana_HitElse no3 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="710593161"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Katana_HitElse no3 3" ID="{67BC6AC0-434D-4BB4-BFB0-CD6CD3AB1B57}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1534,7 +1630,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Grunt_shot 2 new" ID="{4D0EA507-E76D-4EAE-870F-B77CEF4D3048}" ShortID="213335432">
+										<Sound Name="Grunt_shot 2 new more bass" ID="{09ED5057-0FFA-4948-AF89-3C7DC8CAB57B}" ShortID="995114253">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1544,60 +1640,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}">
+												<AudioFileSource Name="Grunt_shot 2 new more bass" ID="{8F9103D7-EC1C-4021-B68C-F95E35151BF6}">
 													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 2 new.wav</AudioFile>
+													<AudioFile>Grunt_shot 2 new more bass.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="407701186"/>
+														<MediaID ID="479020412"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grunt_shot 2" ID="{805A4357-76FB-4F56-B59B-88EE122D6A15}" ShortID="1055975644">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}">
-													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="940036930"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grunt_shot 3 new" ID="{334FA087-869C-49B1-9D92-AC1B790019BA}" ShortID="1023099960">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}">
-													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 3 new.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="445833679"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}" Platform="Linked"/>
+												<ActiveSource Name="Grunt_shot 2 new more bass" ID="{8F9103D7-EC1C-4021-B68C-F95E35151BF6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2487,7 +2539,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Bleed11" ID="{6783D34C-DCF6-433A-9A6F-CABC5CA39032}" ShortID="360609784">
+								<Sound Name="Bleed 1st tweak" ID="{E40CA096-9833-4C32-9029-4A83721CEDF2}" ShortID="818941975">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2497,24 +2549,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.203607005141388"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.534282615681234"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 1st tweak" ID="{436B602F-8DDE-4054-9869-35160850FEE7}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed11.wav</AudioFile>
+											<AudioFile>Bleed 1st tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="173493422"/>
+												<MediaID ID="968899651"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 1st tweak" ID="{436B602F-8DDE-4054-9869-35160850FEE7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed22" ID="{C6125E4C-CCA6-4517-BA98-AECFB83A38CD}" ShortID="434089335">
+								<Sound Name="Bleed 2nd tweak" ID="{17C5AA43-6D5F-41CB-9784-225139189569}" ShortID="850591624">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2524,25 +2571,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.114436053984576"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0327240566037736"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.529824068123393"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 2nd tweak" ID="{CA48D84D-0153-45AD-9778-6966B737398C}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed22.wav</AudioFile>
+											<AudioFile>Bleed 2nd tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="290099863"/>
+												<MediaID ID="727363635"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 2nd tweak" ID="{CA48D84D-0153-45AD-9778-6966B737398C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed33" ID="{E373DD61-466F-4006-8C4A-329F9E257B8F}" ShortID="770516473">
+								<Sound Name="Bleed 3rd tweak" ID="{2C946526-E643-4C5F-B944-69BE3226E033}" ShortID="923071950">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2552,21 +2593,38 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.489622830976864"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.618400546272493"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 3rd tweak" ID="{19553DB7-9166-407E-9562-379878AA7E45}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed33.wav</AudioFile>
+											<AudioFile>Bleed 3rd tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="782221668"/>
+												<MediaID ID="618296949"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 3rd tweak" ID="{19553DB7-9166-407E-9562-379878AA7E45}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bleed 4th tweak" ID="{4CC48CF5-EE7B-4E84-B093-69784F3C3F06}" ShortID="880732539">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bleed 4th tweak" ID="{07DC50D5-A19D-4D2B-ADFB-C19C821F104B}">
+											<Language>SFX</Language>
+											<AudioFile>Bleed 4th tweak.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="320974741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bleed 4th tweak" ID="{07DC50D5-A19D-4D2B-ADFB-C19C821F104B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

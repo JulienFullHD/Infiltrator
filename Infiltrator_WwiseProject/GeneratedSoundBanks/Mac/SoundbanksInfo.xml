@@ -91,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{71D93864-AF27-B352-1887-6F003453C2CC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5956BB31-45B4-4B3F-C38B-E545EE22BB62}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -131,10 +131,6 @@
 					<ShortName>NERDS RULE EVERYTHING AROUND ME.wav</ShortName>
 					<CachePath>SFX/NERDS RULE EVERYTHING AROUND ME_10C4C929.wem</CachePath>
 				</File>
-				<File Id="173493422" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Bleed11.wav</ShortName>
-					<CachePath>SFX/Bleed11_49260CEE.wem</CachePath>
-				</File>
 				<File Id="174831135" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metal2.wav</ShortName>
 					<CachePath>SFX/FS_player_metal2_10C4C929.wem</CachePath>
@@ -155,9 +151,9 @@
 					<ShortName>FS_Enemy1.wav</ShortName>
 					<CachePath>SFX/FS_Enemy1_10C4C929.wem</CachePath>
 				</File>
-				<File Id="290099863" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Bleed22.wav</ShortName>
-					<CachePath>SFX/Bleed22_B69D4C13.wem</CachePath>
+				<File Id="320974741" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bleed 4th tweak.wav</ShortName>
+					<CachePath>SFX/Bleed 4th tweak_10C4C929.wem</CachePath>
 				</File>
 				<File Id="326487538" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall2.wav</ShortName>
@@ -167,21 +163,17 @@
 					<ShortName>ComboTwo.wav</ShortName>
 					<CachePath>SFX/ComboTwo_3E437D68.wem</CachePath>
 				</File>
-				<File Id="407701186" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Grunt_shot 2 new.wav</ShortName>
-					<CachePath>SFX/Grunt_shot 2 new_10C4C929.wem</CachePath>
-				</File>
 				<File Id="411126953" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ComboThree.wav</ShortName>
 					<CachePath>SFX/ComboThree_91D231E5.wem</CachePath>
 				</File>
-				<File Id="445833679" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Grunt_shot 3 new.wav</ShortName>
-					<CachePath>SFX/Grunt_shot 3 new_10C4C929.wem</CachePath>
-				</File>
 				<File Id="465842787" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience Pimped.wav</ShortName>
 					<CachePath>SFX/Ambience Pimped_C18E9BBE.wem</CachePath>
+				</File>
+				<File Id="479020412" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Grunt_shot 2 new more bass.wav</ShortName>
+					<CachePath>SFX/Grunt_shot 2 new more bass_10C4C929.wem</CachePath>
 				</File>
 				<File Id="482327575" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DropAfterJumpFall1.wav</ShortName>
@@ -211,6 +203,10 @@
 					<ShortName>Player_death2.wav</ShortName>
 					<CachePath>SFX/Player_death2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="618296949" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bleed 3rd tweak.wav</ShortName>
+					<CachePath>SFX/Bleed 3rd tweak_10C4C929.wem</CachePath>
+				</File>
 				<File Id="635522304" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump2.wav</ShortName>
 					<CachePath>SFX/jump2_10C4C929.wem</CachePath>
@@ -236,17 +232,25 @@
 					<ShortName>Bullet_Flight2.wav</ShortName>
 					<CachePath>SFX/Bullet_Flight2_D47EEE08.wem</CachePath>
 				</File>
+				<File Id="671753095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Katana_HitElse no3 2.wav</ShortName>
+					<CachePath>SFX/Katana_HitElse no3 2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="675877473" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing no3.wav</ShortName>
 					<CachePath>SFX/Katana_Swing no3_3C6556A1.wem</CachePath>
 				</File>
+				<File Id="710593161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Katana_HitElse no3 3.wav</ShortName>
+					<CachePath>SFX/Katana_HitElse no3 3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="727363635" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bleed 2nd tweak.wav</ShortName>
+					<CachePath>SFX/Bleed 2nd tweak_10C4C929.wem</CachePath>
+				</File>
 				<File Id="743429803" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metalWet1.wav</ShortName>
 					<CachePath>SFX/FS_player_metalWet1_10C4C929.wem</CachePath>
-				</File>
-				<File Id="782221668" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Bleed33.wav</ShortName>
-					<CachePath>SFX/Bleed33_C6BF1477.wem</CachePath>
 				</File>
 				<File Id="808142375" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>kunai1.wav</ShortName>
@@ -268,10 +272,6 @@
 					<ShortName>Smokebomb.wav</ShortName>
 					<CachePath>SFX/Smokebomb_BC02CF42.wem</CachePath>
 				</File>
-				<File Id="940036930" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Grunt_shot 2.wav</ShortName>
-					<CachePath>SFX/Grunt_shot 2_10C4C929.wem</CachePath>
-				</File>
 				<File Id="952022165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing.wav</ShortName>
 					<CachePath>SFX/Katana_Swing_B9FC8756.wem</CachePath>
@@ -283,6 +283,10 @@
 				<File Id="961857935" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DeathEnemy2.wav</ShortName>
 					<CachePath>SFX/DeathEnemy2_24267E71.wem</CachePath>
+				</File>
+				<File Id="968899651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Bleed 1st tweak.wav</ShortName>
+					<CachePath>SFX/Bleed 1st tweak_10C4C929.wem</CachePath>
 				</File>
 				<File Id="988550002" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_player_metalWet2.wav</ShortName>
@@ -343,13 +347,14 @@
 				</Event>
 				<Event Id="1010055213" Name="Enemy_Hit" MaxAttenuation="60" DurationType="OneShot" DurationMin="1.2760385" DurationMax="1.7768296">
 					<MediaRefs>
-						<MediaRef Id="173493422"/>
 						<MediaRef Id="183922488"/>
-						<MediaRef Id="290099863"/>
+						<MediaRef Id="320974741"/>
 						<MediaRef Id="497480755"/>
+						<MediaRef Id="618296949"/>
 						<MediaRef Id="650916587"/>
-						<MediaRef Id="782221668"/>
+						<MediaRef Id="727363635"/>
 						<MediaRef Id="961857935"/>
+						<MediaRef Id="968899651"/>
 					</MediaRefs>
 					<PluginRefs>
 						<Custom>
@@ -357,17 +362,17 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
-				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.3445702" DurationMax="0.38045448">
+				<Event Id="501485854" Name="Grunt_burst" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.34460893" DurationMax="0.37601584">
 					<MediaRefs>
-						<MediaRef Id="407701186"/>
-						<MediaRef Id="445833679"/>
-						<MediaRef Id="940036930"/>
+						<MediaRef Id="479020412"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2725920228" Name="Katana_Swing" DurationType="OneShot" DurationMin="0.3054159" DurationMax="0.37434462">
+				<Event Id="2725920228" Name="Katana_Swing" DurationType="OneShot" DurationMin="0.3054159" DurationMax="0.7844778">
 					<MediaRefs>
 						<MediaRef Id="50718732"/>
+						<MediaRef Id="671753095"/>
 						<MediaRef Id="675877473"/>
+						<MediaRef Id="710593161"/>
 						<MediaRef Id="834220296"/>
 						<MediaRef Id="952022165"/>
 					</MediaRefs>
@@ -495,5 +500,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BC7323A8-BADB-8428-7E80-837B97EE1DC3}</FileHash>
+	<FileHash>{8B9BED0A-9470-83C0-F651-1639F2DAA233}</FileHash>
 </SoundBanksInfo>
