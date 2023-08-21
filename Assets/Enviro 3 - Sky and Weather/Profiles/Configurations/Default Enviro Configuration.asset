@@ -128,9 +128,9 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
   showCirrusCloudsControls: 0
   show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: -0.59818125, y: -0.98322546}
-  cloudFlatDetailAnim: {x: 0.9603097, y: -0.8878673}
-  cirrusAnim: {x: 0.7005354, y: -0.49197704}
+  cloudFlatBaseAnim: {x: 0.25998765, y: 0.15858828}
+  cloudFlatDetailAnim: {x: -0.74978745, y: 0.8222728}
+  cirrusAnim: {x: 0.12963055, y: 0.078941874}
 --- !u!114 &-1033463005042072443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375eef0084d44344ebf50cbba7c1eadb, type: 3}
   m_Name: Sky Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
@@ -528,7 +528,7 @@ MonoBehaviour:
     moonColorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 9.082411, g: 9.082411, b: 9.082411, a: 1}
+      key1: {r: 6.17726, g: 1.544315, b: 5.6155014, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -768,8 +768,8 @@ MonoBehaviour:
       m_RotationOrder: 4
     intensity: 0.5
     sunScale: 7
-    moonScale: 7
-    moonPhase: -1.632224
+    moonScale: 16
+    moonPhase: -0.14
     skyExposureHDRP:
       serializedVersion: 2
       m_Curve:
@@ -816,7 +816,7 @@ MonoBehaviour:
   showSkyControls: 1
   showSkySunControls: 1
   showSkyMoonControls: 1
-  showSkyStarsControls: 0
+  showSkyStarsControls: 1
   mySkyboxMat: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1836,10 +1836,10 @@ MonoBehaviour:
   showDensityControls: 1
   showTextureControls: 0
   showWindControls: 1
-  cloudAnimLayer1: {x: 0.65682036, y: -0.44752002, z: 0.5085479}
+  cloudAnimLayer1: {x: 0.0858826, y: 0.12339205, z: -0.35262743}
   cloudAnimLayer2: {x: 0, y: 0, z: 0}
-  cloudAnimNonScaledLayer1: {x: 4.1510496, y: -4.116417, z: -170.79376}
-  cloudAnimNonScaledLayer2: {x: -3.860881, y: 3.828243, z: -171.15198}
+  cloudAnimNonScaledLayer1: {x: 5.872321, y: -5.8376884, z: -256.7836}
+  cloudAnimNonScaledLayer2: {x: -5.5824976, y: 5.5499964, z: -257.14774}
   weatherMap: {fileID: 0}
 --- !u!114 &3607125083166130530
 MonoBehaviour:
@@ -2082,6 +2082,24 @@ MonoBehaviour:
   showFogControls: 1
   showVolumetricsControls: 0
   fogLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
