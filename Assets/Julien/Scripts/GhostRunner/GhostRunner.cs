@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GhostRunner : MonoBehaviour {
     [SerializeField] private Transform _recordTarget;
@@ -50,7 +51,16 @@ public class GhostRunner : MonoBehaviour {
         _system.SetSavedRun(new Recording(_data));
 
         _system.PlayRecording(RecordingType.Saved, Instantiate(_ghostPrefab,player.position,player.rotation));
+        _system.GetRun(RecordingType.Saved, out Recording run);
+        StartCoroutine(WaitAndStopReplay(run.Duration));
     }
     
+    private IEnumerator WaitAndStopReplay(float waitTime)
+    {
+        
+        yield return new WaitForSeconds(waitTime);
+        _system.StopReplay();
+        
+    }
 }
 

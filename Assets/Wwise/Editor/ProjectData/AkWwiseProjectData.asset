@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585093227941711140
+    m_lastTime: -8585089788453355890
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -233,7 +233,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585093227957468934
+    m_lastTime: -8585089788459181918
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -517,6 +517,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 8eb53d411b940a43b098fdf3c4694721
       Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_AC
+      guid: 52b1ee1277cafd49acdc6dd5547f2f60
+      id: 2380299862
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
+      - ElementName: Play_AC
+        ObjectType: 3
+        guid: 52b1ee1277cafd49acdc6dd5547f2f60
+      Path: Events\Default Work Unit\Ambience\Play_AC
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
