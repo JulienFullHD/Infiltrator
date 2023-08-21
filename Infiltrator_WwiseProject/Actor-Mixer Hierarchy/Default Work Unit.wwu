@@ -232,6 +232,63 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<Sound Name="AC" ID="{E1974B26-9B5D-4592-A51D-D4B64F8AF24C}" ShortID="527189920">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>30</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Ambient_Attenuation" ID="{C4DBCB8C-F7DA-452D-9C3B-95E8789018B2}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AC" ID="{E3958227-5749-4621-BA29-11815A6F6647}">
+									<PropertyList>
+										<Property Name="FadeInShape" Type="int16" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.70762333825996"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>AC.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1069867659"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AC" ID="{E3958227-5749-4621-BA29-11815A6F6647}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Combat" ID="{A82FEDF0-F0BF-4C37-9E06-A9D4EB493901}" ShortID="745743272">
@@ -372,7 +429,7 @@
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -493,6 +550,50 @@
 												<ActiveSource Name="Katana_Swing1" ID="{B62B3046-76C8-4F5F-8D18-73242778F729}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="Katana_HitElse no3 2" ID="{BAE84911-00D2-44BE-860D-5F701693EA47}" ShortID="791961479">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Katana_HitElse no3 2" ID="{E0F2C5F1-E1BB-4E44-BCF5-493A6BE9007B}">
+													<Language>SFX</Language>
+													<AudioFile>Katana_HitElse no3 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="671753095"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Katana_HitElse no3 2" ID="{E0F2C5F1-E1BB-4E44-BCF5-493A6BE9007B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Katana_HitElse no3 3" ID="{D5E1135E-AD1C-462F-B181-0EB252426352}" ShortID="542777752">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Katana_HitElse no3 3" ID="{67BC6AC0-434D-4BB4-BFB0-CD6CD3AB1B57}">
+													<Language>SFX</Language>
+													<AudioFile>Katana_HitElse no3 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="710593161"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Katana_HitElse no3 3" ID="{67BC6AC0-434D-4BB4-BFB0-CD6CD3AB1B57}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 									<PositioningInfo>
 										<Position Name="" ID="{A193AE24-D606-463A-867D-C3D40C5DA648}">
@@ -503,14 +604,14 @@
 												<Path2D Name="Swing" ID="{AD5E7E93-80DD-43BA-B435-6E2E9DAE46AE}">
 													<PointList>
 														<Point>
-															<XPos>-8.12185</XPos>
-															<YPos>25.70621</YPos>
+															<XPos>-2.03048</XPos>
+															<YPos>18.92655</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>38.07106</XPos>
-															<YPos>54.80227</YPos>
+															<XPos>15.73603</XPos>
+															<YPos>25.98871</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -519,14 +620,14 @@
 												<Path2D Name="Katana_Swing_Path" ID="{3B49A166-E10D-461A-AE82-DC39212E0685}">
 													<PointList>
 														<Point>
-															<XPos>-4.06091</XPos>
-															<YPos>11.58191</YPos>
+															<XPos>-0.50761</XPos>
+															<YPos>8.75705</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>27.41117</XPos>
-															<YPos>30.50847</YPos>
+															<XPos>12.18274</XPos>
+															<YPos>23.16384</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -535,8 +636,8 @@
 												<Path2D Name="Katana_Swing_Path_01" ID="{E0425D17-D379-463A-A4C2-E897E9D1D2A4}">
 													<PointList>
 														<Point>
-															<XPos>-6.59898</XPos>
-															<YPos>24.01129</YPos>
+															<XPos>-1.01522</XPos>
+															<YPos>19.49152</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
@@ -731,13 +832,13 @@
 												<Path2D Name="Kunai_Throw_Path" ID="{866BAC2E-9262-4DF7-8938-2B8AE8775C6E}">
 													<PointList>
 														<Point>
-															<XPos>2.03047</XPos>
-															<YPos>2.54238</YPos>
+															<XPos>0</XPos>
+															<YPos>0.84746</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-89.84772</XPos>
+															<XPos>-12.69036</XPos>
 															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
@@ -747,13 +848,13 @@
 												<Path2D Name="Kunai_Throw_Path_02" ID="{2152DB9B-0634-490F-AB7C-505E38C6B1E5}">
 													<PointList>
 														<Point>
-															<XPos>2.53809</XPos>
-															<YPos>2.54238</YPos>
+															<XPos>0</XPos>
+															<YPos>1.97741</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-67.00508</XPos>
+															<XPos>-8.12183</XPos>
 															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
@@ -763,14 +864,14 @@
 												<Path2D Name="Kunai_Throw_Path_01" ID="{9FA46D49-A2F1-4189-89FE-3D28B4CC9064}">
 													<PointList>
 														<Point>
-															<XPos>1.52286</XPos>
+															<XPos>0</XPos>
 															<YPos>1.41244</YPos>
 															<Flags>12</Flags>
 															<Time>0</Time>
 														</Point>
 														<Point>
-															<XPos>-84.26396</XPos>
-															<YPos>97.74011</YPos>
+															<XPos>-10.15228</XPos>
+															<YPos>100</YPos>
 															<Flags>0</Flags>
 															<Time>5000</Time>
 														</Point>
@@ -1534,7 +1635,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Grunt_shot 2 new" ID="{4D0EA507-E76D-4EAE-870F-B77CEF4D3048}" ShortID="213335432">
+										<Sound Name="Grunt_shot 2 new more bass" ID="{09ED5057-0FFA-4948-AF89-3C7DC8CAB57B}" ShortID="995114253">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -1544,60 +1645,16 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}">
+												<AudioFileSource Name="Grunt_shot 2 new more bass" ID="{8F9103D7-EC1C-4021-B68C-F95E35151BF6}">
 													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 2 new.wav</AudioFile>
+													<AudioFile>Grunt_shot 2 new more bass.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="407701186"/>
+														<MediaID ID="479020412"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 2 new" ID="{A8355DF6-66FF-4A16-8456-371FAA1056A1}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grunt_shot 2" ID="{805A4357-76FB-4F56-B59B-88EE122D6A15}" ShortID="1055975644">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}">
-													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="940036930"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 2" ID="{611A3E95-E09E-4620-9C88-42837687B68B}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Grunt_shot 3 new" ID="{334FA087-869C-49B1-9D92-AC1B790019BA}" ShortID="1023099960">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}">
-													<Language>SFX</Language>
-													<AudioFile>Grunt_shot 3 new.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="445833679"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Grunt_shot 3 new" ID="{52C92B11-B2C8-42EF-B8AC-C475E2B0F9FD}" Platform="Linked"/>
+												<ActiveSource Name="Grunt_shot 2 new more bass" ID="{8F9103D7-EC1C-4021-B68C-F95E35151BF6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -2438,6 +2495,7 @@
 										<Value>18</Value>
 									</ValueList>
 								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2454,7 +2512,7 @@
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>8</Value>
+										<Value>7</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -2487,7 +2545,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Bleed11" ID="{6783D34C-DCF6-433A-9A6F-CABC5CA39032}" ShortID="360609784">
+								<Sound Name="Bleed 1st tweak" ID="{E40CA096-9833-4C32-9029-4A83721CEDF2}" ShortID="818941975">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2497,24 +2555,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.203607005141388"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.534282615681234"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 1st tweak" ID="{436B602F-8DDE-4054-9869-35160850FEE7}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed11.wav</AudioFile>
+											<AudioFile>Bleed 1st tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="173493422"/>
+												<MediaID ID="968899651"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed11" ID="{2E64A4DE-D909-445A-BC3A-12A265EBDC26}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 1st tweak" ID="{436B602F-8DDE-4054-9869-35160850FEE7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed22" ID="{C6125E4C-CCA6-4517-BA98-AECFB83A38CD}" ShortID="434089335">
+								<Sound Name="Bleed 2nd tweak" ID="{17C5AA43-6D5F-41CB-9784-225139189569}" ShortID="850591624">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2524,25 +2577,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.114436053984576"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0327240566037736"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.529824068123393"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 2nd tweak" ID="{CA48D84D-0153-45AD-9778-6966B737398C}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed22.wav</AudioFile>
+											<AudioFile>Bleed 2nd tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="290099863"/>
+												<MediaID ID="727363635"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed22" ID="{DEB7CB81-435E-4F53-A41C-FB5D4C0267F7}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 2nd tweak" ID="{CA48D84D-0153-45AD-9778-6966B737398C}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Bleed33" ID="{E373DD61-466F-4006-8C4A-329F9E257B8F}" ShortID="770516473">
+								<Sound Name="Bleed 3rd tweak" ID="{2C946526-E643-4C5F-B944-69BE3226E033}" ShortID="923071950">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
@@ -2552,21 +2599,38 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.489622830976864"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.618400546272493"/>
-											</PropertyList>
+										<AudioFileSource Name="Bleed 3rd tweak" ID="{19553DB7-9166-407E-9562-379878AA7E45}">
 											<Language>SFX</Language>
-											<AudioFile>Bleed33.wav</AudioFile>
+											<AudioFile>Bleed 3rd tweak.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="782221668"/>
+												<MediaID ID="618296949"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Bleed33" ID="{5AE5CFE7-89C9-408C-AE8C-ED3B79DEFF9A}" Platform="Linked"/>
+										<ActiveSource Name="Bleed 3rd tweak" ID="{19553DB7-9166-407E-9562-379878AA7E45}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bleed 4th tweak" ID="{4CC48CF5-EE7B-4E84-B093-69784F3C3F06}" ShortID="880732539">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bleed 4th tweak" ID="{07DC50D5-A19D-4D2B-ADFB-C19C821F104B}">
+											<Language>SFX</Language>
+											<AudioFile>Bleed 4th tweak.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="320974741"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bleed 4th tweak" ID="{07DC50D5-A19D-4D2B-ADFB-C19C821F104B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -2575,7 +2639,7 @@
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>24</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -2595,10 +2659,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2611,20 +2676,8 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="DeathEnemy2" ID="{8178F47E-C766-4C49-99AF-97B5DE2AA3D8}" ShortID="79089761">
+								<Sound Name="EnemyPain" ID="{4479D2F4-4EF2-4D8C-9188-6C7F37608D64}" ShortID="158802916">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{5E1330EF-2AE5-4A14-8DCE-122641D432F4}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-126"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-2</Value>
@@ -2640,38 +2693,100 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy2" ID="{101CAA10-009E-4D29-A152-CA8B9EE98C5C}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.959993612468461"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.317336245813981"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.29048321676088"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain" ID="{83BA33FF-C16E-4FFB-A206-C3180B637CF4}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy2.wav</AudioFile>
+											<AudioFile>EnemyPain.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="961857935"/>
+												<MediaID ID="149103611"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy2" ID="{101CAA10-009E-4D29-A152-CA8B9EE98C5C}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain" ID="{83BA33FF-C16E-4FFB-A206-C3180B637CF4}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="DeathEnemy4" ID="{00896622-05AF-47C2-8058-00D87AA2D0FA}" ShortID="66127128">
+								<Sound Name="EnemyPain1" ID="{CE3DE2E8-2633-429A-99B5-DA9C4F2403BF}" ShortID="82499215">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain1" ID="{4A8590A3-8539-43C3-A719-7260032847CE}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="164023042"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain1" ID="{4A8590A3-8539-43C3-A719-7260032847CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain2" ID="{235B2C07-6509-470A-9BE2-D86B916737D4}" ShortID="216530094">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{AB2AE365-3EF2-45EA-A2DD-8B79D20574AE}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-278"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
 										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain2" ID="{56CBF4D9-E84E-4F34-8971-CE6FB40330E3}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="492423826"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain2" ID="{56CBF4D9-E84E-4F34-8971-CE6FB40330E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain3" ID="{713A1344-6EB9-4A1B-BC9A-8EBEA768DEAC}" ShortID="1045215761">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="EnemyPain3" ID="{1C858241-8570-4326-A59E-CB73D000F511}">
+											<Language>SFX</Language>
+											<AudioFile>EnemyPain3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="240970278"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="EnemyPain3" ID="{1C858241-8570-4326-A59E-CB73D000F511}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="EnemyPain4" ID="{B1E67250-7327-45F6-B9CC-6481FABF10D9}" ShortID="516984336">
+									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>3</Value>
@@ -2687,41 +2802,23 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy4" ID="{80C4E9CD-F3A6-423F-8672-39FC9ED824ED}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.894181829795512"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.462334521819583"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.48505718292439"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain4" ID="{0F3722EA-7744-44D5-80E0-C540FB6D7BA9}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy4.wav</AudioFile>
+											<AudioFile>EnemyPain4.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="183922488"/>
+												<MediaID ID="17528126"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy4" ID="{80C4E9CD-F3A6-423F-8672-39FC9ED824ED}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain4" ID="{0F3722EA-7744-44D5-80E0-C540FB6D7BA9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="DeathEnemy5" ID="{6621B7A3-DD23-44B7-91AB-BD9AACAC1462}" ShortID="1072372698">
+								<Sound Name="EnemyPain5" ID="{5B6BBEAC-AC91-44FA-9394-2090528AA83E}" ShortID="362022058">
 									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{0C372101-D82D-4B2D-B6A7-B5262868E3A4}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-101"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2734,62 +2831,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy5" ID="{4B19C0D3-7BE3-4481-8E70-058783C16FCF}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.992261672442381"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.323145924655359"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.31540759709774"/>
-											</PropertyList>
+										<AudioFileSource Name="EnemyPain5" ID="{2C90AA01-8E48-4159-ABCB-6BFED9DD6359}">
 											<Language>SFX</Language>
-											<AudioFile>DeathEnemy5.wav</AudioFile>
+											<AudioFile>EnemyPain5.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="497480755"/>
+												<MediaID ID="30904411"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy5" ID="{4B19C0D3-7BE3-4481-8E70-058783C16FCF}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="DeathEnemy6" ID="{75BBF08F-9C06-427F-8F6C-C8956721471C}" ShortID="29403091">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-150</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>4</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E6A68D54-4097-465A-B848-20D2663558B4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{82330717-01A5-4D50-AA86-10032B3917E0}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="DeathEnemy6" ID="{EF528AEA-8705-4669-BFFF-E2A62F0BF9ED}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.2290566216689"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.540474136349768"/>
-												<Property Name="TrimEnd" Type="Real64" Value="1.79200455256793"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>DeathEnemy6.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="650916587"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="DeathEnemy6" ID="{EF528AEA-8705-4669-BFFF-E2A62F0BF9ED}" Platform="Linked"/>
+										<ActiveSource Name="EnemyPain5" ID="{2C90AA01-8E48-4159-ABCB-6BFED9DD6359}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

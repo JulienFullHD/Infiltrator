@@ -75,6 +75,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_AC" ID="{12EEB152-CA77-49FD-ACDC-6DD5547F2F60}">
+							<ChildrenList>
+								<Action Name="" ID="{0B6795E5-7F1A-46BA-93A2-C209AA43B6F1}" ShortID="496975991">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AC" ID="{E1974B26-9B5D-4592-A51D-D4B64F8AF24C}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Movement" ID="{431387C3-6C3A-4ECC-A146-EFBC335239D9}" ShortID="394829484">
@@ -181,9 +192,6 @@
 						<Event Name="Enemy_Hit" ID="{89B608FC-628E-479A-BAF0-D9B7827CDC0D}">
 							<ChildrenList>
 								<Action Name="" ID="{43DCAF91-9CEA-4601-BF76-E3AE0ED2C5DB}" ShortID="134016738">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.2"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Grunt_Pain" ID="{D73D8FDE-1037-4B65-9F8D-72F861E6C735}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>

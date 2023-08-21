@@ -22,6 +22,7 @@ namespace AK
         static const AkUniqueID GRUNT_BURST = 501485854U;
         static const AkUniqueID KATANA_SWING = 2725920228U;
         static const AkUniqueID KUNAI_THROW = 1445849350U;
+        static const AkUniqueID PLAY_AC = 2380299862U;
         static const AkUniqueID PLAY_AMBIENCEWIND = 4079089048U;
         static const AkUniqueID PLAY_BILLBOARDNOISE = 909711491U;
         static const AkUniqueID PLAY_FS_ENEMY = 857770058U;
