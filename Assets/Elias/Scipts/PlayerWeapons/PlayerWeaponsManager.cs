@@ -91,11 +91,13 @@ public class PlayerWeaponsManager : MonoBehaviour
             Invoke(nameof(AttackSword), swordAttackCountdownMS);
         }
 
-        if (!PauseMenu.isPaused && Input.GetKeyDown(UserSettings.Instance.KeybindSmokebomb) && canThrowSmokebomb)
-        {
-            canThrowSmokebomb = false;
-            ThrowSmoke();
-        }
+        // Smokebomb as an available weapon has been removed from the game
+        //if (!PauseMenu.isPaused && Input.GetKeyDown(UserSettings.Instance.KeybindSmokebomb) && canThrowSmokebomb)
+        //{
+        //    canThrowSmokebomb = false;
+        //    ThrowSmoke();
+        //}
+        
     }
 
     /// <summary>
