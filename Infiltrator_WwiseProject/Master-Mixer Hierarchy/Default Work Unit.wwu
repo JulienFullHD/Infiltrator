@@ -19,11 +19,11 @@
 					<ChildrenList>
 						<Bus Name="Environment" ID="{5E3D4B3D-ABD4-440D-A57D-B9B0BC888196}">
 							<PropertyList>
-								<Property Name="MaxDuckVolume" Type="Real64" Value="-25"/>
-								<Property Name="RecoveryTime" Type="Real64" Value="0.75"/>
+								<Property Name="MaxDuckVolume" Type="Real64" Value="-25.5"/>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.25"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>4</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -66,28 +66,12 @@
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}"/>
-									<DuckingParam>
-										<Volume>-3</Volume>
-										<FadeInTime>0.800000011920929</FadeInTime>
-										<FadeOutTime>0.200000002980232</FadeOutTime>
-										<FadeCurve>FadeLog2</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
 						</Bus>
 						<Bus Name="Music" ID="{7A6FE371-043C-41D2-BEF5-EA6C0AD40098}">
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="1"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
@@ -132,6 +116,23 @@
 						<Bus Name="Reverbs" ID="{CD938CE3-2FF6-45FA-960A-389380CFF8D7}">
 							<ChildrenList>
 								<AuxBus Name="Open_field" ID="{81F0F66D-6C46-4168-B501-637E7367C4FD}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
@@ -139,6 +140,23 @@
 									</ReferenceList>
 								</AuxBus>
 								<AuxBus Name="Room_Medium_HighAbsorbtion" ID="{159E4EC6-2057-4181-87F5-92D6FE4FD94B}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>6</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 											<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C0261005-B784-DB80-7BC1-6FE4CC0C3F09}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EA098503-E45F-263C-6B72-D5459230206D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -91,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{966E323A-262F-6CE6-2679-AA26C62725F1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2D0B003F-8271-F5A4-AD90-33629389DE08}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -519,5 +519,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{815082AA-A5B4-01E5-2B90-002AFF0E22B9}</FileHash>
+	<FileHash>{4AAC95B9-C409-9097-B04E-4D3F5D5EF2C6}</FileHash>
 </SoundBanksInfo>
