@@ -26,6 +26,9 @@ public class TextHeartbeat : MonoBehaviour
         defaultSize = textField.fontSize;
     }
 
+    /// <summary>
+    /// Pulsates the text using Animation Curves
+    /// </summary>
     private void Update()
     {
         timer += Time.unscaledDeltaTime;

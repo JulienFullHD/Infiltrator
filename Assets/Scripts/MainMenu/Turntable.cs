@@ -9,6 +9,9 @@ public class Turntable : MonoBehaviour
     [ReadOnly, SerializeField] private Vector3 rotate;
     private Vector3 defaultRotation;
 
+    /// <summary>
+    /// Sets start values
+    /// </summary>
     private void Start()
     {
         defaultRotation = transform.eulerAngles;
@@ -23,12 +26,18 @@ public class Turntable : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Reset rotations to default values
+    /// </summary>
     public void ResetRotation()
     {
         rotate.y = defaultRotation.y;
         transform.localEulerAngles = rotate;
     }
 
+    /// <summary>
+    /// Rotates gameObject
+    /// </summary>
     private void Update()
     {
         if (rotationIsLocal)

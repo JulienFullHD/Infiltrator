@@ -12,6 +12,10 @@ public class AbilityUI : MonoBehaviour
     [SerializeField] private GameObject kunaiTwoAmmo;
     [SerializeField] private GameObject kunaiThreeAmmo;
 
+    /// <summary>
+    /// Changes the displayed ammo UI based on the amount of Kunais left
+    /// </summary>
+    /// <param name="ammo">Amount of Kunais left</param>
     public void ChangeKunaiAmmoUI(int ammo)
     {
         kunaiNoAmmo.SetActive(false);
@@ -46,15 +50,22 @@ public class AbilityUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI DashCooldownText;
     [ReadOnly, SerializeField] public float dashCooldownTimer;
 
-    public void StartDashCooldown(float timer)
+    /// <summary>
+    /// Starts a cooldown before the next dash is possible
+    /// </summary>
+    /// <param name="seconds">Time in seconds</param>
+    public void StartDashCooldown(float seconds)
     {
-        dashCooldownTimer = timer;
+        dashCooldownTimer = seconds;
         dashIsOnCooldown = true;
 
         DashReady.SetActive(false);
         DashOnCooldown.SetActive(true);
     }
 
+    /// <summary>
+    /// Makes dash available and updates the UI to reflect it
+    /// </summary>
     private void StopDashingCooldown()
     {
         dashIsOnCooldown = false;
@@ -63,6 +74,7 @@ public class AbilityUI : MonoBehaviour
         DashOnCooldown.SetActive(false);
     }
     #endregion
+    
     #region Smoke
     [Header("Smoke Settings")]
     [ReadOnly, SerializeField] private bool smokeIsOnCooldown = false;
@@ -71,15 +83,22 @@ public class AbilityUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI SmokeCooldownText;
     [ReadOnly, SerializeField] public float smokeCooldownTimer;
 
-    public void StartSmokeCooldown(float timer)
+    /// <summary>
+    /// Starts a cooldown before the next smokebomb is possible
+    /// </summary>
+    /// <param name="seconds">Time in seconds</param>
+    public void StartSmokeCooldown(float seconds)
     {
-        smokeCooldownTimer = timer;
+        smokeCooldownTimer = seconds;
         smokeIsOnCooldown = true;
 
         SmokeReady.SetActive(false);
         SmokeOnCooldown.SetActive(true);
     }
 
+    /// <summary>
+    /// Makes dash available and updates the UI to reflect it
+    /// </summary>
     private void StopSmokeCooldown()
     {
         smokeIsOnCooldown = false;
@@ -89,6 +108,9 @@ public class AbilityUI : MonoBehaviour
     }
     #endregion
 
+    /// <summary>
+    /// Counts down cooldown timers for dash and smokebomb
+    /// </summary>
     private void Update()
     {
         if (dashIsOnCooldown)

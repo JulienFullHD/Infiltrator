@@ -43,6 +43,9 @@ public class Dashing : MonoBehaviour
         canDash = true;
     }
 
+    /// <summary>
+    /// Test every frame if the dash button has been pressed
+    /// </summary>
     private void Update()
     {
         if (!PauseMenu.isPaused && Input.GetKey(UserSettings.Instance.KeybindDash) && canDash)
@@ -57,6 +60,9 @@ public class Dashing : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Start the dash procedure
+    /// </summary>
     private void Dash()
     {
         StartPhasing();
@@ -81,6 +87,9 @@ public class Dashing : MonoBehaviour
         Invoke(nameof(ResetDash), dashDuration);
     }
 
+    /// <summary>
+    /// Sets the player velocity after a dash to "keep" some momentum
+    /// </summary>
     private void DelayedDashForce()
     {
         if (resetVelocity)
@@ -91,6 +100,9 @@ public class Dashing : MonoBehaviour
         rb.AddForce(delayedForceToApply, ForceMode.Impulse);
     }
 
+    /// <summary>
+    /// Stops the dash and reenables gravity
+    /// </summary>
     private void ResetDash()
     {
         movementManager.isDashing = false;
@@ -101,11 +113,17 @@ public class Dashing : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Makes dash ability useable again
+    /// </summary>
     private void AllowDash()
     {
         canDash = true;
     }
 
+    /// <summary>
+    /// Start the phasing procedure to allow phasing through enemies while dashing
+    /// </summary>
     private void StartPhasing()
     {
         collisionObject.layer = LayerMask.NameToLayer(layerName: "PlayerDash");
@@ -114,6 +132,9 @@ public class Dashing : MonoBehaviour
         Invoke(nameof(StopPhasing), phaseTimer);
     }
 
+    /// <summary>
+    /// Stop phasing to collide with enemies again
+    /// </summary>
     private void StopPhasing()
     {
         collisionObject.layer = LayerMask.NameToLayer(layerName: "Player");
@@ -132,6 +153,10 @@ public class Dashing : MonoBehaviour
         enemiesHitPerDash = 0;
     }
 
+    /// <summary>
+    /// Test to hit enemies while phasing
+    /// </summary>
+    /// <param name="other"></param>
     public void OnDashTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))

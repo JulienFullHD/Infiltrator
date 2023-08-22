@@ -96,26 +96,11 @@ public class PlayerWeaponsManager : MonoBehaviour
             canThrowSmokebomb = false;
             ThrowSmoke();
         }
-
-        #region FOR_TESTING_ONLY
-        //FOR DEBUG ONLY; ENABLES FULL AUTO KUNAI SPRAY
-        if (Input.GetKey(KeyCode.B))
-        {
-            AddKunai();
-            ThrowKunai();
-        }
-
-        //Give to 3 Kunais
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            AddKunai();
-            AddKunai();
-            AddKunai();
-        }
-        #endregion
-
     }
 
+    /// <summary>
+    /// Play sword animation and check for hits
+    /// </summary>
     private void AttackSword()
     {
         slashEffect.Play();
@@ -136,6 +121,9 @@ public class PlayerWeaponsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Throw a smokebomb to stun enemies
+    /// </summary>
     private void ThrowSmoke()
     {
         abilityUI.StartSmokeCooldown(smokebombAttackCooldownMS / 1000);
@@ -148,6 +136,9 @@ public class PlayerWeaponsManager : MonoBehaviour
         mySmokebomb.Post(gameObject);
     }
 
+    /// <summary>
+    /// Throw a Kunai 
+    /// </summary>
     private void ThrowKunai()
     {
         //Small amount of Kunais does not warrant use of pooling
@@ -173,24 +164,29 @@ public class PlayerWeaponsManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add a Kunai if possible
+    /// </summary>
     public void AddKunai()
     {
         if(kunaiAmount < 3)
             KunaiAmount++;
     }
 
+    /// <summary>
+    /// Add score, add it to combo, deal damage to enemies and display hitmarker
+    /// </summary>
+    /// <param name="hitType">Type of weapon</param>
+    /// <param name="enemyGameObject">Reference to enemy</param>
     public void HitEnemy(HitType hitType, GameObject enemyGameObject)
     {
         //Tell enemy they were hit, and what by (Smokebomb; no damage, only stun)
         //Tell score manager about the hit
-
-        Debug.Log($"HitEnemy({hitType}, {enemyGameObject.name})");
-        
+                
         if(hitType == HitType.Kunai ||
            hitType == HitType.Sword ||
            hitType == HitType.Dash)
         {
-            Debug.Log(enemyGameObject.transform.parent.name);
             if(enemyGameObject.transform.parent.TryGetComponent<AI_HPSystem>(out AI_HPSystem aI_HPSystem))
             {
                 aI_HPSystem.TakeDamage(1);
@@ -206,11 +202,15 @@ public class PlayerWeaponsManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Hide UI Hitmarker
+    /// </summary>
     private void HideHitmarker()
     {
         hitmarkerObject.SetActive(false);
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         if(Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, 2000f, ~LayerMask.GetMask("Player","Kunai")) && showGizmo)
@@ -229,7 +229,7 @@ public class PlayerWeaponsManager : MonoBehaviour
             Gizmos.matrix = Matrix4x4.identity;
         }
     }
-
+#endif
 
     private void AllowMelee()
     {
@@ -240,11 +240,6 @@ public class PlayerWeaponsManager : MonoBehaviour
     {
         canThrowSmokebomb = true;
     }
-
-    #region UI
-    
-
-    #endregion
 }
 
 public enum HitType

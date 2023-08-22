@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Debug camera only used for initial level testing
 public class DebugCam : MonoBehaviour
 {
     [Header("Camera settings")]

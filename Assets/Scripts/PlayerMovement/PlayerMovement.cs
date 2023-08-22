@@ -65,9 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
-
-private void Start()
+    private void Start()
     {
         canJump = true;
     }
@@ -98,6 +96,9 @@ private void Start()
         }
     }   
 
+    /// <summary>
+    /// Check if player is grounded or not
+    /// </summary>
     private void GroundCheck()
     {
         isGroundedLastFrame = isGrounded;
@@ -122,6 +123,9 @@ private void Start()
         //isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + extraRaycastDistance, groundLayers);
     }
 
+    /// <summary>
+    /// Allow jumping for a short time after losing grounded status
+    /// </summary>
     private void CoyoteTime()
     {
         if (isGrounded)
@@ -150,6 +154,9 @@ private void Start()
         }
     }
     
+    /// <summary>
+    /// Removes drag when in the air
+    /// </summary>
     private void DragControl()
     {
         if (isGrounded && !isDashing)
@@ -162,6 +169,9 @@ private void Start()
         }
     }
 
+    /// <summary>
+    /// Test for jump input and movement keys
+    /// </summary>
     private void Inputs()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -173,6 +183,10 @@ private void Start()
             Jump();
         }
     }
+
+    /// <summary>
+    /// Limits the maximum rigidbody speed while in different states
+    /// </summary>
     private void SpeedControl()
     {
         if (isDashing)
@@ -233,6 +247,10 @@ private void Start()
         }
     }
 
+    /// <summary>
+    /// Smoothly change the maximum rigidbody speed to not make the player suddenly stop
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpeedLerp()
     {
         float time = 0;
@@ -252,6 +270,9 @@ private void Start()
         isDashing = false;
     }
 
+    /// <summary>
+    /// Jump into the air
+    /// </summary>
     private void Jump()
     {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
@@ -262,6 +283,9 @@ private void Start()
         myJump.Post(gameObject); //Wwise
     }
 
+    /// <summary>
+    /// Allow jumping
+    /// </summary>
     public void ResetJump()
     {
         canJump = true;
@@ -279,6 +303,9 @@ private void Start()
         Move();
     }
 
+    /// <summary>
+    /// Moves player using Forces
+    /// </summary>
     private void Move()
     {        
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;

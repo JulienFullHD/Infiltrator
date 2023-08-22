@@ -25,6 +25,9 @@ public class PlayerCamera : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Rotates the camera with vertical constraints
+    /// </summary>
     void Update()
     {
         if (PauseMenu.isPaused)

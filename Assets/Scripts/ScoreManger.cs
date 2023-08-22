@@ -59,6 +59,9 @@ public class ScoreManger : MonoBehaviour
         ResetComboValues();
     }
 
+    /// <summary>
+    /// Reset values to default
+    /// </summary>
     private void ResetComboValues()
     {
         scoreTypeValues.Clear();
@@ -67,6 +70,10 @@ public class ScoreManger : MonoBehaviour
         currentComboScore = 0;
     }
 
+    /// <summary>
+    /// Start a combo and the timer
+    /// </summary>
+    /// <param name="playSound">Should a sound be played</param>
     private void StartCombo(bool playSound = true)
     {
         if (fadeAnimationRoutine is not null)
@@ -87,6 +94,12 @@ public class ScoreManger : MonoBehaviour
         comboIsCounting = true;
     }
 
+    /// <summary>
+    /// Play UI Animation of Combo-Counter merging with the score display
+    /// </summary>
+    /// <param name="duration">Duration of merge animation</param>
+    /// <param name="comboScore">Current combo score</param>
+    /// <returns></returns>
     private IEnumerator ComboFade(float duration, int comboScore)
     {
         Color textColorOriginal = textComboScore.color;
@@ -124,6 +137,10 @@ public class ScoreManger : MonoBehaviour
         textMainScore.text = currentMainScore.ToString();
     }
 
+    /// <summary>
+    /// Stops a combo, resets values and prepares for the next combo
+    /// </summary>
+    /// <param name="playSound"></param>
     private void StopCombo(bool playSound = true)
     {
         fadeAnimationRoutine = StartCoroutine(ComboFade(comboAddFadeTimer, currentComboScore));
@@ -138,6 +155,9 @@ public class ScoreManger : MonoBehaviour
         comboIsCounting = false;
     }
 
+    /// <summary>
+    /// Forcefully stops a combo and ends the animation instantly
+    /// </summary>
     public void ForceStopCombo()
     {
         if (fadeAnimationRoutine is not null)
@@ -148,12 +168,20 @@ public class ScoreManger : MonoBehaviour
         currentMainScore += currentComboScore;
     }
 
+    /// <summary>
+    /// Add a score type to the combo list
+    /// </summary>
+    /// <param name="scoreType">Type of score</param>
     public void AddScoreType(ScoreType scoreType)
     {
         AddToLastThreeHits(scoreType: scoreType);
         AddScoreToList(scoreType: scoreType);
     }
 
+    /// <summary>
+    /// Convert a hit type to a score type
+    /// </summary>
+    /// <param name="hitType"></param>
     public void HitToScore(HitType hitType)
     {
         switch (hitType)
@@ -178,6 +206,10 @@ public class ScoreManger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Add type of score to the last three hits list
+    /// </summary>
+    /// <param name="scoreType"></param>
     private void AddToLastThreeHits(ScoreType scoreType)
     {
         if(lastThreeHits.Count >= 3)
@@ -188,6 +220,10 @@ public class ScoreManger : MonoBehaviour
         TestForBonus();
     }
 
+    /// <summary>
+    /// Add a score to the combo list
+    /// </summary>
+    /// <param name="scoreType">Type of score</param>
     private void AddScoreToList(ScoreType scoreType)
     {
         if(!comboIsCounting)
@@ -214,6 +250,10 @@ public class ScoreManger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Adds points to the combo score based on the score type
+    /// </summary>
+    /// <param name="scoreType">Type of score</param>
     private void CalculateScore(ScoreType scoreType)
     {
         switch (scoreType)
@@ -253,6 +293,9 @@ public class ScoreManger : MonoBehaviour
         textComboScore.text = currentComboScore.ToString();
     }
 
+    /// <summary>
+    /// Counts down combo timer
+    /// </summary>
     private void Update()
     {
         if (comboIsCounting && !LevelManager.Instance.isWon)
@@ -270,6 +313,10 @@ public class ScoreManger : MonoBehaviour
         TestForBonus();
     }
 
+    /// <summary>
+    /// Test for bonus scores based on the last three score types
+    /// </summary>
+    /// <param name="playSound"></param>
     private void TestForBonus(bool playSound = true)
     {
         // Hattrick
@@ -296,6 +343,9 @@ public class ScoreManger : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Clear last three hits list to prepare for a new bonus
+    /// </summary>
     private void ResetLastThreeHits()
     {
         lastThreeHits.Clear();
@@ -304,11 +354,20 @@ public class ScoreManger : MonoBehaviour
         lastThreeHits.Add(ScoreType.UNDEFINED);
     }
 
+    /// <summary>
+    /// Checks if achieved score type is a damaging weapon
+    /// </summary>
+    /// <param name="scoreType">Type of score</param>
+    /// <returns></returns>
     private bool ScoreTypeIsWeapon(ScoreType scoreType)
     {
         return scoreType == ScoreType.Kunai || scoreType == ScoreType.Sword || scoreType == ScoreType.Dash;
     }
 
+    /// <summary>
+    /// Returns current score, not counting the current combo
+    /// </summary>
+    /// <returns></returns>
     public int GetScore()
     {
         return currentMainScore;

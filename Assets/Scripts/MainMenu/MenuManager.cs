@@ -18,6 +18,10 @@ public class MenuManager : MonoBehaviour
         OpenMenu(menuArray[0]);
     }
 
+    /// <summary>
+    /// Shows a new menu and hides all other shown menues
+    /// </summary>
+    /// <param name="menu">Menu script</param>
     public void OpenMenu(Menu menu)
     {
         for (int i = 0; i < menuArray.Length; i++)
@@ -30,15 +34,28 @@ public class MenuManager : MonoBehaviour
         menu.Open();
     }
 
+    /// <summary>
+    /// Hides the menu
+    /// </summary>
+    /// <param name="menu">Menu script</param>
     public void CloseMenu(Menu menu)
     {
         menu.Close();
     }
 
+
+    /// <summary>
+    /// Exits out the Application
+    /// </summary>
     public void ExitGame()
     {
         Application.Quit();
     }
+
+    /// <summary>
+    /// Loads the scene via its name as a string
+    /// </summary>
+    /// <param name="sceneName">Scene name</param>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);

@@ -20,6 +20,9 @@ public class UserSettings : MonoBehaviour
         LoadAllPrefs();
     }
 
+    /// <summary>
+    /// Load all PlayerPref values into game values
+    /// </summary>
     public void LoadAllPrefs()
     {
         LoadPrefsAudio();
@@ -28,6 +31,10 @@ public class UserSettings : MonoBehaviour
         ResetBrokenValues();
     }
 
+
+    /// <summary>
+    /// Save all game values into PlayerPrefs
+    /// </summary>
     public void SaveAllPrefs()
     {
         SetPrefsAudio();
@@ -36,6 +43,9 @@ public class UserSettings : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    /// <summary>
+    /// If Settings end up broken, reset to default values
+    /// </summary>
     private void ResetBrokenValues()
     {
         if (keybindKunai == KeyCode.None)
@@ -60,6 +70,9 @@ public class UserSettings : MonoBehaviour
     [ReadOnly, SerializeField] private float volumeEffects;
     [ReadOnly, SerializeField] private float volumeAmbience;
 
+    /// <summary>
+    /// Load Audio related PlayerPref values
+    /// </summary>
     public void LoadPrefsAudio()
     {
         volumeMaster = PlayerPrefs.GetFloat("VolumeMaster", 0.6f);
@@ -68,6 +81,10 @@ public class UserSettings : MonoBehaviour
         volumeEffects = PlayerPrefs.GetFloat("VolumeEffects", 1f);
         volumeAmbience = PlayerPrefs.GetFloat("VolumeAmbience", 1f);
     }
+    
+    /// <summary>
+    /// Set Audio related PlayerPref values
+    /// </summary>
     public void SetPrefsAudio()
     {
         PlayerPrefs.SetFloat("VolumeMaster", volumeMaster);
@@ -138,7 +155,6 @@ public class UserSettings : MonoBehaviour
     }
     #endregion
 
-
     #region Graphics
     [Header("Graphics")]
     [SerializeField] private QualityLevels graphicsQuality;
@@ -149,10 +165,17 @@ public class UserSettings : MonoBehaviour
         Low = 2
     }
 
+    /// <summary>
+    /// Load Graphics related PlayerPref values
+    /// </summary>
     public void LoadPrefsGraphics()
     {
         graphicsQuality = (QualityLevels)PlayerPrefs.GetInt("GraphicsQuality", 0);
     }
+
+    /// <summary>
+    /// Set Graphics related PlayerPref values
+    /// </summary>
     public void SetPrefsGraphics()
     {
         PlayerPrefs.SetInt("GraphicsQuality", (int)graphicsQuality);
@@ -171,7 +194,6 @@ public class UserSettings : MonoBehaviour
     }
     #endregion
 
-
     #region Controls
     [Header("Controls")]
     [SerializeField] private float sensitivityVertical;
@@ -180,6 +202,9 @@ public class UserSettings : MonoBehaviour
     [SerializeField] private KeyCode keybindSmokebomb;
     [SerializeField] private KeyCode keybindDash;
 
+    /// <summary>
+    /// Load Control related PlayerPref values
+    /// </summary>
     public void LoadPrefsControls()
     {
         sensitivityVertical = PlayerPrefs.GetFloat("ControlsSensitivityVertical", 1);
@@ -188,6 +213,10 @@ public class UserSettings : MonoBehaviour
         keybindSmokebomb = (KeyCode)PlayerPrefs.GetInt("KeybindSmokebomb", (int)KeyCode.F);
         keybindDash = (KeyCode)PlayerPrefs.GetInt("KeybindDash", (int)KeyCode.LeftShift);
     }
+    
+    /// <summary>
+    /// Set Control related PlayerPref values
+    /// </summary>
     public void SetPrefsControls()
     {
         PlayerPrefs.SetFloat("ControlsSensitivityVertical", sensitivityVertical);
@@ -276,6 +305,9 @@ public class UserSettings : MonoBehaviour
     }
     #endregion
 
+    /// <summary>
+    /// Save all set PlayerPref values to system
+    /// </summary>
     private void OnApplicationQuit()
     {
         SaveAllPrefs();

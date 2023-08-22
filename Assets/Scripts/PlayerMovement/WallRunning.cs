@@ -68,12 +68,19 @@ public class WallRunning : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Check for walls left and right of player
+    /// </summary>
     private void CheckForWall()
     {
         wallRightExists = Physics.Raycast(transform.position, orientation.right, out rightWallhit, wallCheckDistance, wallLayers);
         wallLeftExists = Physics.Raycast(transform.position, -orientation.right, out leftWallhit, wallCheckDistance, wallLayers);
     }
 
+    /// <summary>
+    /// Check if player is in the air
+    /// </summary>
+    /// <returns></returns>
     private bool InAir()
     {
         //Better solution lol
@@ -83,6 +90,9 @@ public class WallRunning : MonoBehaviour
         return !Physics.Raycast(transform.position, Vector3.down, minJumpHeight, groundLayers);
     }
 
+    /// <summary>
+    /// Get movement inputs
+    /// </summary>
     private void HandleInput()
     {
         // Framerate indepentant input values for movement keys ASWD
@@ -90,6 +100,9 @@ public class WallRunning : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
     }
 
+    /// <summary>
+    /// Start, continue or stop the wallrunning procedure based on conditions
+    /// </summary>
     private void HandleWallrunState()
     {        
         // Needs to touch wall, press forward and be in air
@@ -163,6 +176,9 @@ public class WallRunning : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Initiate a wallrun
+    /// </summary>
     private void StartWallRun()
     {
         movementManager.ResetJump();
@@ -177,6 +193,9 @@ public class WallRunning : MonoBehaviour
         wallrunTimer = maxWallrunTime;
     }
     
+    /// <summary>
+    /// Continue a wallrun along a wall
+    /// </summary>
     private void WallRunningMovement()
     {
         // Use Gravity while initially going upwards
@@ -218,6 +237,9 @@ public class WallRunning : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Jump away from the wall
+    /// </summary>
     private void WallJump()
     {
         exitingWall = true;
@@ -231,6 +253,9 @@ public class WallRunning : MonoBehaviour
         rb.AddForce(forceToApply, ForceMode.Impulse);
     }
 
+    /// <summary>
+    /// Stop a wallrun
+    /// </summary>
     private void StopWallRun()
     {
         rb.useGravity = true;

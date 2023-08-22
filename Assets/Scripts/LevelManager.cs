@@ -60,12 +60,20 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Delay the winning sequence to let other code finish first
+    /// </summary>
+    /// <param name="seconds">Delay duration in seconds</param>
+    /// <returns></returns>
     private IEnumerator WinInSeconds(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         Win();
     }
 
+    /// <summary>
+    /// Winning sequence
+    /// </summary>
     public void Win()
     {
         Time.timeScale = 0;

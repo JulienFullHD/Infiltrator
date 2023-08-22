@@ -14,6 +14,11 @@ public class Smokebomb : MonoBehaviour
     [Header("Wwise Event")]     //Wwise
     public AK.Wwise.Event mySmokebombPop;     //Wwise
 
+    /// <summary>
+    /// Launch smokebomb using parameter forces
+    /// </summary>
+    /// <param name="_launchSpeed">Speed of bomb launch</param>
+    /// <param name="_weaponManager">Reference for possible hits</param>
     public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
         weaponManager = _weaponManager;
@@ -46,6 +51,7 @@ public class Smokebomb : MonoBehaviour
         Destroy(gameObject, durationMS/1000);
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -54,4 +60,5 @@ public class Smokebomb : MonoBehaviour
             Gizmos.DrawWireCube(transform.position, stunHitbox);
         }
     }
+#endif
 }

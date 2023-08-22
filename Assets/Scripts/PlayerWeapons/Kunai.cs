@@ -11,6 +11,11 @@ public class Kunai : MonoBehaviour
     [SerializeField] private PlayerWeaponsManager weaponManager;
     private Vector3 LastPos;
 
+    /// <summary>
+    /// Set Kunai velocity and references in case of a hit
+    /// </summary>
+    /// <param name="_launchSpeed">Speed of Kunai</param>
+    /// <param name="_weaponManager">Reference in case of a hit</param>
     public void Init(float _launchSpeed, PlayerWeaponsManager _weaponManager)
     {
         weaponManager = _weaponManager;
@@ -19,6 +24,10 @@ public class Kunai : MonoBehaviour
         rb.freezeRotation = true;
     }
 
+    /// <summary>
+    /// Check for any enemies between new position and last frames position
+    /// More reliable than checking for collisions with enemies
+    /// </summary>
     void FixedUpdate()
     {
         if (Physics.Linecast(transform.position, LastPos,out RaycastHit collision))
@@ -27,15 +36,20 @@ public class Kunai : MonoBehaviour
             {
                 weaponManager.HitEnemy(hitType: HitType.Kunai, enemyGameObject: collision.transform.gameObject);
 
-                rb.velocity = Vector3.zero;
-                rb.angularVelocity = Vector3.zero;
-                rb.constraints = RigidbodyConstraints.FreezeAll;
+                Destroy(gameObject);
+                //rb.velocity = Vector3.zero;
+                //rb.angularVelocity = Vector3.zero;
+                //rb.constraints = RigidbodyConstraints.FreezeAll;
             }
         }
         LastPos = transform.position;
 
     }
 
+    /// <summary>
+    /// Test for world or enemy collisions
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log($"KUNAI HIT: {collision.gameObject.name}");
@@ -56,6 +70,11 @@ public class Kunai : MonoBehaviour
         //StartCoroutine(VanishingSequence(5));
     }
 
+    /// <summary>
+    /// Makes the Kunai slowly fade out of existence
+    /// </summary>
+    /// <param name="secondsToVanish">Duration in seconds</param>
+    /// <returns></returns>
     private IEnumerator VanishingSequence(float secondsToVanish)
     {
         Color temp = meshRenderer.material.color;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Debug Script to draw lines between objects
+// Used to visualise the camera path in the main menu scene
 public class DebugGizmoLine : MonoBehaviour
 {
     public Transform drawLineTo;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+// Script to let the main menu fade in from black
 public class FadeIn : MonoBehaviour
 {
     [SerializeField] private CanvasGroup canvas;
@@ -17,6 +18,9 @@ public class FadeIn : MonoBehaviour
         timerDuration = 0;
     }
 
+    /// <summary>
+    /// Makes the black overlay fade away over time
+    /// </summary>
     private void Update()
     {
         timerDelay += Time.deltaTime;

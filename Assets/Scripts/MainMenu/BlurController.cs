@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+/// <summary>
+/// Unused. Intended to make the background behind UI blurry.
+/// </summary>
 public class BlurController : MonoBehaviour
 {
     public static BlurController Instance;
