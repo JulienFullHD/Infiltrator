@@ -128,9 +128,9 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
   showCirrusCloudsControls: 0
   show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: 0.25998765, y: 0.15858828}
-  cloudFlatDetailAnim: {x: -0.74978745, y: 0.8222728}
-  cirrusAnim: {x: 0.12963055, y: 0.078941874}
+  cloudFlatBaseAnim: {x: 0.054302845, y: 0.83736163}
+  cloudFlatDetailAnim: {x: 0.22182743, y: 0.21958418}
+  cirrusAnim: {x: -0.97318095, y: -0.58168024}
 --- !u!114 &-1033463005042072443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1622,7 @@ MonoBehaviour:
     temperatureWeatherMod: 0
     temperatureCustomMod: 0
     temperatureChangingSpeed: 0.1
-    wetness: 1
+    wetness: 0.9999998
     wetnessTarget: 1
     snow: 0
     snowTarget: 0
@@ -1821,11 +1821,11 @@ MonoBehaviour:
     cloudsTravelSpeed: 0.627
   settingsQuality:
     volumetricClouds: 1
-    downsampling: 2
+    downsampling: 4
     stepsLayer1: 128
     stepsLayer2: 64
     blueNoiseIntensity: 2
-    reprojectionBlendTime: 2
+    reprojectionBlendTime: 3
     lodDistance: 0.7
   preset: {fileID: 11400000, guid: 4b3879673bba3ff488a4b539b4de69b7, type: 2}
   showGlobalControls: 1
@@ -1836,10 +1836,10 @@ MonoBehaviour:
   showDensityControls: 1
   showTextureControls: 0
   showWindControls: 1
-  cloudAnimLayer1: {x: 0.0858826, y: 0.12339205, z: -0.35262743}
+  cloudAnimLayer1: {x: 0.983071, y: -0.5372295, z: -0.62426454}
   cloudAnimLayer2: {x: 0, y: 0, z: 0}
-  cloudAnimNonScaledLayer1: {x: 5.872321, y: -5.8376884, z: -256.7836}
-  cloudAnimNonScaledLayer2: {x: -5.5824976, y: 5.5499964, z: -257.14774}
+  cloudAnimNonScaledLayer1: {x: 6.3330083, y: -6.1752496, z: -279.76443}
+  cloudAnimNonScaledLayer2: {x: -6.0431848, y: 5.8875575, z: -280.12857}
   weatherMap: {fileID: 0}
 --- !u!114 &3607125083166130530
 MonoBehaviour:
@@ -2026,9 +2026,9 @@ MonoBehaviour:
   showSaveLoad: 0
   active: 1
   Settings:
-    volumetrics: 1
+    volumetrics: 0
     steps: 32
-    quality: 1
+    quality: 0
     scattering: 0.39
     extinction: 0.232
     anistropy: 0.105
@@ -2082,6 +2082,53 @@ MonoBehaviour:
   showFogControls: 1
   showVolumetricsControls: 0
   fogLights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2572,11 +2619,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456bf221b186fde4096dcf2c1841b35a, type: 3}
   m_Name: Quality Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
+  showModuleInspector: 1
   showSaveLoad: 0
   active: 1
   Settings:
-    defaultQuality: {fileID: 11400000, guid: 60e887b1524da0a4a8f1318ef102e22a, type: 2}
+    defaultQuality: {fileID: 11400000, guid: a002704085c17f1439758fcee25df529, type: 2}
     Qualities:
     - {fileID: 11400000, guid: a002704085c17f1439758fcee25df529, type: 2}
     - {fileID: 11400000, guid: 2e0aaa075bca92245a9e8300b7eace9c, type: 2}

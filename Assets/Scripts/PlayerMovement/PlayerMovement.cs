@@ -74,12 +74,6 @@ private void Start()
 
     private void Update()
     {
-        if (isGrounded)
-            Debug.Log("Grounded");
-        else
-            Debug.Log("In Air");
-
-
         GroundCheck();
         CoyoteTime();
         Inputs();

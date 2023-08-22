@@ -52,9 +52,6 @@ public class WallRunning : MonoBehaviour
 
     private void Update()
     {
-        if (movementManager.isWallrunning)
-            Debug.Log("Wallrunning");
-
         HandleInput();
         CheckForWall();
         HandleWallrunState();        
@@ -211,7 +208,7 @@ public class WallRunning : MonoBehaviour
             rb.velocity = new Vector3(rb.velocity.x, wallrunUpwardsForce, rb.velocity.z);
         }
 
-        // Push against wall to allow wallrunning at reflex angles (>180°)
+        // Push against wall to allow wallrunning at reflex angles (>180ï¿½)
         if (!(wallLeftExists && horizontalInput > 0) || !(wallRightExists && horizontalInput < 0))
         {
             rb.AddForce(-wallSurfaceNormal * 100, ForceMode.Force);
