@@ -10,7 +10,6 @@ public class Player_HPSystem : MonoBehaviour
     public int HitPoints = 10;
     [SerializeField]private GhostRunner ghostRunner;
     public AK.Wwise.Event myDeath;
-    [SerializeField] private AK.Wwise.Event StopAllBuFlights;
   
     
     public void TakeDamage(int _damage)
@@ -18,12 +17,9 @@ public class Player_HPSystem : MonoBehaviour
         HitPoints -= _damage;
         if(HitPoints <= 0)
         {
-
             myDeath.Post(gameObject);
             ghostRunner.StopRun();
-            StopAllBuFlights.Post(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            
         }
     }
 }

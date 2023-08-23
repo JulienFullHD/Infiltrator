@@ -41,8 +41,9 @@ namespace AK
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_STOPWALLRUNNING = 328487306U;
         static const AkUniqueID PLAYER_WALLRUNNING = 2134301282U;
+        static const AkUniqueID SMOKE_POP = 2528951528U;
+        static const AkUniqueID SMOKE_THROW = 2664284733U;
         static const AkUniqueID STOP_MENUTHEME = 2271744U;
-        static const AkUniqueID STOPALLBUFLIGHTS = 2278868614U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

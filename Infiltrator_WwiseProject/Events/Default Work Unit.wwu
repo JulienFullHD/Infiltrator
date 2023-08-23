@@ -176,8 +176,6 @@
 								<Action Name="" ID="{B0E24105-CBEB-4793-9C5F-CED94B249C19}" ShortID="1024408788">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -344,21 +342,6 @@
 									</ReferenceList>
 								</Action>
 								<Action Name="" ID="{A1524183-CB76-4B00-AE19-1901719F56CD}" ShortID="1017951837">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="StopAllBuFlights" ID="{DBB6940C-51C8-4F92-9C1D-BE0B1CC5EFB0}">
-							<ChildrenList>
-								<Action Name="" ID="{CB58827D-B061-4FFF-A69E-3B1E90532952}" ShortID="435881556">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="Scope" Type="int16" Value="1"/>
-									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Bullet_Flight" ID="{3FD54CAF-7A38-480C-A051-6E23061F4112}" WorkUnitID="{93D527E3-1FA4-4A32-87D3-1DA7F6F02B64}"/>
