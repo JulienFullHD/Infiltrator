@@ -68,6 +68,8 @@ public class PlayerWeaponsManager : MonoBehaviour
     public AK.Wwise.Event myKunai;
     public AK.Wwise.Event mySmokebomb;
     public AK.Wwise.Event myKatanaSwing;
+
+    [SerializeField] private Animator animator;
     
 
     private void Awake()
@@ -106,6 +108,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     private void AttackSword()
     {
         slashEffect.Play();
+        animator.SetTrigger("Attack");
 
         Invoke(nameof(AllowMelee), swordAttackCooldownMS/1000);
 
