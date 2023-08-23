@@ -143,10 +143,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: f6b542792c589394aa2d6ed3dd4df908,
       type: 2}
-  StopBulletFlight:
+  FlightStop:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: a77e559de003ddd40bb36e5f3dc648ad,
+      type: 2}
 --- !u!96 &8424643758678577343
 TrailRenderer:
   serializedVersion: 2

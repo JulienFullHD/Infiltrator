@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6DDB8881-EFCF-C780-08C0-A2F4AA9A778A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{ABA5B62F-2D83-6C6E-6D43-D2549CCC81B6}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -91,7 +91,7 @@
 				<Event Id="2271744" Name="Stop_MenuTheme" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2D0B003F-8271-F5A4-AD90-33629389DE08}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{270A09D2-9BBE-E32F-9F77-85AFFEBD6C91}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -165,7 +165,7 @@
 				</File>
 				<File Id="248514043" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy1.wav</ShortName>
-					<CachePath>SFX/FS_Enemy1_10C4C929.wem</CachePath>
+					<CachePath>SFX/FS_Enemy1_C8F3997D.wem</CachePath>
 				</File>
 				<File Id="320974741" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed 4th tweak.wav</ShortName>
@@ -197,11 +197,7 @@
 				</File>
 				<File Id="491065857" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy.wav</ShortName>
-					<CachePath>SFX/FS_Enemy_10C4C929.wem</CachePath>
-				</File>
-				<File Id="491182039" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Smoke_Throw.wav</ShortName>
-					<CachePath>SFX/Smoke_Throw_473F68FB.wem</CachePath>
+					<CachePath>SFX/FS_Enemy_45E26709.wem</CachePath>
 				</File>
 				<File Id="492423826" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EnemyPain2.wav</ShortName>
@@ -238,7 +234,7 @@
 				</File>
 				<File Id="662879814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>FS_Enemy2.wav</ShortName>
-					<CachePath>SFX/FS_Enemy2_10C4C929.wem</CachePath>
+					<CachePath>SFX/FS_Enemy2_48B71460.wem</CachePath>
 				</File>
 				<File Id="663770453" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bullet_Flight2.wav</ShortName>
@@ -246,7 +242,7 @@
 				</File>
 				<File Id="671753095" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_HitElse no3 2.wav</ShortName>
-					<CachePath>SFX/Katana_HitElse no3 2_10C4C929.wem</CachePath>
+					<CachePath>SFX/Katana_HitElse no3 2_70E83367.wem</CachePath>
 				</File>
 				<File Id="675877473" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing no3.wav</ShortName>
@@ -254,7 +250,7 @@
 				</File>
 				<File Id="710593161" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_HitElse no3 3.wav</ShortName>
-					<CachePath>SFX/Katana_HitElse no3 3_10C4C929.wem</CachePath>
+					<CachePath>SFX/Katana_HitElse no3 3_BB0682B2.wem</CachePath>
 				</File>
 				<File Id="727363635" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Bleed 2nd tweak.wav</ShortName>
@@ -279,10 +275,6 @@
 				<File Id="885646893" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jump1.wav</ShortName>
 					<CachePath>SFX/jump1_10C4C929.wem</CachePath>
-				</File>
-				<File Id="914882142" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Smokebomb.wav</ShortName>
-					<CachePath>SFX/Smokebomb_BC02CF42.wem</CachePath>
 				</File>
 				<File Id="952022165" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Katana_Swing.wav</ShortName>
@@ -381,7 +373,7 @@
 						<MediaRef Id="479020412"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2725920228" Name="Katana_Swing" DurationType="OneShot" DurationMin="0.3054159" DurationMax="0.7844778">
+				<Event Id="2725920228" Name="Katana_Swing" DurationType="OneShot" DurationMin="0.2893224" DurationMax="0.37434462">
 					<MediaRefs>
 						<MediaRef Id="50718732"/>
 						<MediaRef Id="671753095"/>
@@ -412,7 +404,7 @@
 						<MediaRef Id="177461868"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.21875" DurationMax="0.25317174">
+				<Event Id="857770058" Name="Play_FS_Enemy" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.19557624" DurationMax="0.2805873">
 					<MediaRefs>
 						<MediaRef Id="248514043"/>
 						<MediaRef Id="491065857"/>
@@ -424,7 +416,7 @@
 						</ShareSets>
 					</PluginRefs>
 				</Event>
-				<Event Id="405241043" Name="Play_FS_Metal" DurationType="OneShot" DurationMin="0.16664584" DurationMax="0.171875">
+				<Event Id="405241043" Name="Play_FS_Metal" DurationType="OneShot" DurationMin="0.17747535" DurationMax="0.19984198">
 					<MediaRefs>
 						<MediaRef Id="9922241"/>
 						<MediaRef Id="86246821"/>
@@ -450,7 +442,7 @@
 						<MediaRef Id="642047943"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1766533624" Name="Play_ProjectileHitOther" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.41972026" DurationMax="0.56187975">
+				<Event Id="1766533624" Name="Play_ProjectileHitOther" MaxAttenuation="60" DurationType="OneShot" DurationMin="0.37349653" DurationMax="0.6046477">
 					<MediaRefs>
 						<MediaRef Id="576626224"/>
 						<MediaRef Id="1054928639"/>
@@ -503,21 +495,12 @@
 						<MediaRef Id="79855120"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2528951528" Name="Smoke_Pop" MaxAttenuation="60" DurationType="OneShot" DurationMin="13.439858" DurationMax="13.439858">
-					<MediaRefs>
-						<MediaRef Id="914882142"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2664284733" Name="Smoke_Throw" DurationType="OneShot" DurationMin="0.7400208" DurationMax="0.7400208">
-					<MediaRefs>
-						<MediaRef Id="491182039"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="2278868614" Name="StopAllBuFlights" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="2828409398" Name="DopplerParam"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7B818FCD-45DB-9659-444E-B69BE1FB0FBD}</FileHash>
+	<FileHash>{B557EBE0-1945-AA5E-6CFE-D1C270476673}</FileHash>
 </SoundBanksInfo>
