@@ -63,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
     public AK.Wwise.Event myJump;
     public AK.Wwise.Event myLand;
 
+    [SerializeField] private Animator animator;
 
 
     private void Start()
@@ -303,14 +304,17 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {        
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        if(moveDirection.magnitude == 0)animator.SetBool("Run", false);
 
         if (isGrounded)
         {
             rb.AddForce(moveDirection.normalized * speedToApply * speedForceMultiplier, ForceMode.Force);
+            if(moveDirection.magnitude > 0)animator.SetBool("Run", true);
         }
         else
         {
             rb.AddForce(moveDirection.normalized * speedToApply * speedForceMultiplier * aerialSpeedMultiplier, ForceMode.Force);
+            animator.SetBool("Run", false);
         }
     }
 }
