@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 17073382a501504daa8610032b3917e0
     GuidInternal: 
-    m_lastTime: -8585088738890170764
+    m_lastTime: -8585088010007702495
     List:
     - name: Ambience
       guid: 6c4f897ba31d8b4093b29a0ae523264b
@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 81941faf4ea51b4585190a7261121ff1
     GuidInternal: 
-    m_lastTime: -8585090548188401776
+    m_lastTime: -8585088031658290856
     List:
     - name: Main
       guid: 424d0823f869df478f86b3ec1bfd68ee
@@ -233,7 +233,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 422f606ff5de564d8d2d7d49b6a29f86
     GuidInternal: 
-    m_lastTime: -8585090531222657917
+    m_lastTime: -8585087982933002807
     List:
     - name: Ambience
       guid: 30b406f7dca7704ba6ae7bbc7a03d1b3
@@ -1026,6 +1026,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 7b5a8bc01b311148bb94f0d3bb29ffeb
       Path: Events\Default Work Unit\Music\Stop_MenuTheme
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: StopAllBuFlights
+      guid: 0c94b6dbc851924f9c1dbe0b1cc5efb0
+      id: 2278868614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 422f606ff5de564d8d2d7d49b6a29f86
+      - ElementName: Combat
+        ObjectType: 4
+        guid: e3f6ed781da2a44ea8ecdd28771d5f8f
+      - ElementName: StopAllBuFlights
+        ObjectType: 3
+        guid: 0c94b6dbc851924f9c1dbe0b1cc5efb0
+      Path: Events\Default Work Unit\Combat\StopAllBuFlights
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

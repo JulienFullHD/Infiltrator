@@ -80,9 +80,9 @@ private void Start()
         SpeedControl();
         DragControl();
         //Wwise
-        if (rb.velocity.magnitude > 0.4 && isGrounded)
+        if (rb.velocity.magnitude > 0.5 && isGrounded)
         {
-            if (!FootstepIsPlaying && lastFootstepTime > 0.20)
+            if (!FootstepIsPlaying && lastFootstepTime > 0.28)
             {
                 myFootstep.Post(gameObject);
                 lastFootstepTime = 0;
