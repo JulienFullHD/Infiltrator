@@ -114,14 +114,24 @@
 							</ObjectLists>
 						</Bus>
 						<Bus Name="Reverbs" ID="{CD938CE3-2FF6-45FA-960A-389380CFF8D7}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<AuxBus Name="Open_field" ID="{81F0F66D-6C46-4168-B501-637E7367C4FD}">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>5</Value>
 											</ValueList>
 										</Property>
+										<Property Name="EnableDiffraction" Type="bool" Value="True"/>
+										<Property Name="ListenerRelativeRouting" Type="bool" Value="True"/>
 										<Property Name="OutputBusHighpass" Type="int16">
 											<ValueList>
 												<Value>6</Value>
@@ -134,6 +144,9 @@
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Player Attenuation" ID="{5417ECC0-D9EB-4ADD-BC76-F487CF3D79DB}" WorkUnitID="{136EED7D-DC2B-4AEE-B50C-D18467552544}"/>
+										</Reference>
 										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 											<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
@@ -143,7 +156,7 @@
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
-												<Value>6</Value>
+												<Value>-6</Value>
 											</ValueList>
 										</Property>
 										<Property Name="OutputBusHighpass" Type="int16">
