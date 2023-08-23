@@ -88,7 +88,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void ExitLevel()
     {
-        UnPauseGame();
+        Time.timeScale = 1.0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         ghostRunner.StopRun();

@@ -16,6 +16,9 @@ public class PlayerCamera : MonoBehaviour
 
     void Start()
     {
+        yRotation = transform.eulerAngles.y;
+        xRotation = Mathf.Clamp(transform.eulerAngles.x, -89.99f, 89.99f);
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 

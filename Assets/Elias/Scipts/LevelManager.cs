@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
 
     [Header("Win Event")]
     [SerializeField] public bool isWon;
+    [SerializeField] private int mainMenuIndex;
     [SerializeField] private CanvasGroup playerCanvasGroup;
     [SerializeField] private GameObject winCanvasObject;
     [SerializeField] private float fadeMaxTime;
@@ -109,5 +110,28 @@ public class LevelManager : MonoBehaviour
     {
         LeaderboardCreator.UploadNewEntry(publicKey, username, score, ((msg) => {
         }));
+    }
+
+    /// <summary>
+    /// Load the current scene again to reset everything
+    /// </summary>
+    public void ResetLevel()
+    {
+        Time.timeScale = 1.0f;
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    /// <summary>
+    /// Exits the level back to the main menu
+    /// </summary>
+    public void ExitLevel()
+    {
+        Time.timeScale = 1.0f;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        SceneManager.LoadScene(mainMenuIndex);
     }
 }

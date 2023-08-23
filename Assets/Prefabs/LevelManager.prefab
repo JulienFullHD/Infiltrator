@@ -111,9 +111,9 @@ RectTransform:
   m_Father: {fileID: 9114737515317269988}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00003, y: -400}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5886413704879642821
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 6424214638261927761}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: ExitLevel
         m_Mode: 1
         m_Arguments:
@@ -245,9 +245,9 @@ RectTransform:
   m_Father: {fileID: 9114737515317269988}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400.00003, y: -340.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &391165064619668492
@@ -332,8 +332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 6424214638261927761}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: ResetLevel
         m_Mode: 1
         m_Arguments:
@@ -645,7 +645,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 167}
-  m_SizeDelta: {x: 613.25, y: 101}
+  m_SizeDelta: {x: 775.73, y: 101}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &196363466393145359
 CanvasRenderer:
@@ -702,8 +702,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.22
-  m_fontSizeBase: 52.22
+  m_fontSize: 49
+  m_fontSizeBase: 49
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -793,9 +793,9 @@ MonoBehaviour:
   levelName: NULL
   enemyCount: 0
   isWon: 0
+  mainMenuIndex: 0
   playerCanvasGroup: {fileID: 0}
   winCanvasObject: {fileID: 8236405766735853739}
-  winCanvasGroup: {fileID: 0}
   fadeMaxTime: 0.7
   fadeTimer: 0
   scoreManager: {fileID: 0}
@@ -960,12 +960,12 @@ GameObject:
   - component: {fileID: 3895316955736281979}
   - component: {fileID: 4872738246338550726}
   m_Layer: 5
-  m_Name: PauseMenu Canvas
+  m_Name: WinMenu Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2214605130618937731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.05
+      value: 1.02
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -1116,7 +1116,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.01
-      value: 1.05
+      value: 1.02
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -1125,16 +1125,16 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.5
-      value: 0.95
-      inSlope: -0.008312943
-      outSlope: -0.008312943
+      value: 0.98
+      inSlope: -0.0024061315
+      outSlope: -0.0024061315
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.60754716
-      outWeight: 0.33333334
+      outWeight: 0.1453458
     - serializedVersion: 3
       time: 0.99
-      value: 1.05
+      value: 1.02
       inSlope: 0.03898582
       outSlope: 0.03898582
       tangentMode: 0
@@ -1143,7 +1143,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1.05
+      value: 1.02
       inSlope: 0
       outSlope: 0
       tangentMode: 136
