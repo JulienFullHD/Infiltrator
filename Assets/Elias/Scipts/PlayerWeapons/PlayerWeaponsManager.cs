@@ -14,7 +14,6 @@ public class PlayerWeaponsManager : MonoBehaviour
     [SerializeField] private float swordAttackCooldownMS;
     [ReadOnly, SerializeField] private bool canAttackSword;
     [ReadOnly, SerializeField] private Collider[] swordHits;
-    [SerializeField] private VisualEffect slashEffect;
 
     [Header("Kunai Settings")]
     [SerializeField] private GameObject kunaiPrefab;
@@ -107,7 +106,6 @@ public class PlayerWeaponsManager : MonoBehaviour
     /// </summary>
     private void AttackSword()
     {
-        slashEffect.Play();
         animator.SetTrigger("Attack");
 
         Invoke(nameof(AllowMelee), swordAttackCooldownMS/1000);
