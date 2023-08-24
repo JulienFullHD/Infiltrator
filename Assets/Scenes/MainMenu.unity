@@ -37969,7 +37969,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '{Fill in credit for third party assets}'
+  m_text: 'This Game Was Made for Educational Use. Not Commercial.
+
+    
+
+    Text
+    Font is Called Valorax Display Font and is taken from "BEfonts", by Terima kasih
+
+    Bot
+    Animation is created by Mixamo'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e881de16fffc0884da865db8c89c3be0, type: 2}
   m_sharedMaterial: {fileID: 8691195893795997063, guid: e881de16fffc0884da865db8c89c3be0,
